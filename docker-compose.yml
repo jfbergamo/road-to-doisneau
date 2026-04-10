@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: rtd_db
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: road_to_doisneau
+    ports:
+      - "5432:5432"
+    volumes:
+      - db:/var/lib/postgresql
