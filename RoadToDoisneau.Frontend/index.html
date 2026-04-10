@@ -1,11 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Road to Doisneau - Photographic Exhibition</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    Test
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="/content/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
+        </div>
+
+        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <div class="nav-content" id="primary-navigation">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn btn-pill">Buy</button>
+                <button class="btn btn-outline btn-pill bg-light">IT EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+
+            <h1 class="hero-main-title">Robert Doisneau</h1>
+
+            <div class="hero-gallery">
+                <div class="gallery-item">
+                    <img src="/gallery/Gallery_1.svg" alt="Exhibition photo 1">
+                    <div class="gallery-caption">
+                        <strong>Robert Doisneau</strong><br>Paris, 1950
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="/gallery/Gallery_2.svg" alt="Exhibition photo 2">
+                    <div class="gallery-caption">
+                        <strong>Robert Doisneau</strong><br>Kiss at the Hôtel de Ville, 1950
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="/gallery/Gallery_3.svg" alt="Exhibition photo 3">
+                    <div class="gallery-caption">
+                        <strong>Robert Doisneau</strong><br>Provence, 1953
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="/gallery/Gallery_4.svg" alt="Exhibition photo 4">
+                    <div class="gallery-caption">
+                        <strong>Robert Doisneau</strong><br>Lyon, 1948
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="/gallery/Gallery_5.svg" alt="Exhibition photo 5">
+                    <div class="gallery-caption">
+                        <strong>Robert Doisneau</strong><br>Normandy, 1952
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="hero-text">
+                <h2 class="hero-subtitle">Take the road to see the past.</h2>
+                <p class="serif-text">
+                    "There are days when the simple act of seeing appears to be true happiness"
+                    <span class="author">Robert Doisneau</span>
+                </p>
+                <button class="btn">Button</button>
+            </div>
+
+        </section>
+
+        <section class="banner-section">
+            <div class="banner-image"></div>
+        </section>
+
+        <section class="interviews">
+            <h2>Interviews</h2>
+            <div class="interviews-grid">
+                <div class="interview-card">
+                    <h3>who</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+                        pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
+                        sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa
+                        nisl malesuada lacinia integer nunc posuere.</p>
+                </div>
+                <div class="interview-card">
+                    <h3>who</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+                        pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
+                        sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa
+                        nisl malesuada lacinia integer nunc posuere.</p>
+                </div>
+                <div class="interview-card">
+                    <h3>who</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+                        pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
+                        sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa
+                        nisl malesuada lacinia integer nunc posuere.</p>
+                </div>
+            </div>
+            <button class="btn">Explore</button>
+        </section>
+
+        <section class="booklet">
+            <h2>Booklet</h2>
+            <p class="booklet-subtitle">(Don't forget to take your stickers!)</p>
+
+            <img src="/gallery/Gallery_Booklet.svg" alt="Exhibition Booklet">
+
+            <button class="btn">Landing Page</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+
+        <section class="footer-section">
+
+            <div class="footer-content">
+                <div class="footer-row">
+                    <span>Partners:</span>
+                    <img src="/content/ITS_logo.svg" alt="ITS Alto Adriatico Logo">
+                    <img src="/content/ANC_logo.svg" alt="Absolute&Code Logo">
+                    <img src="/content/GHB_logo.svg" alt="Galleria Harry Bertoia">
+                </div>
+
+                <div class="footer-row">
+                    <span>Contact Us:</span>
+                    <div class="placeholder-logo">Display&Code</div>
+                    <div class="placeholder-logo">Display&Code</div>
+                    <div class="placeholder-logo">Display&Code</div>
+                </div>
+            </div>
+
+            <p class="copyright">Copyright © 2026 All rights reserved</p>
+
+        </section>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
