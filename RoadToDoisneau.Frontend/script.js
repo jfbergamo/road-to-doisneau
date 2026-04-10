@@ -76,3 +76,17 @@ if (booklet) {
 
     bookletObserver.observe(booklet);
 }
+
+// Interview
+
+function toggleInterview(id, btn) {
+        const content = document.getElementById('content-' + id);
+        
+        if (content.classList.contains('open')) {
+            content.classList.remove('open');
+            btn.textContent = 'Read More';
+        } else {
+            content.classList.add('open');
+            btn.textContent = 'Read Less';
+        }
+    }
