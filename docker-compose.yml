@@ -9,4 +9,8 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - db:/var/lib/postgresql
+      - postgres_data:/var/lib/postgresql
+      - ./RoadToDoisneau.Db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  postgres_data:
