@@ -395,6 +395,14 @@ a {
     text-align: justify;
 }
 
+.interview-iviewer {
+    color:#FAC4B8;
+}
+
+.interview-iviewed {
+    color:#B7D8FA;
+}
+
 /* Booklet */
 
 .booklet {
