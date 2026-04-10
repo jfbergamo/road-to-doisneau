@@ -11,6 +11,15 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql
       - ./RoadToDoisneau.Db/init.sql:/docker-entrypoint-initdb.d/init.sql
+  server:
+    build: .
+    container_name: rtd_server
+    ports:
+      - "8080:8080"
+    environment:
+      ConnectionStrings__db: ${CONNECTION_STRING}
+    depends_on:
+      - postgres
 
 volumes:
   postgres_data:
