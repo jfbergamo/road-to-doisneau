@@ -2,7 +2,7 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-<img src="content/logo.svg" alt="Logo" width="300" height="300">
+<img src="content/logo_git.svg" alt="Logo" width="300" height="300">
 <h1 align="center">Road To Doisneau</h1>
 <p align="center"> Take the road to see the past. </p>
 </div>
