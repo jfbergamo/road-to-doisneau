@@ -79,14 +79,14 @@ if (booklet) {
 
 // Interview
 
-function toggleInterview(id, btn) {
-        const content = document.getElementById('content-' + id);
-        
-        if (content.classList.contains('open')) {
-            content.classList.remove('open');
-            btn.textContent = 'Read More';
-        } else {
-            content.classList.add('open');
-            btn.textContent = 'Read Less';
-        }
+function toggleAllInterviews(btn) {
+    const container = document.getElementById('interviews-container');
+    
+    if (container.style.display === "none") {
+        container.style.display = "block";
+        btn.textContent = "Read Less";
+    } else {
+        container.style.display = "none";
+        btn.textContent = "Read More";
     }
+}
