@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
-
-namespace RoadToDoisneau.Backend.Models;
+﻿namespace RoadToDoisneau.Backend.Models;
 
 //CREATE TABLE tickets(
 //    ticket_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -10,7 +8,8 @@ namespace RoadToDoisneau.Backend.Models;
 //    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 //    expires_at TIMESTAMP DEFAULT(CURRENT_TIMESTAMP + INTERVAL '6 months'),
 //    has_booklet BOOL NOT NULL DEFAULT False,
-//    fk_price_id INT NOT NULL REFERENCES prices(id)
+//    fk_price_id INT NOT NULL REFERENCES prices(price_id),
+//    fk_order_id INT NOT NULL REFERENCES orders(order_id)
 //);
 
 public class Ticket
@@ -23,4 +22,8 @@ public class Ticket
     public DateTime ExpiresAt { get; set; }
     public bool HasBooklet { get; set; }
     public int PriceId { get; set; }
+    public int OrderId { get; set; }
+
+    Price? Price { get; set; }
+    Order? Order { get; set; }
 }
