@@ -739,3 +739,39 @@ a {
         margin-right: 0;
     }
 }
+
+
+.interviews {
+    background-color: #001f3f;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+.interviews-content-wrapper {
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.interview-text {
+    margin-bottom: 20px;
+    border-bottom: 3px solid #114578;
+    padding-bottom: 10px;
+}
+
+.read-more-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-family: serif;
+    transition: background 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #444;
+}
