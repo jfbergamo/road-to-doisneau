@@ -21,18 +21,13 @@ CREATE TABLE tickets (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     expires_at TIMESTAMP DEFAULT (CURRENT_TIMESTAMP + INTERVAL '6 months'),
     has_booklet BOOL NOT NULL DEFAULT False,
-    fk_price_id INT NOT NULL REFERENCES prices(id)
+    fk_price_id INT NOT NULL REFERENCES prices(price_id),
+    fk_order_id INT NOT NULL REFERENCES orders(order_id)
 );
 
 CREATE TABLE orders (
     order_id SERIAL PRIMARY KEY,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE order_items (
-    id SERIAL PRIMARY KEY,
-    order_id INT NOT NULL REFERENCES orders(id) ON DELETE CASCADE, -- Suggerito ON DELETE CASCADE
-    ticket_id UUID REFERENCES tickets(id) ON DELETE SET NULL
 );
 
 CREATE TABLE articles (
