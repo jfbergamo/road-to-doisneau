@@ -1,4 +1,4 @@
-/*FONTS*/
+/* Fonts */
 @font-face {
     font-family: 'Metal';
     src: url('/font/Metal/Metal-Regular.ttf') format('truetype');
@@ -62,6 +62,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Body */
 body {
     font-family: var(--font-main);
     background-color: var(--dark-color);

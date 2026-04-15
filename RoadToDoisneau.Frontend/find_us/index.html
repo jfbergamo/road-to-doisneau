@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Us - Road to Doisneau</title>
+    <link rel="stylesheet" href="findUs.css">
+    <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');}
+    </script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
+        </div>
+
+        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <div class="nav-content" id="primary-navigation">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/articles">Articles</a></li>
+                    <li><a href="/find_us">Find Us</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn btn-pill">Buy</button>
+                <button class="btn btn-outline btn-pill" style="color: #052444">IT EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="find-us-page">
+        <section class="find-us-section">
+            <div class="section-container">
+                <h2>Come raggiungerci</h2>
+                <div class="info-block">
+                    <p class="serif-text">La mostra e collocata alla Galleria Harry Bertoia, nel cuore di Pordenone. 
+                        Facilmente raggiungibile dalla stazione (10-minuti di camminata) o in macchina usando i vicini
+                        "parcheggi multipiano".</p>
+                    <div class="image-wrapper">
+                        <a href="https://www.google.com/maps/dir/Museo+Civico+d'Arte+Moderna,
+                        +Viale+Franco+Martelli,+1,+33170+Pordenone+PN/Galleria+Harry+Bertoia,
+                        +Corso+Vittorio+Emanuele+II,+60,+33170+Pordenone+PN/@45.9562005,12.65
+                        75428,685m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0x477964b03f3ad907:0
+                        x28c5607716ad9a5!2m2!1d12.6608166!2d45.957895!1m5!1m1!1s0x477964ba9e4
+                        b1023:0xaea273ee6e362d7!2m2!1d12.659829!2d45.9545192" 
+                           target="_blank" class="map-link">
+                            <img src="/content/root.png" alt="Map to the museum" class="find-us-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="find-us-section">
+            <div class="section-container">
+                <h2>Ore di apertura</h2>
+                <div class="hours-grid">
+                    <div class="hours-item"><span>Lunedì - Mercoledì:</span> <strong>Chiuso</strong></div>
+                    <div class="hours-item"><span>Giovedì - Venerdì:</span> <strong>15:00 - 19:00</strong></div>
+                    <div class="hours-item"><span>Sabato - Domenica:</span> <strong>10:00 - 19:00</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="find-us-section">
+            <div class="section-container">
+                <h2>Tickets</h2>
+                <p class="serif-text">Prenota in anticipo per saltare la coda.</p><br>
+                <a href="buy.html" class="btn" style="background-color: #B7D8FA; color: #052444">Buy Tickets Now</a>
+            </div>
+        </section>
+
+        <section class="find-us-section no-border">
+            <div class="section-container">
+                <h2>Dove alloggiare per prolungare l'esperienza a Pordenone</h2>
+                <div class="hotel-card">
+                    <a href="https://palacehotelmoderno.it/it/" target="_blank">
+                        <img src="moderno.jpg" alt="Partner Hotel" class="hotel-img">
+                    </a>
+                    <div class="hotel-info">
+                        <a href="https://palacehotelmoderno.it/it/" target="_blank" style="text-decoration: none;">
+                            <h3 style="color: #B7D8FA">Hotel Moderno</h3>
+                        </a>
+                        <p>Via Roma 1, 33170 Pordenone (PN)</p>
+                        <p><strong>Tel:</strong> +39 0434 123456</p>
+                        <p><strong>Email:</strong> info@hotelmoderno.it</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="copyright">Copyright © 2026 All rights reserved</p>
+    </footer>
+
+    <script src="findUs.js"></script>
+</body>
+</html>
