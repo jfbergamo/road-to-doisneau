@@ -15,8 +15,8 @@
 
 <body>
     <header class="navbar">
-        <div class="logo">
-            <img src="content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
+        <div class="nav-logo">
+            <a href="/"><img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon"></a>
         </div>
 
         <div class="nav-content" id="navigation">
@@ -34,10 +34,10 @@
         <div class="nav-right">
             <div class="nav-actions">
                 <button class="btn btn-pill">Buy</button>
-                <button class="btn btn-outline btn-pill" style="color: #052444">IT EN</button>
+                <button class="btn btn-outline">EN</button>
             </div>
 
-            <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false"
+            <button class="nav-hamburger" aria-controls="primary-navigation" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -104,50 +104,53 @@
 
         <!-- INTERVISTE -->
         <section class="interviews">
-        <h2>Extracts from visitors</h2>
-        <div id="interviews-container" class="interviews-content-wrapper" style="display: none;">   
-            <div class="interview-text">
-                <p>
-                    <strong class="interview-iviewer">Intervistatore</strong>: <i>"È rimasta soddisfatta della mostra?"</i><br>
-                    <strong class="interview-iviewed">Visitatrice</strong>: <i>"In realtà più che soddisfatta, perché rispetto a 
-                        quella di Verona è più ricca."</i>
-                </p>
+            <h2>Extracts from visitors</h2>
+            <div id="interviews-container" class="interviews-content-wrapper" style="display: none;">
+                <div class="interview-text">
+                    <p>
+                        <strong class="interview-iviewer">Intervistatore</strong>: <i>"È rimasta soddisfatta della
+                            mostra?"</i><br>
+                        <strong class="interview-iviewed">Visitatrice</strong>: <i>"In realtà più che soddisfatta,
+                            perché rispetto a
+                            quella di Verona è più ricca."</i>
+                    </p>
+                </div>
+                <div class="interview-text">
+                    <p>
+                        <strong class="interview-iviewer">Intervistatore:</strong><i>"C'è una fotografia che l'ha
+                            colpita?"</i></br>
+                        <strong class="interview-iviewed">Visitatore:</strong><i>"Assolutamente sì."</i></br>
+                        <strong class="interview-iviewer">Intervistatore:</strong><i>"Posso sapere quale?"</i></br>
+                        <strong class="interview-iviewed">Visitatore:</strong><i>"Il titolo è 'Anita', perché è il
+                            nome di mia madre."</i></br>
+                        <strong class="interview-iviewer">Intervistatore:</strong><i>"Molto bella come foto. Le è
+                            venuta voglia di prendere in mano una macchina fotografica, mettersi a
+                            fare fotografie a paesaggi o altri soggetti?"</i></br>
+                        <strong class="interview-iviewed">Visitatore:</strong><i>"Assolutamente sì, e ne parlavo
+                            prima con il docente che mi accompagna."</i></br>
+                    </p>
+                </div>
+                <div class="interview-text">
+                    <p>
+                        <strong class="interview-iviewer">Intervistatore:</strong><i>"C'è una fotografia che l'ha
+                            colpita?"</i></br>
+                        <strong class="interview-iviewed">Visitatrice:</strong><i>"Beh, sicuramente sono legata a
+                            queste, quelle che riproducono i ragazzini nelle scuole, sono quelle che più... e poi tutte
+                            quelle dove si riconosce bene Parigi, che è la mia città del cuore."</i></br>
+                        <strong class="interview-iviewer">Intervistatore:</strong><i>"Le è venuta voglia di prendere
+                            in mano una macchina fotografica, mettersi a fare fotografie a paesaggi o altri
+                            soggetti?"</i></br>
+                        <strong class="interview-iviewed">Visitatrice:</strong><i>"Allora, io sono di un'altra
+                            generazione, quindi la macchina fotografica l'ho usata, sì, per tanto tempo. Adesso
+                            anche io sono un po' più pigra e quindi uso più il telefonino, però ho fatto molte
+                            foto sì. Mia madre addirittura faceva foto e le sviluppava lei stessa, quindi..."</i></br>
+                    </p>
+                </div>
             </div>
-            <div class="interview-text">
-                <p>
-                    <strong class="interview-iviewer">Intervistatore:</strong><i>"C'è una fotografia che l'ha
-                        colpita?"</i></br>
-                    <strong class="interview-iviewed">Visitatore:</strong><i>"Assolutamente sì."</i></br>
-                    <strong class="interview-iviewer">Intervistatore:</strong><i>"Posso sapere quale?"</i></br>
-                    <strong class="interview-iviewed">Visitatore:</strong><i>"Il titolo è 'Anita', perché è il
-                        nome di mia madre."</i></br>
-                    <strong class="interview-iviewer">Intervistatore:</strong><i>"Molto bella come foto. Le è
-                        venuta voglia di prendere in mano una macchina fotografica, mettersi a
-                        fare fotografie a paesaggi o altri soggetti?"</i></br>
-                    <strong class="interview-iviewed">Visitatore:</strong><i>"Assolutamente sì, e ne parlavo
-                        prima con il docente che mi accompagna."</i></br>
-                </p>
+            <div class="button-container">
+                <button class="read-more-btn" onclick="toggleAllInterviews(this)">Read More</button>
             </div>
-            <div class="interview-text">
-                <p>
-                    <strong class="interview-iviewer">Intervistatore:</strong><i>"C'è una fotografia che l'ha colpita?"</i></br>
-                    <strong class="interview-iviewed">Visitatrice:</strong><i>"Beh, sicuramente sono legata a
-                        queste, quelle che riproducono i ragazzini nelle scuole, sono quelle che più... e poi tutte
-                        quelle dove si riconosce bene Parigi, che è la mia città del cuore."</i></br>
-                    <strong class="interview-iviewer">Intervistatore:</strong><i>"Le è venuta voglia di prendere
-                        in mano una macchina fotografica, mettersi a fare fotografie a paesaggi o altri 
-                        soggetti?"</i></br>
-                    <strong class="interview-iviewed">Visitatrice:</strong><i>"Allora, io sono di un'altra
-                        generazione, quindi la macchina fotografica l'ho usata, sì, per tanto tempo. Adesso 
-                        anche io sono un po' più pigra e quindi uso più il telefonino, però ho fatto molte 
-                        foto sì. Mia madre addirittura faceva foto e le sviluppava lei stessa, quindi..."</i></br>
-                </p>
-            </div>
-        </div>
-    <div class="button-container">
-        <button class="read-more-btn" onclick="toggleAllInterviews(this)">Read More</button>
-    </div>
-</section>
+        </section>
         <section class="booklet">
             <h2>Booklet</h2>
             <p class="booklet-subtitle">(Don't forget to take your stickers!)</p>
@@ -155,46 +158,58 @@
             <button class="btn">Buy Booklet <strong><em style="color:#FAC4B8;">Here</em></strong></button>
         </section>
     </main>
-    
+
     <!-- FOOTER -->
     <footer class="footer">
 
-    <div class="footer-columns">
+        <div class="footer-columns">
 
-        <div class="footer-logos">
-            <img src="content/logo/logo_alt.svg" alt="Road to Doisneau" class="logo-doisneau">
-            <img src="content/logo/partners/PDNC_logo.svg" alt="Pordenone Capitale" class="logo-pordenone">
+            <div class="footer-logos">
+                <a href="index.html"><img src="/content/logo/logo_alt.svg" alt="Road to Doisneau" class="logo-doisneau"></a>
+                <a href="https://pordenonecapitale2027.it/">
+                    <img src="/content/logo/partners/PDNC_logo.svg"
+                         alt="Pordenone Capitale"
+                         class="logo-pordenone">
+                </a>
+            </div>
+
+            <div class="footer-contact">
+                <p>Corso Vittorio Emanuele II, 64 33170 Pordenone</p>
+                <p>tel. 0434 392111</p>
+                <p>P.I. 00081570939</p>
+                <p>C.F. 80002150938</p>
+                <p>PEC comune.pordenone@certgov.fvg.it</p>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://facebook.com/">
+                    <div class="social-fb"><img src="/content/icons/socials/fb_icon.svg" alt="facebook-icon"></div>
+                </a>
+                <a href="https://instagram.com/">
+                    <div class="social-insta"><img src="/content/icons/socials/insta_icon.svg" alt="instagram-icon"></div>
+                </a>
+                <a href="https://x.com/">
+                    <div class="social-x"><img src="/content/icons/socials/x_icon.svg" alt="x-icon"></div>
+                </a>
+                <a href="https://youtube.com/">
+                    <div class="social-yt"><img src="/content/icons/socials/yt_icon.svg" alt="youtube-icon"></div>
+                </a>
+            </div>
+
+            <div class="footer-sponsors">
+                <a href="https://itsaltoadriatico.it/"><div class="sponsor-1"><img src="/content/logo/partners/ITS_logo.svg" alt="ITS logo"></div></a>
+                <a href="https://galleriabertoia.comune.pordenone.it/"><div class="sponsor-2"><img src="/content/logo/partners/GHB_logo.svg" alt="Galleria Bertoia logo"></div></a>
+                <a href="https://absolutecode.it/"><div class="sponsor-3"><img src="/content/logo/partners/ANC_logo.svg" alt="Absolute&Code logo"></div></a>
+                <a href="https://comune.pordenone.it/"><div class="sponsor-4"><img src="/content/logo/partners/PDN_logo.svg" alt="PD Commune logo"></div></a>
+            </div>
         </div>
 
-        <div class="footer-contact">
-            <p>Corso Vittorio Emanuele II, 64 33170 Pordenone</p>
-            <p>tel. 0434 392111</p>
-            <p>P.I. 00081570939</p>
-            <p>C.F. 80002150938</p>
-            <p>PEC comune.pordenone@certgov.fvg.it</p>
+        <div class="footer-copyright">
+            Copyright &copy; 2026 All rights reserved
         </div>
-
-        <div class="footer-socials">
-            <div class="social-fb"><img src="content/icons/socials/fb_icon.svg" alt="facebook-icon"></div>
-            <div class="social-insta"><img src="content/icons/socials/insta_icon.svg" alt="instagram-icon"></div>
-            <div class="social-x"><img src="content/icons/socials/x_icon.svg" alt="x-icon"></div>
-            <div class="social-yt"><img src="content/icons/socials/yt_icon.svg" alt="youtube-icon"></div>
-        </div>
-
-        <div class="footer-sponsors">
-            <div class="sponsor-1"><img src="content/logo/partners/ITS_logo.svg" alt="ITS logo"></div>
-            <div class="sponsor-2"><img src="content/logo/partners/GHB_logo.svg" alt="Galleria Bertoia logo"></div>
-            <div class="sponsor-3"><img src="content/logo/partners/ANC_logo.svg" alt="Absolute&COde logo"></div>
-            <div class="sponsor-4"><img src="content/logo/partners/PDN_logo.svg" alt="PD Commune logo"></div>
-        </div>
-    </div>
-
-    <div class="footer-copyright">
-        Copyright &copy; 2026 All rights reserved
-    </div>
-</footer>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 
-</html> 
+</html>
