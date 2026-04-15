@@ -313,7 +313,6 @@ a {
     mix-blend-mode: multiply;
 }
 
-
 /* Interviews */
 .interviews {
     background-color: var(--dark-color);
@@ -668,4 +667,93 @@ a {
 }
 .read-more-btn:hover {
     background-color: #444;
+}
+
+/* Find Us Page Styles */
+.find-us-page {
+    padding: 40px 0;
+}
+.find-us-section {
+    background-color: var(--dark-color); /* Sfondo scuro come richiesto per coerenza */
+    color: var(--light-color);
+    margin: 0 16px;
+    padding: 80px 20px;
+    text-align: center;
+    /* Riga leggera come in "Extracts from visitors" */
+    border-bottom: 3px solid #114578; 
+}
+.find-us-section:first-child {
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+.find-us-section.no-border {
+    border-bottom: none;
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+}
+.section-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.find-us-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--accent-color); /* Colore pesca per i titoli */
+}
+
+/* Come raggiungerci */
+.find-us-img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+/* Orari */
+.hours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: var(--font-inter);
+}
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(250, 196, 184, 0.2);
+}
+
+/* Alloggio */
+.hotel-card {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+.hotel-img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.hotel-info h3 {
+    color: var(--comp-color);
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .hotel-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hotel-img {
+        width: 100%;
+    }
+    .hours-item {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
