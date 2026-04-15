@@ -13,6 +13,11 @@ CREATE TABLE prices (
 	price DECIMAL(10, 2) NOT NULL
 );
 
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE tickets (
     ticket_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     holder_first_name VARCHAR(75) NOT NULL,
@@ -23,11 +28,6 @@ CREATE TABLE tickets (
     has_booklet BOOL NOT NULL DEFAULT False,
     fk_price_id INT NOT NULL REFERENCES prices(price_id),
     fk_order_id INT NOT NULL REFERENCES orders(order_id)
-);
-
-CREATE TABLE orders (
-    order_id SERIAL PRIMARY KEY,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE articles (
