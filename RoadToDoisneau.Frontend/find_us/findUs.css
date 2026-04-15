@@ -720,44 +720,48 @@ a {
     border-bottom: 1px solid rgba(250, 196, 184, 0.2);
 }
 
-/* Alloggio */
+/* Alloggio - Hotel Card Aggiornata */
 .hotel-card {
     display: flex;
-    gap: 30px;
-    align-items: center;
-    text-align: left;
+    flex-direction: row;
+    align-items: stretch; /* Cruciale per la centratura verticale del testo rispetto all'immagine */
     background-color: rgba(255, 255, 255, 0.05);
-    padding: 20px;
     border-radius: 12px;
     margin-top: 30px;
+    overflow: hidden;
 }
+
 .hotel-img {
     width: 250px;
     height: 180px;
     object-fit: cover;
-    border-radius: 8px;
+    display: block; /* Rimuove spazi bianchi indesiderati sotto l'immagine */
 }
-.hotel-info h3 {
-    color: var(--comp-color);
-    margin-bottom: 10px;
+
+.hotel-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1; 
+    padding: 20px 20px 20px 200px;
+    text-align: left;
 }
+
 .hotel-info h3 {
+    margin: 0 0 10px 0;
+    color: var(--accent-color);
+    font-family: var(--font-display);
     cursor: pointer;
     transition: opacity 0.3s;
 }
+
 .hotel-info h3:hover {
-    opacity: 0.7; /* Il titolo schiarisce leggermente al passaggio del mouse */
+    opacity: 0.7;
 }
-@media (max-width: 768px) {
-    .hotel-card {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hotel-img {
-        width: 100%;
-    }
-    .hours-item {
-        flex-direction: column;
-        gap: 5px;
-    }
+
+.hotel-info p {
+    margin: 2px 0;
+    color: var(--light-color);
+    font-family: var(--font-inter);
 }
