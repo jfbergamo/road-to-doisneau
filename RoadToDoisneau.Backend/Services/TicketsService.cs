@@ -90,4 +90,34 @@ public class TicketsService
             """;
         ticket.Id = await connection.ExecuteScalarAsync<int>(query, ticket);
     }
+
+    public async Task<bool> UpdateAsync(Photo photo)
+    {
+        using var connection = new NpgsqlConnection(_connectionString);
+        string query = """
+            UPDATE tickets SET
+                holder_first_name = @HolderFirstName,
+                holder_last_name = @HolderLastName,
+                holder_mail = @HolderEmail,
+                created_at = @CreatedAt,
+                expires_at = @ExpiresAt,
+                has_booklet = @HasBooklet,
+                fk_price_id = @PriceId,
+                fk_order_id = @OrderId
+            WHERE ticket_id = @Id;
+            """;
+        int result = await connection.ExecuteAsync(query, photo);
+        return result > 0;
+    }
+
+    public async Task<bool> DeleteAsync(int id)
+    {
+        using var connection = new NpgsqlConnection(_connectionString);
+        string query = """
+            DELETE FROM tickets
+            WHERE ticket_id = @id;
+            """;
+        int result = await connection.ExecuteAsync(query, new { id });
+        return result > 0;
+    }
 }
