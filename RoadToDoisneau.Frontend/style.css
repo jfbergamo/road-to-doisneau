@@ -105,6 +105,24 @@ a {
     font-size: 1.2rem;
     gap: 10px;
 }
+
+/* Rimuove i punti elenco da TUTTI gli elementi dentro la navbar */
+.navbar ul, 
+.navbar li,
+.navbar nav,
+.nav-content {
+    list-style: none !important;
+    list-style-type: none !important;
+}
+
+/* Assicura che l'hamburger non agisca come un elemento lista */
+.hamburger {
+    display: flex !important; /* Forza il layout flex invece di list-item */
+    list-style: none !important;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
 .navbar {
     background-color: var(--accent-color);
     max-width: 1000px;
