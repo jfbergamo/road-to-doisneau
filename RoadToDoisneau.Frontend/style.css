@@ -314,7 +314,7 @@ a {
 .banner-image {
     width: 100%;
     height: 160px;
-    background-image: url('/gallery/Gallery_Banner.svg');
+    background-image: url('/content/gallery/Gallery_Banner.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
