@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Road to Doisneau - Photographic Exhibition</title>
-    <link rel="stylesheet" href="/About-Doisneau/style.css">
-    <!-- <link id="favicon" rel="shortcut icon" href="content/logo_favicon_dark.svg" type="image/svg"> -->
+    <link rel="stylesheet" href="style.css">
+    <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
     <script>
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.getElementById('favicon').setAttribute('href', 'content/logo_favicon_light.svg');
-        }
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');}
     </script>
 </head>
 
 <body>
     <header class="navbar">
         <div class="logo">
-            <img src="/content/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
+            <img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
         </div>
 
         <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false"
@@ -30,16 +29,16 @@
         <div class="nav-content" id="primary-navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/articles">Articles</a></li>
+                    <li><a href="/find_us">Find Us</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
                 <button class="btn btn-pill">Buy</button>
-                <button class="btn btn-outline btn-pill bg-light">IT EN</button>
+                <button class="btn btn-outline btn-pill" style="color: #052444">IT EN</button>
             </div>
         </div>
     </header>
@@ -52,7 +51,7 @@
             <p class="subtitle">Il pescatore d'immagini (1912 – 1994)</p>
         </div>
         <div class="hero-image">
-            <img src="/gallery/Gallery_7_Autoportrait.svg" alt="Robert Doisneau Portrait">
+            <img src="/content/gallery/Gallery_7_Autoportrait.svg" alt="Robert Doisneau Portrait">
         </div>
     </div>
 </section>
@@ -73,7 +72,7 @@
                         rendendolo uno dei massimi esponenti della <em>fotografia umanista</em> francese.
                     </p>
                                             <div class="featured-work">
-                        <img src="/Gallery_6_Le Baiser.svg" alt="Le Baiser de l'hôtel de ville" class="highlight-img">
+                        <img src="/content/gallery/Gallery_6_Le_Baiser.svg" alt="Le Baiser de l'hôtel de ville" class="highlight-img">
                         </div>
                 </div>
                 

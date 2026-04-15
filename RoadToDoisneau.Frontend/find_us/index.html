@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Us - Road to Doisneau</title>
     <link rel="stylesheet" href="findUs.css">
-    <link id="favicon" rel="shortcut icon" href="content/logo_favicon_dark.svg" type="image/svg">
+    <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');}
+    </script>
 </head>
 
 <body>
     <header class="navbar">
         <div class="logo">
-            <img src="/content/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
+            <img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
         </div>
 
-        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -24,16 +29,16 @@
         <div class="nav-content" id="primary-navigation">
             <nav>
                 <ul class="nav-links">
-                    <li style="color: #052444"><a href="/">Home</a></li>
-                    <li style="color: #052444"><a href="#">About</a></li>
-                    <li style="color: #052444"><a href="#">Gallery</a></li>
-                    <li style="color: #052444"><a href="#">Articles</a></li>
-                    <li style="color: #052444"><a href="findUs.html">Find Us</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/articles">Articles</a></li>
+                    <li><a href="/find_us">Find Us</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
                 <button class="btn btn-pill">Buy</button>
-                <button class="btn btn-outline btn-pill bg-light">IT EN</button>
+                <button class="btn btn-outline btn-pill" style="color: #052444">IT EN</button>
             </div>
         </div>
     </header>
@@ -47,7 +52,7 @@
                         You can easily reach us by train (10-minute walk from the station) or by car using the nearby 
                         "Park Multiplayer".</p>
                     <div class="image-wrapper">
-                        <img src="/content/root.png" alt="Map to the museum" class="find-us-img">
+                        <img src="root.png" alt="Map to the museum" class="find-us-img">
                     </div>
                 </div>
             </div>
@@ -77,7 +82,7 @@
                 <h2>Where to Stay</h2>
                 <div class="hotel-card">
                     <a href="https://palacehotelmoderno.it/it/" target="_blank">
-                        <img src="/content/moderno.jpg" alt="Partner Hotel" class="hotel-img">
+                        <img src="moderno.jpg" alt="Partner Hotel" class="hotel-img">
                     </a>
                     <div class="hotel-info">
                         <a href="https://palacehotelmoderno.it/it/" target="_blank" style="text-decoration: none;">
