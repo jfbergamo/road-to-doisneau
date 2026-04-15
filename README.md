@@ -2,7 +2,7 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-<img src="content/logo_git.svg" alt="Logo" width="300" height="300">
+<img src="content_git/logo_git.svg" alt="Logo" width="300" height="300">
 <h1 align="center">Road To Doisneau</h1>
 <p align="center"> Take the road to see the past. </p>
 </div>
@@ -32,7 +32,7 @@
 ## About The Project
 
 <div align="center">
-<img src="content/card.svg" alt="Promo Card" width="50%" height="50%">
+<img src="content_git/card.svg" alt="Promo Card" width="50%" height="50%">
 </div>
 
 This is about the project...
@@ -42,7 +42,7 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
 ### Color Palette
 
 <div align="center">
-<img src="content/palette.svg" alt="Color Palette" width="50%" height="50%">
+<img src="content_git/palette.svg" alt="Color Palette" width="50%" height="50%">
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
