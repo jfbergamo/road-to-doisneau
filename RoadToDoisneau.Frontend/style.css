@@ -161,11 +161,13 @@ a {
     width: 100%;
     justify-content: center;
     gap: 12px;
-    opacity: 0;
+}
+.hero-gallery img {
     transform: translateY(100px);
     transition: opacity 1.2s ease, transform 1.2s ease;
+        opacity: 0;
 }
-.hero-gallery.visible { opacity: 1; transform: translateY(0); }
+.hero-gallery.visible img { opacity: 1; transform: translateY(0); }
 .gallery-item {
     position: relative;
     flex: 1;

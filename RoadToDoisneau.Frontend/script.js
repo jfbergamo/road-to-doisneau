@@ -51,7 +51,7 @@ if (gallery) {
             }
         });
     }, {
-        threshold: 0.70
+        threshold: 0.2
     });
 
     observer.observe(gallery);
