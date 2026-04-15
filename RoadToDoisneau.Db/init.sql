@@ -1,5 +1,5 @@
 CREATE TABLE photos (
-    id SERIAL PRIMARY KEY,
+    photo_id SERIAL PRIMARY KEY,
     url VARCHAR(255) NOT NULL,
     title VARCHAR(75) NOT NULL,
     location VARCHAR(75),
@@ -8,12 +8,13 @@ CREATE TABLE photos (
 );
 
 CREATE TABLE prices (
-	id SERIAL PRIMARY KEY,
+	price_id SERIAL PRIMARY KEY,
 	category VARCHAR(50) NOT NULL,
-	price DECIMAL(10, 2) NOT NULL);
+	price DECIMAL(10, 2) NOT NULL
+);
 
 CREATE TABLE tickets (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    ticket_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     holder_first_name VARCHAR(75) NOT NULL,
     holder_last_name VARCHAR(75) NOT NULL,
     holder_mail VARCHAR(100) NOT NULL,
@@ -25,17 +26,16 @@ CREATE TABLE tickets (
 );
 
 CREATE TABLE orders (
-    id SERIAL PRIMARY KEY,
-    note TEXT,
+    order_id SERIAL PRIMARY KEY,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE articles (
-	id SERIAL PRIMARY KEY,
+	article_id SERIAL PRIMARY KEY,
 	title VARCHAR(150) NOT NULL,
-	description TEXT NOT NULL DEFAULT DIOPORCO,
+	description TEXT NOT NULL DEFAULT '',
 	page VARCHAR(255) NOT NULL,
-	data TIMESTAMP DEFAULT CURRENT TIMESTAMP,
+	date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	author VARCHAR(100),
 	thumbnail VARCHAR(255) NOT NULL
 );
