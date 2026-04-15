@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROAD TO DOISNEAU</title>
+
+    <link rel="stylesheet" href="/landing-page/navbar.css">
+    <link rel="stylesheet" href="/landing-page/style.css">
+    <link rel="stylesheet" href="/landing-page/home.css">
+    <link rel="stylesheet" href="/landing-page/ticket.css">
+    <link rel="stylesheet" href="/landing-page/footer.css">
+    <link rel="stylesheet" href="/landing-page/countdown.css">
+    <link rel="stylesheet" href="/landing-page//widget.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <img src="/content/logo.svg" alt="logo">
+        <a href="#home">Home</a>
+        <a href="#ticket">Ticket</a>
+        <a href="#contatti">Contattaci</a>
+        <button type="button" class="butto_nav">BUY TICKETS</button>
+    </nav>
+
+<div class="Home" id="home">
+    <img src="/content/card.svg" alt="LandingPhoto">
+    
+    <div class="text-container">
+        <h2>ROAD TO DOISNEAU</h2><br>
+        <h3>"UNO SCATTO PER SOGNARE IL MONDO IN CUI VORREMMO VIVERE"</h3><br>
+        <h3>"THERE ARE DAYS WHEN THE SIMPLE ACT OF SEEING APPEARS TO BE TRUE HAPPINESS"</h3><br>
+        <button type="button">BUY TICKETS</button>
+    </div>
+</div> 
+
+<section class="Ticket" id="ticket">
+    <h2>VUOI COMPRARE I TUOI BIGLIETTI?</h2>
+    <h3>Ecco le nostre tariffe!</h3>
+
+    <div class="Ticket-container">
+        <div class="card ridotto">
+            <span class="ticket-tag">Ridotto</span>
+            <div class="price">€9</div>
+            <p>Over 65</p>
+            <div class="price">€5</div>
+            <p>Studenti</p>
+        </div>
+
+        <div class="card intero">
+            <span class="ticket-tag">Intero</span>
+            <div class="price">€12</div>
+            <p>Accesso completo <br>a tutte le aree</p>
+        </div>
+
+        <div class="card gratis">
+            <span class="ticket-tag">Gratis</span>
+            <div class="price">€0</div>
+            <details class="gratis-details">
+            <summary>Scopri chi ha diritto <span>↓</span></summary>
+            <ul>
+                <li>Guide turistiche con tesserino di riconoscimento</li>
+                <li>Giornalisti con tesserino di riconoscimento</li>
+                <li>Bambini fino ai 5 anni</li>
+                <li>Disabili ed accompagnatori</li>
+                <li>Accompagnatori scolastici</li>
+            </ul>
+            </details>
+        </div>
+    </div><br>
+    <button type="button">BUY TICKETS</button>
+</section>
+
+<section class="countdown">
+    <div class="countdown-container">
+        <h3>DIO PORCO BASTARDO LURIDO COGLIONE</h3>
+        <div id="timer">
+            <div class="time-segment">
+                <span id="days">00</span>
+                <p>Giorni</p>
+            </div>
+            <div class="time-segment">
+                <span id="hours">00</span>
+                <p>Ore</p>
+            </div>
+            <div class="time-segment">
+                <span id="minutes">00</span>
+                <p>Minuti</p>
+            </div>
+            <div class="time-segment">
+                <span id="seconds">00</span>
+                <p>Secondi</p>
+            </div>
+        </div><br>
+            <button type="button" class="butto_nav">BUY TICKETS</button>
+    </div>
+</section>
+
+<div class="contact-widget" id="contactWidget">
+    <button class="widget-trigger" onclick="toggleWidget()">
+        <span class="icon">✉</span>
+        <span class="text">Contattaci</span>
+    </button>
+    
+    <div class="widget-content">
+        <h3>SCRIVICI</h3>
+        <form action="/submit" method="POST">
+            <div class="form-row">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                <input type="text" id="cognome" name="cognome" placeholder="Cognome" required>
+            </div>
+            
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            
+            <select id="interesse" name="interesse" required>
+                <option value="" disabled selected>Interesse...</option>
+                <option value="biglietti">Acquistare biglietti</option>
+                <option value="eventi">Prossimi eventi</option>
+                <option value="mostra">Informazioni mostra</option>
+                <option value="altro">Altro</option>
+            </select>
+            
+            <textarea id="dettaglio" name="dettaglio" placeholder="La tua richiesta..." rows="3"></textarea>
+            
+            <button type="submit" class="btn-send">INVIA RICHIESTA</button>
+        </form>
+    </div>
+</div>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contatti</h4>
+            <p>📞 +39 0123 456789</p>
+            <p>✉️ info@doisneau-mostra.it</p>
+            <p>✉️ jacopo.bergamasco.25@stud.itsaltoadriatico.it</p>
+            <p>📍 Corso Vittorio Emanuele II, 60, 33170 Pordenone PN</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Partner</h4>
+<div class="partner-space">
+            <span class="partner-placeholder">Comune di Pordenone</span>
+            <span class="partner-placeholder">Galleria Harry Bertoia</span>
+            <span class="partner-placeholder">ITS ALTO ADRIATICO</span>
+            <span class="partner-placeholder">Absolute&Code</span>
+        </div>
+    </div>
+
+        <div class="footer-section">
+            <h4>Sito Ufficiale</h4>
+            <p>Scopri l'archivio completo dell'artista.</p>
+            <a href="/index.html" target="_blank" class="btn-footer">GO TO WEBSITE</a>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 Mostra Doisneau - Tutti i diritti riservati</p>
+    </div>
+</footer>
+
+<script src="prova.js"></script>
+</body>
+
+</html>

@@ -5,8 +5,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
-
+@font-face {
+    font-family: 'Libre Caslon Display';
+    src: url('/font/Libre_Caslon_Display/LibreCaslonDisplay-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 @font-face {
     font-family: 'Libre Caslon Text';
     src: url('/font/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('.ttf');
@@ -25,7 +29,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Inter';
+    src: url('/font/Inter/Inter_18pt-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 
 :root {
     /* Colors */
@@ -60,9 +69,7 @@ body {
     color: var(--dark-color);
     line-height: 1.6;
 }
-h1,
-h2,
-h3,
+h1, h2, h3,
 .serif-text {
     font-family: var(--font-serif);
     font-weight: normal;
@@ -303,7 +310,6 @@ a {
     mix-blend-mode: multiply;
 }
 
-
 /* Interviews */
 .interviews {
     background-color: var(--dark-color);
@@ -340,38 +346,34 @@ a {
     text-align: justify;
 }
 .interview-iviewer {
-    color: #FAC4B8;
+    color:#FAC4B8;
 }
 .interview-iviewed {
-    color: #B7D8FA;
+    color:#B7D8FA;
 }
 .interview-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    margin-bottom: 10px;
-}
-
-.interview-content.open {
-    max-height: 1000px;
-    /* Un valore abbastanza alto da contenere il testo */
-    transition: max-height 0.5s ease-in;
-}
-
-.read-more-btn {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-family: inherit;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.read-more-btn:hover {
-    background-color: #555;
-}
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        margin-bottom: 10px;
+    }
+    .interview-content.open {
+        max-height: 1000px; /* Un valore abbastanza alto da contenere il testo */
+        transition: max-height 0.5s ease-in;
+    }
+    .read-more-btn {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-family: inherit;
+        border-radius: 4px;
+        transition: background 0.3s;
+    }
+    .read-more-btn:hover {
+        background-color: #555;
+    }
 
 /* Booklet */
 .booklet {
@@ -406,86 +408,146 @@ a {
     display: block;
 }
 
-
+/* Footer */
 .footer {
     background-color: var(--dark-color);
     color: var(--light-color);
-    padding: 60px 20px 40px 20px;
-    font-family: sans-serif;
+    padding: 80px 40px 30px 40px;
+    font-family: var(--font-inter);
+    margin-top: 60px;
 }
-
-.footer-columns {
+.footer-top {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto 60px auto;
-    gap: 80px;
+    flex-wrap: wrap;
+    gap: 40px;
 }
-
-.footer-logos {
+.footer-column {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    min-width: 250px;
+}
+.footer-logo-col {
     align-items: flex-start;
 }
-
-.logo-doisneau {
-    height: 80px;
-    width: auto;
+.footer-logo {
+    max-width: 180px;
+    height: auto;
 }
-
-.logo-pordenone {
-    height: 70px;
-    width: auto;
-}
-
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.footer-contact p {
-    margin: 0;
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 1.1rem;
-}
-
-.footer-socials {
-    display: flex;
-    flex-direction: column;
+.footer-links {
+    align-items: center;
     gap: 16px;
+}
+.footer-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 4px;
+    transition: opacity 0.3s ease;
+}
+.footer-links a:hover {
+    opacity: 0.7;
+}
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(254, 245, 243, 0.3);
+    transform: scaleX(1);
+}
+.footer-social {
+    align-items: flex-end;
+    gap: 24px;
+}
+.social-icons {
+    display: flex;
+    gap: 24px;
+}
+.social-icons a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+.social-icons a:hover {
+    opacity: 0.7;
+}
+.footer-section {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    margin: 0 16px 32px 16px;
+    border-radius: var(--border-radius-lg);
+    padding: 60px 0 40px 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
-
-.footer-socials img {
-    width: 32px;
-    height: auto;
-}
-
-.footer-sponsors {
+.footer-content {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 40px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
 }
-
-.footer-sponsors img {
-    width: 160px;
-    height: auto;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
+.footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-
-.footer-sponsors img:hover {
-    filter: grayscale(0%);
+.footer-row span {
+    font-weight: bold;
+    margin-right: 20px;
+    min-width: 100px;
+    text-align: right;
+    color: var(--light-color);
 }
-
-.footer-copyright {
+.footer-content img {
+    width: 150px;
+    height: 150px;
+    padding: 8px 16px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+}
+.placeholder-logo {
+    padding: 8px 16px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+}
+.footer-bottom {
     text-align: center;
-    font-size: 1rem;
-    font-weight: 600;
+    padding-top: 30px;
+    font-size: 0.9rem;
+    color: rgba(254, 245, 243, 0.7);
+}
+.footer-bottom a {
+    color: rgba(254, 245, 243, 0.7);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(254, 245, 243, 0.3);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+.footer-bottom a:hover {
+    color: var(--light-color);
+    border-color: var(--light-color);
+}
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: var(--light-color);
 }
 
 /* Response */
@@ -554,14 +616,152 @@ a {
     }
 
     /* Footer */
-
-    .footer-columns {
+    .footer-top {
         flex-direction: column;
         text-align: center;
-        gap: 40px;
+        gap: 60px;
     }
-
-    .footer-logos {
+    .footer-logo-col, 
+    .footer-links, 
+    .footer-social {
         align-items: center;
     }
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-row span {
+        text-align: center;
+        margin-right: 0;
+    }
+}
+.interviews {
+    background-color: #001f3f;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+.interviews-content-wrapper {
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+.interview-text {
+    margin-bottom: 20px;
+    border-bottom: 3px solid #114578;
+    padding-bottom: 10px;
+}
+.read-more-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-family: serif;
+    transition: background 0.3s;
+}
+.read-more-btn:hover {
+    background-color: #444;
+}
+
+/* Find Us Page Styles */
+.find-us-page {
+    padding: 40px 0;
+}
+.find-us-section {
+    background-color: var(--dark-color); /* Sfondo scuro come richiesto per coerenza */
+    color: var(--light-color);
+    margin: 0 16px;
+    padding: 80px 20px;
+    text-align: center;
+    /* Riga leggera come in "Extracts from visitors" */
+    border-bottom: 3px solid #114578; 
+}
+.find-us-section:first-child {
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+.find-us-section.no-border {
+    border-bottom: none;
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+}
+.section-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.find-us-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--accent-color); /* Colore pesca per i titoli */
+}
+
+/* Come raggiungerci */
+.find-us-img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+/* Orari */
+.hours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: var(--font-inter);
+}
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(250, 196, 184, 0.2);
+}
+
+/* Alloggio - Hotel Card Aggiornata */
+.hotel-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Cruciale per la centratura verticale del testo rispetto all'immagine */
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.hotel-img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    display: block; /* Rimuove spazi bianchi indesiderati sotto l'immagine */
+}
+
+.hotel-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1; 
+    padding: 20px 20px 20px 200px;
+    text-align: left;
+}
+
+.hotel-info h3 {
+    margin: 0 0 10px 0;
+    color: var(--accent-color);
+    font-family: var(--font-display);
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.hotel-info h3:hover {
+    opacity: 0.7;
+}
+
+.hotel-info p {
+    margin: 2px 0;
+    color: var(--light-color);
+    font-family: var(--font-inter);
 }

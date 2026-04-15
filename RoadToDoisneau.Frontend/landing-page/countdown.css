@@ -1,0 +1,75 @@
+.countdown{
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--light-color);
+}
+
+.countdown-container {
+    background-color: var(--light-color);
+    text-align: center;
+    padding: 60px 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: var(--border-radius-lg);
+    border: 2px solid var(--accent-color); 
+    box-shadow: 0 10px 30px rgba(5, 36, 68, 0.05);
+}
+
+.countdown-container h3 {
+    font-family: var(--font-display);
+    color: var(--dark-color);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.time-segment {
+    background: linear-gradient(135deg, var(--dark-color) 0%, #0a3a6d 100%);
+    color: var(--light-color);
+    min-width: 100px;
+    padding: 20px 10px;
+    border-radius: var(--border-radius-btn);
+    box-shadow: 0 4px 15px rgba(5, 36, 68, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.time-segment:hover {
+    transform: translateY(-5px);
+}
+
+.time-segment span {
+    display: block;
+    font-family: var(--font-main);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.time-segment p {
+    font-family: var(--font-alt);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .time-segment {
+        min-width: 70px;
+        padding: 15px 5px;
+    }
+    
+    .time-segment span {
+        font-size: 1.8rem;
+    }
+}
