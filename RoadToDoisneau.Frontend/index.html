@@ -9,8 +9,7 @@
     <link id="favicon" rel="shortcut icon" href="content/logo_favicon_dark.svg" type="image/svg">
     <script>
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.getElementById('favicon').setAttribute('href', 'content/logo_favicon_light.svg');
-        }
+            document.getElementById('favicon').setAttribute('href', 'content/logo_favicon_light.svg');}
     </script>
 </head>
 
@@ -33,13 +32,13 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="/About-Doisneau/About.html">About</a></li>
                     <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li><a href="articles/index.html">Articles</a></li>
+                    <li><a href="find_us/index.html">Find Us</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
                 <button class="btn btn-pill">Buy</button>
-                <button class="btn btn-outline btn-pill bg-light">IT EN</button>
+                <button class="btn btn-outline btn-pill" style="color: #052444">IT EN</button>
             </div>
         </div>
     </header>
@@ -47,7 +46,6 @@
     <main>
         <!-- IMMAGINI -->
         <section class="hero">
-
             <h1 class="hero-main-title">Robert Doisneau</h1>
 
             <div class="hero-gallery">
@@ -95,7 +93,6 @@
                 </p>
                 <button class="btn""><strong>Buy Tickets Here</strong></button>
             </div>
-
         </section>
 
         <section class=" banner-section">
@@ -104,7 +101,7 @@
 
         <!-- INTERVISTE -->
         <section class="interviews">
-        <h2>Extracts</h2>
+        <h2>Extracts from visitors</h2>
         <div id="interviews-container" class="interviews-content-wrapper" style="display: none;">   
             <div class="interview-text">
                 <p>
@@ -125,7 +122,7 @@
                         venuta voglia di prendere in mano una macchina fotografica, mettersi a
                         fare fotografie a paesaggi o altri soggetti?"</i></br>
                     <strong class="interview-iviewed">Visitatore:</strong><i>"Assolutamente sì, e ne parlavo
-                        prima con il docente che mi accompagna, ***** *****."</i></br>
+                        prima con il docente che mi accompagna."</i></br>
                 </p>
             </div>
             <div class="interview-text">
@@ -144,47 +141,57 @@
                 </p>
             </div>
         </div>
-
     <div class="button-container">
         <button class="read-more-btn" onclick="toggleAllInterviews(this)">Read More</button>
     </div>
 </section>
-
-
-
         <section class="booklet">
             <h2>Booklet</h2>
             <p class="booklet-subtitle">(Don't forget to take your stickers!)</p>
-
             <img src="/gallery/Gallery_Booklet.svg" alt="Exhibition Booklet">
-
-            <button class="btn">Buy Booklet <strong><em style="color: #FAC4B8;">Here</em></strong></button>
+            <button class="btn">Buy Booklet <strong><em style="color:#FAC4B8;">Here</em></strong></button>
         </section>
     </main>
     
     <!-- FOOTER -->
     <footer class="footer">
-        <section class="footer-section">
-            <div class="footer-content">
 
-                <div class="footer-row">
-                    <span>Partners:</span>
-                    <img src="/content/ANC_logo.svg" alt="Absolute&Code Logo">
-                    <img src="/content/ITS_logo.svg" alt="ITS Alto Adriatico Logo">
-                    <img src="/content/GHB_logo.svg" alt="Galleria Harry Bertoia">
-                </div>
+    <div class="footer-columns">
 
-                <div class="footer-row">
-                    <span>Contact Us:</span>
-                    <div class="placeholder-logo">Display&Code</div>
-                    <div class="placeholder-logo">Display&Code</div>
-                    <div class="placeholder-logo">Display&Code</div>
-                </div>
-            </div>
-            <p class="copyright">Copyright © 2026 All rights reserved</p>
-        </section>
-    </footer>
+        <div class="footer-logos">
+            <img src="content/logo_alt.svg" alt="Road to Doisneau" class="logo-doisneau">
+            <img src="content/partners_logo/PDNC_logo.svg" alt="Pordenone Capitale" class="logo-pordenone">
+        </div>
+
+        <div class="footer-contact">
+            <p>Corso Vittorio Emanuele II, 64 33170 Pordenone</p>
+            <p>tel. 0434 392111</p>
+            <p>P.I. 00081570939</p>
+            <p>C.F. 80002150938</p>
+            <p>PEC comune.pordenone@certgov.fvg.it</p>
+        </div>
+
+        <div class="footer-socials">
+            <div class="social-fb"><img src="content/icons/fb_icon.svg" alt="facebook-icon"></div>
+            <div class="social-insta"><img src="content/icons/insta_icon.svg" alt="instagram-icon"></div>
+            <div class="social-x"><img src="content/icons/x_icon.svg" alt="x-icon"></div>
+            <div class="social-yt"><img src="content/icons/yt_icon.svg" alt="youtube-icon"></div>
+        </div>
+
+        <div class="footer-sponsors">
+            <div class="sponsor-1"><img src="content/partners_logo/ITS_logo.svg" alt="ITS logo"></div>
+            <div class="sponsor-2"><img src="content/partners_logo/GHB_logo.svg" alt="Galleria Bertoia logo"></div>
+            <div class="sponsor-3"><img src="content/partners_logo/ANC_logo.svg" alt="Absolute&COde logo"></div>
+            <div class="sponsor-4"><img src="content/partners_logo/PDN_logo.svg" alt="PD Commune logo"></div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        Copyright &copy; 2026 All rights reserved
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>
-</html>
+
+</html> 
