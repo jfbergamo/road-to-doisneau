@@ -36,7 +36,6 @@
     font-style: normal;
 }
 
-
 :root {
     /* Colors */
     --light-color: #FEF5F3;
@@ -70,9 +69,7 @@ body {
     color: var(--dark-color);
     line-height: 1.6;
 }
-h1,
-h2,
-h3,
+h1, h2, h3,
 .serif-text {
     font-family: var(--font-serif);
     font-weight: normal;
@@ -743,6 +740,13 @@ a {
 .hotel-info h3 {
     color: var(--comp-color);
     margin-bottom: 10px;
+}
+.hotel-info h3 {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.hotel-info h3:hover {
+    opacity: 0.7; /* Il titolo schiarisce leggermente al passaggio del mouse */
 }
 @media (max-width: 768px) {
     .hotel-card {
