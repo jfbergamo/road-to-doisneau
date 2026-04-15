@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Ham
 
-    const hamburger = document.querySelector(".hamburger");
+    const hamburger = document.querySelector(".nav-hamburger");
     const navContent = document.querySelector(".nav-content");
 
     if (hamburger && navContent) {
@@ -51,7 +51,7 @@ if (gallery) {
             }
         });
     }, {
-        threshold: 0.70
+        threshold: 0.5
     });
 
     observer.observe(gallery);
