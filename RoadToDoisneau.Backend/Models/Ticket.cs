@@ -24,6 +24,6 @@ public class Ticket
     public int PriceId { get; set; }
     public int OrderId { get; set; }
 
-    Price? Price { get; set; }
-    Order? Order { get; set; }
+    public decimal Price { get; set; }
+    public Order? Order { get; set; }
 }

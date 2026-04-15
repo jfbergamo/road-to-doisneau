@@ -1,14 +1,13 @@
 ﻿namespace RoadToDoisneau.Backend.Models;
 
-//CREATE TABLE photos(
-//    id SERIAL PRIMARY KEY,
-//    url VARCHAR(255) NOT NULL,
-//    title VARCHAR(75) NOT NULL,
-//    location VARCHAR(75),
-//    description TEXT,
-//    shooting_year INTEGER NOT NULL
-//);
-
+// CREATE TABLE photos (
+//     photo_id SERIAL PRIMARY KEY,
+//     url VARCHAR(255) NOT NULL,
+//     title VARCHAR(75) NOT NULL,
+//     location VARCHAR(75),
+//     description TEXT,
+//     shooting_year INTEGER NOT NULL
+// );
 public class Photo
 {
     public int Id { get; set; }
