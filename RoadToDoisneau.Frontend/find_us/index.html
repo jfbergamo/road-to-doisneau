@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Us - Road to Doisneau</title>
     <link rel="stylesheet" href="findUs.css">
-    <link id="favicon" rel="shortcut icon" href="content/logo_favicon_dark.svg" type="image/svg">
+    <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');}
+    </script>
 </head>
 
 <body>
     <header class="navbar">
         <div class="logo">
-            <img src="/content/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
+            <img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
         </div>
 
-        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -25,15 +30,15 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="findUs.html">Find Us</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/articles">Articles</a></li>
+                    <li><a href="/find_us">Find Us</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
                 <button class="btn btn-pill">Buy</button>
-                <button class="btn btn-outline btn-pill bg-light">IT EN</button>
+                <button class="btn btn-outline btn-pill" style="color: #052444">IT EN</button>
             </div>
         </div>
     </header>
@@ -41,13 +46,18 @@
     <main class="find-us-page">
         <section class="find-us-section">
             <div class="section-container">
-                <h2>How to Reach Us</h2>
+                <h2>Come raggiungerci</h2>
                 <div class="info-block">
-                    <p class="serif-text">The exhibition is located at Galleria Harry Bertoia, in the heart of Pordenone. 
-                        You can easily reach us by train (10-minute walk from the station) or by car using the nearby 
-                        "Park Multiplayer".</p>
+                    <p class="serif-text">La mostra e collocata alla Galleria Harry Bertoia, nel cuore di Pordenone. 
+                        Facilmente raggiungibile dalla stazione (10-minuti di camminata) o in macchina usando i vicini
+                        "parcheggi multipiano".</p>
                     <div class="image-wrapper">
-                        <img src="/content/root.png" alt="Map to the museum" class="find-us-img">
+                        <a href="https://www.google.com/maps/place/Galleria+Harry+Bertoia/@45.9545246,12.6600085,1391m/
+                        data=!3m1!1e3!4m6!3m5!1s0x477964ba9e4b1023:0xaea273ee6e362d7!8m2!3d45.9545192!4d12.659829!16s%2
+                        Fg%2F11cn5qhpvq?entry=ttu&g_ep=EgoyMDI2MDQxMy4wIKXMDSoASAFQAw%3D%3D" 
+                           target="_blank" class="map-link">
+                            <img src="root.png" alt="Map to the museum" class="find-us-img">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -55,11 +65,11 @@
 
         <section class="find-us-section">
             <div class="section-container">
-                <h2>Opening Hours</h2>
+                <h2>Ore di apertura</h2>
                 <div class="hours-grid">
-                    <div class="hours-item"><span>Monday - Wednesday:</span> <strong>Closed</strong></div>
-                    <div class="hours-item"><span>Thursday - Friday:</span> <strong>15:00 - 19:00</strong></div>
-                    <div class="hours-item"><span>Saturday - Sunday:</span> <strong>10:00 - 19:00</strong></div>
+                    <div class="hours-item"><span>Lunedì - Mercoledì:</span> <strong>Chiuso</strong></div>
+                    <div class="hours-item"><span>Giovedì - Venerdì:</span> <strong>15:00 - 19:00</strong></div>
+                    <div class="hours-item"><span>Sabato - Domenica:</span> <strong>10:00 - 19:00</strong></div>
                 </div>
             </div>
         </section>
@@ -67,27 +77,112 @@
         <section class="find-us-section">
             <div class="section-container">
                 <h2>Tickets</h2>
-                <p class="serif-text">Book your visit in advance to skip the line and guarantee your entry.</p><br>
+                <p class="serif-text">Prenota in anticipo per saltare la coda.</p><br>
                 <a href="buy.html" class="btn" style="background-color: #B7D8FA; color: #052444">Buy Tickets Now</a>
             </div>
         </section>
 
         <section class="find-us-section no-border">
             <div class="section-container">
-                <h2>Where to Stay</h2>
-                <div class="hotel-card">
-                    <a href="https://palacehotelmoderno.it/it/" target="_blank">
-                        <img src="/content/moderno.jpg" alt="Partner Hotel" class="hotel-img">
-                    </a>
-                    <div class="hotel-info">
-                        <a href="https://palacehotelmoderno.it/it/" target="_blank" style="text-decoration: none;">
-                            <h3 style="color: #B7D8FA">Hotel Moderno</h3>
-                        </a>
-                        <p>Via Roma 1, 33170 Pordenone (PN)</p>
-                        <p><strong>Tel:</strong> +39 0434 123456</p>
-                        <p><strong>Email:</strong> info@hotelmoderno.it</p>
-                    </div>
-                </div>
+                <h2><strong>Cosa fare per prolungare l'esperienza a Pordenone</strong></h2>
+                <h3>Hotel</h3>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <div class="hotel-card">
+                            <a href="https://palacehotelmoderno.it/it/" target="_blank">
+                                <img src="moderno.jpg" alt="Partner Hotel" class="hotel-img">
+                            </a>
+                            <div class="hotel-info">
+                                <a href="https://palacehotelmoderno.it/it/" target="_blank" style="text-decoration: none;">
+                                    <h3 style="color: #B7D8FA">Hotel Moderno</h3>
+                                </a>
+                                <p>Via Roma 1, 33170 Pordenone (PN)</p>
+                                <p><strong>Tel:</strong> +39 0434 123456</p>
+                                <p><strong>Email:</strong> info@hotelmoderno.it</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hotel-card"> 
+                            <a href="https://www.hotelsantin.it/" target="_blank">
+                                <img src="santin.jpg" alt="Partner Hotel" class="hotel-img">
+                            </a>
+                            <div class="hotel-info">
+                                <a href="https://www.hotelsantin.it/" target="_blank" style="text-decoration: none;">
+                                    <h3 style="color: #B7D8FA">Hotel Santin</h3>
+                                </a>
+                                <p>Via Delle Grazie 9, 33170 Pordenone (PN)</p>
+                                <p><strong>Tel:</strong> +39 0434 520443</p>
+                                <p><strong>Email:</strong> info@hotelsantin.it</p>
+                            </div>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="hotel-card"> 
+                            <a href=https://www.parkhotelpordenone.it/" target="_blank">
+                                <img src="best-western.jpg" alt="Partner Hotel" class="hotel-img">
+                            </a>
+                            <div class="hotel-info">
+                                <a href="https://www.parkhotelpordenone.it/" target="_blank" style="text-decoration: none;">
+                                    <h3 style="color: #B7D8FA">Best Western Plus Park Hotel</h3>
+                                </a>
+                                <p>Via Giuseppe Mazzini 43, 33170 Pordenone (PN)</p>
+                                <p><strong>Tel:</strong> +39 0434 27901</p>
+                                <p><strong>Email:</strong> info@parkhotelpordenone.it</p>
+                            </div>
+                        </div> 
+                    </li>
+                </ul>
+                <br>
+                <br>
+                <h3>Ristoranti</h3>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <div class="hotel-card">
+                            <a href="https://www.instagram.com/smashedforreal/" target="_blank">
+                                <img src="sfr.jpg" alt="Ristorante" class="hotel-img">
+                            </a>
+                            <div class="hotel-info">
+                                <a href="https://www.instagram.com/smashedforreal/" target="_blank" style="text-decoration: none;">
+                                    <h3 style="color: #B7D8FA">SFR - Smashed for Real Pordenone</h3>
+                                </a>
+                                <p>Via Guglielmo Oberdan 10, 33170 Pordenone (PN)</p>
+                                <p><strong>Tel:</strong> +39 0434 036788</p>
+                                <p><strong>Email:</strong> ---</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hotel-card"> 
+                            <a href="https://www.ristoranteallacatina.it/" target="_blank">
+                                <img src="catina.jpg" alt="Ristorante" class="hotel-img">
+                            </a>
+                            <div class="hotel-info">
+                                <a href="https://www.ristoranteallacatina.it/" target="_blank" style="text-decoration: none;">
+                                    <h3 style="color: #B7D8FA">La Catina</h3>
+                                </a>
+                                <p>Via Piazza Cavour 3, 33170 Pordenone (PN)</p>
+                                <p><strong>Tel:</strong> +39 0434 520358</p>
+                                <p><strong>Email:</strong> prenotazioni@ristoranteallacatina.it</p>
+                            </div>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="hotel-card"> 
+                            <a href="https://brunchrepublic.com/pordenone/" target="_blank">
+                                <img src="brunch.jpg" alt="Ristorante" class="hotel-img">
+                            </a>
+                            <div class="hotel-info">
+                                <a href="https://brunchrepublic.com/pordenone/" target="_blank" style="text-decoration: none;">
+                                    <h3 style="color: #B7D8FA">Best Western Plus Park Hotel</h3>
+                                </a>
+                                <p>Via Mazzini 1, 33170 Pordenone (PN)</p>
+                                <p><strong>Tel:</strong> +39 0434 040304</p>
+                                <p><strong>Email:</strong> pordenone@brunchrepublic.com</p>
+                            </div>
+                        </div> 
+                    </li>
+                </ul>
             </div>
         </section>
     </main>

@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROAD TO DOISNEAU</title>
 
-    <link rel="stylesheet" href="/landing-page/navbar.css">
-    <link rel="stylesheet" href="/landing-page/style.css">
-    <link rel="stylesheet" href="/landing-page/home.css">
-    <link rel="stylesheet" href="/landing-page/ticket.css">
-    <link rel="stylesheet" href="/landing-page/footer.css">
-    <link rel="stylesheet" href="/landing-page/countdown.css">
-    <link rel="stylesheet" href="/landing-page//widget.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="ticket.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="countdown.css">
+    <link rel="stylesheet" href="widget.css">
     
+    <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');}
+    </script>
 </head>
 <body>
     <nav class="navbar">
-        <img src="/content/logo.svg" alt="logo">
+        <img src="/content/logo/logo.svg" alt="logo">
         <a href="#home">Home</a>
         <a href="#ticket">Ticket</a>
         <a href="#contatti">Contattaci</a>
@@ -24,15 +29,21 @@
     </nav>
 
 <div class="Home" id="home">
-    <img src="/content/card.svg" alt="LandingPhoto">
+    <img src="/content_git/card.svg" alt="LandingPhoto">
     
     <div class="text-container">
         <h2>ROAD TO DOISNEAU</h2><br>
-        <h3>"UNO SCATTO PER SOGNARE IL MONDO IN CUI VORREMMO VIVERE"</h3><br>
-        <h3>"THERE ARE DAYS WHEN THE SIMPLE ACT OF SEEING APPEARS TO BE TRUE HAPPINESS"</h3><br>
+        <h3>"Uno scatto per sognare il mondo in cui vorremmo vivere"</h3><br>
+        <!-- <h3>"THERE ARE DAYS WHEN THE SIMPLE ACT OF SEEING APPEARS TO BE TRUE HAPPINESS"</h3><br> -->
         <button type="button">BUY TICKETS</button>
     </div>
 </div> 
+
+<div class="container">
+    <p id="ciccio">
+        Visitare una mostra di Robert Doisneau è un po’ come fare un viaggio nel tempo senza bisogno di una macchina complicata: basta uno sguardo. Se poi la cornice è Pordenone, l’esperienza diventa ancora più intima e suggestiva.
+    </p>
+</div>
 
 <section class="Ticket" id="ticket">
     <h2>VUOI COMPRARE I TUOI BIGLIETTI?</h2>
@@ -73,7 +84,7 @@
 
 <section class="countdown">
     <div class="countdown-container">
-        <h3>DIO PORCO BASTARDO LURIDO COGLIONE</h3>
+        <h3>AFFRETTATI! La mostra finisce tra:</h3>
         <div id="timer">
             <div class="time-segment">
                 <span id="days">00</span>
@@ -127,7 +138,7 @@
     </div>
 </div>
 
-<footer class="main-footer">
+<footer class="main-footer" id="contatti">
     <div class="footer-container">
         <div class="footer-section">
             <h4>Contatti</h4>
