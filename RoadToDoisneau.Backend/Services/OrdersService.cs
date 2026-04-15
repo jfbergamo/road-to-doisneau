@@ -4,10 +4,10 @@ using RoadToDoisneau.Backend.Models;
 
 namespace RoadToDoisneau.Backend.Services;
 
-public class OrdersService
+public class OrdersService : IOrdersService
 {
     private readonly string _connectionString;
-    
+
     public OrdersService(IConfiguration config)
     {
         _connectionString = config.GetConnectionString("db")!;

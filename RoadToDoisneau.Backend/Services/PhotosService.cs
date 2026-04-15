@@ -4,7 +4,7 @@ using RoadToDoisneau.Backend.Models;
 
 namespace RoadToDoisneau.Backend.Services;
 
-public class PhotosService
+public class PhotosService : IPhotosService
 {
     private readonly string _connectionString;
 

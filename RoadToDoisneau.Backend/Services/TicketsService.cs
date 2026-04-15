@@ -4,7 +4,7 @@ using RoadToDoisneau.Backend.Models;
 
 namespace RoadToDoisneau.Backend.Services;
 
-public class TicketsService
+public class TicketsService : ITicketsService
 {
     private readonly string _connectionString;
     private readonly PricesService _ps;

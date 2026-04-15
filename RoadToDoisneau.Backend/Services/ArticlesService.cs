@@ -4,7 +4,7 @@ using RoadToDoisneau.Backend.Models;
 
 namespace RoadToDoisneau.Backend.Services;
 
-public class ArticlesService
+public class ArticlesService : IArticlesService
 {
     private readonly string _connectionString;
 

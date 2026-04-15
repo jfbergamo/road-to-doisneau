@@ -1,6 +1,14 @@
+using RoadToDoisneau.Backend.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
+
+builder.Services.AddScoped<IArticlesService, ArticlesService>();
+builder.Services.AddScoped<IOrdersService, OrdersService>();
+builder.Services.AddScoped<IPhotosService, PhotosService>();
+builder.Services.AddScoped<IPricesService, PricesService>();
+builder.Services.AddScoped<ITicketsService, TicketsService>();
 
 var app = builder.Build();
 
@@ -19,7 +27,5 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 
 app.MapGet("/api/status", () => new { Status = "Running" });
-
-Console.WriteLine("Hello world");
 
 app.Run();
