@@ -1,37 +1,31 @@
 /* Fonts */
 @font-face {
     font-family: 'Metal';
-    src: url('/font/Metal/Metal-Regular.ttf') format('truetype');
+    src: url('/content/fonts/Metal/Metal-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Libre Caslon Display';
-    src: url('/font/Libre_Caslon_Display/LibreCaslonDisplay-Regular.ttf') format('truetype');
+    src: url('/content/fonts/Libre_Caslon_Display/LibreCaslonDisplay-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Libre Caslon Text';
-    src: url('/font/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('truetype');
+    src: url('/content/fonts/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Libre Franklin';
-    src: url('/font/Libre_Franklin/LibreFranklin-Regular.ttf') format('truetype');
+    src: url('/content/fonts/Libre_Franklin/LibreFranklin-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Source Sans Pro';
-    src: url('/font/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Inter';
-    src: url('/font/Inter/Inter_18pt-Regular.ttf') format('truetype');
+    src: url('/content/fonts/Source_Sans_Pro/SourceSansPro-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -256,7 +250,7 @@ a {
 .banner-image {
     width: 100%;
     height: 160px;
-    background: url('/gallery/Gallery_Banner.svg') center/cover no-repeat;
+    background: url('/content/gallery/Gallery_Banner.svg') center/cover no-repeat;
     mix-blend-mode: multiply;
 }
 .booklet { background-color: var(--light-color); text-align: center; }
