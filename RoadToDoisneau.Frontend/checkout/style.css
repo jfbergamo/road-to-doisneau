@@ -1,14 +1,56 @@
-*{
-    border: 0;
-    margin: 0;
+/* Fonts */
+
+@font-face {
+    font-family: 'Metal';
+    src: url('/font/Metal/Metal-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: 'Libre Caslon Display';
+    src: url('/font/Libre_Caslon_Display/LibreCaslonDisplay-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Caslon Text';
+    src: url('/font/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('/font/Libre_Franklin/LibreFranklin-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/font/Inter/Inter_18pt-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 :root {
+    /* Colors */
     --light-color: #FEF5F3;
     --accent-color: #FAC4B8;
     --comp-color: #B7D8FA;
     --dark-color: #052444;
 
+    /* Typography */
     --font-logo: 'Metal', sans-serif;
     --font-display: 'Libre Caslon Display', Georgia, serif;
     --font-text: 'Libre Caslon Text', Georgia, serif;
@@ -16,139 +58,455 @@
     --font-alt: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     --font-inter: 'Inter', Helvetica, Arial, sans-serif;
 
+    /* Borders */
     --border-radius-lg: 24px;
     --border-radius-btn: 8px;
     --border-radius-pill: 50px;
 }
 
-button[type="button"],
-.text-container button,
-.btn-buy {
-    background: linear-gradient(135deg, var(--dark-color) 0%, #0a3a6d 100%);
-    color: var(--light-color);
-    padding: 16px 32px;
-    font-family: var(--font-main);
-    font-size: 1rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: none;
-    border-radius: var(--border-radius-pill);
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(5, 36, 68, 0.2);
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
+/* Reset */
 
-button[type="button"]:hover {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 12px 25px rgba(5, 36, 68, 0.3);
-    background: linear-gradient(135deg, #0a3a6d 0%, var(--dark-color) 100%);
-}
-
-button[type="button"]:active {
-    transform: translateY(-1px) scale(1);
-    box-shadow: 0 2px 10px rgba(5, 36, 68, 0.2);
-}
-
-button[type="button"]::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(254, 245, 243, 0.3),
-        transparent
-    );
-    transition: 0.6s;
-}
-
-button[type="button"]:hover::after {
-    left: 100%;
-}
-
-:root {
-    --nav-height-normal: 80px;
-    --nav-height-scrolled: 65px;
-}
-
-.navbar.scrolled {
-    top: 8px;
-    padding: 10px 0;
-    max-width: 850px;
-    background-color: var(--accent-color);
-    box-shadow: 0 8px 30px rgba(5, 36, 68, 0.2);
-}
-
-.Home, .Ticket, .Contatti {
-    transition: padding-top 0.5s ease-in-out;
-}
-
-[data-active-section="ticket"] .Ticket h2,
-[data-active-section="contatti"] footer h2 {
-    transform: translateY(20px);
-    animation: focusTitle 0.8s forwards cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-@keyframes focusTitle {
-    from {
-        opacity: 0;
-        letter-spacing: 5px;
-    }
-    to {
-        opacity: 1;
-        letter-spacing: -1px;
-    }
-}
-
-.container {
-    background-color: var(--light-color);
-}
-
-#ciccio {
-    background-color: transparent;
-    color: var(--dark-color);
-    background-color: var(--light-color);
-    font-family: var(--font-text);
-    line-height: 1.6;
-    font-size: 1.25rem;
+* {
+    margin: 0;
     padding: 0;
-    margin: 0 auto;
-    max-width: 450px;
-    text-align: center;
-    position: relative;
     box-sizing: border-box;
 }
 
-#ciccio::before {
-    content: "Perchè Doisneau?";
-    display: block;
-    font-family: var(--font-display);
-    font-size: 3rem;
-    font-weight: bold;
+/* Body */
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--dark-color);
     color: var(--dark-color);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    line-height: 1.6;
 }
 
-#ciccio::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 1.5px;
-    background-color: var(--accent-color);
-    margin: 12px auto 0 auto;
+h1,
+h2,
+h3,
+.serif-text {
+    font-family: var(--font-serif);
+    font-weight: normal;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Buttons */
+
+.btn {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 12px 32px;
+    border-radius: var(--border-radius-btn);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-pill {
+    border-radius: var(--border-radius-pill);
+    padding: 8px 24px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--dark-color);
+    border: 1px solid var(--text-dark);
+}
+
+/* Navigation */
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    gap: 10px;
+}
+
+.navbar {
+    background-color: var(--accent-color);
+    max-width: 1000px;
+    width: 95%;
+    margin: 16px auto;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    position: sticky;
+    top: 16px;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+    background-color: #FAC4B8E6;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
+    padding: 6px 20px;
+    max-width: 850px;
+    margin-top: 8px;
+    top: 8px;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    font-weight: 500;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Response */
 
 @media (max-width: 768px) {
-    #ciccio {
-        max-width: 100%;
+
+    /* Nav */
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
     }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-content {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--bg-nav);
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+        z-index: 99;
+    }
+
+    .nav-content.active {
+        left: 0;
+    }
+
+    .nav-actions {
+        flex-direction: column;
+    }
+}
+
+.main-exhibition {
+    background-color: var(--light-color);
+    padding-bottom: 120px; /* Spazio per la bar */
+}
+
+/* --- Header Mostra --- */
+.exhibition-header {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--dark-color);
+}
+
+.serif-title {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family: var(--font-text);
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 25px auto;
+}
+
+.section-title {
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* --- Container Card Visive --- */
+.Ticket-container-visual {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: start; /* Importante per l'effetto sfalsato */
+}
+
+/* --- La Card Visiva Base --- */
+.card-visual {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    height: 450px; /* Altezza fissa per impatto */
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 10px 30px rgba(5, 36, 68, 0.1);
+    border: 1px solid rgba(250, 196, 184, 0.3); /* dark color lightened */
+}
+
+/* Effetto Sfocatura Iniziale (Image Layer) */
+.card-visual::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) grayscale(50%); /* Sfocata e semi-grigia */
+    transition: all 0.6s ease;
+    z-index: 1;
+}
+
+/* Overlay Scuro per Leggibilità */
+.card-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(180deg, rgba(5,36,68,0.2) 0%, rgba(5,36,68,0.8) 100%);
+    z-index: 2;
+    transition: background 0.5s ease;
+}
+
+/* Hover sulla Card */
+.card-visual:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(5, 36, 68, 0.2);
+}
+
+.card-visual:hover::before {
+    filter: blur(0px) grayscale(0%); /* Torna a fuoco e colori */
+}
+
+.card-visual:hover .card-overlay {
+    background: linear-gradient(180deg, rgba(5,36,68,0.1) 0%, rgba(5,36,68,0.9) 100%);
+}
+
+/* --- Layout Contenuto Card --- */
+.card-content {
+    position: relative;
+    z-index: 3; /* Sopra overlay e blur */
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Testo in basso */
+    color: var(--light-color);
+}
+
+/* Tag */
+.ticket-tag {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    padding: 6px 14px;
+    border-radius: var(--border-radius-pill);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Prezzi */
+.price {
+    font-family: var(--font-inter); /* Numeri moderni */
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.price.large {
+    font-size: 4rem;
+    color: var(--light-color);
+}
+
+.description {
+    font-family: var(--font-text);
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin: 10px 0 20px 0;
+}
+
+/* Gruppo Prezzi Ridotto */
+.price-group {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.price-item .label {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* Selettore Quantità nella Card */
+.qty-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(254, 245, 243, 0.2);
+    padding-top: 15px;
+    margin-top: auto; /* Spinge in basso */
+}
+
+.qty-selector span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.qty-input {
+    width: 65px;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--light-color);
+    border-radius: var(--border-radius-btn);
+    padding: 8px;
+    font-family: var(--font-inter);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- Personalizzazione Card Intero (Highlight) --- */
+.card-visual.intero {
+    height: 500px; /* Più alta */
+    margin-top: -25px; /* Sfalsata verso l'alto */
+    border: 2px solid var(--comp-color); /* Celeste */
+}
+
+.tag-dark {
+    background-color: var(--comp-color);
+    color: var(--dark-color);
+}
+
+/* --- Gratis Details Visivi --- */
+.gratis-details-visual {
+    margin-bottom: 20px;
+}
+
+.gratis-details-visual summary {
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    list-style: none;
+}
+
+.gratis-details-visual ul {
+    font-size: 0.8rem;
+    padding-left: 15px;
+    margin-top: 10px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* --- Barra Totale Visiva --- */
+.checkout-bar-visual {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 600px; /* Più stretta e elegante */
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 15px 25px;
+    border-radius: 100px; /* Pill perfetta */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    z-index: 2000;
+    opacity: 0; /* Nascosta inizialmente */
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+/* Classe JS per mostrare la barra */
+.checkout-bar-visual.active {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+.total-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-info .label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.total-info .total-amount {
+    font-family: var(--font-inter);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--comp-color); /* Celeste accent */
+}
+
+.btn-buy {
+    background-color: var(--comp-color);
+    color: var(--dark-color);
+    font-weight: bold;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .serif-title { font-size: 2.8rem; }
+    
+    .Ticket-container-visual {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-visual, .card-visual.intero {
+        height: 350px;
+        margin-top: 0; /* Togli sfalsamento su mobile */
+    }
+
+    .card-content { padding: 20px; }
+    .price { font-size: 2.5rem; }
+    .price.large { font-size: 3rem; }
 }
