@@ -14,8 +14,6 @@
 
 public class Ticket
 {
-    private const decimal DEFAULT_PRICE = 12;
-
     public Guid Id { get; set; }
     public string HolderName { get; set => field = value.Substring(0, Math.Min(75, value.Length)); } = default!;
     public string HolderEmail { get; set => field = value.Substring(0, Math.Min(100, value.Length)); } = default!;
@@ -28,15 +26,13 @@ public class Ticket
 
     public void ApplyDiscount()
     {
-        decimal discount = 0;
         switch (DiscountCode)
         {
-            case "FREE": discount = 1.00M; /* Sconto: 100% => €0    */ break;
-            case "STUD": discount = 0.60M; /* Sconto:  60% => €4.80 */ break;
-            case "OVER": discount = 0.25M; /* Sconto:  25% => €9.00 */ break;
-            case "FULL": /* Sconto: 0% => €12.00 */
-            default: break;
+            case "FREE": Price =  0.00M; break;
+            case "STUD": Price =  5.00M; break;
+            case "OVER": Price =  9.00M; break;
+            case "FULL":
+            default:     Price = 12.00M; break;
         }
-        Price = DEFAULT_PRICE * (1 - discount);
     }
 }
