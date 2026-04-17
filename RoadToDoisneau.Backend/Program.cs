@@ -8,7 +8,6 @@ builder.Services.AddOpenApi();
 builder.Services.AddScoped<IArticlesService, ArticlesService>();
 builder.Services.AddScoped<IOrdersService, OrdersService>();
 builder.Services.AddScoped<IPhotosService, PhotosService>();
-builder.Services.AddScoped<IPricesService, PricesService>();
 builder.Services.AddScoped<ITicketsService, TicketsService>();
 
 var app = builder.Build();

@@ -7,12 +7,10 @@ namespace RoadToDoisneau.Backend.Services;
 public class TicketsService : ITicketsService
 {
     private readonly string _connectionString;
-    private readonly PricesService _ps;
 
     public TicketsService(IConfiguration config)
     {
         _connectionString = config.GetConnectionString("db")!;
-        _ps = new PricesService(config);
     }
 
     public async Task<IEnumerable<Ticket>> GetListAsync()
@@ -71,11 +69,6 @@ public class TicketsService : ITicketsService
             WHERE ticket_id = @id
             """;
         var ticket = await connection.QuerySingleOrDefaultAsync<Ticket>(query, new { id });
-
-        if (ticket is not null)
-        {
-            ticket.Price = await _ps.GetPriceByIdAsync(ticket.PriceId);
-        }
 
         return ticket;
     }

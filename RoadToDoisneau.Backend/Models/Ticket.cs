@@ -22,6 +22,5 @@ public class Ticket
     public bool HasBooklet { get; set; }
     public int PriceId { get; set; }
     public int OrderId { get; set; }
-
     public decimal Price { get; set; }
 }

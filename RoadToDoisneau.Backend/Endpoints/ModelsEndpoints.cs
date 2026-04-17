@@ -7,7 +7,6 @@ public static class ModelsEndpoints
         route.MapArticlesEndpoints(isDevel);
         route.MapOrdersEndpoints(isDevel);
         route.MapPhotosEndpoints(isDevel);
-        route.MapPricesEndpoints(isDevel);
         route.MapTicketsEndpoints(isDevel);
     }
 }
