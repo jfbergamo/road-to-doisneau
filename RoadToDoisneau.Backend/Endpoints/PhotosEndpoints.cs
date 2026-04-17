@@ -8,7 +8,7 @@ public static class PhotosEndpoints
 {
     public static void MapPhotosEndpoints(this IEndpointRouteBuilder route, bool isDevel)
     {
-        var group = route.MapGroup("/photos").WithTags("Photos");
+        var group = route.MapGroup("/api/photos").WithTags("Photos");
 
         group.MapGet("", GetPhotosAsync)
              .WithName("GetPhotos");
@@ -40,7 +40,7 @@ public static class PhotosEndpoints
     private static async Task<Created<Photo>> InsertPhotoAsync(Photo photo, IPhotosService srvc)
     {
         await srvc.InsertAsync(photo);
-        return TypedResults.Created($"/photos/{photo.Id}", photo);
+        return TypedResults.Created($"/api/photos/{photo.Id}", photo);
     }
 
     private static async Task<Results<NoContent,NotFound>> UpdatePhotoAsync(int id, Photo photo, IPhotosService srvc)

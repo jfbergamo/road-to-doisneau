@@ -8,7 +8,7 @@ public static class OrdersEndpoints
 {
     public static void MapOrdersEndpoints(this IEndpointRouteBuilder route, bool isDevel)
     {
-        var group = route.MapGroup("/orders").WithTags("Orders");
+        var group = route.MapGroup("/api/orders").WithTags("Orders");
 
         group.MapGet("", GetOrdersAsync)
              .WithName("GetOrders");
@@ -41,7 +41,7 @@ public static class OrdersEndpoints
     private static async Task<Created<Order>> InsertOrderAsync(Order order, IOrdersService srvc)
     {
         await srvc.InsertAsync(order);
-        return TypedResults.Created($"/orders/{order.Id}", order);
+        return TypedResults.Created($"/api/orders/{order.Id}", order);
     }
 
     private static async Task<Results<NoContent, NotFound>> UpdateOrderAsync(int id, Order order, IOrdersService srvc)

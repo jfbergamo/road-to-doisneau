@@ -8,7 +8,7 @@ public static class ArticlesEndpoints
 {
     public static void MapArticlesEndpoints(this IEndpointRouteBuilder app, bool isDevel)
     {
-        var group = app.MapGroup("/articles").WithTags("Articles");
+        var group = app.MapGroup("/api/articles").WithTags("Articles");
 
         group.MapGet("", GetArticlesAsync)
              .WithName("GetArticles");
@@ -41,7 +41,7 @@ public static class ArticlesEndpoints
     private static async Task<Created<Article>> InsertArticleAsync(Article article, IArticlesService srvc)
     {
         await srvc.InsertAsync(article);
-        return TypedResults.Created($"/articles/{article.Id}", article);
+        return TypedResults.Created($"/api/articles/{article.Id}", article);
     }
 
     private static async Task<Results<NoContent, NotFound>> UpdateArticleAsync(int id, Article article, IArticlesService srvc)

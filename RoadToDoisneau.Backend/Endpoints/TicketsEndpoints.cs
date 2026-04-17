@@ -10,7 +10,7 @@ public static class TicketsEndpoints
 {
     public static void MapTicketsEndpoints(this IEndpointRouteBuilder route, bool isDevel)
     {
-        var group = route.MapGroup("/tickets").WithTags("Tickets");
+        var group = route.MapGroup("/api/tickets").WithTags("Tickets");
 
         group.MapGet("", GetTicketsAsync)
              .WithName("GetTickets");
@@ -43,7 +43,7 @@ public static class TicketsEndpoints
     private static async Task<Created<Ticket>> InsertTicketAsync(Ticket ticket, ITicketsService srvc)
     {
         await srvc.InsertAsync(ticket);
-        return TypedResults.Created($"/tickets/{ticket.Id}", ticket);
+        return TypedResults.Created($"/api/tickets/{ticket.Id}", ticket);
     }
 
     private static async Task<Results<NoContent,NotFound>> UpdateTicketAsync(Guid id, Ticket ticket, ITicketsService srvc)
