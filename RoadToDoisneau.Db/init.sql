@@ -20,9 +20,8 @@ CREATE TABLE orders (
 
 CREATE TABLE tickets (
     ticket_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    holder_first_name VARCHAR(75) NOT NULL,
-    holder_last_name VARCHAR(75) NOT NULL,
-    holder_mail VARCHAR(100) NOT NULL,
+    holder_name VARCHAR(75) NOT NULL,
+    holder_email VARCHAR(100) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     expires_at TIMESTAMP DEFAULT (CURRENT_TIMESTAMP + INTERVAL '6 months'),
     has_booklet BOOL NOT NULL DEFAULT False,

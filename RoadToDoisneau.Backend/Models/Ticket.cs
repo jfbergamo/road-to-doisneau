@@ -15,8 +15,7 @@
 public class Ticket
 {
     public int Id { get; set; }
-    public string HolderFirstName { get; set => field = value.Substring(0, Math.Min(75, value.Length)); } = default!;
-    public string HolderLastName { get; set => field = value.Substring(0, Math.Min(75, value.Length)); } = default!;
+    public string HolderName { get; set => field = value.Substring(0, Math.Min(75, value.Length)); } = default!;
     public string HolderEmail { get; set => field = value.Substring(0, Math.Min(100, value.Length)); } = default!;
     public DateTime CreatedAt { get; set; }
     public DateTime ExpiresAt { get; set; }

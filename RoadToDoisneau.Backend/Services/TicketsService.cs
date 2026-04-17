@@ -23,9 +23,8 @@ public class TicketsService : ITicketsService
         string query = """
             SELECT
                 ticket_id         AS Id,
-                holder_first_name AS HolderFirstName,
-                holder_last_name  AS HolderLastName,
-                holder_mail       AS HolderEmail,
+                holder_name       AS HolderName,
+                holder_email      AS HolderEmail,
                 created_at        AS CreatedAt,
                 expires_at        AS ExpiresAt,
                 has_booklet       AS HasBooklet,
@@ -42,9 +41,8 @@ public class TicketsService : ITicketsService
         string query = """
             SELECT
                 ticket_id         AS Id,
-                holder_first_name AS HolderFirstName,
-                holder_last_name  AS HolderLastName,
-                holder_mail       AS HolderEmail,
+                holder_name       AS HolderName,
+                holder_email      AS HolderEmail,
                 created_at        AS CreatedAt,
                 expires_at        AS ExpiresAt,
                 has_booklet       AS HasBooklet,
@@ -69,17 +67,15 @@ public class TicketsService : ITicketsService
         using var connection = new NpgsqlConnection(_connectionString);
         string query = """
             INSERT INTO tickets (
-                holder_first_name,
-                holder_last_name,
-                holder_mail,
+                holder_name,
+                holder_email,
                 created_at,
                 expires_at,
                 has_booklet,
                 fk_price_id,
                 fk_order_id
             ) VALUES (
-                @HolderFirstName,
-                @HolderLastName,
+                @HolderName,
                 @HolderEmail,
                 @CreatedAt,
                 @ExpiresAt,
@@ -96,15 +92,14 @@ public class TicketsService : ITicketsService
         using var connection = new NpgsqlConnection(_connectionString);
         string query = """
             UPDATE tickets SET
-                holder_first_name = @HolderFirstName,
-                holder_last_name = @HolderLastName,
-                holder_mail = @HolderEmail,
-                created_at = @CreatedAt,
-                expires_at = @ExpiresAt,
-                has_booklet = @HasBooklet,
-                fk_price_id = @PriceId,
-                fk_order_id = @OrderId
-            WHERE ticket_id = @Id;
+                holder_name  = @HolderName,
+                holder_email = @HolderEmail,
+                created_at   = @CreatedAt,
+                expires_at   = @ExpiresAt,
+                has_booklet  = @HasBooklet,
+                fk_price_id  = @PriceId,
+                fk_order_id  = @OrderId
+            WHERE ticket_id  = @Id;
             """;
         int result = await connection.ExecuteAsync(query, ticket);
         return result > 0;
