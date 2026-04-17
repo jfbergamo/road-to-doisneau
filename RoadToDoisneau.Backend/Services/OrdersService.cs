@@ -68,7 +68,9 @@ public class OrdersService : IOrdersService
             {
                 if (await _ticketsService.GetByIdAsync(ticket.Id) is null)
                 {
-                    ticket.OrderId = order.Id;
+                    ticket.CreatedAt = order.CreatedAt;
+                    ticket.ExpiresAt = order.CreatedAt.AddMonths(6);
+                    ticket.OrderId   = order.Id;
                     await _ticketsService.InsertAsync(ticket);
                 }
             }

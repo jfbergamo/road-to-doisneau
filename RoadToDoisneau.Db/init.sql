@@ -19,7 +19,7 @@ CREATE TABLE tickets (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     expires_at TIMESTAMP DEFAULT (CURRENT_TIMESTAMP + INTERVAL '6 months'),
     has_booklet BOOL NOT NULL DEFAULT False,
-    price DECIMAL NOT NULL,
+    price DECIMAL NOT NULL DEFAULT 12,
     discount_code CHAR(4),
     fk_order_id INT NOT NULL REFERENCES orders(order_id)
 );

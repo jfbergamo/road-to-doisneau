@@ -24,7 +24,8 @@ public class TicketsService : ITicketsService
                 created_at        AS CreatedAt,
                 expires_at        AS ExpiresAt,
                 has_booklet       AS HasBooklet,
-                fk_price_id       AS PriceId,
+                price             AS Price,
+                discount_code     AS DiscountCode,
                 fk_order_id       AS OrderId
             FROM tickets
             """;
@@ -42,10 +43,10 @@ public class TicketsService : ITicketsService
                 created_at        AS CreatedAt,
                 expires_at        AS ExpiresAt,
                 has_booklet       AS HasBooklet,
-                fk_price_id       AS PriceId,
+                price             AS Price,
+                discount_code     AS DiscountCode,
                 fk_order_id       AS OrderId
-            FROM
-                tickets
+            FROM tickets
             WHERE
                 fk_order_id = @orderId
             """;
@@ -63,7 +64,8 @@ public class TicketsService : ITicketsService
                 created_at        AS CreatedAt,
                 expires_at        AS ExpiresAt,
                 has_booklet       AS HasBooklet,
-                fk_price_id       AS PriceId,
+                price             AS Price,
+                discount_code     AS DiscountCode,
                 fk_order_id       AS OrderId
             FROM tickets
             WHERE ticket_id = @id
@@ -83,7 +85,8 @@ public class TicketsService : ITicketsService
                 created_at,
                 expires_at,
                 has_booklet,
-                fk_price_id,
+                price,
+                discount_code,
                 fk_order_id
             ) VALUES (
                 @HolderName,
@@ -91,10 +94,12 @@ public class TicketsService : ITicketsService
                 @CreatedAt,
                 @ExpiresAt,
                 @HasBooklet,
-                @PriceId,
+                @Price,
+                @DiscountCode,
                 @OrderId
             ) RETURNING ticket_id
             """;
+        ticket.ApplyDiscount();
         ticket.Id = await connection.ExecuteScalarAsync<Guid>(query, ticket);
     }
 
@@ -103,14 +108,15 @@ public class TicketsService : ITicketsService
         using var connection = new NpgsqlConnection(_connectionString);
         string query = """
             UPDATE tickets SET
-                holder_name  = @HolderName,
-                holder_email = @HolderEmail,
-                created_at   = @CreatedAt,
-                expires_at   = @ExpiresAt,
-                has_booklet  = @HasBooklet,
-                fk_price_id  = @PriceId,
-                fk_order_id  = @OrderId
-            WHERE ticket_id  = @Id;
+                holder_name   = @HolderName,
+                holder_email  = @HolderEmail,
+                created_at    = @CreatedAt,
+                expires_at    = @ExpiresAt,
+                has_booklet   = @HasBooklet,
+                price         = @Price,
+                discount_code = @DiscountCode,
+                fk_order_id   = @OrderId
+            WHERE ticket_id   = @Id;
             """;
         int result = await connection.ExecuteAsync(query, ticket);
         return result > 0;

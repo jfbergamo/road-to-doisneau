@@ -16,11 +16,11 @@ public static class TicketsEndpoints
              .WithName("GetTickets");
         group.MapGet("{id:int}", GetTicketAsync)
              .WithName("GetTicket");
+        group.MapPost("", InsertTicketAsync)
+             .WithName("InsertTicket");
 
         if (isDevel)
         {
-            group.MapPost("", InsertTicketAsync)
-                 .WithName("InsertTicket");
             group.MapPut("{id:int}", UpdateTicketAsync)
                  .WithName("UpdateTicket");
             group.MapDelete("{id:int}", DeleteTicketAsync)
