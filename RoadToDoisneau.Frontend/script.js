@@ -1,5 +1,4 @@
 // Nav
-
 document.addEventListener('DOMContentLoaded', () => {
 
     const navbar = document.querySelector('.navbar');
@@ -12,8 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-// Ham
-
+    // Ham
     const hamburger = document.querySelector(".nav-hamburger");
     const navContent = document.querySelector(".nav-content");
 
@@ -38,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Gallery
-
 const gallery = document.querySelector('.hero-gallery');
 
 if (gallery) {
@@ -58,7 +55,6 @@ if (gallery) {
 }
 
 // Booklet
-
 const booklet = document.querySelector('.booklet img');
 
 if (booklet) {
@@ -78,7 +74,6 @@ if (booklet) {
 }
 
 // Interviews
-
 const interviewGrid = document.querySelector('.interviews-grid');
 
 if (interviewGrid) {
@@ -87,14 +82,12 @@ if (interviewGrid) {
     let isPaused = false;
     let scrollSpeed = 1;
 
-   
     interviewGrid.addEventListener('mouseenter', () => isPaused = true);
     interviewGrid.addEventListener('mouseleave', () => isPaused = false);
 
-
     interviewGrid.addEventListener('touchstart', () => isPaused = true);
     interviewGrid.addEventListener('touchend', () => {
-        setTimeout(() => isPaused = false, 1000); 
+        setTimeout(() => isPaused = false, 1000);
     });
 
     function autoScroll() {
@@ -102,7 +95,7 @@ if (interviewGrid) {
             interviewGrid.scrollLeft += scrollSpeed;
 
             if (interviewGrid.scrollLeft >= interviewGrid.scrollWidth / 2) {
-                interviewGrid.scrollLeft = 0; 
+                interviewGrid.scrollLeft = 0;
             }
         }
         requestAnimationFrame(autoScroll);
