@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Road to Doisneau - Photographic Exhibition</title>
     <link rel="stylesheet" href="style.css">
-    <link id="favicon" rel="shortcut icon" href="content/logo_favicon_dark.svg" type="image/svg">
+    <link id="favicon" rel="icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg+xml">
     <script>
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.getElementById('favicon').setAttribute('href', 'content/logo_favicon_light.svg');
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');
         }
     </script>
 </head>
@@ -44,6 +44,7 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
+        </div>
 
     </header>
 
@@ -105,53 +106,108 @@
 
         <!-- INTERVISTE -->
         <section class="interviews">
-            <h2>Extracts from visitors</h2>
-            <div id="interviews-container" class="interviews-content-wrapper" style="display: none;">
-                <div class="interview-text">
+            <h2>What do our visitors say?</h2>
+
+            <div class="interviews-grid">
+
+                <!-- <div class="interview-card">
                     <p>
-                        <strong class="interview-iviewer">Intervistatore</strong>: <i>"È rimasta soddisfatta della
-                            mostra?"</i><br>
-                        <strong class="interview-iviewed">Visitatrice</strong>: <i>"In realtà più che soddisfatta,
-                            perché rispetto a
-                            quella di Verona è più ricca."</i>
+                        <strong class="interview-box">Intervistatore:</strong> <i>""</i><br><br>
+                        <strong class="interview-box">Visitatrice:</strong> <i>""</i>
+                    </p>
+                </div> -->
+
+                <div class="interview-card">
+                    <p>
+                        <strong class="interview-box">Intervistatore:</strong> <i>"Ho notato che alcuni titoli sono in
+                            contrasto con il contenuto della fotografia. Si è fatta influenzare da esse o ha preferito
+                            guardare soltanto la fotografia?"</i><br><br>
+                        <strong class="interview-box">Visitatrice:</strong> <i>"I titoli li guardo raramente, perché mi
+                            concentro più sui dettagli delle foto o dei quadri, per cui i titoli li guardo
+                            raramente."</i>
                     </p>
                 </div>
-                <div class="interview-text">
+
+                <div class="interview-card">
                     <p>
-                        <strong class="interview-iviewer">Intervistatore:</strong><i>"C'è una fotografia che l'ha
-                            colpita?"</i></br>
-                        <strong class="interview-iviewed">Visitatore:</strong><i>"Assolutamente sì."</i></br>
-                        <strong class="interview-iviewer">Intervistatore:</strong><i>"Posso sapere quale?"</i></br>
-                        <strong class="interview-iviewed">Visitatore:</strong><i>"Il titolo è 'Anita', perché è il
-                            nome di mia madre."</i></br>
-                        <strong class="interview-iviewer">Intervistatore:</strong><i>"Molto bella come foto. Le è
-                            venuta voglia di prendere in mano una macchina fotografica, mettersi a
-                            fare fotografie a paesaggi o altri soggetti?"</i></br>
-                        <strong class="interview-iviewed">Visitatore:</strong><i>"Assolutamente sì, e ne parlavo
-                            prima con il docente che mi accompagna."</i></br>
+                        <strong class="interview-box">Intervistatore:</strong> <i>"Come mai ha scelto di venire a questa
+                            mostra?"</i><br><br>
+                        <strong class="interview-box">Visitatore:</strong> <i>"Sono qui con i miei studenti per un
+                            progetto interno al nostro percorso di studio."</i><br><br>
+                        <strong class="interview-box">Intervistatore:</strong> <i> "C'è una fotografia che l'ha
+                            colpita?"</i><br><br>
+                        <strong class="interview-box">Visitatore:</strong> <i>"Il titolo è 'Anita', perché è il nome di
+                            mia madre."</i>
                     </p>
                 </div>
-                <div class="interview-text">
+
+                <div class="interview-card">
                     <p>
-                        <strong class="interview-iviewer">Intervistatore:</strong><i>"C'è una fotografia che l'ha
-                            colpita?"</i></br>
-                        <strong class="interview-iviewed">Visitatrice:</strong><i>"Beh, sicuramente sono legata a
-                            queste, quelle che riproducono i ragazzini nelle scuole, sono quelle che più... e poi tutte
-                            quelle dove si riconosce bene Parigi, che è la mia città del cuore."</i></br>
-                        <strong class="interview-iviewer">Intervistatore:</strong><i>"Le è venuta voglia di prendere
-                            in mano una macchina fotografica, mettersi a fare fotografie a paesaggi o altri
-                            soggetti?"</i></br>
-                        <strong class="interview-iviewed">Visitatrice:</strong><i>"Allora, io sono di un'altra
-                            generazione, quindi la macchina fotografica l'ho usata, sì, per tanto tempo. Adesso
-                            anche io sono un po' più pigra e quindi uso più il telefonino, però ho fatto molte
-                            foto sì. Mia madre addirittura faceva foto e le sviluppava lei stessa, quindi..."</i></br>
+                        <strong class="interview-box">Intervistatore:</strong> <i>"Come mai ha scelto di venire a questa
+                            mostra?"</i><br><br>
+                        <strong class="interview-box">Visitatrice:</strong> <i>"Io, in realtà, questa mostra l'avevo già
+                            visitata a Verona, però ho deciso di ritornare perché vedere Doisneau è sempre una buona
+                            idea."</i>
                     </p>
                 </div>
-            </div>
-            <div class="button-container">
-                <button class="read-more-btn" onclick="toggleAllInterviews(this)">Read More</button>
+
+                <div class="interview-card">
+                    <p>
+                        <strong class="interview-box">Intervistatore:</strong> <i>"Come mai ha scelto di venire a questa
+                            mostra?"</i><br><br>
+                        <strong class="interview-box">Visitatrice:</strong> <i>Allora, Doisneau è sempre stato uno dei
+                            miei fotografi preferiti, ma in particolare negli ultimi anni è diventato più importante
+                            ancora perché, avendo fatto molte foto di scolari e avendo io aperto un B&B all'interno di
+                            una vecchia scuola, ho esposto alcune delle sue fotografie e quindi mi sento molto legata a
+                            questo artista."</i>
+                    </p>
+                </div>
+
+                <div class="interview-card">
+                    <p>
+                        <strong class="interview-box">Intervistatore:</strong> <i>"C'è una fotografia che l’ha colpita
+                            maggiormente?"</i><br><br>
+                        <strong class="interview-box">Visitatore:</strong> <i>"Guarda, una che mi ha colpito
+                            particolarmente credo sia quella 'Cuccioli al guinzaglio' che non avevo mai visto."</i>
+                    </p>
+                </div>
+
+                <div class="interview-card">
+                    <p>
+                        <strong class="interview-box">Intervistatore:</strong> <i>"Le è venuta voglia di prendere in
+                            mano una macchina fotografica, mettersi a fare fotografie a paesaggi o altri
+                            soggetti?"</i><br><br>
+                        <strong class="interview-box">Visitatrice:</strong> <i>"Io sono di un'altra generazione, quindi
+                            la macchina fotografica l'ho usata, sì, per tanto tempo. Adesso anche io sono un po' più
+                            pigra e quindi uso più il telefonino, però ho fatto molte foto sì. Mia madre addirittura
+                            faceva foto e le sviluppava lei stessa, quindi..."</i>
+                    </p>
+                </div>
+
+                <div class="interview-card">
+                    <p>
+                        <strong class="interview-box">Intervistatore:</strong> <i>"Le è venuta voglia di prendere in
+                            mano una macchina fotografica, mettersi a fare fotografie a paesaggi o altri
+                            soggetti?"</i><br><br>
+                        <strong class="interview-box">Visitatrice:</strong> <i>"Assolutamente sì!"</i>
+                    </p>
+                </div>
+
+                <div class="interview-card">
+                    <p>
+                        <strong class="interview-box">Intervistatore:</strong> <i>"Alcuni titoli sono in contrasto con
+                            il contenuto della fotografia. Si è fatto influenzare da esse o ha preferito guardare
+                            soltanto la fotografia?"</i><br><br>
+                        <strong class="interview-box">Visitatrice:</strong> <i>"No, di solito guardo prima la foto,
+                            l'opera, il quadro, insomma, quello ho davanti. Però ho notato delle didascalie che
+                            sottolineano e fanno anche sorridere rispetto al soggetto della foto. (Foto citata: Hommages
+                            Respectueux / Omaggi rispettosi 1954)</i>
+                    </p>
+                </div>
             </div>
         </section>
+
+
         <section class="booklet">
             <h2>Booklet</h2>
             <p class="booklet-subtitle">(Don't forget to take your stickers!)</p>
@@ -166,7 +222,8 @@
         <div class="footer-columns">
 
             <div class="footer-logos">
-                <a href="index.html"><img src="content/logo/logo_alt.svg" alt="Road to Doisneau" class="logo-doisneau"></a>
+                <a href="index.html"><img src="content/logo/logo_alt.svg" alt="Road to Doisneau"
+                        class="logo-doisneau"></a>
                 <a href="https://pordenonecapitale2027.it/"><img src="content/logo/partners/PDNC_logo.svg"
                         alt="Pordenone Capitale" class="logo-pordenone"></a>
             </div>
@@ -184,7 +241,8 @@
                     <div class="social-fb"><img src="content/icons/socials/fb_icon.svg" alt="facebook-icon"></div>
                 </a>
                 <a href="https://instagram.com/">
-                    <div class="social-insta"><img src="content/icons/socials/insta_icon.svg" alt="instagram-icon"></div>
+                    <div class="social-insta"><img src="content/icons/socials/insta_icon.svg" alt="instagram-icon">
+                    </div>
                 </a>
                 <a href="https://x.com/">
                     <div class="social-x"><img src="content/icons/socials/x_icon.svg" alt="x-icon"></div>
@@ -195,10 +253,19 @@
             </div>
 
             <div class="footer-sponsors">
-                <a href="https://itsaltoadriatico.it/"><div class="sponsor-1"><img src="content/logo/partners/ITS_logo.svg" alt="ITS logo"></div></a>
-                <a href="https://galleriabertoia.comune.pordenone.it/"><div class="sponsor-2"><img src="content/logo/partners/GHB_logo.svg" alt="Galleria Bertoia logo"></div></a>
-                <a href="https://absolutecode.it/"><div class="sponsor-3"><img src="content/logo/partners/ANC_logo.svg" alt="Absolute&Code logo"></div></a>
-                <a href="https://comune.pordenone.it/"><div class="sponsor-4"><img src="content/logo/partners/PDN_logo.svg" alt="PD Commune logo"></div></a>
+                <a href="https://itsaltoadriatico.it/">
+                    <div class="sponsor-1"><img src="content/logo/partners/ITS_logo.svg" alt="ITS logo"></div>
+                </a>
+                <a href="https://galleriabertoia.comune.pordenone.it/">
+                    <div class="sponsor-2"><img src="content/logo/partners/GHB_logo.svg" alt="Galleria Bertoia logo">
+                    </div>
+                </a>
+                <a href="https://absolutecode.it/">
+                    <div class="sponsor-3"><img src="content/logo/partners/ANC_logo.svg" alt="Absolute&Code logo"></div>
+                </a>
+                <a href="https://comune.pordenone.it/">
+                    <div class="sponsor-4"><img src="content/logo/partners/PDN_logo.svg" alt="PD Commune logo"></div>
+                </a>
             </div>
         </div>
 
