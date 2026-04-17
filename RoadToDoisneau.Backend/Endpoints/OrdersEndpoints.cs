@@ -14,11 +14,11 @@ public static class OrdersEndpoints
              .WithName("GetOrders");
         group.MapGet("{id:int}", GetOrderAsync)
              .WithName("GetOrder");
+        group.MapPost("", InsertOrderAsync)
+             .WithName("InsertOrder");
 
         if (isDevel)
         {
-            group.MapPost("", InsertOrderAsync)
-                 .WithName("InsertOrder");
             group.MapPut("{id:int}", UpdateOrderAsync)
                  .WithName("UpdateOrder");
             group.MapDelete("{id:int}", DeleteOrderAsync)

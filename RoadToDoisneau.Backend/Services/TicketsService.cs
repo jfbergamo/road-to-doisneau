@@ -8,13 +8,11 @@ public class TicketsService : ITicketsService
 {
     private readonly string _connectionString;
     private readonly PricesService _ps;
-    private readonly OrdersService _os;
 
     public TicketsService(IConfiguration config)
     {
         _connectionString = config.GetConnectionString("db")!;
         _ps = new PricesService(config);
-        _os = new OrdersService(config);
     }
 
     public async Task<IEnumerable<Ticket>> GetListAsync()
@@ -35,7 +33,28 @@ public class TicketsService : ITicketsService
         return await connection.QueryAsync<Ticket>(query);
     }
 
-    public async Task<Ticket?> GetByIdAsync(int id)
+    public async Task<IEnumerable<Ticket>> GetByOrderAsync(int orderId)
+    {
+        using var connection = new NpgsqlConnection(_connectionString);
+        string query = """
+            SELECT
+                ticket_id         AS Id,
+                holder_name       AS HolderName,
+                holder_email      AS HolderEmail,
+                created_at        AS CreatedAt,
+                expires_at        AS ExpiresAt,
+                has_booklet       AS HasBooklet,
+                fk_price_id       AS PriceId,
+                fk_order_id       AS OrderId
+            FROM
+                tickets
+            WHERE
+                fk_order_id = @orderId
+            """;
+        return await connection.QueryAsync<Ticket>(query, new { orderId });
+    }
+
+    public async Task<Ticket?> GetByIdAsync(Guid id)
     {
         using var connection = new NpgsqlConnection(_connectionString);
         string query = """
@@ -56,7 +75,6 @@ public class TicketsService : ITicketsService
         if (ticket is not null)
         {
             ticket.Price = await _ps.GetPriceByIdAsync(ticket.PriceId);
-            ticket.Order = await _os.GetByIdAsync(ticket.OrderId);
         }
 
         return ticket;
@@ -84,7 +102,7 @@ public class TicketsService : ITicketsService
                 @OrderId
             ) RETURNING ticket_id
             """;
-        ticket.Id = await connection.ExecuteScalarAsync<int>(query, ticket);
+        ticket.Id = await connection.ExecuteScalarAsync<Guid>(query, ticket);
     }
 
     public async Task<bool> UpdateAsync(Ticket ticket)

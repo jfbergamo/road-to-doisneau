@@ -33,7 +33,7 @@ public static class TicketsEndpoints
         return TypedResults.Ok(await srvc.GetListAsync());
     }
 
-    private static async Task<Results<Ok<Ticket>,NotFound>> GetTicketAsync(int id, ITicketsService srvc)
+    private static async Task<Results<Ok<Ticket>,NotFound>> GetTicketAsync(Guid id, ITicketsService srvc)
     {
         var ticket = await srvc.GetByIdAsync(id);
         if (ticket is null) return TypedResults.NotFound();
@@ -46,7 +46,7 @@ public static class TicketsEndpoints
         return TypedResults.Created($"/tickets/{ticket.Id}", ticket);
     }
 
-    private static async Task<Results<NoContent,NotFound>> UpdateTicketAsync(int id, Ticket ticket, ITicketsService srvc)
+    private static async Task<Results<NoContent,NotFound>> UpdateTicketAsync(Guid id, Ticket ticket, ITicketsService srvc)
     {
         ticket.Id = id;
         if (await srvc.UpdateAsync(ticket)) return TypedResults.NoContent();
