@@ -1,3 +1,4 @@
+using RoadToDoisneau.Backend.Endpoints;
 using RoadToDoisneau.Backend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,12 +13,14 @@ builder.Services.AddScoped<ITicketsService, TicketsService>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+var isDevel = app.Environment.IsDevelopment();
+
+if (isDevel)
 {
     app.MapOpenApi();
     app.UseSwaggerUI(opt =>
     {
-        opt.SwaggerEndpoint("/openapi/v1/openapi.json", "RoadToDoisneau API v1");
+        opt.SwaggerEndpoint("/openapi/v1.json", "RoadToDoisneau API v1");
     });
 }
 
@@ -25,6 +28,8 @@ app.UseHttpsRedirection();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
+
+app.MapModelsEndpoints(isDevel);
 
 app.MapGet("/api/status", () => new { Status = "Running" });
 
