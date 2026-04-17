@@ -91,7 +91,7 @@ public class TicketsService : ITicketsService
         ticket.Id = await connection.ExecuteScalarAsync<int>(query, ticket);
     }
 
-    public async Task<bool> UpdateAsync(Photo photo)
+    public async Task<bool> UpdateAsync(Ticket ticket)
     {
         using var connection = new NpgsqlConnection(_connectionString);
         string query = """
@@ -106,7 +106,7 @@ public class TicketsService : ITicketsService
                 fk_order_id = @OrderId
             WHERE ticket_id = @Id;
             """;
-        int result = await connection.ExecuteAsync(query, photo);
+        int result = await connection.ExecuteAsync(query, ticket);
         return result > 0;
     }
 

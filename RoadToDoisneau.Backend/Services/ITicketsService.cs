@@ -8,6 +8,6 @@ namespace RoadToDoisneau.Backend.Services
         Task<Ticket?> GetByIdAsync(int id);
         Task<IEnumerable<Ticket>> GetListAsync();
         Task InsertAsync(Ticket ticket);
-        Task<bool> UpdateAsync(Photo photo);
+        Task<bool> UpdateAsync(Ticket ticket);
     }
 }
