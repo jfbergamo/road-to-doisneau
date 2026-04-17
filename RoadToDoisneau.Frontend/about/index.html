@@ -4,29 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Road to Doisneau - Photographic Exhibition</title>
+    <title>Road to Doisneau</title>
     <link rel="stylesheet" href="about.css">
     <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
     <script>
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');}
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');
+        }
     </script>
 </head>
 
 <body>
     <header class="navbar">
-        <div class="logo">
-            <img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
+        <div class="nav-logo">
+            <a href="index.html"><img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon"></a>
         </div>
 
-        <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-
-        <div class="nav-content" id="primary-navigation">
+        <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
@@ -36,76 +30,93 @@
                     <li><a href="/find_us">Find Us</a></li>
                 </ul>
             </nav>
+        </div>
+
+        <div class="nav-right">
             <div class="nav-actions">
                 <a href="/checkout" class="btn btn-pill">Buy</a>
-                <button class="btn btn-outline btn-pill" style="color: #052444">IT EN</button>
+                <button class="btn btn-outline">EN</button>
             </div>
+
+            <button class="nav-hamburger" aria-controls="primary-navigation" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
 
-<main>
-    <section class="hero-doisneau">
-    <div class="hero-flex">
-        <div class="hero-text-container">
-            <h1>Robert Doisneau</h1>
-            <p class="subtitle">Il pescatore d'immagini (1912 – 1994)</p>
-        </div>
-        <div class="hero-image">
-            <img src="/content/gallery/Gallery_7_Autoportrait.svg" alt="Robert Doisneau Portrait">
-        </div>
-    </div>
-</section>
+    <main>
+        <section class="hero-doisneau">
+            <div class="hero-flex">
+                <div class="hero-text-container">
+                    <h1>Robert Doisneau</h1><br>
+                    <p class="subtitle">Il pescatore d'immagini (1912 – 1994)</p>
+                </div>
+                <div class="hero-image">
+                    <img src="/content/gallery/Gallery_7_Autoportrait.svg" alt="Robert Doisneau Portrait">
+                </div>
+            </div>
+        </section>
 
-    <section id="About" class="content-section">
-        <div class="container">
-            <div class="grid-layout">
-                <div class="bio-text">
-                    <h2>L'uomo dietro l'obiettivo</h2>
-                    <p>
-                        Robert Doisneau non è stato solo un fotografo, ma un poeta del quotidiano. 
-                        Nato a Gentilly, ha dedicato la sua vita a catturare la bellezza nelle piccole cose 
-                        della Parigi del dopoguerra, definendosi un <strong>"pescatore di immagini"</strong> 
-                        piuttosto che un cacciatore.
-                    </p>
-                    <p>
-                        La sua fotografia è intrisa di ironia, tenerezza e un profondo amore per l'essere umano, 
-                        rendendolo uno dei massimi esponenti della <em>fotografia umanista</em> francese.
-                    </p>
-                                            <div class="featured-work">
-                        <img src="/content/gallery/Gallery_6_Le_Baiser.svg" alt="Le Baiser de l'hôtel de ville" class="highlight-img">
+        <section id="About" class="content-section">
+            <div class="container">
+                <div class="grid-layout">
+                    <div class="bio-text">
+                        <h2>L'uomo dietro l'obiettivo</h2>
+                        <p>
+                            Robert Doisneau non è stato solo un fotografo, ma un poeta del quotidiano.
+                            Nato a Gentilly, ha dedicato la sua vita a catturare la bellezza nelle piccole cose
+                            della Parigi del dopoguerra, definendosi un <strong>"pescatore di immagini"</strong>
+                            piuttosto che un cacciatore.
+                        </p>
+                        <p>
+                            La sua fotografia è intrisa di ironia, tenerezza e un profondo amore per l'essere umano,
+                            rendendolo uno dei massimi esponenti della <em>fotografia umanista</em> francese.
+                        </p>
+                        <div class="featured-work">
+                            <img src="/content/gallery/Gallery_6_Le_Baiser.svg" alt="Le Baiser de l'hôtel de ville"
+                                class="highlight-img">
                         </div>
-                </div>
-                
-                <div class="bio-highlights">
-                    <h3>Punti Salienti</h3>
-                    <ul class="highlights-list">
-                        <li><strong>1934:</strong> Inizia a lavorare per la Renault come fotografo industriale.</li>
-                        <li><strong>1944:</strong> Documenta la Liberazione di Parigi dalle barricate.</li>
-                        <li><strong>1950:</strong> Scatta la sua opera più celebre, <em>Le Baiser de l'hôtel de ville</em>.</li>
-                        <li><strong>1984:</strong> Viene nominato Cavaliere della Legion d'Onore.</li>
-                    </ul>
+                    </div>
+
+                    <div class="bio-highlights">
+                        <h3>Punti Salienti</h3>
+                        <ul class="highlights-list">
+                            <li><strong>1934:</strong> Inizia a lavorare per la Renault come fotografo industriale.</li>
+                            <li><strong>1944:</strong> Documenta la Liberazione di Parigi dalle barricate.</li>
+                            <li><strong>1950:</strong> Scatta la sua opera più celebre, <em>Le Baiser de l'hôtel de
+                                    ville</em>.</li>
+                            <li><strong>1984:</strong> Viene nominato Cavaliere della Legion d'Onore.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="quote-section">
-        <div class="container">
-            <blockquote>
-                "Quello che cercavo di mostrare era un mondo dove mi sarei sentito bene, dove le persone sarebbero state gentili, dove avrei trovato la tenerezza che speravo di ricevere. Le mie foto erano la prova che questo mondo può esistere."
-            </blockquote>
-        </div>
-    </section>
-
-    <section class="cta-gallery">
-        <div class="container">
-            <div class="cta-box">
-                <h2>Esplora le sue opere</h2>
-                <p>Scopri la selezione curata per la mostra "Road to Doisneau".</p>
-                <a href="#" class="btn btn-pill">Vai alla Gallery</a>
+        <section class="quote-section">
+            <div class="container">
+                <blockquote>
+                    "Quello che cercavo di mostrare era un mondo dove mi sarei sentito bene, dove le persone sarebbero
+                    state gentili, dove avrei trovato la tenerezza che speravo di ricevere. Le mie foto erano la prova
+                    che questo mondo può esistere."
+                </blockquote>
             </div>
-        </div>
-    </section>
-</main> 
+        </section>
+
+        <section class="cta-gallery">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Esplora le sue opere</h2>
+                    <p>Scopri la selezione curata per la mostra "Road to Doisneau".</p>
+                    <a href="#" class="btn btn-pill">Vai alla Gallery</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
