@@ -7,27 +7,21 @@ CREATE TABLE photos (
     shooting_year INTEGER NOT NULL
 );
 
-CREATE TABLE prices (
-	price_id SERIAL PRIMARY KEY,
-	category VARCHAR(50) NOT NULL,
-	price DECIMAL(10, 2) NOT NULL
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE tickets (
     ticket_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    holder_first_name VARCHAR(75) NOT NULL,
-    holder_last_name VARCHAR(75) NOT NULL,
-    holder_mail VARCHAR(100) NOT NULL,
+    holder_name VARCHAR(75) NOT NULL,
+    holder_email VARCHAR(100) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     expires_at TIMESTAMP DEFAULT (CURRENT_TIMESTAMP + INTERVAL '6 months'),
     has_booklet BOOL NOT NULL DEFAULT False,
-    fk_price_id INT NOT NULL REFERENCES prices(price_id),
+    price DECIMAL NOT NULL DEFAULT 12,
+    discount_code CHAR(4),
     fk_order_id INT NOT NULL REFERENCES orders(order_id)
-);
-
-CREATE TABLE orders (
-    order_id SERIAL PRIMARY KEY,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE articles (
