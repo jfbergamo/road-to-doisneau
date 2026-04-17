@@ -77,16 +77,36 @@ if (booklet) {
     bookletObserver.observe(booklet);
 }
 
-// Interview
+// Interviews
 
-function toggleAllInterviews(btn) {
-    const container = document.getElementById('interviews-container');
-    
-    if (container.style.display === "none") {
-        container.style.display = "block";
-        btn.textContent = "Read Less";
-    } else {
-        container.style.display = "none";
-        btn.textContent = "Read More";
+const interviewGrid = document.querySelector('.interviews-grid');
+
+if (interviewGrid) {
+    interviewGrid.innerHTML += interviewGrid.innerHTML;
+
+    let isPaused = false;
+    let scrollSpeed = 1;
+
+   
+    interviewGrid.addEventListener('mouseenter', () => isPaused = true);
+    interviewGrid.addEventListener('mouseleave', () => isPaused = false);
+
+
+    interviewGrid.addEventListener('touchstart', () => isPaused = true);
+    interviewGrid.addEventListener('touchend', () => {
+        setTimeout(() => isPaused = false, 1000); 
+    });
+
+    function autoScroll() {
+        if (!isPaused) {
+            interviewGrid.scrollLeft += scrollSpeed;
+
+            if (interviewGrid.scrollLeft >= interviewGrid.scrollWidth / 2) {
+                interviewGrid.scrollLeft = 0; 
+            }
+        }
+        requestAnimationFrame(autoScroll);
     }
+
+    autoScroll();
 }

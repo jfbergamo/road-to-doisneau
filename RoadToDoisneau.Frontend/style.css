@@ -6,7 +6,6 @@
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'Libre Caslon Text';
     src: url('/font/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('.ttf');
@@ -28,18 +27,19 @@
     font-style: normal;
 }
 
-
 :root {
     /* Colors */
     --light-color: #FEF5F3;
     --accent-color: #FAC4B8;
     --comp-color: #B7D8FA;
     --dark-color: #052444;
+
     /* Typography */
     --font-metal: 'Metal', sans-serif;
     --font-caslon: 'Libre Caslon Text', Georgia, serif;
     --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
     --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
     /* Borders */
     --border-radius-lg: 24px;
     --border-radius-btn: 100px;
@@ -125,7 +125,6 @@ a {
     box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
     padding: 6px 20px;
     max-width: 850px;
-    margin-top: 8px;
     top: 8px;
 }
 
@@ -139,15 +138,17 @@ a {
 
 .nav-right {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
 }
 
 .nav-content {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 30px;
 }
+
 
 .nav-links {
     display: flex;
@@ -158,9 +159,10 @@ a {
 
 .nav-actions {
     display: flex;
-    gap: 16px;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    gap: 8px;
+    margin: 0;
 }
 
 .nav-hamburger {
@@ -265,7 +267,11 @@ a {
     transform: translateY(0);
 }
 
-.hero-gallery.visible img { opacity: 1; transform: translateY(0); }
+.hero-gallery.visible img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .gallery-item {
     position: relative;
     flex: 1;
@@ -346,77 +352,57 @@ a {
 
 /* Interviews */
 .interviews {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background: var(--comp-color);
     margin: 0 16px 32px 16px;
     border-radius: var(--border-radius-lg);
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-color: #FAC4B8;
+    padding: 60px 40px 60px 40px;
+    text-align: left;
 }
 
 .interviews h2 {
-    font-size: 2.5rem;
-    color: var(--light-color);
-    margin-bottom: 60px;
+    font-size: 3.5rem;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    font-family: var(--font-sans);
+    font-weight: bold;
 }
 
 .interviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    text-align: center;
-    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 30px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 10px; 
+    scrollbar-width: none;
 }
 
-.interview-card h3 {
-    font-family: var(--font-serif);
-    font-size: 1.2rem;
-    margin-bottom: 16px;
+
+.interview-card {
+    flex: 0 0 340px;
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08); 
+    display: flex;
+    flex-direction: column;
 }
 
 .interview-card p {
-    font-size: 0.9rem;
-    color: var(--light-color);
-    text-align: justify;
+    font-size: 0.95rem;
+    color: var(--dark-color);
+    line-height: 1.6;
 }
 
-.interview-iviewer {
-    color: #FAC4B8;
+.interview-box {
+    color: var(--dark-color);
+    font-weight: 700;
 }
 
-.interview-iviewed {
-    color: #B7D8FA;
-}
-
-.interview-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    margin-bottom: 10px;
-}
-
-.interview-content.open {
-    max-height: 1000px;
-    transition: max-height 0.5s ease-in;
-}
-
-.read-more-btn {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-family: inherit;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.read-more-btn:hover {
-    background-color: #555;
+.interview-box {
+    color: var(--accent-color) 
 }
 
 /* Booklet */
@@ -545,28 +531,25 @@ a {
     .navbar {
         flex-direction: row;
         justify-content: space-between;
-        padding: 16px 20px;
-        gap: 0;
+        align-items: center;
+        padding: 12px 20px;
     }
 
     .nav-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         gap: 12px;
     }
 
     .nav-actions {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 16px;
-        margin-top: 32px;
+        flex-direction: row;
     }
 
     .nav-actions .btn {
-        width: 80%;
-        max-width: 250px;
-        display: flex;
-        justify-content: center;
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        white-space: nowrap;
     }
 
     .nav-links {
@@ -577,28 +560,32 @@ a {
     }
 
     .nav-content {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #FAC4B8E6;
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        position: absolute;
+        top: 110%;
+        left: 0;
         width: 100%;
-        height: 100vh;
-        text-align: center;
-        transition: left 0.3s ease-in-out;
+        flex-direction: column;
+        background-color: #FAC4B8F2;
+        backdrop-filter: blur(12px);
+        border-radius: 0 0 24px 24px;
+        box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
+        max-height: 0;
+        padding: 0 20px;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
         z-index: 99;
     }
 
     .nav-content.active {
         max-height: 500px;
-        padding: 24px 20px 32px 20px;
+        padding: 20px 40px 20px 40px;
         opacity: 1;
         border-radius: var(--border-radius-lg);
-        left: 0;
+        background-color: #FAC4B8E6;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
+
     }
 
     .nav-links {
@@ -608,22 +595,23 @@ a {
     }
 
     .nav-actions {
-        flex-direction: column;
-        margin-top: 24px;
-        gap: 16px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
     }
 
     .nav-actions .btn {
         width: 100%;
     }
-    
+
 
     .nav-hamburger {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 5px;
-        z-index: 1001; 
+        z-index: 1001;
     }
 
 
@@ -655,11 +643,22 @@ a {
         font-size: 2rem;
     }
 
-
-    /* Inter */
-    .interviews-grid {
-        grid-template-columns: 1fr;
+    /* Interview */
+    .interviews {
+        padding: 40px 20px 40px 20px;
+        margin-bottom: 32px;
     }
+
+    .interviews h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .interview-card {
+        flex: 0 0 280px;
+        padding: 30px 20px;
+    }
+
 
     /* Footer */
 
@@ -669,7 +668,12 @@ a {
         gap: 40px;
     }
 
+    .footer-socials {
+        flex-direction: row;
+    }
+
     .footer-logos {
+        flex-direction: column;
         align-items: center;
     }
 
