@@ -133,7 +133,7 @@ a {
     gap: 10px;
 }
 
-.navbar {
+#navbar {
     background-color: var(--accent-color);
     max-width: 1000px;
     width: 95%;
