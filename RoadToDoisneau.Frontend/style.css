@@ -149,7 +149,6 @@ a {
     gap: 30px;
 }
 
-
 .nav-links {
     display: flex;
     gap: 32px;
@@ -349,7 +348,6 @@ a {
     mix-blend-mode: multiply;
 }
 
-
 /* Interviews */
 .interviews {
     background: var(--comp-color);
@@ -377,7 +375,6 @@ a {
     padding: 20px 10px; 
     scrollbar-width: none;
 }
-
 
 .interview-card {
     flex: 0 0 340px;
@@ -443,6 +440,7 @@ a {
     transform: translateY(0);
 }
 
+/* Footer */
 .footer {
     background-color: var(--dark-color);
     color: var(--light-color);
@@ -585,7 +583,6 @@ a {
         background-color: #FAC4B8E6;
         backdrop-filter: blur(12px);
         box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
-
     }
 
     .nav-links {
@@ -605,7 +602,6 @@ a {
         width: 100%;
     }
 
-
     .nav-hamburger {
         display: flex;
         flex-direction: column;
@@ -613,7 +609,6 @@ a {
         gap: 5px;
         z-index: 1001;
     }
-
 
     .nav-hamburger.active .bar:nth-child(2) {
         opacity: 0;
@@ -626,7 +621,6 @@ a {
     .nav-hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-
 
     /* Hero */
     .hero-main-title {
@@ -659,7 +653,6 @@ a {
         padding: 30px 20px;
     }
 
-
     /* Footer */
 
     .footer-columns {
@@ -676,5 +669,4 @@ a {
         flex-direction: column;
         align-items: center;
     }
-
 }
