@@ -1,15 +1,7 @@
 /* Fonts */
-
 @font-face {
     font-family: 'Metal';
     src: url('/font/Metal/Metal-Regular.ttf') format('.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Libre Caslon Display';
-    src: url('/font/Libre_Caslon_Display/LibreCaslonDisplay-Regular.ttf') format('.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -35,14 +27,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Inter';
-    src: url('/font/Inter/Inter_18pt-Regular.ttf') format('.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 :root {
     /* Colors */
     --light-color: #FEF5F3;
@@ -51,21 +35,18 @@
     --dark-color: #052444;
 
     /* Typography */
-    --font-logo: 'Metal', sans-serif;
-    --font-display: 'Libre Caslon Display', Georgia, serif;
-    --font-text: 'Libre Caslon Text', Georgia, serif;
-    --font-main: 'Libre Franklin', Helvetica, Arial, sans-serif;
-    --font-alt: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    --font-inter: 'Inter', Helvetica, Arial, sans-serif;
+    --font-metal: 'Metal', sans-serif;
+    --font-caslon: 'Libre Caslon Text', Georgia, serif;
+    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
+    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 
     /* Borders */
     --border-radius-lg: 24px;
-    --border-radius-btn: 8px;
+    --border-radius-btn: 100px;
     --border-radius-pill: 50px;
 }
 
 /* Reset */
-
 * {
     margin: 0;
     padding: 0;
@@ -73,7 +54,6 @@
 }
 
 /* Body */
-
 body {
     font-family: var(--font-sans);
     background-color: var(--dark-color);
@@ -95,7 +75,6 @@ a {
 }
 
 /* Buttons */
-
 .btn {
     background-color: var(--dark-color);
     color: var(--light-color);
@@ -410,7 +389,7 @@ a {
 
 /* Responsiveness per l'articolo */
 @media (max-width: 600px) {
-    
+
     /* Nav */
     .navbar {
         flex-direction: row;
