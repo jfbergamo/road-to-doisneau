@@ -1,68 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="article.css">
-        <link rel="stylesheet" href="articles.css">
+    <link rel="stylesheet" href="article.css">
+    <link rel="stylesheet" href="articles.css">
     <title>La Dernière Valse du 14 juillet 1949</title>
 </head>
-<body>
 
+<body>
+    <!-- Navbar -->
     <header class="navbar">
-        <div class="logo">
-            <img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
+        <div class="nav-logo">
+            <a href="index.html"><img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon"></a>
         </div>
 
-        <div class="nav-content" id="primary-navigation">
+        <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/gallery/">Gallery</a></li>
-                    <li><a href="/articles/">Articles</a></li>
-                    <li><a href="/find_us/">Find Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about/index.html">About</a></li>
+                    <li><a href="gallery-page/index.html">Gallery</a></li>
+                    <li><a href="articles/index.html">Articles</a></li>
+                    <li><a href="find_us/index.html">Find Us</a></li>
                 </ul>
             </nav>
+        </div>
+
+        <div class="nav-right">
             <div class="nav-actions">
-               <a href="/checkout" class="btn btn-pill">Buy</a>
-                <button class="btn btn-outline btn-pill bg-light">IT EN</button>
+                <a href="/checkout" class="btn btn-pill">Buy</a>
+                <button class="btn btn-outline">EN</button>
             </div>
+
+            <button class="nav-hamburger" aria-controls="primary-navigation" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
+
     </header>
-<main class="content-section">
-    <article class="article-detail">
-        <span class="category">Atmosfere Parigine</span>
-        <h1>La Dernière Valse: L'ultimo respiro della festa</h1>
+    <main class="content-section">
+        <article class="article-detail">
+            <span class="category">Atmosfere Parigine</span>
+            <h1>La Dernière Valse: L'ultimo respiro della festa</h1>
 
-        <img src="/content/gallery/Gallery_10_La_Dermiere.svg" 
-             alt="Robert Doisneau - La Dernière Valse du 14 juillet" 
-             class="featured-image">
+            <img src="/content/gallery/Gallery_10_La_Dermiere.svg"
+                alt="Robert Doisneau - La Dernière Valse du 14 juillet" class="featured-image">
 
-        <div class="curiosity-section">
-            <div class="curiosity-item">
-                <h2>1. Il battito del 14 Luglio</h2>
-                <p>Mentre Parigi celebrava fragorosamente la presa della Bastiglia, Doisneau scelse di allontanarsi dai fuochi d'artificio. In un angolo di strada, trovò questa coppia che danzava sola, mentre i musicisti iniziavano a riporre gli strumenti. È il ritratto della "fine della festa", quel momento magico dove la gioia pubblica diventa intimità privata.</p>
+            <div class="curiosity-section">
+                <div class="curiosity-item">
+                    <h2>1. Il battito del 14 Luglio</h2>
+                    <p>Mentre Parigi celebrava fragorosamente la presa della Bastiglia, Doisneau scelse di allontanarsi
+                        dai fuochi d'artificio. In un angolo di strada, trovò questa coppia che danzava sola, mentre i
+                        musicisti iniziavano a riporre gli strumenti. È il ritratto della "fine della festa", quel
+                        momento magico dove la gioia pubblica diventa intimità privata.</p>
+                </div>
+
+                <div class="curiosity-item">
+                    <h2>2. Il pescatore di immagini</h2>
+                    <p>A differenza del "Bacio", qui non c'è regia. Doisneau amava definirsi un <em>pescatore</em>:
+                        restava in attesa che la realtà componesse da sola il suo capolavoro. Notò la grazia composta
+                        dei due ballerini sul selciato umido e scattò, catturando non solo una danza, ma il desiderio di
+                        un'intera generazione di tornare a sorridere dopo gli anni bui della guerra.</p>
+                </div>
+
+                <blockquote>
+                    "C’è una sorta di grazia nel veder finire una festa. È il momento in cui le maschere cadono e resta
+                    solo l'umanità."
+                </blockquote>
+
+                <div class="curiosity-item">
+                    <h2>3. Un'eleganza senza tempo</h2>
+                    <p>Ciò che rende questo scatto eterno è l'equilibrio. L'abito semplice della donna, i lampioni che
+                        riflettono la luce sul cemento e l'abbraccio dignitoso. Non è una danza tra nobili, ma il valzer
+                        della gente comune che, per una notte, trasforma una periferia parigina nel palcoscenico più
+                        prestigioso del mondo.</p>
+                </div>
             </div>
-
-            <div class="curiosity-item">
-                <h2>2. Il pescatore di immagini</h2>
-                <p>A differenza del "Bacio", qui non c'è regia. Doisneau amava definirsi un <em>pescatore</em>: restava in attesa che la realtà componesse da sola il suo capolavoro. Notò la grazia composta dei due ballerini sul selciato umido e scattò, catturando non solo una danza, ma il desiderio di un'intera generazione di tornare a sorridere dopo gli anni bui della guerra.</p>
-            </div>
-
-            <blockquote>
-                "C’è una sorta di grazia nel veder finire una festa. È il momento in cui le maschere cadono e resta solo l'umanità."
-            </blockquote>
-
-            <div class="curiosity-item">
-                <h2>3. Un'eleganza senza tempo</h2>
-                <p>Ciò che rende questo scatto eterno è l'equilibrio. L'abito semplice della donna, i lampioni che riflettono la luce sul cemento e l'abbraccio dignitoso. Non è una danza tra nobili, ma il valzer della gente comune che, per una notte, trasforma una periferia parigina nel palcoscenico più prestigioso del mondo.</p>
-            </div>
-        </div>
-                    <footer class="article-footer">
+            <footer class="article-footer">
                 <a href="/articles/" class="btn btn-outline">← Torna agli articoli</a>
             </footer>
-    </article>
-</main>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
