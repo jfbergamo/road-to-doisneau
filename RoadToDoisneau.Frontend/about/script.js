@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Quote
-const quote = document.querySelector('.quote-section blockquote');
+// Animation
+const scrollElements = document.querySelectorAll('.quote-section blockquote, .hero-flex');
 
-if (quote) {
-    const quoteObserver = new IntersectionObserver((entries) => {
+if (scrollElements.length > 0) {
+    const scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible'); 
@@ -48,7 +48,10 @@ if (quote) {
             }
         });
     }, { 
-        threshold: 0.3 
+        threshold: 0.3
     });
-    quoteObserver.observe(quote);
+    
+    scrollElements.forEach(element => {
+        scrollObserver.observe(element);
+    });
 }
