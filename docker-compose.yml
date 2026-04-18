@@ -17,7 +17,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      ConnectionStrings__db: ${CONNECTION_STRING}
+      ConnectionStrings__db: Server=rtd_db;Port=5432;Database=road_to_doisneau;User Id=${DB_USER};Password=${DB_PASSWORD};
     depends_on:
       - postgres
 
