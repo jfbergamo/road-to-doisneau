@@ -8,6 +8,8 @@ public static class OrdersEndpoints
 {
     private static readonly int MAX_TICKETS_PER_ORDER = 15;
 
+    // UTILE: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status
+
     public static void MapOrdersEndpoints(this IEndpointRouteBuilder route, bool isDevel)
     {
         var group = route.MapGroup("/api/orders").WithTags("Orders");
@@ -45,10 +47,10 @@ public static class OrdersEndpoints
         if (order.Tickets is not null && order.Tickets.Count() > MAX_TICKETS_PER_ORDER)
         {
             // https://stackoverflow.com/a/47708867
-            return TypedResults.Problem(statusCode: StatusCodes.Status403Forbidden, detail: $"An order can't have more than {MAX_TICKETS_PER_ORDER} tickets");
+            return TypedResults.Problem(statusCode: StatusCodes.Status403Forbidden, detail: $"An order can't have more than {MAX_TICKETS_PER_ORDER} tickets.");
         }
-        await srvc.InsertAsync(order);
-        return TypedResults.Created($"/api/orders/{order.Id}", order);
+        if (await srvc.InsertAsync(order)) return TypedResults.Created($"/api/orders/{order.Id}", order);
+        return TypedResults.Problem(statusCode: StatusCodes.Status400BadRequest, detail: "Request is missing required fields.");
     }
 
     private static async Task<Results<NoContent, NotFound>> UpdateOrderAsync(int id, Order order, IOrdersService srvc)

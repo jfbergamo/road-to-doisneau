@@ -59,6 +59,7 @@ public class OrdersService : IOrdersService
                 created_at AS CreatedAt
             """;
 
+        // https://www.learndapper.com/misc/transaction
         using var trans = await connection.BeginTransactionAsync();
         
         try
@@ -75,7 +76,7 @@ public class OrdersService : IOrdersService
                         ticket.CreatedAt = order.CreatedAt;
                         ticket.ExpiresAt = order.CreatedAt.AddMonths(6);
                         ticket.OrderId   = order.Id;
-                        await _ticketsService.InsertAsync(ticket ,trans);
+                        await InsertTicketAsync(ticket, connection, trans);
                     }
                 }
             }
@@ -110,5 +111,32 @@ public class OrdersService : IOrdersService
             """;
         int result = await connection.ExecuteAsync(query, new { id });
         return result > 0;
+    }
+
+    private async Task InsertTicketAsync(Ticket ticket, NpgsqlConnection connection, NpgsqlTransaction transaction)
+    {
+        string query = """
+            INSERT INTO tickets (
+                holder_name,
+                holder_email,
+                created_at,
+                expires_at,
+                has_booklet,
+                price,
+                discount_code,
+                fk_order_id
+            ) VALUES (
+                @HolderName,
+                @HolderEmail,
+                @CreatedAt,
+                @ExpiresAt,
+                @HasBooklet,
+                @Price,
+                @DiscountCode,
+                @OrderId
+            ) RETURNING ticket_id
+            """;
+        ticket.ApplyDiscount();
+        ticket.Id = await connection.ExecuteScalarAsync<Guid>(query, ticket, transaction);
     }
 }
