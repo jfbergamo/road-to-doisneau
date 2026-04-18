@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +8,49 @@
     <link rel="stylesheet" href="article.css">
     <link rel="stylesheet" href="articles.css">
 </head>
-<body>
 
-     <header class="navbar">
-        <div class="logo">
-            <img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-logo">
+            <a href="index.html"><img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon"></a>
         </div>
 
-        <div class="nav-content" id="primary-navigation">
+        <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/gallery/">Gallery</a></li>
-                    <li><a href="/articles/">Articles</a></li>
-                    <li><a href="/find_us/">Find Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about/index.html">About</a></li>
+                    <li><a href="gallery-page/index.html">Gallery</a></li>
+                    <li><a href="articles/index.html">Articles</a></li>
+                    <li><a href="find_us/index.html">Find Us</a></li>
                 </ul>
             </nav>
+        </div>
+
+        <div class="nav-right">
             <div class="nav-actions">
                 <a href="/checkout" class="btn btn-pill">Buy</a>
-                <button class="btn btn-outline btn-pill bg-light">IT EN</button>
+                <button class="btn btn-outline">EN</button>
             </div>
+
+            <button class="nav-hamburger" aria-controls="primary-navigation" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
-
     <main class="content-section">
-        
+
         <article class="article-detail">
-            
+
             <header class="article-header">
                 <span class="category">Evento speciale</span>
                 <h1>Parigi sul Noncello: Robert Doisneau arriva a Pordenone</h1>
-                <p class="subtitle">Un viaggio nell'anima della fotografia umanista francese tra le vie del centro storico.</p>
+                <p class="subtitle">Un viaggio nell'anima della fotografia umanista francese tra le vie del centro
+                    storico.</p>
             </header>
 
             <div class="featured-image-container">
@@ -47,16 +59,24 @@
             </div>
 
             <div class="article-body">
-                <p>Pordenone si trasforma in un set cinematografico d'altri tempi. Con l'arrivo della mostra dedicata a <strong>Robert Doisneau</strong>, la città friulana accoglie la delicatezza di uno sguardo che ha saputo fermare il tempo senza mai spezzarne l'incanto.</p>
-                
+                <p>Pordenone si trasforma in un set cinematografico d'altri tempi. Con l'arrivo della mostra dedicata a
+                    <strong>Robert Doisneau</strong>, la città friulana accoglie la delicatezza di uno sguardo che ha
+                    saputo fermare il tempo senza mai spezzarne l'incanto.
+                </p>
+
                 <h2>La poetica del quotidiano</h2>
-                <p>Non aspettatevi pose plastiche o scenari costruiti a tavolino. Doisneau era un <strong>"pescatore di immagini"</strong>, un uomo capace di attendere ore l'allineamento perfetto tra una luce radente e il sorriso di un passante.</p>
-                
+                <p>Non aspettatevi pose plastiche o scenari costruiti a tavolino. Doisneau era un <strong>"pescatore di
+                        immagini"</strong>, un uomo capace di attendere ore l'allineamento perfetto tra una luce radente
+                    e il sorriso di un passante.</p>
+
                 <div class="mini-quote">
-                    "Quello che cercavo di mostrare era un mondo dove mi sarei sentito bene, dove le persone fossero gentili."
+                    "Quello che cercavo di mostrare era un mondo dove mi sarei sentito bene, dove le persone fossero
+                    gentili."
                 </div>
 
-                <p>L’allestimento è stato pensato per creare un dialogo continuo tra le foto e l'architettura pordenonese. Passeggiare tra le sale è come camminare lungo la Senna, un'esperienza che unisce il bianco e nero parigino ai colori caldi dei nostri portici.</p>
+                <p>L’allestimento è stato pensato per creare un dialogo continuo tra le foto e l'architettura
+                    pordenonese. Passeggiare tra le sale è come camminare lungo la Senna, un'esperienza che unisce il
+                    bianco e nero parigino ai colori caldi dei nostri portici.</p>
             </div>
 
             <footer class="article-footer">
@@ -66,5 +86,7 @@
         </article>
     </main>
 
+    <script src="script.js"></script>
 </body>
+
 </html>
