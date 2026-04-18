@@ -45,9 +45,10 @@ public class OrdersService : IOrdersService
         return order;
     }
 
-    public async Task InsertAsync(Order order)
+    public async Task<bool> InsertAsync(Order order)
     {
         using var connection = new NpgsqlConnection(_connectionString);
+        await connection.OpenAsync();
         string query = """
             INSERT INTO orders (
                 created_at
@@ -57,23 +58,35 @@ public class OrdersService : IOrdersService
                 order_id   AS Id,
                 created_at AS CreatedAt
             """;
+
+        // https://www.learndapper.com/misc/transaction
+        using var trans = await connection.BeginTransactionAsync();
+        
+        try
         {
-            var newOrder = await connection.QuerySingleAsync<Order>(query);
-            order.Id = newOrder.Id;
-            order.CreatedAt = newOrder.CreatedAt;
-        }
-        if (order.Tickets is not null)
-        {
-            foreach (var ticket in order.Tickets)
+            var result = await connection.QuerySingleAsync<Order>(query, trans);
+            order.Id = result.Id;
+            order.CreatedAt = result.CreatedAt;
+            if (order.Tickets is not null)
             {
-                if (await _ticketsService.GetByIdAsync(ticket.Id) is null)
+                foreach (var ticket in order.Tickets)
                 {
-                    ticket.CreatedAt = order.CreatedAt;
-                    ticket.ExpiresAt = order.CreatedAt.AddMonths(6);
-                    ticket.OrderId   = order.Id;
-                    await _ticketsService.InsertAsync(ticket);
+                    if (await _ticketsService.GetByIdAsync(ticket.Id) is null)
+                    {
+                        ticket.CreatedAt = order.CreatedAt;
+                        ticket.ExpiresAt = order.CreatedAt.AddMonths(6);
+                        ticket.OrderId   = order.Id;
+                        await InsertTicketAsync(ticket, connection, trans);
+                    }
                 }
             }
+            await trans.CommitAsync();
+            return true;
+        }
+        catch
+        {
+            await trans.RollbackAsync();
+            return false;
         }
     }
 
@@ -98,5 +111,32 @@ public class OrdersService : IOrdersService
             """;
         int result = await connection.ExecuteAsync(query, new { id });
         return result > 0;
+    }
+
+    private async Task InsertTicketAsync(Ticket ticket, NpgsqlConnection connection, NpgsqlTransaction transaction)
+    {
+        string query = """
+            INSERT INTO tickets (
+                holder_name,
+                holder_email,
+                created_at,
+                expires_at,
+                has_booklet,
+                price,
+                discount_code,
+                fk_order_id
+            ) VALUES (
+                @HolderName,
+                @HolderEmail,
+                @CreatedAt,
+                @ExpiresAt,
+                @HasBooklet,
+                @Price,
+                @DiscountCode,
+                @OrderId
+            ) RETURNING ticket_id
+            """;
+        ticket.ApplyDiscount();
+        ticket.Id = await connection.ExecuteScalarAsync<Guid>(query, ticket, transaction);
     }
 }

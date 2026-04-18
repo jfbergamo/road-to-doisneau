@@ -5,10 +5,27 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
 
+builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options =>
+{
+    options.SerializerOptions.AllowTrailingCommas = true;
+});
+
 builder.Services.AddScoped<IArticlesService, ArticlesService>();
 builder.Services.AddScoped<IOrdersService, OrdersService>();
 builder.Services.AddScoped<IPhotosService, PhotosService>();
 builder.Services.AddScoped<ITicketsService, TicketsService>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "cors",
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:5500",
+                                             "http://127.0.0.1:5500");
+                          policy.WithMethods("GET", "POST");
+                          policy.WithHeaders("Content-Type");
+                      });
+});
 
 var app = builder.Build();
 

@@ -75,7 +75,7 @@ public class TicketsService : ITicketsService
         return ticket;
     }
 
-    public async Task InsertAsync(Ticket ticket)
+    public async Task InsertAsync(Ticket ticket, NpgsqlTransaction? transaction = null)
     {
         using var connection = new NpgsqlConnection(_connectionString);
         string query = """
@@ -100,7 +100,7 @@ public class TicketsService : ITicketsService
             ) RETURNING ticket_id
             """;
         ticket.ApplyDiscount();
-        ticket.Id = await connection.ExecuteScalarAsync<Guid>(query, ticket);
+        ticket.Id = await connection.ExecuteScalarAsync<Guid>(query, ticket, transaction);
     }
 
     public async Task<bool> UpdateAsync(Ticket ticket)

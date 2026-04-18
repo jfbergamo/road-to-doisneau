@@ -7,7 +7,7 @@ namespace RoadToDoisneau.Backend.Services
         Task<bool> DeleteAsync(int id);
         Task<Order?> GetByIdAsync(int id);
         Task<IEnumerable<Order>> GetListAsync();
-        Task InsertAsync(Order order);
+        Task<bool> InsertAsync(Order order);
         Task<bool> UpdateAsync(Order order);
     }
 }

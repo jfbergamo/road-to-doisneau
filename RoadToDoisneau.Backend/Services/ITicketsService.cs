@@ -1,4 +1,5 @@
-﻿using RoadToDoisneau.Backend.Models;
+﻿using Npgsql;
+using RoadToDoisneau.Backend.Models;
 
 namespace RoadToDoisneau.Backend.Services
 {
@@ -8,7 +9,7 @@ namespace RoadToDoisneau.Backend.Services
         Task<Ticket?> GetByIdAsync(Guid id);
         Task<IEnumerable<Ticket>> GetListAsync();
         Task<IEnumerable<Ticket>> GetByOrderAsync(int orderId);
-        Task InsertAsync(Ticket ticket);
+        Task InsertAsync(Ticket ticket, NpgsqlTransaction? transaction = null);
         Task<bool> UpdateAsync(Ticket ticket);
     }
 }
