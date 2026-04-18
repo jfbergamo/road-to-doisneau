@@ -13,27 +13,40 @@
     </script>
 </head>
 <body>
+    <!-- Navbar -->
     <header class="navbar">
-        <div class="logo">
-            <img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon">
+        <div class="nav-logo">
+            <a href="index.html"><img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon"></a>
         </div>
 
-        <div class="nav-content" id="primary-navigation">
+        <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/gallery/">Gallery</a></li>
-                    <li><a href="/articles/">Articles</a></li>
-                    <li><a href="/find_us/">Find Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about/index.html">About</a></li>
+                    <li><a href="gallery-page/index.html">Gallery</a></li>
+                    <li><a href="articles/index.html">Articles</a></li>
+                    <li><a href="find_us/index.html">Find Us</a></li>
                 </ul>
             </nav>
+        </div>
+
+        <div class="nav-right">
             <div class="nav-actions">
                 <a href="/checkout" class="btn btn-pill">Buy</a>
-                <button class="btn btn-outline btn-pill bg-light">IT EN</button>
+                <button class="btn btn-outline">EN</button>
             </div>
+
+            <button class="nav-hamburger" aria-controls="primary-navigation" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
+
     </header>
+
 
     <main class="content-section">
         <div class="blog-grid">
@@ -116,5 +129,7 @@
 
         </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
