@@ -6,6 +6,8 @@ namespace RoadToDoisneau.Backend.Endpoints;
 
 public static class OrdersEndpoints
 {
+    private static readonly int MAX_TICKETS_PER_ORDER = 15;
+
     public static void MapOrdersEndpoints(this IEndpointRouteBuilder route, bool isDevel)
     {
         var group = route.MapGroup("/api/orders").WithTags("Orders");
@@ -38,8 +40,13 @@ public static class OrdersEndpoints
         return TypedResults.NotFound();
     }
 
-    private static async Task<Created<Order>> InsertOrderAsync(Order order, IOrdersService srvc)
+    private static async Task<Results<Created<Order>,ProblemHttpResult>> InsertOrderAsync(Order order, IOrdersService srvc)
     {
+        if (order.Tickets is not null && order.Tickets.Count() > MAX_TICKETS_PER_ORDER)
+        {
+            // https://stackoverflow.com/a/47708867
+            return TypedResults.Problem(statusCode: StatusCodes.Status403Forbidden, detail: $"An order can't have more than {MAX_TICKETS_PER_ORDER} tickets");
+        }
         await srvc.InsertAsync(order);
         return TypedResults.Created($"/api/orders/{order.Id}", order);
     }
