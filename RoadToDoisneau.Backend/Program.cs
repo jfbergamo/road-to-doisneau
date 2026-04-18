@@ -21,9 +21,10 @@ if (isDevel)
     {
         opt.SwaggerEndpoint("/openapi/v1.json", "RoadToDoisneau API v1");
     });
-}
 
-app.UseHttpsRedirection();
+    app.UseHttpsRedirection();
+    app.UseCors("cors");
+}
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
