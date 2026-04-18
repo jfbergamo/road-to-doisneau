@@ -46,7 +46,7 @@ app.UseHttpsRedirection();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-app.MapModelsEndpoints(false);
+app.MapModelsEndpoints(isDevel);
 
 app.MapGet("/api/status", () => new { Status = "Running" });
 
