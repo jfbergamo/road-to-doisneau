@@ -1,3 +1,40 @@
+// Nav
+document.addEventListener('DOMContentLoaded', () => {
+
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Ham
+    const hamburger = document.querySelector(".nav-hamburger");
+    const navContent = document.querySelector(".nav-content");
+
+    if (hamburger && navContent) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navContent.classList.toggle("active");
+
+            const isOpened = hamburger.getAttribute("aria-expanded") === "true";
+            hamburger.setAttribute("aria-expanded", !isOpened);
+        });
+
+        const navLinks = document.querySelectorAll(".nav-links a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navContent.classList.remove("active");
+                hamburger.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+});
+
 const observerOptions = {
     root: null,
     rootMargin: '-10% 0px -70% 0px',
@@ -9,7 +46,7 @@ const observerCallback = (entries) => {
         if (entry.isIntersecting) {
             const sectionId = entry.target.id;
             document.body.setAttribute('data-active-section', sectionId);
-            
+
             if (sectionId !== 'home') {
                 document.querySelector('.navbar').classList.add('scrolled');
             } else {
@@ -56,7 +93,7 @@ const countdownInterval = setInterval(updateCountdown, 1000);
 function toggleWidget() {
     const widget = document.getElementById('contactWidget');
     widget.classList.toggle('active');
-    
+
     const triggerText = widget.querySelector('.text');
     if (widget.classList.contains('active')) {
         triggerText.innerText = 'Chiudi';
