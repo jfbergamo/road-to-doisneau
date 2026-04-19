@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert Doisneau | Gallery</title>
+    <title>Home | Road to Doisneau</title>
     <link rel="stylesheet" href="style.css">
+    <link id="favicon" rel="icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg+xml">
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');
+        }
+    </script>
 </head>
-<body class="locked">
+
+<body>
+    <!-- Navbar -->
     <header class="navbar">
         <div class="nav-logo">
-            <a href="index.html"><img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon"></a>
+            <a href="/"><img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon"></a>
         </div>
 
         <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/gallery/">Gallery</a></li>
-                    <li><a href="articles/">Articles</a></li>
-                    <li><a href="find_us/">Find Us</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="gallery">Gallery</a></li>
+                    <li><a href="articles">Articles</a></li>
+                    <li><a href="find_us">Find Us</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="nav-right">
             <div class="nav-actions">
-                <a href="/checkout" class="btn btn-pill">Buy</a>
+                <a href="/checkout" class="btn btn-pill">Tickets</a>
                 <button class="btn btn-outline">EN</button>
             </div>
 
@@ -37,38 +46,39 @@
                 <span class="bar"></span>
             </button>
         </div>
-
     </header>
+
+
     <div id="unlocker">
-        <div class="unlock-box", >
+        <div class="unlock-box" ,>
             <h1 style="color: #052444;">SBLOCCA LA GALLERIA!</h1>
             <p style="color: B7D8FA;">Guarda subito come Robert Doisneau vedeva il mondo!</p>
             <div class="film-roll">🔒</div>
         </div>
     </div>
-    
+
     <div id="main-content">
-    <main class="main-gallery">
+        <main class="main-gallery">
         </main>
-</div>
+    </div>
 
     <div id="photoModal" class="modal">
-    <span class="modal-close">&times;</span>
-    <button class="nav-btn prev" id="prevBtn">&#10094;</button>
-    <button class="nav-btn next" id="nextBtn">&#10095;</button>
-    <div class="modal-content-wrapper">
-        <img id="modalImg" src="" alt="Zoom">
-        <div id="modalCaption" class="modal-details"></div>
+        <span class="modal-close">&times;</span>
+        <button class="nav-btn prev" id="prevBtn">&#10094;</button>
+        <button class="nav-btn next" id="nextBtn">&#10095;</button>
+        <div class="modal-content-wrapper">
+            <img id="modalImg" src="" alt="Zoom">
+            <div id="modalCaption" class="modal-details"></div>
+        </div>
     </div>
-</div>
 
+    <!-- Footer -->
     <footer class="footer">
 
         <div class="footer-columns">
 
             <div class="footer-logos">
-                <a href="index.html"><img src="/content/logo/logo_alt.svg" alt="Road to Doisneau"
-                        class="logo-doisneau"></a>
+                <a href="/"><img src="/content/logo/logo_alt.svg" alt="Road to Doisneau" class="logo-doisneau"></a>
                 <a href="https://pordenonecapitale2027.it/"><img src="/content/logo/partners/PDNC_logo.svg"
                         alt="Pordenone Capitale" class="logo-pordenone"></a>
             </div>
@@ -122,4 +132,5 @@
     <script src="script.js"></script>
     <script src="photo.js"></script>
 </body>
+
 </html>
