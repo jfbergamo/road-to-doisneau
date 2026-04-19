@@ -4,15 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROAD TO DOISNEAU</title>
-
-    <link rel="stylesheet" href="navbar.css">
+    <title>Road to Doisneau</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="ticket.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="countdown.css">
-    <link rel="stylesheet" href="widget.css">
+
 
     <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
     <script>
@@ -33,10 +27,10 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="gallery">Gallery</a></li>
-                    <li><a href="articles">Articles</a></li>
-                    <li><a href="find_us">Find Us</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/articles">Articles</a></li>
+                    <li><a href="/find_us">Find Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -57,63 +51,68 @@
     </header>
 
     <div class="Home" id="home">
-        <img src="/content/card.svg" alt="LandingPhoto">
 
-        <div class="text-container">
-            <h2>ROAD TO DOISNEAU</h2><br>
-            <h3>"Uno scatto per sognare il mondo in cui vorremmo vivere"</h3><br>
-            <!-- <h3>"THERE ARE DAYS WHEN THE SIMPLE ACT OF SEEING APPEARS TO BE TRUE HAPPINESS"</h3><br> -->
-            <a href="/checkout" class="btn btn-pill">BUY TICKETS</a>
+        <div class="home-top">
+            <img src="/content/card.svg" alt="LandingPhoto">
+
+            <div class="text-container">
+                <h2>ROAD TO DOISNEAU</h2><br>
+                <h3>"Uno scatto per sognare il mondo in cui vorremmo vivere"</h3><br>
+                <a href="/checkout" class="btn btn-pill">BUY TICKETS</a>
+            </div>
         </div>
-    </div>
 
-    <div class="container">
-        <p id="ciccio">
+        <div class="home-divider"></div>
+
+        <p id="quote">
             Visitare una mostra di Robert Doisneau è un po’ come fare un viaggio nel tempo senza bisogno di una macchina
             complicata: basta uno sguardo. Se poi la cornice è Pordenone, l’esperienza diventa ancora più intima e
             suggestiva.
         </p>
+
     </div>
 
-    <section class="Ticket" id="ticket">
-        <h2>VUOI COMPRARE I TUOI BIGLIETTI?</h2>
-        <h3>Ecco le nostre tariffe!</h3>
+    <section class="booking-section" id="ticket">
 
-        <div class="Ticket-container">
-            <div class="card ridotto">
-                <span class="ticket-tag">Ridotto</span>
-                <div class="price">€9</div>
-                <p>Over 65</p>
-                <div class="price">€5</div>
-                <p>Studenti</p>
+        <div class="booking-top">
+            <h2>VUOI COMPRARE I TUOI BIGLIETTI?</h2>
+            <h3>Ecco le nostre tariffe!</h3>
+
+            <div class="Ticket-container">
+                <div class="card ridotto">
+                    <span class="ticket-tag">Ridotto</span>
+                    <div class="price">€9</div>
+                    <p>Over 65</p>
+                    <div class="price">€5</div>
+                    <p>Studenti</p>
+                </div>
+
+                <div class="card intero">
+                    <span class="ticket-tag">Intero</span>
+                    <div class="price">€12</div>
+                    <p>Accesso completo <br>a tutte le aree</p>
+                </div>
+
+                <div class="card gratis">
+                    <span class="ticket-tag">Gratis</span>
+                    <div class="price">€0</div>
+                    <details class="gratis-details">
+                        <summary>Scopri chi ha diritto <span>↓</span></summary>
+                        <ul>
+                            <li>Bambini 0-5 anni</li>
+                            <li>Disabili + Accompagnatori</li>
+                            <li>Giornalisti accreditati</li>
+                        </ul>
+                    </details>
+                </div>
             </div>
+        </div>
 
-            <div class="card intero">
-                <span class="ticket-tag">Intero</span>
-                <div class="price">€12</div>
-                <p>Accesso completo <br>a tutte le aree</p>
-            </div>
+        <a href="/checkout" class="btn btn-pill cta-btn">BUY TICKETS</a>
 
-            <div class="card gratis">
-                <span class="ticket-tag">Gratis</span>
-                <div class="price">€0</div>
-                <details class="gratis-details">
-                    <summary>Scopri chi ha diritto <span>↓</span></summary>
-                    <ul>
-                        <li>Guide turistiche con tesserino di riconoscimento</li>
-                        <li>Giornalisti con tesserino di riconoscimento</li>
-                        <li>Bambini fino ai 5 anni</li>
-                        <li>Disabili ed accompagnatori</li>
-                        <li>Accompagnatori scolastici</li>
-                    </ul>
-                </details>
-            </div>
-        </div><br>
-        <a href="/checkout" class="btn btn-pill">BUY TICKETS</a>
-    </section>
+        <div class="booking-divider"></div>
 
-    <section class="countdown">
-        <div class="countdown-container">
+        <div class="booking-bottom countdown-container">
             <h3>AFFRETTATI! La mostra finisce tra:</h3>
             <div id="timer">
                 <div class="time-segment">
@@ -133,8 +132,8 @@
                     <p>Secondi</p>
                 </div>
             </div><br>
-            <a href="/checkout" class="btn btn-pill">BUY TICKETS</a>
         </div>
+
     </section>
 
     <div class="contact-widget" id="contactWidget">
@@ -212,7 +211,8 @@
                     </div>
                 </a>
                 <a href="https://absolutecode.it/">
-                    <div class="sponsor-3"><img src="/content/logo/partners/ANC_logo.svg" alt="Absolute&Code logo"></div>
+                    <div class="sponsor-3"><img src="/content/logo/partners/ANC_logo.svg" alt="Absolute&Code logo">
+                    </div>
                 </a>
                 <a href="https://comune.pordenone.it/">
                     <div class="sponsor-4"><img src="/content/logo/partners/PDN_logo.svg" alt="PD Commune logo"></div>

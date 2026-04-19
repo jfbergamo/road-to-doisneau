@@ -184,33 +184,60 @@ a {
 
 /* Home */
 .Home {
+    background-color: var(--light-color);
+    margin: 0 16px 32px 16px;
+    border-radius: var(--border-radius-lg);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.home-top {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 0px 5%;
+    padding: 25px 25px;
     gap: 60px;
-    background-color: var(--light-color);
-    overflow: hidden;
+    width: 100%;
+    max-width: 95%;
+    animation: simpleFadeIn 1.2s ease-out forwards;
 }
 
 .Home img {
     flex: 1.5;
     max-width: 60%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--accent-color);
     border-radius: var(--border-radius-lg);
     box-shadow: 0 10px 30px rgba(5, 36, 68, 0.1);
-    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.6s ease;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
     cursor: pointer;
     z-index: 1;
+    display: block;
+    outline: 1px solid transparent;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .Home img:hover,
 .Home img:focus {
-    transform: scale(1.1);
-    box-shadow: 0 30px 60px rgba(5, 36, 68, 0.2);
+    transform: scale(1.03) translateY(-10px);
+    box-shadow: 0 25px 50px rgba(5, 36, 68, 0.25);
     z-index: 10;
-    outline: none;
+}
+
+.home-divider {
+    width: 500px;
+    height: 2px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
 }
 
 .text-container {
@@ -231,10 +258,16 @@ a {
 
 .text-container h3 {
     font-family: var(--font-text);
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: var(--dark-color);
     max-width: 450px;
     font-style: italic;
+}
+
+.text-container .btn {
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
 }
 
 .Home,
@@ -249,21 +282,83 @@ a {
     animation: focusTitle 0.8s forwards cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.container {
-    background-color: var(--light-color);
+/* --- UNIFIED BOOKING SECTION --- */
+.booking-section {
+    background-color: var(--comp-color);
+    /* Ties the background color together */
+    margin: 0 16px 32px 16px;
+    border-radius: var(--border-radius-lg);
+    padding: 80px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    /* Space between tickets, the line, and the countdown */
+
+    box-shadow: 0 10px 30px rgba(5, 36, 68, 0.05);
+    /* Optional: gives the whole block a soft lift */
 }
 
-/* Tickets */
-
-.Ticket {
-    padding: 80px 20px;
+/* Centers the content within the top and bottom halves */
+.booking-top,
+.booking-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     text-align: center;
+    font-size: large;
+}
+
+/* --- BIG BOOKING TEXT --- */
+.booking-section h2 {
+    font-family: var(--font-caslon);
+    /* Keeps it elegant */
+    font-size: 3.5rem;
+    /* Massive size! */
+    line-height: 1.1;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    text-align: center;
+    animation: simpleFadeIn 1.2s ease-out forwards;
+}
+
+.booking-section h3 {
+    font-family: var(--font-caslon);
+    font-size: 2rem;
+    /* Big, readable subtitle */
+    color: var(--dark-color);
+    opacity: 0.8;
+    /* Softens the subtitle slightly */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Specific spacing for the countdown text */
+.booking-bottom h3 {
+    margin-bottom: 25px;
+}
+
+/* The elegant line dividing the tickets and the countdown */
+.booking-divider {
+    width: 120px;
+    height: 2px;
     background-color: var(--light-color);
+    border-radius: 2px;
+}
+
+/* Make the CTA button larger to anchor the bottom of the block */
+.cta-btn {
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
 }
 
 .Ticket h2 {
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 15rem;
     color: var(--dark-color);
     margin-bottom: 10px;
 }
@@ -384,7 +479,7 @@ a {
     margin-top: 20px;
     background: var(--light-color);
     border: 1px solid var(--accent-color);
-    border-radius: var(--border-radius-btn);
+    border-radius: var(--border-radius-lg);
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     overflow: hidden;
 }
@@ -469,9 +564,16 @@ a {
 
 /* Countdown */
 .countdown {
-    padding: 80px 20px;
-    text-align: center;
     background-color: var(--light-color);
+    margin: 0 16px 32px 16px;
+    border-radius: var(--border-radius-lg);
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 60px;
+    overflow: hidden;
 }
 
 .countdown-container {
@@ -540,36 +642,27 @@ a {
     background-color: var(--light-color);
     font-family: var(--font-text);
     line-height: 1.6;
-    font-size: 1.25rem;
+    font-size: 2rem;
     padding: 0;
     margin: 0 auto;
-    max-width: 450px;
+    max-width: 800px;
     text-align: center;
     position: relative;
     box-sizing: border-box;
+    animation: simpleFadeIn 1.2s ease-out forwards;
 }
 
 #quote::before {
     content: "Perchè Doisneau?";
     display: block;
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: bold;
     color: var(--dark-color);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    margin-bottom: 50px;
 }
-
-#quote::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 1.5px;
-    background-color: var(--accent-color);
-    margin: 12px auto 0 auto;
-}
-
 
 /* Footer */
 .footer {
@@ -665,9 +758,9 @@ a {
 }
 
 .widget-trigger {
-    background: linear-gradient(135deg, var(--dark-color) 0%, #0a3a6d 100%);
+    background-color: var(--dark-color);
     color: var(--light-color);
-    border: none;
+    border-color: var(--accent-color);
     padding: 15px 25px;
     border-radius: var(--border-radius-pill);
     cursor: pointer;
@@ -687,7 +780,7 @@ a {
 .widget-content {
     max-height: 0;
     width: 320px;
-    background: var(--light-color);
+    background: var(--comp-color);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
@@ -744,20 +837,36 @@ a {
     /* Home */
     .Home {
         flex-direction: column;
-        padding-top: 150px;
+        padding-top: 120px;
+        gap: 60px;
     }
 
-    .Home img {
+    .home-top {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .home-top img {
         max-width: 90%;
         flex: none;
     }
 
     .Home img:hover {
-        transform: scale(1.05);
+        transform: scale(1.02) translateY(-5px);
+        box-shadow: 0 15px 35px rgba(5, 36, 68, 0.2);
     }
 
     .text-container h2 {
         font-size: 3rem;
+    }
+
+    /* Keep booking text big but safe for phones */
+    .booking-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .booking-section h3 {
+        font-size: 1.5rem;
     }
 
     /* Tickets */
@@ -820,5 +929,20 @@ a {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+
+}
+
+@keyframes simpleFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        /* Starts slightly lower */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Glides perfectly into place */
     }
 }
