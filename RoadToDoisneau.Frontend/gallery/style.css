@@ -1,0 +1,590 @@
+@font-face {
+    font-family: 'Metal';
+    src: url('/font/Metal/Metal-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Caslon Text';
+    src: url('/font/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('/font/Libre_Franklin/LibreFranklin-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Colors */
+    --light-color: #FEF5F3;
+    --accent-color: #FAC4B8;
+    --comp-color: #B7D8FA;
+    --dark-color: #052444;
+
+    /* Typography */
+    --font-metal: 'Metal', sans-serif;
+    --font-caslon: 'Libre Caslon Text', Georgia, serif;
+    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
+    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+    /* Borders */
+    --border-radius-lg: 24px;
+    --border-radius-btn: 100px;
+    --border-radius-pill: 50px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-sans);
+    background-color: var(--dark-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.serif-text {
+    font-family: var(--font-serif);
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 12px 32px;
+    border-radius: var(--border-radius-btn);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-pill {
+    border-radius: var(--border-radius-pill);
+    padding: 8px 24px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--dark-color);
+    border: 1px solid var(--text-dark);
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centra perfettamente in verticale */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+    z-index: 1010; /* Sopra l'immagine */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Posizionamento specifico */
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--accent-color);
+    max-width: 1000px;
+    width: 95%;
+    margin: 16px auto;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    position: sticky;
+    top: 16px;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    z-index: 6000;
+}
+
+.navbar.scrolled {
+    background-color: #FAC4B8E6;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
+    padding: 6px 20px;
+    max-width: 850px;
+    top: 8px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    gap: 10px;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    font-weight: 500;
+}
+
+.nav-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.nav-hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+}
+
+.nav-hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-color);
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+body { background: #052444; color: white; font-family: sans-serif; }
+
+body.locked { overflow: hidden;}
+
+/* LOCKER */
+#unlocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 36, 68, 0.7); /* Blu scuro ma trasparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000; /* Alto, ma non deve coprire la Navbar se vuoi usarla subito */
+    transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+#unlocker.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.unlock-box {
+    background: rgba(254, 245, 243, 0.95); /* Colore chiaro quasi opaco */
+    padding: 3rem;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Ombra profonda per dare stacco */
+    max-width: 450px;
+    width: 90%;
+    border: 1px solid rgba(250, 196, 184, 0.5); /* Bordino sottile color pesca */
+    
+    /* Animazione d'entrata fluida */
+    animation: fadeInScale 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.unlock-box h2 {
+    font-family: var(--font-caslon);
+    color: var(--dark-color);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.unlock-box p {
+    font-family: var(--font-franklin);
+    color: #4a4a4a;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+/* Effetto al passaggio del mouse sulla pellicola dentro la box */
+.unlock-box .film-roll {
+    font-size: 4rem;
+    cursor: pointer;
+    display: inline-block;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+    transition: all 0.4s ease;
+}
+
+.unlock-box .film-roll:hover {
+    transform: scale(1.15) rotate(12deg);
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.3));
+}
+.film-roll { font-size: 5rem; cursor: pointer; margin-top: 20px; }
+
+#main-content.is-blurred {
+    filter: blur(40px); /* Sfocatura molto intensa */
+    transition: filter 1.2s ease;
+}
+#main-content.no-blur {
+    filter: blur(0);
+}
+
+/* SFOCATURA */
+.is-blurred { filter: blur(30px); transition: filter 1s ease; }
+.no-blur { filter: blur(0) !important; }
+
+/* GALLERIA */
+.main-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}.gallery-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3; /* O usa auto se le foto hanno formati diversi */
+    cursor: pointer;
+    background: #000;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0.5); /* Effetto vintage al passaggio */
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+.gallery-caption { display: none; } /* Nascosta in griglia, la usiamo per il modale */
+
+/* MODALE */
+.modal {
+    display: none; /* Diventa 'flex' via JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;  /* Occupa il 90% della larghezza schermo */
+    height: 80%; /* Occupa l'80% dell'altezza schermo */
+    margin: auto;
+}
+#modalImg {
+    /* IMPORTANTE: Queste tre proprietà insieme adattano l'immagine */
+    padding-top: 125px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Adatta l'immagine senza tagliarla o zoomare */
+    
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2); /* Opzionale: un fondo leggero */
+}
+#modalCaption {
+    margin-top: 15px;
+    color: #ccc;
+    font-family: sans-serif;
+    text-align: center;
+}
+.modal-close { position: absolute; top: 20px; right: 30px; font-size: 50px; color: white; cursor: pointer; }
+
+
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 60px 20px 40px 20px;
+    font-family: sans-serif;
+    z-index: 6000;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    gap: 80px;
+}
+
+.footer-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.logo-doisneau {
+    height: 80px;
+    width: auto;
+}
+
+.logo-pordenone {
+    height: 70px;
+    width: auto;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.footer-contact p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+}
+
+.footer-socials img {
+    width: 32px;
+    height: auto;
+}
+
+.footer-sponsors {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-sponsors img {
+    width: 150px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.footer-sponsors img:hover {
+    filter: grayscale(0%);
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Response */
+@media (max-width: 768px) {
+
+    .nav-btn {
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .prev { left: 5px; }
+    .next { right: 5px; }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+    }
+
+    .nav-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .nav-actions {
+        flex-direction: row;
+    }
+
+    .nav-actions .btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+        font-size: 1.5rem;
+    }
+
+    .nav-content {
+        position: absolute;
+        top: 110%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #FAC4B8F2;
+        backdrop-filter: blur(12px);
+        border-radius: 0 0 24px 24px;
+        box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
+        max-height: 0;
+        padding: 0 20px;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+        z-index: 99;
+    }
+
+    .nav-content.active {
+        max-height: 500px;
+        padding: 20px 40px 20px 40px;
+        opacity: 1;
+        border-radius: var(--border-radius-lg);
+        background-color: #FAC4B8E6;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
+
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .nav-actions {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-actions .btn {
+        width: 100%;
+    }
+
+
+    .nav-hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        z-index: 1001;
+    }
+
+
+    .nav-hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .footer-columns {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-socials {
+        flex-direction: row;
+    }
+
+    .footer-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
