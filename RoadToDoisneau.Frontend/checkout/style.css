@@ -1,15 +1,7 @@
 /* Fonts */
-
 @font-face {
     font-family: 'Metal';
     src: url('/font/Metal/Metal-Regular.ttf') format('.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Libre Caslon Display';
-    src: url('/font/Libre_Caslon_Display/LibreCaslonDisplay-Regular.ttf') format('.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -35,14 +27,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Inter';
-    src: url('/font/Inter/Inter_18pt-Regular.ttf') format('.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 :root {
     /* Colors */
     --light-color: #FEF5F3;
@@ -51,21 +35,18 @@
     --dark-color: #052444;
 
     /* Typography */
-    --font-logo: 'Metal', sans-serif;
-    --font-display: 'Libre Caslon Display', Georgia, serif;
-    --font-text: 'Libre Caslon Text', Georgia, serif;
-    --font-main: 'Libre Franklin', Helvetica, Arial, sans-serif;
-    --font-alt: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    --font-inter: 'Inter', Helvetica, Arial, sans-serif;
+    --font-metal: 'Metal', sans-serif;
+    --font-caslon: 'Libre Caslon Text', Georgia, serif;
+    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
+    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 
     /* Borders */
     --border-radius-lg: 24px;
-    --border-radius-btn: 8px;
+    --border-radius-btn: 100px;
     --border-radius-pill: 50px;
 }
 
 /* Reset */
-
 * {
     margin: 0;
     padding: 0;
@@ -73,7 +54,6 @@
 }
 
 /* Body */
-
 body {
     font-family: var(--font-sans);
     background-color: var(--dark-color);
@@ -95,7 +75,6 @@ a {
 }
 
 /* Buttons */
-
 .btn {
     background-color: var(--dark-color);
     color: var(--light-color);
@@ -124,16 +103,7 @@ a {
 }
 
 /* Navigation */
-
-.logo {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    gap: 10px;
-}
-
-#navbar {
+.navbar {
     background-color: var(--accent-color);
     max-width: 1000px;
     width: 95%;
@@ -155,14 +125,28 @@ a {
     box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
     padding: 6px 20px;
     max-width: 850px;
-    margin-top: 8px;
     top: 8px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    gap: 10px;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-content {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 30px;
 }
 
 .nav-links {
@@ -174,53 +158,34 @@ a {
 
 .nav-actions {
     display: flex;
-    gap: 16px;
+    flex-direction: row;
     align-items: center;
+    gap: 8px;
+    margin: 0;
 }
 
-/* Response */
+.nav-hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+}
 
-@media (max-width: 768px) {
-
-    /* Nav */
-
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-content {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        flex-direction: column;
-        justify-content: center;
-        background-color: var(--bg-nav);
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        transition: left 0.3s ease-in-out;
-        z-index: 99;
-    }
-
-    .nav-content.active {
-        left: 0;
-    }
-
-    .nav-actions {
-        flex-direction: column;
-    }
+.nav-hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-color);
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
 }
 
 .main-exhibition {
     background-color: var(--light-color);
-    padding-bottom: 120px; /* Spazio per la bar */
+    padding-bottom: 150px;
+    /* Spazio per la bar */
 }
 
 /* --- Header Mostra --- */
@@ -259,7 +224,6 @@ a {
     margin-top: 20px;
 }
 
-/* --- Container Card Visive --- */
 .Ticket-container-visual {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -267,68 +231,73 @@ a {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
-    align-items: start; /* Importante per l'effetto sfalsato */
+    align-items: start;
 }
 
-/* --- La Card Visiva Base --- */
 .card-visual {
     position: relative;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
-    height: 450px; /* Altezza fissa per impatto */
+    height: 450px;
     background-image: var(--bg-image);
     background-size: cover;
     background-position: center;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     box-shadow: 0 10px 30px rgba(5, 36, 68, 0.1);
-    border: 1px solid rgba(250, 196, 184, 0.3); /* dark color lightened */
 }
 
-/* Effetto Sfocatura Iniziale (Image Layer) */
 .card-visual::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: var(--bg-image);
     background-size: cover;
     background-position: center;
-    filter: blur(5px) grayscale(50%); /* Sfocata e semi-grigia */
+    filter: blur(5px) grayscale(50%);
     transition: all 0.6s ease;
     z-index: 1;
 }
 
-/* Overlay Scuro per Leggibilità */
 .card-overlay {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(180deg, rgba(5,36,68,0.2) 0%, rgba(5,36,68,0.8) 100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(5, 36, 68, 0.2) 0%, rgba(5, 36, 68, 0.8) 100%);
     z-index: 2;
     transition: background 0.5s ease;
 }
 
-/* Hover sulla Card */
+
 .card-visual:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 20px 50px rgba(5, 36, 68, 0.2);
 }
 
 .card-visual:hover::before {
-    filter: blur(0px) grayscale(0%); /* Torna a fuoco e colori */
+    filter: blur(0px) grayscale(0%);
+    /* Torna a fuoco e colori */
 }
 
 .card-visual:hover .card-overlay {
-    background: linear-gradient(180deg, rgba(5,36,68,0.1) 0%, rgba(5,36,68,0.9) 100%);
+    background: linear-gradient(180deg, rgba(5, 36, 68, 0.1) 0%, rgba(5, 36, 68, 0.9) 100%);
 }
 
 /* --- Layout Contenuto Card --- */
 .card-content {
     position: relative;
-    z-index: 3; /* Sopra overlay e blur */
+    z-index: 3;
+    /* Sopra overlay e blur */
     height: 100%;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Testo in basso */
+    justify-content: flex-end;
+    /* Testo in basso */
     color: var(--light-color);
 }
 
@@ -348,69 +317,182 @@ a {
 }
 
 /* Prezzi */
-.price {
-    font-family: var(--font-inter); /* Numeri moderni */
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1;
+/* --- Prezzi & Pill Background --- */
+.price-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
 }
 
-.price.large {
-    font-size: 4rem;
+.price-item-pill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    /* THE MAGIC: Pins elements to the top so they don't slide down when the pill expands */
+    align-items: flex-start;
+
+    width: 100%;
+    background-color: #fef5f361;
+    backdrop-filter: blur(12px);
+    padding: 8px 8px 8px 20px;
+
+    /* Changed to 24px so it looks like a nice rounded box when fully expanded */
+    border-radius: 24px;
+    transition: all 0.3s ease;
+}
+
+.price-item-pill .price {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    line-height: 1;
     color: var(--light-color);
 }
 
-.description {
-    font-family: var(--font-text);
-    font-size: 0.95rem;
-    opacity: 0.9;
-    margin: 10px 0 20px 0;
+/* --- PILL 2: Info Summary and List --- */
+.info-summary-pill {
+    width: 100%;
+    background-color: #fef5f361;
+    backdrop-filter: blur(12px);
+    padding: 10px 10px 10px 20px;
+    border-radius: 24px;
+    transition: all 0.3s ease;
 }
 
-/* Gruppo Prezzi Ridotto */
-.price-group {
+/* Left side: Places Price and Label side-by-side */
+.price-info {
     display: flex;
-    gap: 30px;
-    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: center;
+    /* Keeps the €0 pinned to the top */
+    gap: 15px;
 }
 
-.price-item .label {
-    font-size: 0.85rem;
+/* The Price Text */
+.price-info .price {
+    font-family: var(fon);
+    font-size: 1.6rem;
+    line-height: 1;
+
+    /* Nudges the price down 4px so it vertically aligns with the buttons when closed */
+    margin: 4px 0 0 0;
+    color: var(--light-color);
+}
+
+
+
+/* The Label and Info text */
+.price-info .label {
+    font-family: var(--font-franklin);
+    font-size: 0.95rem;
+    color: var(--light-color);
+    margin: 0;
+}
+
+.gratis-details-visual {
+    display: flex;
+    flex-direction: column;
+}
+
+/* The clickable 'Info Omaggio' text */
+.gratis-details-visual summary {
+    font-family: var(--font-franklin);
+    font-size: 0.95rem;
+    color: var(--light-color);
+    cursor: pointer;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    /* Pushes the arrow to the far right */
+    align-items: center;
+}
+
+.gratis-details-visual summary:hover {
     opacity: 0.8;
 }
 
-/* Selettore Quantità nella Card */
+.gratis-details-visual summary span {
+    transition: transform 0.3s ease;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+/* Flips the arrow when clicked */
+.gratis-details-visual[open] summary span {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+/* The List inside Pill 2 */
+.gratis-details-visual ul {
+    margin-top: 12px;
+    padding-left: 15px;
+    font-family: var(--font-franklin);
+    font-size: 0.85rem;
+    color: var(--light-color);
+    line-height: 1.6;
+}
+
+/* Right side: Modern Quantity Selector */
 .qty-selector {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(254, 245, 243, 0.2);
-    padding-top: 15px;
-    margin-top: auto; /* Spinge in basso */
 }
 
-.qty-selector span {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.qty-input {
-    width: 65px;
-    background: transparent;
-    border: 2px solid var(--accent-color);
+/* Custom Plus / Minus Buttons */
+.qty-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
     color: var(--light-color);
-    border-radius: var(--border-radius-btn);
-    padding: 8px;
-    font-family: var(--font-inter);
-    font-weight: bold;
+    font-size: 1.4rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.qty-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.qty-btn:active {
+    transform: scale(0.9);
+}
+
+/* The Input Number Box */
+.qty-input {
+    width: 36px;
+    background: transparent;
+    border: none;
+    color: var(--light-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
     text-align: center;
+    font-weight: bold;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* --- Personalizzazione Card Intero (Highlight) --- */
 .card-visual.intero {
-    height: 500px; /* Più alta */
-    margin-top: -25px; /* Sfalsata verso l'alto */
-    border: 2px solid var(--comp-color); /* Celeste */
+    height: 500px;
+    /* Più alta */
+    margin-top: -25px;
+    /* Sfalsata verso l'alto */
+    border: 2px solid var(--comp-color);
+    /* Celeste */
 }
 
 .tag-dark {
@@ -418,25 +500,7 @@ a {
     color: var(--dark-color);
 }
 
-/* --- Gratis Details Visivi --- */
-.gratis-details-visual {
-    margin-bottom: 20px;
-}
 
-.gratis-details-visual summary {
-    cursor: pointer;
-    font-size: 0.85rem;
-    color: var(--accent-color);
-    list-style: none;
-}
-
-.gratis-details-visual ul {
-    font-size: 0.8rem;
-    padding-left: 15px;
-    margin-top: 10px;
-    opacity: 0.9;
-    line-height: 1.5;
-}
 
 /* --- Barra Totale Visiva --- */
 .checkout-bar-visual {
@@ -445,17 +509,20 @@ a {
     left: 50%;
     transform: translateX(-50%);
     width: 95%;
-    max-width: 600px; /* Più stretta e elegante */
+    max-width: 600px;
+    /* Più stretta e elegante */
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 15px 25px;
-    border-radius: 100px; /* Pill perfetta */
+    border-radius: var(--border-radius-lg);
+    /* Pill perfetta */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     z-index: 2000;
-    opacity: 0; /* Nascosta inizialmente */
+    opacity: 0;
+    /* Nascosta inizialmente */
     pointer-events: none;
     transition: all 0.4s ease;
 }
@@ -483,7 +550,8 @@ a {
     font-family: var(--font-inter);
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--comp-color); /* Celeste accent */
+    color: var(--comp-color);
+    /* Celeste accent */
 }
 
 .btn-buy {
@@ -494,19 +562,129 @@ a {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-    .serif-title { font-size: 2.8rem; }
-    
+
+    /* Nav */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+    }
+
+    .nav-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .nav-actions {
+        flex-direction: row;
+    }
+
+    .nav-actions .btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+        font-size: 1.5rem;
+    }
+
+    .nav-content {
+        position: absolute;
+        top: 110%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #FAC4B8F2;
+        backdrop-filter: blur(12px);
+        border-radius: 0 0 24px 24px;
+        box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
+        max-height: 0;
+        padding: 0 20px;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+        z-index: 99;
+    }
+
+    .nav-content.active {
+        max-height: 500px;
+        padding: 20px 40px 20px 40px;
+        opacity: 1;
+        border-radius: var(--border-radius-lg);
+        background-color: #FAC4B8E6;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .nav-actions {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-actions .btn {
+        width: 100%;
+    }
+
+    .nav-hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        z-index: 1001;
+    }
+
+    .nav-hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .serif-title {
+        font-size: 2.8rem;
+    }
+
     .Ticket-container-visual {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    .card-visual, .card-visual.intero {
+    .card-visual,
+    .card-visual.intero {
         height: 350px;
-        margin-top: 0; /* Togli sfalsamento su mobile */
+        margin-top: 0;
+        /* Togli sfalsamento su mobile */
     }
 
-    .card-content { padding: 20px; }
-    .price { font-size: 2.5rem; }
-    .price.large { font-size: 3rem; }
+    .card-content {
+        padding: 20px;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    .price.large {
+        font-size: 3rem;
+    }
 }

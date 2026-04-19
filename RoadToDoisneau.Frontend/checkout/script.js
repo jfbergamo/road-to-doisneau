@@ -1,3 +1,41 @@
+// Nav
+document.addEventListener('DOMContentLoaded', () => {
+
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Ham
+    const hamburger = document.querySelector(".nav-hamburger");
+    const navContent = document.querySelector(".nav-content");
+
+    if (hamburger && navContent) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navContent.classList.toggle("active");
+
+            const isOpened = hamburger.getAttribute("aria-expanded") === "true";
+            hamburger.setAttribute("aria-expanded", !isOpened);
+        });
+
+        const navLinks = document.querySelectorAll(".nav-links a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navContent.classList.remove("active");
+                hamburger.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+});
+
+// Cart & Checkout Logic
 document.addEventListener('DOMContentLoaded', () => {
     const inputs = document.querySelectorAll('.qty-input');
     const grandTotalEl = document.getElementById('grand-total');
@@ -6,68 +44,93 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorMsg = document.getElementById('limit-error');
     const MAX_TOTAL = 15;
 
-    // Salviamo lo stato precedente per il ripristino istantaneo
+    // Save previous state for instant reset if limit is exceeded
     let previousState = new Map();
     inputs.forEach(input => previousState.set(input, 0));
 
+    // The Master Function that calculates the math
     function updateOrder() {
         let totalQty = 0;
         let totalPrice = 0;
 
-        // 1. Calcolo preventivo della quantità
+        // 1. Calculate Quantity
         inputs.forEach(input => {
             totalQty += parseInt(input.value) || 0;
         });
 
-        // 2. Controllo Limite
+        // 2. Check 15 Ticket Limit
         if (totalQty > MAX_TOTAL) {
-            // Mostra errore e vibrazione
-            errorMsg.style.display = 'block';
-            
-            // Ripristina i valori precedenti in tutti gli input
+            if (errorMsg) errorMsg.style.display = 'block';
             inputs.forEach(input => {
                 input.value = previousState.get(input);
             });
-            
-            // Ricalcola la quantità corretta dopo il ripristino
             totalQty = 0;
             inputs.forEach(input => totalQty += parseInt(input.value) || 0);
         } else {
-            // Nascondi errore e salva lo stato attuale come valido
-            errorMsg.style.display = 'none';
+            if (errorMsg) errorMsg.style.display = 'none';
             inputs.forEach(input => {
                 previousState.set(input, parseInt(input.value) || 0);
             });
         }
 
-        // 3. Calcolo del prezzo finale
+        // 3. Calculate Final Price
         inputs.forEach(input => {
             const qty = parseInt(input.value) || 0;
-            const price = parseFloat(input.getAttribute('data-price'));
+            // Uses dataset or getAttribute safely
+            const price = parseFloat(input.dataset.price || input.getAttribute('data-price')) || 0;
             totalPrice += qty * price;
         });
 
-        // 4. Aggiornamento UI
-        ticketCountEl.innerText = totalQty;
-        grandTotalEl.innerText = `€${totalPrice}`;
+        // 4. Update UI Elements
+        if (ticketCountEl) ticketCountEl.innerText = totalQty;
+        if (grandTotalEl) grandTotalEl.innerText = `€${totalPrice}`;
 
-        // Mostra la barra solo se ci sono biglietti (anche quelli a 0€)
-        if (totalQty > 0) {
-            checkoutBar.classList.add('active');
-        } else {
-            checkoutBar.classList.remove('active');
+        // 5. Show/Hide Checkout Bar
+        if (checkoutBar) {
+            if (totalQty > 0) {
+                checkoutBar.classList.add('active');
+            } else {
+                checkoutBar.classList.remove('active');
+            }
         }
     }
 
-    // Gestione Navbar
-    window.addEventListener('scroll', () => {
-        const nav = document.getElementById('navbar');
-        if (window.scrollY > 50) nav.classList.add('scrolled');
-        else nav.classList.remove('scrolled');
-    });
-
-    // Eventi di input
+    // Listens for manual typing
     inputs.forEach(input => {
         input.addEventListener('input', updateOrder);
+    });
+
+    // --- Modern Quantity Buttons (+ / -) ---
+    const qtySelectors = document.querySelectorAll('.qty-selector');
+
+    qtySelectors.forEach(selector => {
+        const input = selector.querySelector('.qty-input');
+        const btnMinus = selector.querySelector('.minus');
+        const btnPlus = selector.querySelector('.plus');
+
+        if (input && btnMinus && btnPlus) {
+
+            // Minus Button
+            btnMinus.addEventListener('click', () => {
+                let currentValue = parseInt(input.value) || 0;
+                if (currentValue > 0) {
+                    input.value = currentValue - 1;
+                    updateOrder(); // <--- FIXED: Calls the math function directly!
+                }
+            });
+
+            // Plus Button
+            btnPlus.addEventListener('click', () => {
+                let currentValue = parseInt(input.value) || 0;
+                let max = parseInt(input.getAttribute('max')) || 15;
+
+                if (currentValue < max) {
+                    input.value = currentValue + 1;
+                    updateOrder(); // <--- FIXED: Calls the math function directly!
+                } else {
+                    updateOrder(); // Runs it anyway to trigger the 15-limit error if needed
+                }
+            });
+        }
     });
 });
