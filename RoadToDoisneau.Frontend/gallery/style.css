@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: 'Metal';
     src: url('/font/Metal/Metal-Regular.ttf') format('.ttf');
@@ -51,6 +52,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Body */
 body {
     font-family: var(--font-sans);
     background-color: var(--dark-color);
@@ -102,7 +105,8 @@ a {
 .nav-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Centra perfettamente in verticale */
+    transform: translateY(-50%);
+    /* Centra perfettamente in verticale */
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -111,7 +115,8 @@ a {
     font-size: 24px;
     transition: 0.3s;
     user-select: none;
-    z-index: 1010; /* Sopra l'immagine */
+    z-index: 1010;
+    /* Sopra l'immagine */
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -148,7 +153,6 @@ a {
     top: 16px;
     z-index: 1000;
     transition: all 0.3s ease-in-out;
-    z-index: 6000;
 }
 
 .navbar.scrolled {
@@ -180,7 +184,6 @@ a {
     align-items: center;
     gap: 30px;
 }
-
 
 .nav-links {
     display: flex;
@@ -215,9 +218,9 @@ a {
     border-radius: 3px;
 }
 
-body { background: #052444; color: white; font-family: sans-serif; }
-
-body.locked { overflow: hidden;}
+body.locked {
+    overflow: hidden;
+}
 
 /* LOCKER */
 #unlocker {
@@ -226,11 +229,13 @@ body.locked { overflow: hidden;}
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(5, 36, 68, 0.7); /* Blu scuro ma trasparente */
+    background-color: rgba(5, 36, 68, 0.7);
+    /* Blu scuro ma trasparente */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 5000; /* Alto, ma non deve coprire la Navbar se vuoi usarla subito */
+    z-index: 5000;
+    /* Alto, ma non deve coprire la Navbar se vuoi usarla subito */
     transition: opacity 0.8s ease, visibility 0.8s;
 }
 
@@ -241,15 +246,18 @@ body.locked { overflow: hidden;}
 }
 
 .unlock-box {
-    background: rgba(254, 245, 243, 0.95); /* Colore chiaro quasi opaco */
+    background: rgba(254, 245, 243, 0.95);
+    /* Colore chiaro quasi opaco */
     padding: 3rem;
     border-radius: 24px;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Ombra profonda per dare stacco */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    /* Ombra profonda per dare stacco */
     max-width: 450px;
     width: 90%;
-    border: 1px solid rgba(250, 196, 184, 0.5); /* Bordino sottile color pesca */
-    
+    border: 1px solid rgba(250, 196, 184, 0.5);
+    /* Bordino sottile color pesca */
+
     /* Animazione d'entrata fluida */
     animation: fadeInScale 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -275,27 +283,40 @@ body.locked { overflow: hidden;}
     font-size: 4rem;
     cursor: pointer;
     display: inline-block;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
     transition: all 0.4s ease;
 }
 
 .unlock-box .film-roll:hover {
     transform: scale(1.15) rotate(12deg);
-    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3));
 }
-.film-roll { font-size: 5rem; cursor: pointer; margin-top: 20px; }
+
+.film-roll {
+    font-size: 5rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
 
 #main-content.is-blurred {
-    filter: blur(40px); /* Sfocatura molto intensa */
+    filter: blur(40px);
+    /* Sfocatura molto intensa */
     transition: filter 1.2s ease;
 }
+
 #main-content.no-blur {
     filter: blur(0);
 }
 
 /* SFOCATURA */
-.is-blurred { filter: blur(30px); transition: filter 1s ease; }
-.no-blur { filter: blur(0) !important; }
+.is-blurred {
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.no-blur {
+    filter: blur(0) !important;
+}
 
 /* GALLERIA */
 .main-gallery {
@@ -303,15 +324,18 @@ body.locked { overflow: hidden;}
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 15px;
     padding: 20px;
-}.gallery-item {
+}
+
+.gallery-item {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 4 / 3; /* O usa auto se le foto hanno formati diversi */
+    aspect-ratio: 4 / 3;
+    /* O usa auto se le foto hanno formati diversi */
     cursor: pointer;
     background: #000;
 }
 
-.gallery-item img{
+.gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -320,14 +344,15 @@ body.locked { overflow: hidden;}
 
 .gallery-item:hover img {
     transform: scale(1.05);
-    filter: grayscale(0.5); /* Effetto vintage al passaggio */
+    filter: grayscale(0.5);
+    /* Effetto vintage al passaggio */
 }
 
 .gallery-overlay {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 5px 10px;
     font-size: 0.8rem;
@@ -338,11 +363,17 @@ body.locked { overflow: hidden;}
 .gallery-item:hover .gallery-overlay {
     opacity: 1;
 }
-.gallery-caption { display: none; } /* Nascosta in griglia, la usiamo per il modale */
+
+.gallery-caption {
+    display: none;
+}
+
+/* Nascosta in griglia, la usiamo per il modale */
 
 /* MODALE */
 .modal {
-    display: none; /* Diventa 'flex' via JS */
+    display: none;
+    /* Diventa 'flex' via JS */
     position: fixed;
     top: 0;
     left: 0;
@@ -352,40 +383,55 @@ body.locked { overflow: hidden;}
     justify-content: center;
     align-items: center;
 }
+
 .modal-content-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;  /* Occupa il 90% della larghezza schermo */
-    height: 80%; /* Occupa l'80% dell'altezza schermo */
+    width: 90%;
+    /* Occupa il 90% della larghezza schermo */
+    height: 80%;
+    /* Occupa l'80% dell'altezza schermo */
     margin: auto;
 }
+
 #modalImg {
     /* IMPORTANTE: Queste tre proprietà insieme adattano l'immagine */
     padding-top: 125px;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Adatta l'immagine senza tagliarla o zoomare */
-    
+    object-fit: contain;
+    /* Adatta l'immagine senza tagliarla o zoomare */
+
     display: block;
-    background-color: rgba(0, 0, 0, 0.2); /* Opzionale: un fondo leggero */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Opzionale: un fondo leggero */
 }
+
 #modalCaption {
     margin-top: 15px;
     color: #ccc;
     font-family: sans-serif;
     text-align: center;
 }
-.modal-close { position: absolute; top: 20px; right: 30px; font-size: 50px; color: white; cursor: pointer; }
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
 
 
+/* Footer */
 .footer {
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 60px 20px 40px 20px;
     font-family: sans-serif;
-    z-index: 6000;
 }
 
 .footer-columns {
@@ -465,15 +511,7 @@ body.locked { overflow: hidden;}
 /* Response */
 @media (max-width: 768px) {
 
-    .nav-btn {
-        padding: 10px;
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-    .prev { left: 5px; }
-    .next { right: 5px; }
-
+    /* Nav */
     .navbar {
         flex-direction: row;
         justify-content: space-between;
@@ -531,7 +569,6 @@ body.locked { overflow: hidden;}
         background-color: #FAC4B8E6;
         backdrop-filter: blur(12px);
         box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
-
     }
 
     .nav-links {
@@ -551,7 +588,6 @@ body.locked { overflow: hidden;}
         width: 100%;
     }
 
-
     .nav-hamburger {
         display: flex;
         flex-direction: column;
@@ -559,7 +595,6 @@ body.locked { overflow: hidden;}
         gap: 5px;
         z-index: 1001;
     }
-
 
     .nav-hamburger.active .bar:nth-child(2) {
         opacity: 0;
@@ -572,6 +607,24 @@ body.locked { overflow: hidden;}
     .nav-hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .nav-btn {
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .prev {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+
+
+    /* Footer */
     .footer-columns {
         flex-direction: column;
         text-align: center;
