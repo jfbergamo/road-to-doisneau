@@ -9,24 +9,26 @@
     <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
     <script>
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');}
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');
+        }
     </script>
 </head>
 
 <body>
-    <header id="navbar">
+    <!-- Navbar -->
+    <header class="navbar">
         <div class="nav-logo">
-            <a href="/"><img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon"></a>
+            <a href="index.html"><img src="/content/logo/logo.svg" alt="Road to Doisneau Logo" class="logo-icon"></a>
         </div>
 
         <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/gallery">Gallery</a></li>
-                    <li><a href="/articles">Articles</a></li>
-                    <li><a href="/find_us">Find Us</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="about/index.html">About</a></li>
+                    <li><a href="gallery-page/index.html">Gallery</a></li>
+                    <li><a href="articles/index.html">Articles</a></li>
+                    <li><a href="find_us/index.html">Find Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,37 +45,50 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
+        </div>
     </header>
 
-<main class="main-container main-exhibition">
-        
+    <main class="main-container main-exhibition">
+
         <header class="exhibition-header">
             <h1 class="serif-title">Road to Doisneau</h1>
             <p class="subtitle">Prendi la strada per immergerti nel passato.</p>
             <div class="divider"></div>
             <h2 class="section-title">Prenota la tua Esperienza</h2>
-<div id="limit-error"></div>
+            <div id="limit-error"></div>
         </header>
 
         <div class="Ticket-container-visual">
-            
+
             <div class="card-visual" style="--bg-image: url('/content/gallery/Gallery_10_La_Dermiere.svg');">
                 <div class="card-overlay"></div>
                 <div class="card-content">
                     <span class="ticket-tag">Ridotti</span>
-                    <div class="qty-row">
-                        <div class="price-info">
-                            <span class="price">€9</span>
-                            <p class="label">Over 65</p>
+
+                    <div class="price-group">
+                        <div class="price-item-pill">
+                            <div class="price-info">
+                                <span class="price">€9</span>
+                                <p class="label">Over 65</p>
+                            </div>
+                            <div class="qty-selector">
+                                <button type="button" class="qty-btn minus">−</button>
+                                <input type="number" value="0" min="0" max="15" class="qty-input" data-price="9">
+                                <button type="button" class="qty-btn plus">+</button>
+                            </div>
                         </div>
-                        <input type="number" value="0" min="0" max="15" class="qty-input" data-price="9">
-                    </div>
-                    <div class="qty-row">
-                        <div class="price-info">
-                            <span class="price">€5</span>
-                            <p class="label">Studenti</p>
+
+                        <div class="price-item-pill">
+                            <div class="price-info">
+                                <span class="price">€5</span>
+                                <p class="label">Studenti</p>
+                            </div>
+                            <div class="qty-selector">
+                                <button type="button" class="qty-btn minus">−</button>
+                                <input type="number" value="0" min="0" max="15" class="qty-input" data-price="5">
+                                <button type="button" class="qty-btn plus">+</button>
+                            </div>
                         </div>
-                        <input type="number" value="0" min="0" max="15" class="qty-input" data-price="5">
                     </div>
                 </div>
             </div>
@@ -82,12 +97,19 @@
                 <div class="card-overlay"></div>
                 <div class="card-content">
                     <span class="ticket-tag tag-dark">Intero</span>
-                    <div class="qty-row">
-                        <div class="price-info">
-                            <span class="price large">€12</span>
-                            <p class="label">Accesso Completo</p>
+
+                    <div class="price-group">
+                        <div class="price-item-pill">
+                            <div class="price-info">
+                                <span class="price">€12</span>
+                                <p class="label"></p>
+                            </div>
+                            <div class="qty-selector">
+                                <button type="button" class="qty-btn minus">−</button>
+                                <input type="number" value="0" min="0" max="15" class="qty-input" data-price="12">
+                                <button type="button" class="qty-btn plus">+</button>
+                            </div>
                         </div>
-                        <input type="number" value="0" min="0" max="15" class="qty-input" data-price="12">
                     </div>
                 </div>
             </div>
@@ -96,19 +118,33 @@
                 <div class="card-overlay"></div>
                 <div class="card-content">
                     <span class="ticket-tag">Omaggio</span>
-                    <div class="qty-row">
-                        <div class="price-info">
-                            <span class="price">€0</span>
+
+                    <div class="price-group">
+
+                        <div class="price-item-pill">
+                            <div class="price-info">
+                                <span class="price">€0</span>
+                                <p class="label"></p>
+                            </div>
+
+                            <div class="qty-selector">
+                                <button type="button" class="qty-btn minus">−</button>
+                                <input type="number" value="0" min="0" max="15" class="qty-input" data-price="0">
+                                <button type="button" class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="info-summary-pill">
                             <details class="gratis-details-visual">
-                                <summary>Info <span>↓</span></summary>
+                                <summary>Info Omaggio <span>↓</span></summary>
                                 <ul>
                                     <li>Bambini 0-5 anni</li>
-                                    <li>Disabili + Accompagnatore</li>
+                                    <li>Disabili + Accompagnatori</li>
                                     <li>Giornalisti accreditati</li>
                                 </ul>
                             </details>
                         </div>
-                        <input type="number" value="0" min="0" max="15" class="qty-input" data-price="0">
+
                     </div>
                 </div>
             </div>
@@ -126,4 +162,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,101 +1,193 @@
+/* Fonts */
+@font-face {
+    font-family: 'Metal';
+    src: url('/font/Metal/Metal-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Caslon Text';
+    src: url('/font/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('/font/Libre_Franklin/LibreFranklin-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
-            --light-color: #FEF5F3;
-            --accent-color: #FAC4B8;
-            --dark-color: #052444;
-            --font-display: 'Libre Caslon Text', serif;
-            --font-main: 'Inter', sans-serif;
-            --border-radius: 24px;
-        }
+    /* Colors */
+    --light-color: #FEF5F3;
+    --accent-color: #FAC4B8;
+    --comp-color: #B7D8FA;
+    --dark-color: #052444;
 
-        body {
-            background-color: var(--dark-color);
-            font-family: var(--font-main);
-            color: var(--dark-color);
-            margin: 0;
-            padding: 40px 20px;
-            line-height: 1.6;
-        }
+    /* Typography */
+    --font-metal: 'Metal', sans-serif;
+    --font-caslon: 'Libre Caslon Text', Georgia, serif;
+    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
+    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+    /* Borders */
+    --border-radius-lg: 24px;
+    --border-radius-btn: 100px;
+    --border-radius-pill: 50px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: var(--font-sans);
+    background-color: var(--dark-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.serif-text {
+    font-family: var(--font-serif);
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 12px 32px;
+    border-radius: var(--border-radius-btn);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-pill {
+    border-radius: var(--border-radius-pill);
+    padding: 8px 24px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--dark-color);
+    border: 1px solid var(--text-dark);
+}
 
 
 
-        .category-tag {
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            color: var(--accent-color);
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
-        }
+.category-tag {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
 
-        h1 {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            line-height: 1.1;
-            margin-bottom: 30px;
-        }
+h1 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
 
-        /* Immagine dell'articolo */
-        .featured-image {
-            width: 100%;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            filter: grayscale(100%); /* Effetto Noir */
-            transition: filter 0.5s ease;
-        }
-        
-        .featured-image:hover {
-            filter: grayscale(0%);
-        }
+/* Immagine dell'articolo */
+.featured-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    filter: grayscale(100%);
+    /* Effetto Noir */
+    transition: filter 0.5s ease;
+}
 
-        .curiosity-section {
-            margin-bottom: 40px;
-        }
+.featured-image:hover {
+    filter: grayscale(0%);
+}
 
-        .curiosity-item {
-            margin-bottom: 30px;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 20px;
-        }
+.curiosity-section {
+    margin-bottom: 40px;
+}
 
-        .curiosity-item h2 {
-            font-family: var(--font-display);
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-        }
+.curiosity-item {
+    margin-bottom: 30px;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 20px;
+}
 
-        .curiosity-item p {
-            font-size: 1.1rem;
-            color: #333;
-        }
+.curiosity-item h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
 
-        blockquote {
-            font-family: var(--font-display);
-            font-style: italic;
-            font-size: 1.4rem;
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            margin: 40px 0;
-            position: relative;
-        }
+.curiosity-item p {
+    font-size: 1.1rem;
+    color: #333;
+}
 
-        blockquote::before {
-            content: '“';
-            font-size: 4rem;
-            color: var(--accent-color);
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            opacity: 0.5;
-        }
+blockquote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.4rem;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px 0;
+    position: relative;
+}
 
-        @media (max-width: 600px) {
-            .article-container { padding: 30px; }
-            h1 { font-size: 2rem; }
-        }
+blockquote::before {
+    content: '“';
+    font-size: 4rem;
+    color: var(--accent-color);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    opacity: 0.5;
+}
 
-        .logo {
+@media (max-width: 600px) {
+    .article-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.logo {
     display: flex;
     align-items: center;
     font-weight: bold;
