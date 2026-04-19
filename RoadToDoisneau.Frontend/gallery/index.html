@@ -40,35 +40,27 @@
 
     </header>
     <div id="unlocker">
-        <div class="unlock-box">
-            <h1>SBLOCCA LA GALLERIA!</h1>
-            <p>Clicca sulla pellicola per sviluppare le foto</p>
-            <div class="film-roll">📸</div>
+        <div class="unlock-box", >
+            <h1 style="color: #052444;">SBLOCCA LA GALLERIA!</h1>
+            <p style="color: B7D8FA;">Guarda subito come Robert Doisneau vedeva il mondo!</p>
+            <div class="film-roll">🔒</div>
         </div>
     </div>
     
-    <div id="main-content" class="is-blurred">
-
-        <main class="main-gallery">
-            <div class="gallery-item">
-                <img src="https://picsum.photos/800/600?random=1" alt="Foto 1">
-                <div class="gallery-caption">Le Baiser de l'Hôtel de Ville, 1950</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://picsum.photos/800/600?random=2" alt="Foto 2">
-                <div class="gallery-caption">Les Enfants de la Place Hébert, 1957</div>
-            </div>
-        
+    <div id="main-content">
+    <main class="main-gallery">
         </main>
-    </div>
+</div>
 
     <div id="photoModal" class="modal">
-        <span class="modal-close">&times;</span>
-        <div class="modal-content-wrapper">
-            <img id="modalImg" src="">
-            <div id="modalCaption"></div>
-        </div>
+    <span class="modal-close">&times;</span>
+    <button class="nav-btn prev" id="prevBtn">&#10094;</button>
+    <button class="nav-btn next" id="nextBtn">&#10095;</button>
+    <div class="modal-content-wrapper">
+        <img id="modalImg" src="" alt="Zoom">
+        <div id="modalCaption" class="modal-details"></div>
     </div>
+</div>
 
     <footer class="footer">
 
@@ -128,5 +120,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="photo.js"></script>
 </body>
 </html>

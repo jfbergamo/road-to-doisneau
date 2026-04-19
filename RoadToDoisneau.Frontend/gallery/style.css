@@ -99,6 +99,40 @@ a {
     border: 1px solid var(--text-dark);
 }
 
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centra perfettamente in verticale */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+    z-index: 1010; /* Sopra l'immagine */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Posizionamento specifico */
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
 /* Navigation */
 .navbar {
     background-color: var(--accent-color);
@@ -183,7 +217,7 @@ a {
 
 body { background: #052444; color: white; font-family: sans-serif; }
 
-body.locked { overflow: hidden; }
+body.locked { overflow: hidden;}
 
 /* LOCKER */
 #unlocker {
@@ -264,18 +298,85 @@ body.locked { overflow: hidden; }
 .no-blur { filter: blur(0) !important; }
 
 /* GALLERIA */
-.main-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
-.gallery-item { cursor: pointer; border: 1px solid #ffffff33; }
-.gallery-item img { width: 100%; display: block; }
+.main-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}.gallery-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3; /* O usa auto se le foto hanno formati diversi */
+    cursor: pointer;
+    background: #000;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0.5); /* Effetto vintage al passaggio */
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
 .gallery-caption { display: none; } /* Nascosta in griglia, la usiamo per il modale */
 
 /* MODALE */
-.modal { 
-    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-    background: rgba(0,0,0,0.95); z-index: 100000; 
+.modal {
+    display: none; /* Diventa 'flex' via JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
 }
-.modal-content-wrapper { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.modal-image { max-width: 90%; max-height: 80%; }
+.modal-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;  /* Occupa il 90% della larghezza schermo */
+    height: 80%; /* Occupa l'80% dell'altezza schermo */
+    margin: auto;
+}
+#modalImg {
+    /* IMPORTANTE: Queste tre proprietà insieme adattano l'immagine */
+    padding-top: 125px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Adatta l'immagine senza tagliarla o zoomare */
+    
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2); /* Opzionale: un fondo leggero */
+}
+#modalCaption {
+    margin-top: 15px;
+    color: #ccc;
+    font-family: sans-serif;
+    text-align: center;
+}
 .modal-close { position: absolute; top: 20px; right: 30px; font-size: 50px; color: white; cursor: pointer; }
 
 
@@ -364,7 +465,15 @@ body.locked { overflow: hidden; }
 /* Response */
 @media (max-width: 768px) {
 
-    /* Nav */
+    .nav-btn {
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .prev { left: 5px; }
+    .next { right: 5px; }
+
     .navbar {
         flex-direction: row;
         justify-content: space-between;
