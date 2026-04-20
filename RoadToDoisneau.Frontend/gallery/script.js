@@ -41,14 +41,12 @@ localStorage.clear();
 localStorage.clear();
 
 document.addEventListener('DOMContentLoaded', () => {
-    const unlocker = document.getElementById('unlocker');
     const mainContent = document.getElementById('main-content');
     const filmRoll = document.querySelector('.film-roll');
 
     // Funzione di sblocco
     const reveal = () => {
-        if (unlocker && mainContent) {
-            unlocker.classList.add('hidden');
+        if (mainContent) {
             mainContent.classList.remove('is-blurred');
             mainContent.classList.add('no-blur');
             document.body.classList.remove('locked');
