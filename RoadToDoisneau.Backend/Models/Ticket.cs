@@ -14,6 +14,8 @@
 
 public class Ticket
 {
+    private static decimal BOOKLET_PRICE = 0;
+
     public Guid Id { get; set; }
     public string HolderName { get; set => field = value.Substring(0, Math.Min(75, value.Length)); } = default!;
     public string HolderEmail { get; set => field = value.Substring(0, Math.Min(100, value.Length)); } = default!;
@@ -34,5 +36,6 @@ public class Ticket
             case "FULL":
             default:     Price = 12.00M; break;
         }
+        if (HasBooklet) Price += BOOKLET_PRICE;
     }
 }
