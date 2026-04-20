@@ -28,9 +28,10 @@ CREATE TABLE articles (
 	article_id SERIAL PRIMARY KEY,
 	title VARCHAR(150) NOT NULL,
 	description TEXT NOT NULL DEFAULT '',
+    category VARCHAR(20) NOT NULL,
+    quote TEXT,
+    special BOOL DEFAULT FALSE,
 	page VARCHAR(255) NOT NULL,
-	date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	author VARCHAR(100),
 	thumbnail VARCHAR(255) NOT NULL
 );
 
