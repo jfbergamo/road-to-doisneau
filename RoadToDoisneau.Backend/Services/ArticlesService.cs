@@ -22,9 +22,10 @@ public class ArticlesService : IArticlesService
                 article_id  AS Id,
                 title       AS Title,
                 description AS Description,
+                category    AS Category,
+                quote       AS Quote,
+                special     AS Special,
                 page        AS Page,
-                date        AS Date,
-                author      AS Author,
                 thumbnail   AS Thumbnail
             FROM articles
             """;
@@ -39,9 +40,10 @@ public class ArticlesService : IArticlesService
                 article_id  AS Id,
                 title       AS Title,
                 description AS Description,
+                category    AS Category,
+                quote       AS Quote,
+                special     AS Special,
                 page        AS Page,
-                date        AS Date,
-                author      AS Author,
                 thumbnail   AS Thumbnail
             FROM articles
             WHERE article_id = @id
@@ -56,16 +58,18 @@ public class ArticlesService : IArticlesService
             INSERT INTO articles (
                 title,
                 description,
+                category,
+                quote,
+                special,
                 page,
-                date,
-                author,
                 thumbnail
             ) VALUES (
                 @Title,
                 @Description,
+                @Category,
+                @Quote,
+                @Special,
                 @Page,
-                @Date,
-                @Author,
                 @Thumbnail
             ) RETURNING article_id
             """;
@@ -78,12 +82,13 @@ public class ArticlesService : IArticlesService
         string query = """
             UPDATE articles
             SET
-                title = @Title,
-                description = @Description,
-                page = @Page,
-                date = @Date,
-                author = @Author,
-                thumbnail = @Thumbnail
+                title        = @Title,
+                description  = @Description,
+                category     = @Category,
+                quote        = @Quote,
+                special      = @Special,
+                page         = @Page,
+                thumbnail    = @Thumbnail
             WHERE article_id = @Id
             """;
         int result = await connection.ExecuteAsync(query, article);
