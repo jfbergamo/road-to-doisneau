@@ -86,16 +86,10 @@ function renderArticle(article) {
     return blogCardArticle;
 }
 
-// (async () => {
-//     const result = await fetch(`${API_ENDPOINT}/status`);
-//     console.log(result);
-//     const article = {
-//         title: "Roberto Doisneau fa coming out",
-//         description: "Grande scoperta da parte di Antonio Cristiano",
-//         category: "incredibile",
-//         thumbnail: "/content/gallery/Gallery_7_Autoportrait.svg",
-//         page: "https://pbs.twimg.com/profile_images/1264560554250829832/Uynj_QW__400x400.jpg",
-//         special: true
-//     };
-//     grid.appendChild(renderArticle(article));
-// })()
+(async () => {
+    const result = await fetch(`${API_ENDPOINT}/articles`).then(x => x.json());
+    grid.innerHTML = '';
+    for (const article of result) {
+        grid.appendChild(renderArticle(article));
+    }
+})();

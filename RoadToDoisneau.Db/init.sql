@@ -35,6 +35,14 @@ CREATE TABLE articles (
 	thumbnail VARCHAR(255) NOT NULL
 );
 
+INSERT INTO articles (title, description, category, quote, special, page, thumbnail) VALUES
+('Parigi sul Noncello: Robert Doisneau arriva a Pordenone', 'Lo sguardo complice del fotografo che ha reso eterno l’ordinario approda in città con una selezione antologica unica.', 'Evento', NULL, false, '/articles/Parigi_sul_Noncello.html', '/content/gallery/Gallery_7_Autoportrait.svg'),
+('A spasso con Doisneau: Cosa fare a Pordenone', 'Come trasformare una giornata culturale in un’esperienza "umanista" tra i portici e le osterie del centro storico.', 'Guida', NULL, false, '/articles/Cosa_fare_a_Pordenone.html', '/content/gallery/Gallery_9_Pn.svg'),
+('Le Baiser de l’Hôtel de Ville 1950', 'Dietro lo scatto più famoso di Robert Doisneau si nasconde una storia di attori, processi e "falsa" spontaneità. È il simbolo dell’amore romantico, della Parigi del dopoguerra e della libertà ritrovata. Ma sapevate che quel momento, in realtà, non è stato catturato per caso? Ecco tre curiosità che cambieranno il vostro modo di guardare Le Baiser de l’Hôtel de Ville', 'Curiosità', NULL, false, '/articles/Le_Baiser.html', '/content/gallery/Gallery_8_View.svg'),
+('La Dernière Valse du 14 juillet 1949', 'Se Le Baiser rappresenta l’amore passionale, "La Dernière Valse" (L’ultimo valzer) è il manifesto della malinconia poetica di Robert Doisneau. Scattata durante i festeggiamenti del 14 luglio 1949, questa immagine racchiude tutto il fascino della Parigi popolare.', 'Curiosità', NULL, false, '/articles/La_Dernière_Valse.html', '/content/gallery/Gallery_11_La_Demiere_vut.svg'),
+('Pordenone stregata dal "Bacio": Successo travolgente', 'Sale piene e code fuori dai musei per il fotografo della felicità. Migliaia di visitatori nel primo weekend.', 'News', 'Cercavo di mostrare un mondo dove mi sarei sentito bene.', true, '', '/content/gallery/Gallery_15_Valser.svg'),
+('Un mese in più di fotografie: Mostra prolungata', 'Data la straordinaria affluenza, c’è tempo fino al 14 Agosto per sognare con le opere originali di Robert Doisneau.', 'Avviso', NULL, false, '/checkout', '/content/gallery/Gallery_12_Rose.svg');
+
 INSERT INTO photos (url, title, location, description, shooting_year) VALUES
 ('Autoportrait_au_Rolleiflex_1947.jpg', 'Autoportrait au Rolleiflex', 'Atelier Doisneau, Montrouge', 'L''artista si riflette, catturando l''essenza del fotografo che osserva il mondo attraverso la sua lente binoculare.', 1947),
 ('Créatures_de_Rêve_1952.jpeg', 'Créatures de Rêve', 'Les Halles, Parigi', 'Un''immagine onirica catturata tra le strade di Parigi, dove il reale si fonde con l''immaginazione.', 1952),
