@@ -14,7 +14,7 @@
 
 public class Ticket
 {
-    private static decimal BOOKLET_PRICE = 0;
+    private static decimal BOOKLET_PRICE = 4;
 
     public Guid Id { get; set; }
     public string HolderName { get; set => field = value.Substring(0, Math.Min(75, value.Length)); } = default!;
