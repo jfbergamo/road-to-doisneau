@@ -223,27 +223,6 @@ body.locked {
 }
 
 /* LOCKER */
-#unlocker {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(5, 36, 68, 0.7);
-    /* Blu scuro ma trasparente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 5000;
-    /* Alto, ma non deve coprire la Navbar se vuoi usarla subito */
-    transition: opacity 0.8s ease, visibility 0.8s;
-}
-
-#unlocker.hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
 
 .unlock-box {
     background: rgba(254, 245, 243, 0.95);
@@ -298,20 +277,11 @@ body.locked {
     margin-top: 20px;
 }
 
-#main-content.is-blurred {
-    filter: blur(40px);
-    /* Sfocatura molto intensa */
-    transition: filter 1.2s ease;
-}
-
-#main-content.no-blur {
-    filter: blur(0);
-}
-
 /* SFOCATURA */
 .is-blurred {
-    filter: blur(30px);
+    filter: blur(20px);
     transition: filter 1s ease;
+    border-radius: var(--border-radius-lg);
 }
 
 .no-blur {
@@ -319,6 +289,7 @@ body.locked {
 }
 
 /* GALLERIA */
+
 .main-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
