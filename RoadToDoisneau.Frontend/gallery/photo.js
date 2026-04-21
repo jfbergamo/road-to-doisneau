@@ -1,5 +1,7 @@
 localStorage.clear();
 
+const API_ENDPOINT = "https://localhost:7022/api";
+
 document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.querySelector('.main-gallery');
     const mainContent = document.getElementById('main-content');
@@ -11,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 1. FUNZIONE PER CARICARE IL JSON ---
     async function loadGalleryData() {
         try {
-            const response = await fetch('gallery.json');
+            const response = await fetch(`${API_ENDPOINT}/photos`);
             if (!response.ok) throw new Error("File JSON non trovato");
             
             allPhotos = await response.json(); // Salva i dati nell'array globale
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.innerHTML = `
                 <img src="${photo.url}" alt="${photo.title}" loading="lazy" class="is-blurred">
                 <div class="gallery-overlay">
-                    <span>${photo.shooting_year}</span>
+                    <span>${photo.shootingYear}</span>
                 </div>
             `;
 
