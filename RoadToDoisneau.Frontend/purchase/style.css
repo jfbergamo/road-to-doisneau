@@ -1,8 +1,8 @@
 /* --- FONTS & IDENTITY --- */
-@font-face { font-family: 'Metal'; src: url('/font/Metal/Metal-Regular.ttf') format('truetype'); }
-@font-face { font-family: 'Libre Caslon Text'; src: url('/font/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('truetype'); }
-@font-face { font-family: 'Libre Franklin'; src: url('/font/Libre_Franklin/LibreFranklin-Regular.ttf') format('truetype'); }
-@font-face { font-family: 'Source Sans Pro'; src: url('/font/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Metal'; src: url('/content/fonts/Metal/Metal-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Libre Caslon Text'; src: url('/content/fonts/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Libre Franklin'; src: url('/content/fonts/Libre_Franklin/LibreFranklin-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Source Sans Pro'; src: url('/content/fonts/Source_Sans_Pro/SourceSansPro-Regular.otf') format('opentype'); }
 
 :root {
     --light-color: #FEF5F3;
