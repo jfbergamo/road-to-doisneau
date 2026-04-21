@@ -136,14 +136,20 @@ function renderTickets(tickets) {
 
     qrGrid.innerHTML = ''; 
 
-    tickets.forEach(t => {
+    tickets.forEach(async (t) => {
         // Generiamo il QR basandoci sul nome confermato dal database
-        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(t.id)}`;
+        let response;
+        try {
+            response = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(t.id)}`, { signal: AbortSignal.timeout(1500) });
+        } catch {
+            response = await fetch('/content/icons/socials/tiktok_icon.svg');
+        }
+        const qr = await response.blob();
         
         const qrCard = document.createElement('div');
         qrCard.className = 'qr-card';
         qrCard.innerHTML = `
-            <img src="${qrUrl}" alt="QR Ticket">
+            <img src="${URL.createObjectURL(qr)}" alt="QR Ticket">
             <p style="font-weight: 700; margin-top: 15px; font-family: var(--font-franklin);">
                 ${t.holderName}
             </p>
