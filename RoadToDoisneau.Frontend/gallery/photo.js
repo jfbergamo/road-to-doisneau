@@ -3,7 +3,6 @@ localStorage.clear();
 document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.querySelector('.main-gallery');
     const mainContent = document.getElementById('main-content');
-    const filmRoll = document.querySelector('.film-roll');
 
     // --- VARIABILI DI STATO PER LA NAVIGAZIONE ---
     let allPhotos = []; // Archivio locale dei dati JSON
@@ -99,23 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = "auto";
         }
     };
-
-    const reveal = () => {
-
-        if (filmRoll) {
-        filmRoll.textContent = '🔓'; 
-        filmRoll.style.transform = 'scale(1.5)';
-        filmRoll.style.opacity = '0';
-    }
-
-    setTimeout(() => {
-        mainContent.classList.remove('is-blurred');
-        mainContent.classList.add('no-blur');
-        document.body.classList.remove('locked');
-    }, 300); 
-    };
-
-    if (filmRoll) filmRoll.addEventListener('click', reveal);
 
     loadGalleryData();
 });

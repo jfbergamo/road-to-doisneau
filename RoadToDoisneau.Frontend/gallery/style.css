@@ -244,6 +244,9 @@ a {
     /* O usa auto se le foto hanno formati diversi */
     cursor: pointer;
     background: #000;
+
+    border-radius: var(--border-radius-lg);
+    mask-image: radial-gradient(white, black);
 }
 
 .gallery-item img {
