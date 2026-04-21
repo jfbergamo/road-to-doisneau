@@ -2,7 +2,6 @@ localStorage.clear();
 
 document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.querySelector('.main-gallery');
-    const unlocker = document.getElementById('unlocker');
     const mainContent = document.getElementById('main-content');
     const filmRoll = document.querySelector('.film-roll');
 
@@ -110,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setTimeout(() => {
-        unlocker.classList.add('hidden');
         mainContent.classList.remove('is-blurred');
         mainContent.classList.add('no-blur');
         document.body.classList.remove('locked');

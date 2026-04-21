@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettagli Partecipanti | Road to Doisneau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <header class="navbar">
+        <div class="nav-logo">
+            <a href="/"><img src="/content/logo/logo.svg" alt="Logo" class="logo-icon"></a>
+        </div>
+        <div class="nav-right">
+            <a href="/checkout" class="btn btn-outline">Indietro</a>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <header class="exhibition-header">
+            <h1 class="serif-title">Quasi fatto</h1>
+            <p class="subtitle">Inserisci i dettagli per ogni partecipante.</p>
+        </header>
+
+        <form id="checkout-form-final">
+            <div id="participants-container">
+                </div>
+
+            <div class="payment-card" style="margin-top: 40px; padding: 30px; background: #111; color: white; border-radius: 20px;">
+                <h3>Totale Ordine: <span id="final-price">€0</span></h3>        
+                </div>
+
+                <button type="submit" class="btn btn-pill" style="width: 100%; margin-top: 30px; background: white; color: black; border: none;">
+                    Conferma e Paga
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <script src="formScript.js"></script>
+</body>
+</html>

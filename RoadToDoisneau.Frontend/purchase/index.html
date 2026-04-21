@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Sicuro | Road to Doisneau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="checkout-screen" class="checkout-container">
+        <div class="card">
+            <h2 class="serif-title" style="font-size: 1.5rem;">Metodo di Pagamento</h2>
+            <form id="purchaseForm">
+                <div class="credit-card-box">
+                    <div class="cc-chip"></div>
+                    <div class="cc-number-display" id="card-display">•••• •••• •••• ••••</div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem; text-transform: uppercase;">
+                        <span id="name-display">TITOLARE CARTA</span>
+                        <span id="date-display">MM/AA</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Titolare della Carta</label>
+                    <input type="text" id="cc-name" placeholder="NOME COGNOME" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Numero Carta</label>
+                    <input type="tel" id="cc-num" placeholder="1234 5678 1234 5678" inputmode="numeric" maxlength="19" required>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 10px;">
+                    <div class="form-group">
+                        <label>Scadenza</label>
+                        <input type="text" id="cc-exp" maxlength="5" placeholder="MM/AA" required>
+                    </div>
+                    <div class="form-group">
+                        <label>CVV</label>
+                       <input type="password" id="cc-cvv" maxlength="3" inputmode="numeric" pattern="\d*" placeholder="***" required>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="card" style="height: fit-content;">
+            <h2 class="serif-title" style="font-size: 1.5rem;">Riepilogo Biglietti</h2>
+            <div id="ticket-summary-list">
+                </div>
+            <div class="total" style="border-top: 2px solid #eee; margin-top: 15px; padding-top: 15px;">
+                <span>Totale da Pagare</span>
+                <span id="final-total-display">€ 0,00</span>
+            </div>
+            <button type="button" class="btn-pay" onclick="simulatePurchase()">Paga Ora</button>
+            <p style="text-align: center; font-size: 0.75rem; color: #94a3b8; margin-top: 15px;">🔒 Transazione criptata SSL</p>
+        </div>
+    </div>
+
+    <div id="loader" class="card" style="max-width: 400px; display: none; margin: 100px auto; text-align: center;">
+        <div class="spinner"></div>
+        <h3>Verifica Transazione...</h3>
+        <p>Stiamo comunicando con il tuo istituto bancario.</p>
+    </div>
+
+    <div id="success-page" class="card" style="max-width: 800px; display: none; margin: 50px auto; text-align: center;">
+        <h1 style="color: #22c55e;">✅ Acquisto Confermato!</h1>
+        <p>Grazie, i tuoi biglietti per <strong>Road to Doisneau</strong> sono pronti.</p>
+        <div id="qr-container-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+            </div>
+        <button class="btn-pay" style="margin-top: 30px;" onclick="window.location.href='/'">Torna alla Home</button>
+    </div>
+
+    <script src="purchaseScript.js"></script>
+</body>
+</html>
