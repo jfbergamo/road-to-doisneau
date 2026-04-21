@@ -40,31 +40,6 @@ localStorage.clear();
 
 localStorage.clear();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const unlocker = document.getElementById('unlocker');
-    const mainContent = document.getElementById('main-content');
-    const filmRoll = document.querySelector('.film-roll');
-
-    // Funzione di sblocco
-    const reveal = () => {
-        if (unlocker && mainContent) {
-            unlocker.classList.add('hidden');
-            mainContent.classList.remove('is-blurred');
-            mainContent.classList.add('no-blur');
-            document.body.classList.remove('locked');
-        }
-    };
-
-    // Click sulla pellicola
-    if (filmRoll) {
-        filmRoll.addEventListener('click', reveal);
-    }
-
-    // Controllo se era già sbloccato
-    if (localStorage.getItem('doisneau_unlocked') === 'true') {
-        reveal();
-    }
-
     // --- GESTIONE MODALE ---
     document.querySelectorAll('.gallery-item').forEach(item => {
         item.addEventListener('click', () => {
@@ -83,4 +58,56 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = "none";
         document.body.style.overflow = "auto";
     };
+<<<<<<< translations
 });
+
+// i18n Translation
+const langToggle = document.getElementById('langToggle');
+let currentLang = localStorage.getItem('lang') || 'it';
+
+langToggle.textContent = currentLang === 'it' ? 'EN' : 'IT';
+
+async function loadTranslations(lang) {
+    try {
+        const response = await fetch(`/locales/${lang}.json`);
+        if (!response.ok) throw new Error("Could not load translation file");
+
+        const translations = await response.json();
+        applyTranslations(translations);
+    } catch (error) {
+        console.error("Translation error:", error);
+    }
+}
+
+function applyTranslations(translations) {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const keys = element.getAttribute('data-i18n').split('.');
+        let text = translations;
+
+        keys.forEach(key => {
+            if (text) text = text[key];
+        });
+
+        if (text) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = text;
+            } else {
+                element.innerHTML = text;
+            }
+        }
+    });
+}
+
+langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'it' ? 'en' : 'it';
+
+    langToggle.textContent = currentLang === 'it' ? 'EN' : 'IT';
+
+    localStorage.setItem('lang', currentLang);
+
+    loadTranslations(currentLang);
+});
+
+loadTranslations(currentLang);
+=======
+>>>>>>> master

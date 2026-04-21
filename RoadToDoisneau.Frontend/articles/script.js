@@ -1,4 +1,6 @@
 const grid = document.getElementById('blog-grid');
+const langToggle = document.getElementById('langToggle');
+let currentLang = localStorage.getItem('lang') || 'it';
 
 const API_ENDPOINT = "https://localhost:7022/api"
 
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         });
     }
-
+  
     // Loading of articles
 
     const response = await fetch(`${API_ENDPOINT}/articles`);
@@ -51,6 +53,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error(`Incorrect response from server`);
     }
     
+    // Translastions
+  
+    loadTranslations(currentLang);
 });
 
 // Articles
@@ -98,3 +103,47 @@ function renderArticle(article) {
 
     return blogCardArticle;
 }
+});
+
+langToggle.textContent = currentLang === 'it' ? 'EN' : 'IT';
+
+async function loadTranslations(lang) {
+    try {
+        const response = await fetch(`/locales/${lang}.json`);
+        if (!response.ok) throw new Error("Could not load translation file");
+
+        const translations = await response.json();
+        applyTranslations(translations);
+    } catch (error) {
+        console.error("Translation error:", error);
+    }
+}
+
+function applyTranslations(translations) {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const keys = element.getAttribute('data-i18n').split('.');
+        let text = translations;
+
+        keys.forEach(key => {
+            if (text) text = text[key];
+        });
+
+        if (text) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = text;
+            } else {
+                element.innerHTML = text;
+            }
+        }
+    });
+}
+
+langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'it' ? 'en' : 'it';
+
+    langToggle.textContent = currentLang === 'it' ? 'EN' : 'IT';
+
+    localStorage.setItem('lang', currentLang);
+
+    loadTranslations(currentLang);
+});

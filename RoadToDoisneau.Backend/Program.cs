@@ -20,8 +20,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: "cors",
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:5500",
-                                             "http://127.0.0.1:5500");
+                          policy.WithOrigins("*");
                           policy.WithMethods("GET", "POST");
                           policy.WithHeaders("Content-Type");
                       });
@@ -40,8 +39,9 @@ if (isDevel)
     });
 
     app.UseHttpsRedirection();
-    app.UseCors("cors");
 }
+
+app.UseCors("cors");
 
 app.UseDefaultFiles();
 app.UseStaticFiles();

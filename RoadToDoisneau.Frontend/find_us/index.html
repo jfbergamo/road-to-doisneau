@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Us | Road to Doisneau</title>
+    <title data-i18n="find_us.page_title">Trovaci | Road to Doisneau</title>
     <link rel="stylesheet" href="findUs.css">
     <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
     <script>
@@ -24,19 +24,19 @@
         <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/gallery">Gallery</a></li>
-                    <li><a href="/articles">Articles</a></li>
-                    <li><a href="/find_us">Find Us</a></li>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="/about" data-i18n="nav.about">Autore</a></li>
+                    <li><a href="/gallery" data-i18n="nav.gallery">Galleria</a></li>
+                    <li><a href="/articles" data-i18n="nav.articles">Articoli</a></li>
+                    <li><a href="/find_us" data-i18n="nav.find_us">Trovaci</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="nav-right">
             <div class="nav-actions">
-                <a href="/checkout" class="btn btn-pill">Tickets</a>
-                <button class="btn btn-outline">EN</button>
+                <a href="/checkout" class="btn btn-pill" data-i18n="nav.tickets_btn">Biglietti</a>
+                <button class="btn btn-outline" id="langToggle">EN</button>
             </div>
 
             <button class="nav-hamburger" aria-controls="primary-navigation" aria-expanded="false"
@@ -51,9 +51,10 @@
     <main class="find-us-page">
         <section class="find-us-section">
             <div class="section-container">
-                <h2>Come raggiungerci</h2>
+                <h2 data-i18n="find_us.how_to_reach">Come Raggiungerci</h2>
                 <div class="info-block">
-                    <p class="serif-text">La mostra e collocata alla Galleria Harry Bertoia, nel cuore di Pordenone.
+                    <p class="serif-text" data-i18n="find_us.reach_text">La mostra e collocata alla Galleria Harry
+                        Bertoia, nel cuore di Pordenone.
                         Facilmente raggiungibile dalla stazione (10-minuti di camminata) o in macchina usando i vicini
                         "parcheggi multipiano".</p>
                     <div class="image-wrapper">
@@ -70,27 +71,34 @@
 
         <section class="find-us-section">
             <div class="section-container">
-                <h2>Ore di apertura</h2>
+                <h2 data-i18n="find_us.opening_hours">Ore di Apertura</h2>
                 <div class="hours-grid">
-                    <div class="hours-item"><span>Lunedì - Mercoledì:</span> <strong>Chiuso</strong></div>
-                    <div class="hours-item"><span>Giovedì - Venerdì:</span> <strong>15:00 - 19:00</strong></div>
-                    <div class="hours-item"><span>Sabato - Domenica:</span> <strong>10:00 - 19:00</strong></div>
+                    <div class="hours-item"><span data-i18n="find_us.days_mon_wed">Lunedì - Mercoledì:</span> <strong
+                            data-i18n="find_us.closed">Chiuso</strong></div>
+                    <div class="hours-item"><span data-i18n="find_us.days_thu_fri">Giovedì - Venerdì:</span>
+                        <strong>15:00 - 19:00</strong>
+                    </div>
+                    <div class="hours-item"><span data-i18n="find_us.days_sat_sun">Sabato - Domenica:</span>
+                        <strong>10:00 - 19:00</strong>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="find-us-section">
             <div class="section-container">
-                <h2>Tickets</h2>
-                <p class="serif-text">Prenota in anticipo per saltare la coda.</p><br>
-                <a href="/checkout" class="btn" style="background-color: #B7D8FA; color: #052444">Buy Tickets Now</a>
+                <h2 data-i18n="nav.tickets_btn">Biglietti</h2>
+                <p class="serif-text" data-i18n="find_us.book_advance">Prenota in anticipo per saltare la coda.</p><br>
+                <a href="/checkout" class="btn" style="background-color: #B7D8FA; color: #052444"
+                    data-i18n="find_us.buy_now">Buy Tickets Now</a>
             </div>
         </section>
 
         <section class="find-us-section no-border">
             <div class="section-container">
-                <h2><strong>Cosa fare per prolungare l'esperienza a Pordenone</strong></h2>
-                <h3>Hotel</h3>
+                <h2 data-i18n="find_us.prolong_experience"><strong>Cosa fare per prolungare l'esperienza a
+                        Pordenone</strong></h2>
+                <h3 data-i18n="find_us.hotels">Hotel</h3>
                 <ul style="list-style-type: none;">
                     <li>
                         <div class="hotel-card">
@@ -143,7 +151,7 @@
                 </ul>
                 <br>
                 <br>
-                <h3>Ristoranti</h3>
+                <h3 data-i18n="find_us.restaurants">Ristoranti</h3>
                 <ul style="list-style-type: none;">
                     <li>
                         <div class="hotel-card">
@@ -257,8 +265,7 @@
         <div class="footer-columns">
 
             <div class="footer-logos">
-                <a href="/"><img src="/content/logo/logo_alt.svg" alt="Road to Doisneau"
-                        class="logo-doisneau"></a>
+                <a href="/"><img src="/content/logo/logo_alt.svg" alt="Road to Doisneau" class="logo-doisneau"></a>
                 <a href="https://pordenonecapitale2027.it/"><img src="/content/logo/partners/PDNC_logo.svg"
                         alt="Pordenone Capitale" class="logo-pordenone"></a>
             </div>
@@ -296,7 +303,8 @@
                     </div>
                 </a>
                 <a href="https://absolutecode.it/">
-                    <div class="sponsor-3"><img src="/content/logo/partners/ANC_logo.svg" alt="Absolute&Code logo"></div>
+                    <div class="sponsor-3"><img src="/content/logo/partners/ANC_logo.svg" alt="Absolute&Code logo">
+                    </div>
                 </a>
                 <a href="https://comune.pordenone.it/">
                     <div class="sponsor-4"><img src="/content/logo/partners/PDN_logo.svg" alt="PD Commune logo"></div>
@@ -304,8 +312,8 @@
             </div>
         </div>
 
-        <div class="footer-copyright">
-            Copyright &copy; 2026 All rights reserved
+        <div class="footer-copyright" data-i18n="footer.copyright">
+            Copyright &copy; 2026 Tutti i diritti riservati.
         </div>
     </footer>
 

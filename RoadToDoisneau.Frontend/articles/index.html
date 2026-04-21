@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles | Road to Doisneau</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Libre+Franklin:wght@300;900&family=Metal&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title data-i18n="articles.page_title">Articoli | Road to Doisneau</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Libre+Franklin:wght@300;900&family=Metal&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="articles.css">
     <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
     <script>
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');}
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');
+        }
     </script>
 </head>
+
 <body>
     <!-- Navbar -->
     <header class="navbar">
@@ -22,19 +27,19 @@
         <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/gallery">Gallery</a></li>
-                    <li><a href="/articles">Articles</a></li>
-                    <li><a href="/find_us">Find Us</a></li>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="/about" data-i18n="nav.about">Autore</a></li>
+                    <li><a href="/gallery" data-i18n="nav.gallery">Galleria</a></li>
+                    <li><a href="/articles" data-i18n="nav.articles">Articoli</a></li>
+                    <li><a href="/find_us" data-i18n="nav.find_us">Trovaci</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="nav-right">
             <div class="nav-actions">
-                <a href="/checkout" class="btn btn-pill">Buy</a>
-                <button class="btn btn-outline">EN</button>
+                <a href="/checkout" class="btn btn-pill" data-i18n="nav.tickets_btn">Biglietti</a>
+                <button class="btn btn-outline" id="langToggle">EN</button>
             </div>
 
             <button class="nav-hamburger" aria-controls="primary-navigation" aria-expanded="false"
@@ -49,10 +54,10 @@
 
 
     <main class="content-section">
-        <div id="blog-grid">
-        </div>
+        <div id="blog-grid"></div>
     </main>
 
     <script src="script.js"></script>
 </body>
+
 </html>
