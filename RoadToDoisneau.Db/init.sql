@@ -69,7 +69,7 @@ INSERT INTO photos (url, title, location, description, shooting_year) VALUES
 ('/content/photo/Les_enfants_de_la_place_Hébert_1957.webp', 'Les children de la place Hébert', '18° Arrondissement, Parigi', 'Giochi infantili e libertà nel dopoguerra, tra le macerie e la speranza di Place Hébert.', 1957),
 ('/content/photo/Les_enfants_de_la_rue_Vilin_à_Belleville_1969.png', 'Les children de la rue Vilin à Belleville', 'Belleville, Parigi', 'Le lunghe scale di Belleville diventano il palcoscenico per le avventure dei bambini del quartiere.', 1969),
 ('/content/photo/Les_Hélicoptères_1972.jpg', 'Les Hélicoptères', 'Issy-les-Moulineaux', 'L''avvento della modernità tecnologica che sovrasta la vita tranquilla della periferia.', 1972),
-('/content/photo/Les_Mains_de_l_industry_1951.jpg', 'Les Mains de l_industrie', 'Officine Renault, Billancourt', 'Un omaggio poetico al lavoro manuale nelle officine Renault di Billancourt.', 1951),
+('/content/photo/Les_Mains_de_l_industrie_1951.jpg', 'Les Mains de l_industrie', 'Officine Renault, Billancourt', 'Un omaggio poetico al lavoro manuale nelle officine Renault di Billancourt.', 1951),
 ('/content/photo/Les_pains_de_Picasso_1952.jpg', 'Les pains de Picasso', 'Vallauris, Costa Azzurra', 'Il genio di Picasso si presta al gioco visivo di Doisneau in questo celebre e ironico ritratto.', 1952),
 ('/content/photo/Leschiotsen_laisse_Paris1934.jpg', 'Leschiotsen_laisse_Paris', 'Pont des Arts, Parigi', 'Piccoli momenti di tenerezza e vita cittadina lungo i boulevard di Parigi.', 1934),
 ('/content/photo/Madmoiselle_Anita_1951.jpg', 'Madmoiselle_Anita', 'Le Petit Châtelet, Parigi', 'La solitudine e il fascino di Anita in un bar di Pigalle, un''icona della notte parigina.', 1951),

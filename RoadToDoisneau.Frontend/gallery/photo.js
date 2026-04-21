@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2>${photo.title}</h2>
             <p><strong>Luogo:</strong> ${photo.location}</p>
             <p>${photo.description}</p>
-            <p><em>Anno: ${photo.shooting_year}</em></p>
+            <p><em>Anno: ${photo.shootingYear}</em></p>
         `;
     }
 
