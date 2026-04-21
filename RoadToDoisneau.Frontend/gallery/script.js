@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-localStorage.clear();
 
     // --- GESTIONE MODALE ---
 document.querySelectorAll('.gallery-item').forEach(item => {
