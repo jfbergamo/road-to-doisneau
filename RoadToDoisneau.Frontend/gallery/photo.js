@@ -1,9 +1,10 @@
 localStorage.clear();
 
+const API_ENDPOINT = "https://localhost:7022/api";
+
 document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.querySelector('.main-gallery');
     const mainContent = document.getElementById('main-content');
-    const filmRoll = document.querySelector('.film-roll');
 
     // --- VARIABILI DI STATO PER LA NAVIGAZIONE ---
     let allPhotos = []; // Archivio locale dei dati JSON
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 1. FUNZIONE PER CARICARE IL JSON ---
     async function loadGalleryData() {
         try {
-            const response = await fetch('gallery.json');
+            const response = await fetch(`${API_ENDPOINT}/photos`);
             if (!response.ok) throw new Error("File JSON non trovato");
             
             allPhotos = await response.json(); // Salva i dati nell'array globale
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.innerHTML = `
                 <img src="${photo.url}" alt="${photo.title}" loading="lazy" class="is-blurred">
                 <div class="gallery-overlay">
-                    <span>${photo.shooting_year}</span>
+                    <span>${photo.shootingYear}</span>
                 </div>
             `;
 
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2>${photo.title}</h2>
             <p><strong>Luogo:</strong> ${photo.location}</p>
             <p>${photo.description}</p>
-            <p><em>Anno: ${photo.shooting_year}</em></p>
+            <p><em>Anno: ${photo.shootingYear}</em></p>
         `;
     }
 
@@ -99,23 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = "auto";
         }
     };
-
-    const reveal = () => {
-
-        if (filmRoll) {
-        filmRoll.textContent = '🔓'; 
-        filmRoll.style.transform = 'scale(1.5)';
-        filmRoll.style.opacity = '0';
-    }
-
-    setTimeout(() => {
-        mainContent.classList.remove('is-blurred');
-        mainContent.classList.add('no-blur');
-        document.body.classList.remove('locked');
-    }, 300); 
-    };
-
-    if (filmRoll) filmRoll.addEventListener('click', reveal);
 
     loadGalleryData();
 });

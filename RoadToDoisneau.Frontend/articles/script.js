@@ -1,5 +1,10 @@
+const grid = document.getElementById('blog-grid');
+const langToggle = document.getElementById('langToggle');
+let currentLang = localStorage.getItem('lang') || 'it';
+
 // Nav
-document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener('DOMContentLoaded', async () => {
 
     const navbar = document.querySelector('.navbar');
 
@@ -33,11 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    
+    // Translastions
+  
+    loadTranslations(currentLang);
 });
 
-// i18n Translation
-const langToggle = document.getElementById('langToggle');
-let currentLang = localStorage.getItem('lang') || 'it';
+// Translations
 
 langToggle.textContent = currentLang === 'it' ? 'EN' : 'IT';
 
@@ -81,5 +89,3 @@ langToggle.addEventListener('click', () => {
 
     loadTranslations(currentLang);
 });
-
-loadTranslations(currentLang);
