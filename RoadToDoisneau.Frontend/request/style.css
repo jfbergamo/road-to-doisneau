@@ -1,0 +1,121 @@
+/* --- Variabili e Font (Assicurati che siano in cima al file) --- */
+:root {
+    --light-color: #FEF5F3;
+    --accent-color: #FAC4B8;
+    --comp-color: #B7D8FA;
+    --dark-color: #052444;
+    --font-metal: 'Metal', sans-serif;
+    --font-caslon: 'Libre Caslon Text', Georgia, serif;
+    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
+    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    --border-radius-lg: 24px;
+    --border-radius-pill: 50px;
+}
+
+/* --- Layout Pagina Grazie --- */
+body {
+    background-color: var(--light-color);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: var(--font-source);
+}
+
+.participant-card-visual {
+    background: white;
+    padding: 60px 40px;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--accent-color);
+    box-shadow: 12px 12px 0px var(--accent-color);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.serif-title {
+    font-family: var(--font-caslon);
+    font-size: 2.2rem;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* --- Box Informazioni --- */
+.request-info-box {
+    margin-top: 30px;
+    padding: 25px;
+    background: var(--light-color);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.request-label {
+    font-family: var(--font-franklin);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-color);
+    opacity: 0.6;
+}
+
+.ticket-tag {
+    font-family: var(--font-metal);
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+/* --- Area Messaggio (Dinamica) --- */
+.message-detail-container {
+    display: none; /* Nascosto di default, attivato da JS */
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--accent-color);
+}
+
+.message-text {
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--dark-color);
+    line-height: 1.6;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    white-space: pre-wrap; /* Mantiene la formattazione dell'utente */
+}
+
+/* --- Pulsante --- */
+.action-area {
+    margin-top: 40px;
+}
+
+.btn-pill {
+    display: inline-block;
+    background-color: var(--dark-color);
+    color: white;
+    padding: 15px 35px;
+    border-radius: var(--border-radius-pill);
+    text-decoration: none;
+    font-family: var(--font-franklin);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-pill:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    transform: scale(1.05);
+}
+
+.thank{
+    font-family: var(--font-metal);
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin-top: 20px;
+}

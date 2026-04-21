@@ -169,3 +169,29 @@ langToggle.addEventListener('click', () => {
 });
 
 loadTranslations(currentLang);
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.querySelector('form[action="/submit"]');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Recupero valori
+            const nome = document.getElementById('nome').value;
+            const interesseSelect = document.getElementById('interesse');
+            const interesseTesto = interesseSelect.options[interesseSelect.selectedIndex].text;
+            
+            // Qui c'era l'errore: usiamo 'dettaglio' costantemente
+            const dettaglio = document.getElementById('dettaglio').value;
+
+            // Salvataggio nel localStorage (usiamo una chiave sola per chiarezza)
+            localStorage.setItem('user_message', dettaglio);
+            localStorage.setItem('user_name', nome);
+
+            // Costruzione URL (assicurati che il percorso /request/ sia corretto per la tua struttura cartelle)
+            const targetUrl = `/request/index.html?richiesta=${encodeURIComponent(interesseTesto)}`;
+
+            window.location.href = targetUrl;
+        });
+    }
+});
