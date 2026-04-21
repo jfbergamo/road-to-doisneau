@@ -2,7 +2,7 @@ const grid = document.getElementById('blog-grid');
 const langToggle = document.getElementById('langToggle');
 let currentLang = localStorage.getItem('lang') || 'it';
 
-const API_ENDPOINT = "https://localhost:7022/api"
+const API_ENDPOINT = "https://localhost:7022/api";
 
 // Nav
 
@@ -103,7 +103,6 @@ function renderArticle(article) {
 
     return blogCardArticle;
 }
-});
 
 langToggle.textContent = currentLang === 'it' ? 'EN' : 'IT';
 
