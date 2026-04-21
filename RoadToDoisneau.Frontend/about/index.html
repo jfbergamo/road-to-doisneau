@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Road to Doisneau</title>
+    <title data-i18n="about.page_title">Autore | Road to Doisneau</title>
     <link rel="stylesheet" href="about.css">
     <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
     <script>
@@ -23,19 +23,19 @@
         <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/gallery">Gallery</a></li>
-                    <li><a href="/articles">Articles</a></li>
-                    <li><a href="/find_us">Find Us</a></li>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="/about" data-i18n="nav.about">Autore</a></li>
+                    <li><a href="/gallery" data-i18n="nav.gallery">Galleria</a></li>
+                    <li><a href="/articles" data-i18n="nav.articles">Articoli</a></li>
+                    <li><a href="/find_us" data-i18n="nav.find_us">Trovaci</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="nav-right">
             <div class="nav-actions">
-                <a href="/checkout" class="btn btn-pill">Tickets</a>
-                <button class="btn btn-outline">EN</button>
+                <a href="/checkout" class="btn btn-pill" data-i18n="nav.tickets_btn">Biglietti</a>
+                <button class="btn btn-outline" id="langToggle">EN</button>
             </div>
 
             <button class="nav-hamburger" aria-controls="primary-navigation" aria-expanded="false"
@@ -51,8 +51,13 @@
         <section class="hero-doisneau">
             <div class="hero-flex">
                 <div class="hero-text-container">
+<<<<<<< translations
+                    <h1 data-i18n="about.hero_title">Robert Doisneau</h1><br>
+                    <p class="subtitle" data-i18n="about.hero_subtitle">Il pescatore d'immagini (1912 – 1994)</p>
+=======
                     <h1>Robert Doisneau</h1><br>
                     <p class="subtitle">Il pescatore d'immagini (1912 - 1994)</p>
+>>>>>>> master
                 </div>
                 <div class="hero-image">
                     <img src="/content/gallery/Gallery_7_Autoportrait.svg" alt="Robert Doisneau Portrait">
@@ -64,14 +69,14 @@
             <div class="container">
                 <div class="grid-layout">
                     <div class="bio-text">
-                        <h2>L'uomo dietro l'obiettivo</h2>
-                        <p>
+                        <h2 data-i18n="about.bio_title">L'uomo dietro l'obiettivo</h2>
+                        <p data-i18n="about.bio_p1">
                             Robert Doisneau non è stato solo un fotografo, ma un poeta del quotidiano.
                             Nato a Gentilly, ha dedicato la sua vita a catturare la bellezza nelle piccole cose
                             della Parigi del dopoguerra, definendosi un <strong>"pescatore di immagini"</strong>
                             piuttosto che un cacciatore.
                         </p>
-                        <p>
+                        <p data-i18n="about.bio_p2">
                             La sua fotografia è intrisa di ironia, tenerezza e un profondo amore per l'essere umano,
                             rendendolo uno dei massimi esponenti della <em>fotografia umanista</em> francese.
                         </p>
@@ -82,13 +87,18 @@
                     </div>
 
                     <div class="bio-highlights">
-                        <h3>Punti Salienti</h3>
+                        <h3 data-i18n="about.highlights_title">Punti Salienti</h3>
                         <ul class="highlights-list">
-                            <li><strong>1934:</strong> Inizia a lavorare per la Renault come fotografo industriale.</li>
-                            <li><strong>1944:</strong> Documenta la Liberazione di Parigi dalle barricate.</li>
-                            <li><strong>1950:</strong> Scatta la sua opera più celebre, <em>Le Baiser de l'hôtel de
-                                    ville</em>.</li>
-                            <li><strong>1984:</strong> Viene nominato Cavaliere della Legion d'Onore.</li>
+                            <li data-i18n="about.highlight_1"><strong>1934:</strong> Inizia a lavorare per la Renault
+                                come fotografo industriale.</li>
+                            <li data-i18n="about.highlight_2"><strong>1944:</strong> Documenta la Liberazione di Parigi
+                                dalle barricate.</li>
+                            <li data-i18n="about.highlight_3"><strong>1950:</strong> Scatta la sua opera più celebre,
+                                <em>Le Baiser de l'hôtel de
+                                    ville</em>.
+                            </li>
+                            <li data-i18n="about.highlight_4"><strong>1984:</strong> Viene nominato Cavaliere della
+                                Legion d'Onore.</li>
                         </ul>
                     </div>
                 </div>
@@ -97,7 +107,7 @@
 
         <section class="quote-section">
             <div class="container">
-                <blockquote>
+                <blockquote data-i18n="about.quote">
                     "Quello che cercavo di mostrare era un mondo dove mi sarei sentito bene, dove le persone sarebbero
                     state gentili, dove avrei trovato la tenerezza che speravo di ricevere. Le mie foto erano la prova
                     che questo mondo può esistere."
@@ -108,9 +118,9 @@
         <section class="cta-gallery">
             <div class="container">
                 <div class="cta-box">
-                    <h2>Esplora le sue opere</h2>
-                    <p>Scopri la selezione curata per la mostra "Road to Doisneau".</p>
-                    <a href="/gallery" class="btn btn-pill">Vai alla Gallery</a>
+                    <h2 data-i18n="about.cta_title">Esplora le sue Opere</h2>
+                    <p data-i18n="about.cta_text">Scopri la selezione curata per la mostra "Road to Doisneau".</p>
+                    <a href="/gallery" class="btn btn-pill" data-i18n="about.cta_btn">Vai alla Galleria</a>
                 </div>
             </div>
         </section>
