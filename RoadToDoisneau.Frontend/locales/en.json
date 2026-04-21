@@ -35,9 +35,11 @@
             "q9": "\"I've noticed that some titles are in contrast with the shot's title. Did you get influenced by them or have you prefered to just watch the photos?\"",
             "a9": "\"No, usually I watch the photo first. But I've noticed some captions that are very funny in contrast with the photos (cit: Hommages Respectueux / Respectable Homages - 1954\""
         },
-        "booklet.title": "\"Buy Booklet before coming to see us\"",
-        "booklet.subtitle": "\"Don't forget to take your free stikers!\"",
-        "booklet.btn": "\"Buy Booklet\""
+        "booklet": {
+            "title": "\"Buy Booklet before coming to see us\"",
+            "subtitle": "\"Don't forget to take your free stikers!\"",
+            "btn": "\"Buy Booklet\""
+        }
     },
     "gallery": {
         "gallery.unlock_title": "Unlock the gallery",
@@ -108,66 +110,66 @@
         "art5_title": "Pordenone spellbound by 'The Kiss': Overwhelming success",
         "art5_desc": "Full rooms and queues outside museums for the photographer of happiness.",
         "art6_title": "One more month of photography: Exhibition extended",
-        "art6_desc": "Due to extraordinary attendance, there is time until August 14."
+        "art6_desc": "Due to extraordinary attendance, there is time until August 14.",
+        "cosaFarePordenone": {
+            "cat_guide": "Urban guide",
+            "art2_title": "Going around with Doisneau: What to do in Pordenone",
+            "art2_subtitle": "How to transform a cultural day in a “humanistic” experience between porticoes and taverns of the historic center.",
+            "art2_caption": "Trip on the Noncello",
+            "art2_p1": "After having nourished the eyes with Robert Doisneau`s works, the excitement yearns to be taken outside, in the city streets. Pordenone, with the elegant porticoes and medieval alleys, lends itself to be lived with the same “humanistic” curiosity of the french photographer.",
+            "art2_h2_1": "Getting lost on the way",
+            "art2_p2": "Start your stroll in Corso Vittorio Emanuele II. Here, the kind invitation is to forget the smartphone in your pocket: observe the passerby-faces, the lights and shadow games underneath the painted arches and the slow rhythm of steps on the cobbled streets. It`s in these ordinary details that Robert Doisneau would have found “his case music”.",
+            "art2_quote": "\"What I was trying to show was a world where I would have felt better, where people would have been gentler, where I would have found the sweetness I hoped to receive.\"",
+            "art2_h2_2": "The shadow rite",
+            "art2_p3": "Not a day in Pordenone could be declared finished without having made a stop in the historic city-center taverns. Walk into a typical local tavern, order a “tajut” of wine and listen to the buzz of conversations. In that sincere conviviality, between a stolen smile from a balcony and a gesture of understanding, you`ll find again the spirit of the Parisian bistrot that Doisneau really loved to go to.",
+            "art2_p4": "Finally, reach the Noncello shore at sunset, The light fog that frequently rises from the water that resembles the suffused atmosphere of a morning alongside the Senna, perfectly closing the circle of a day dedicated to the real beauty.",
+            "back_btn": "← Go back to the Articles"
+        },
+        "valse": {
+            "cat_atmospheres": "Parisian atmospheres",
+            "art3_detail_title": "La Dernière Valse: The last breath of the party",
+            "art3_h2_1": "1. The beat of the 14th of July",
+            "art3_p1": "While Paris was celebrating the Storming of the Bastille, Doisneau decided to distance himself from the fireworks. In an alley corner. He found a couple who danced alone, while the musicians were starting to put away. It`s the portrait of the “end of the party”, that magic moment where the public joy was starting to turn to private intimacy. ",
+            "art3_h2_2": "2. The images fisher",
+            "art3_p2": "Unlike “the Kiss”. Here there`s no staging. Doisneau loved to define himself a fisher: he played the waiting game until reality composed itself the masterpiece.  He noticed the grace of the two dancers on the humid paving and he shot, capturing not only a dance, but the desire of an entire generation to go back to smiling after the dark years of war.",
+            "art3_quote": "\"“There`s a sort of grace in seeing a party till the end. It`s the moment in which the masks drop and only humanity remains.”\"",
+            "art3_h2_3": "3. Un elegance without time",
+            "art3_p3": "What makes this shot eternal and equilibrated. The simple dress of the woman, the streetlamps that reflect the light on the cement and the dignified hug. It`s not a noble dance, but the walzer of the common people that, for one night, transforming the periferic Paris in the world's most prestigious stage."
+        },
+        "basier": {
+            "cat_behind_lens": "Behind the lens",
+            "art4_detail_title": "Le Basier de l`Hôtel de Ville: Chronicle of an emotional construct",
+            "art4_h2_1":"1. The actor`s dance",
+            "art4_p1":"For decades we dreamed of this shot, believing it was the peak of spontaneity. The truth is more staged: Doisneau did not “steal” the moment, he directed it. He noticed Françoise and Jacques in a bistrot and, enchanted by their chemistry, he asked them to replicate that kiss in front of the Hotel de Ville for a Life service. It was not news. It was vision.",
+            "art4_h2_2": "2. Scandal at the tribunal",
+            "art4_p2": "In the 90s, the mith risked breaking under the pressure of the judicial system. A lot of couples argued to have been the real protagonists, trying to get compensation in the millions. Doisneau was forced to confess: his photo was staged. Françoise Bornet appeared with the original print signed by the maestro, the only proof that put an end to the disputes.",
+            "art4_quote": "\"“I would have never permitted myself to shoot at people kissing on the street. Two lovers kissing are rarely a legitimate one”\"",
+            "art4_h2_3": "3. 155.000 euros of poetry",
+            "art4_p3": "In 2005, the original copy of Françoise was sold at auction for a record figure. Over 150 thousand euros for a piece of paper. Why? Because even knowing that it was a staged pose, that kiss continued to represent the Paris that all of us want to dream about: free, romantic and timeless."
+        },
+        "parigiNoncello": {
+            "cat_special_event": "Special Event",
+            "art1_title": "Paris on the Noncello: Robert Doisneau arrives in Pordenone",
+            "art1_subtitle": "A trip in the soul of french humanistic photography between the streets of the storic citycenter.",
+            "art1_p1": "Pordenone transforms itself in a cinematic set of other times. With the arrival of the exhibition dedicated to Robert Doisneau, the Friulian city welcomes the delicacy of a look that was capable of stopping time without breaking the enchantment. ",
+            "art1_h2_1": "The poetry of the ordinary",
+            "art1_p2": "Don`t expect plastic poses or constructed poses. Doisneau was an “image fisher”, a man capable of waiting hours the perfect alignment between radiant light and the smile of a passerby",
+            "art1_quote": "\"“What I was trying to show was a world where I would have felt better, where people would have been gentler”\"",
+            "art1_p3": "Our set-up has been tough to create a continuous dialogue between the photos and Pordenone`s architecture. Strolling between the halls it`s like walking down the Senna, an experience that bonds the Parisian white and black with the colors of our porticoes."
+        }
     },
-    "articles-cosaFarePordenone": {
-        "articles.cat_guide": "Urban guide",
-        "articles.art2_title": "Going around with Doisneau: What to do in Pordenone",
-        "articles.art2_subtitle": "How to transform a cultural day in a “humanistic” experience between porticoes and taverns of the historic center.",
-        "articles.art2_caption": "Trip on the Noncello",
-        "articles.art2_p1": "After having nourished the eyes with Robert Doisneau`s works, the excitement yearns to be taken outside, in the city streets. Pordenone, with the elegant porticoes and medieval alleys, lends itself to be lived with the same “humanistic” curiosity of the french photographer.",
-        "articles.art2_h2_1": "Getting lost on the way",
-        "articles.art2_p2": "Start your stroll in Corso Vittorio Emanuele II. Here, the kind invitation is to forget the smartphone in your pocket: observe the passerby-faces, the lights and shadow games underneath the painted arches and the slow rhythm of steps on the cobbled streets. It`s in these ordinary details that Robert Doisneau would have found “his case music”.",
-        "articles.art2_quote": "\"What I was trying to show was a world where I would have felt better, where people would have been gentler, where I would have found the sweetness I hoped to receive.\"",
-        "articles.art2_h2_2": "The shadow rite",
-        "articles.art2_p3": "Not a day in Pordenone could be declared finished without having made a stop in the historic city-center taverns. Walk into a typical local tavern, order a “tajut” of wine and listen to the buzz of conversations. In that sincere conviviality, between a stolen smile from a balcony and a gesture of understanding, you`ll find again the spirit of the Parisian bistrot that Doisneau really loved to go to.",
-        "articles.art2_p4": "Finally, reach the Noncello shore at sunset, The light fog that frequently rises from the water that resembles the suffused atmosphere of a morning alongside the Senna, perfectly closing the circle of a day dedicated to the real beauty.",
-        "articles.back_btn": "← Go back to the Articles"
-    },
-    "articles-valse": {
-        "articles.cat_atmospheres": "Parisian atmospheres",
-        "articles.art3_detail_title": "La Dernière Valse: The last breath of the party",
-        "articles.art3_h2_1": "1. The beat of the 14th of July",
-        "articles.art3_p1": "While Paris was celebrating the Storming of the Bastille, Doisneau decided to distance himself from the fireworks. In an alley corner. He found a couple who danced alone, while the musicians were starting to put away. It`s the portrait of the “end of the party”, that magic moment where the public joy was starting to turn to private intimacy. ",
-        "articles.art3_h2_2": "2. The images fisher",
-        "articles.art3_p2": "Unlike “the Kiss”. Here there`s no staging. Doisneau loved to define himself a fisher: he played the waiting game until reality composed itself the masterpiece.  He noticed the grace of the two dancers on the humid paving and he shot, capturing not only a dance, but the desire of an entire generation to go back to smiling after the dark years of war.",
-        "articles.art3_quote": "\"“There`s a sort of grace in seeing a party till the end. It`s the moment in which the masks drop and only humanity remains.”\"",
-        "articles.art3_h2_3": "3. Un elegance without time",
-        "articles.art3_p3": "What makes this shot eternal and equilibrated. The simple dress of the woman, the streetlamps that reflect the light on the cement and the dignified hug. It`s not a noble dance, but the walzer of the common people that, for one night, transforming the periferic Paris in the world's most prestigious stage."
-    },
-    "articles-basier": {
-        "articles.cat_behind_lens": "Behind the lens",
-        "articles.art4_detail_title": "Le Basier de l`Hôtel de Ville: Chronicle of an emotional construct",
-        "articles.art4_h2_1":"1. The actor`s dance",
-        "articles.art4_p1":"For decades we dreamed of this shot, believing it was the peak of spontaneity. The truth is more staged: Doisneau did not “steal” the moment, he directed it. He noticed Françoise and Jacques in a bistrot and, enchanted by their chemistry, he asked them to replicate that kiss in front of the Hotel de Ville for a Life service. It was not news. It was vision.",
-        "articles.art4_h2_2": "2. Scandal at the tribunal",
-        "articles.art4_p2": "In the 90s, the mith risked breaking under the pressure of the judicial system. A lot of couples argued to have been the real protagonists, trying to get compensation in the millions. Doisneau was forced to confess: his photo was staged. Françoise Bornet appeared with the original print signed by the maestro, the only proof that put an end to the disputes.",
-        "articles.art4_quote": "\"“I would have never permitted myself to shoot at people kissing on the street. Two lovers kissing are rarely a legitimate one”\"",
-        "articles.art4_h2_3": "3. 155.000 euros of poetry",
-        "articles.art4_p3": "In 2005, the original copy of Françoise was sold at auction for a record figure. Over 150 thousand euros for a piece of paper. Why? Because even knowing that it was a staged pose, that kiss continued to represent the Paris that all of us want to dream about: free, romantic and timeless."
-    },
-    "articles-parigiNoncello": {
-        "articles.cat_special_event": "Special Event",
-        "articles.art1_title": "Paris on the Noncello: Robert Doisneau arrives in Pordenone",
-        "articles.art1_subtitle": "A trip in the soul of french humanistic photography between the streets of the storic citycenter.",
-        "articles.art1_p1": "Pordenone transforms itself in a cinematic set of other times. With the arrival of the exhibition dedicated to Robert Doisneau, the Friulian city welcomes the delicacy of a look that was capable of stopping time without breaking the enchantment. ",
-        "articles.art1_h2_1": "The poetry of the ordinary",
-        "articles.art1_p2": "Don`t expect plastic poses or constructed poses. Doisneau was an “image fisher”, a man capable of waiting hours the perfect alignment between radiant light and the smile of a passerby",
-        "articles.art1_quote": "\"“What I was trying to show was a world where I would have felt better, where people would have been gentler”\"",
-        "articles.art1_p3": "Our set-up has been tough to create a continuous dialogue between the photos and Pordenone`s architecture. Strolling between the halls it`s like walking down the Senna, an experience that bonds the Parisian white and black with the colors of our porticoes."
-    },
-    "findUs": {
-        "find_us.how_to_reach": "How to reach us",
-        "find_us.reach_text": "The exhibition is collocated at Harry Bertoia Gallery, in the heart of Pordenone. Easily reachable from the station (10-minutes walk) or by car using the nearby \"multilayer parking lot”.",
-        "find_us.opening_hours": "Opening Hours",
-        "find_us.days_mon_wed": "Monday - Wednesday:",
-        "find_us.closed": "Closed",
-        "find_us.days_thu_fri": "Thursday - Friday:",
-        "find_us.days_sat_sun": "Saturday - Sunday:",
-        "find_us.book_advance": "Book in advance to skip line.",
-        "find_us.prolong_experience": "What to do to prolongate the visit",
-        "find_us.hotels": "Hotels",
-        "find_us.restaurants": "Restaurants",
-        "find_us.enterntainment": "Enterntainment"
+    "find_us": {
+        "how_to_reach": "How to reach us",
+        "reach_text": "The exhibition is collocated at Harry Bertoia Gallery, in the heart of Pordenone. Easily reachable from the station (10-minutes walk) or by car using the nearby \"multilayer parking lot”.",
+        "opening_hours": "Opening Hours",
+        "days_mon_wed": "Monday - Wednesday:",
+        "closed": "Closed",
+        "days_thu_fri": "Thursday - Friday:",
+        "days_sat_sun": "Saturday - Sunday:",
+        "book_advance": "Book in advance to skip line.",
+        "prolong_experience": "What to do to prolongate the visit",
+        "hotels": "Hotels",
+        "restaurants": "Restaurants",
+        "enterntainment": "Enterntainment"
     }
 }
