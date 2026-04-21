@@ -418,9 +418,8 @@ a {
     font-size: 1.1rem;
     opacity: 0.7;
 }
-
 /* Flips the arrow when clicked */
-.gratis-details-visual[open] summary span {
+.gratis-details-visual[open] summary span:last-child {
     display: inline-block;
     transform: rotate(180deg);
 }
