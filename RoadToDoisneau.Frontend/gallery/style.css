@@ -218,70 +218,10 @@ a {
     border-radius: 3px;
 }
 
-body.locked {
-    overflow: hidden;
-}
-
-/* LOCKER */
-
-.unlock-box {
-    background: rgba(254, 245, 243, 0.95);
-    /* Colore chiaro quasi opaco */
-    padding: 3rem;
-    border-radius: 24px;
-    text-align: center;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    /* Ombra profonda per dare stacco */
-    max-width: 450px;
-    width: 90%;
-    border: 1px solid rgba(250, 196, 184, 0.5);
-    /* Bordino sottile color pesca */
-
-    /* Animazione d'entrata fluida */
-    animation: fadeInScale 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.unlock-box h2 {
-    font-family: var(--font-caslon);
-    color: var(--dark-color);
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    font-style: italic;
-}
-
-.unlock-box p {
-    font-family: var(--font-franklin);
-    color: #4a4a4a;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-}
-
-/* Effetto al passaggio del mouse sulla pellicola dentro la box */
-.unlock-box .film-roll {
-    font-size: 4rem;
-    cursor: pointer;
-    display: inline-block;
-    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
-    transition: all 0.4s ease;
-}
-
-.unlock-box .film-roll:hover {
-    transform: scale(1.15) rotate(12deg);
-    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3));
-}
-
-.film-roll {
-    font-size: 5rem;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
 /* SFOCATURA */
 .is-blurred {
     filter: blur(20px);
     transition: filter 1s ease;
-    border-radius: var(--border-radius-lg);
 }
 
 .no-blur {
