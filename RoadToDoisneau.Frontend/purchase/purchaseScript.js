@@ -1,5 +1,7 @@
+const API_URL = `https://localhost:7022/api`
+
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 1. SETUP INIZIALE E RIEPILOGO ---
+    // --- 1. RECUPERO DATI E RIEPILOGO ---
     const finalDetails = JSON.parse(localStorage.getItem('finalOrderDetails')) || [];
     const summaryContainer = document.getElementById('ticket-summary-list');
     const totalDisplay = document.getElementById('final-total-display');
@@ -25,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     totalDisplay.innerText = `€ ${runningTotal.toFixed(2)}`;
 
-    // --- 2. FORMATTAZIONE INPUT CARTA (SOLO ESTETICA) ---
+    // --- 2. FORMATTAZIONE INPUT CARTA ---
     const ccNum = document.getElementById('cc-num');
     const ccExp = document.getElementById('cc-exp');
     const ccName = document.getElementById('cc-name');
@@ -54,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// --- 3. HELPER DI VALIDAZIONE ---
+// --- 3. HELPER DI VALIDAZIONE E MAPPING ---
 function isExpiryValid(val) {
     if (!/^\d{2}\/\d{2}$/.test(val)) return false;
     const [m, y] = val.split('/').map(n => parseInt(n, 10));
@@ -72,63 +74,61 @@ function mapToDiscountCode(type) {
     return 'FULL';
 }
 
-// --- 4. FUNZIONE CORE: ACQUISTO ---
+// --- 4. FUNZIONE ACQUISTO (POST AL DATABASE) ---
 async function simulatePurchase() {
-    // Referenze UI
     const checkoutScreen = document.getElementById('checkout-screen');
     const loader = document.getElementById('loader');
+    
+    // Dati carta (per validazione locale)
     const ccValue = document.getElementById('cc-num').value.replace(/\s/g, '');
     const expValue = document.getElementById('cc-exp').value;
     const cvvValue = document.getElementById('cc-cvv').value;
 
-    // A. Validazione locale (Blocca subito se i campi sono palesemente errati)
     if (ccValue.length < 16 || !isExpiryValid(expValue) || cvvValue.length < 3) {
-        alert("Dati della carta non validi. Controlla numero, scadenza e CVV.");
+        alert("Dati della carta non validi.");
         return;
     }
 
-    // B. Preparazione dati per il DB (Mapping)
+    // Preparazione Payload per Tabella SQL (holder_name, holder_email, has_booklet, discount_code)
     const finalDetails = JSON.parse(localStorage.getItem('finalOrderDetails')) || [];
     const payload = finalDetails.map(ticket => ({
-        holder_name: ticket.ownerName,
-        holder_email: ticket.ownerEmail || "utente@esempio.it",
-        has_booklet: !!ticket.wantsBooklet,
-        discount_code: mapToDiscountCode(ticket.type)
+        holderName: ticket.ownerName,
+        holderEmail: ticket.ownerEmail || "email@esempio.com",
+        hasBooklet: !!ticket.wantsBooklet,
+        discountCode: mapToDiscountCode(ticket.type)
     }));
 
-    // C. Mostra Loader
+    // Interfaccia: Caricamento
     checkoutScreen.style.display = 'none';
     loader.style.display = 'block';
 
     try {
-        // D. Chiamata al Back-end
-        const response = await fetch('/api/tickets/purchase', { 
+        const body = JSON.stringify({ tickets: payload });
+
+        const response = await fetch(`${API_URL}/orders`, { 
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ tickets: payload })
+            body: body
         });
 
-        if (!response.ok) {
-            throw new Error("Errore server: " + response.status);
-        }
+        if (!response.ok) throw new Error("Errore durante la creazione dei biglietti.");
 
-        const dataFromDb = await response.json(); 
-        // Assumiamo che il server restituisca l'array di record inseriti (con ticket_id UUID)
+        // Il backend restituisce una lista di nomi (es: [{ holder_name: "Mario Rossi" }, ...])
+        const resultFromDb = await response.json(); 
         
-        renderTickets(dataFromDb);
+        renderTickets(resultFromDb.tickets);
 
     } catch (error) {
-        // --- E. GESTIONE FALLIMENTO: NON CAMBIARE STILE SE FALLISCE ---
-        console.error("Errore durante l'invio:", error);
-        alert("Il pagamento non è andato a buon fine. Riprova tra un istante.");
+        console.error("Errore:", error);
+        alert("Il server non risponde. Riprova tra poco.");
         
-        // Nascondi loader e torna al modulo (non perdiamo i dati inseriti)
+        // FAIL-SAFE: Non cambia stile, torna al checkout
         loader.style.display = 'none';
         checkoutScreen.style.display = 'grid'; 
     }
 }
 
-// --- 5. MOSTRA I QR GENERATI DAL DB ---
+// --- 5. RENDERING (RICEVE SOLO I NOMI DAL DB) ---
 function renderTickets(tickets) {
     const qrGrid = document.getElementById('qr-container-grid');
     const successPage = document.getElementById('success-page');
@@ -137,16 +137,19 @@ function renderTickets(tickets) {
     qrGrid.innerHTML = ''; 
 
     tickets.forEach(t => {
-        // Usiamo l'UUID generato dal tuo database per il QR
-        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${t.ticket_id}`;
+        // Generiamo il QR basandoci sul nome confermato dal database
+        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(t.id)}`;
         
         const qrCard = document.createElement('div');
         qrCard.className = 'qr-card';
         qrCard.innerHTML = `
             <img src="${qrUrl}" alt="QR Ticket">
-            <p style="font-weight: 700; margin-top: 10px;">${t.holder_name}</p>
-            <p style="font-size: 0.8rem; color: #666; margin: 2px 0;">${t.discount_code}</p>
-            <small style="font-family: monospace; color: #FAC4B8;">${t.ticket_id.substring(0, 8)}...</small>
+            <p style="font-weight: 700; margin-top: 15px; font-family: var(--font-franklin);">
+                ${t.holderName}
+            </p>
+            <p style="font-family: var(--font-metal); color: var(--accent-color); font-size: 0.9rem;">
+                CONFERMATO
+            </p>
         `;
         qrGrid.appendChild(qrCard);
     });
@@ -154,7 +157,7 @@ function renderTickets(tickets) {
     loader.style.display = 'none';
     successPage.style.display = 'block';
     
-    // Svuota memoria
+    // Cleanup storage
     localStorage.removeItem('cartData');
     localStorage.removeItem('finalOrderDetails');
 }
