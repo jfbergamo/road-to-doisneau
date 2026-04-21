@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Road to Doisneau</title>
+    <title data-i18n="home.hero_title">Home | Road to Doisneau</title>
     <link rel="stylesheet" href="style.css">
     <link id="favicon" rel="icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg+xml">
     <script>
@@ -24,18 +24,18 @@
         <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="about">Autore</a></li>
-                    <li><a href="gallery">Galleria</a></li>
-                    <li><a href="articles">Articoli</a></li>
-                    <li><a href="find_us">Trovaci</a></li>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about" data-i18n="nav.about">Autore</a></li>
+                    <li><a href="gallery" data-i18n="nav.gallery">Galleria</a></li>
+                    <li><a href="articles" data-i18n="nav.articles">Articoli</a></li>
+                    <li><a href="find_us" data-i18n="nav.find_us">Trovaci</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="nav-right">
             <div class="nav-actions">
-                <a href="/checkout" class="btn btn-pill">Biglietti</a>
+                <a href="/checkout" class="btn btn-pill" data-i18n="nav.tickets_btn">Biglietti</a>
                 <button class="btn btn-outline" id="langToggle">EN</button>
             </div>
 
@@ -51,7 +51,7 @@
     <main>
         <!-- Gallery -->
         <section class="hero">
-            <h1 class="hero-main-title">Robert Doisneau</h1>
+            <h1 class="hero-main-title" data-i18n="home.hero_title_main">Robert Doisneau</h1>
 
             <div class="hero-gallery">
                 <div class="gallery-item">
@@ -91,8 +91,9 @@
             </div>
 
             <div class="hero-text">
-                <h2 class="hero-subtitle">Prendi questa strada per scoprire il passato.</h2>
-                <p class="serif-text">
+                <h2 class="hero-subtitle" data-i18n="home.hero_subtitle">Prendi questa strada per scoprire il passato.
+                </h2>
+                <p class="serif-text" data-i18n="home.hero_quote">
                     “Ci sono giorni in cui il semplice fatto di vedere sembra essere la vera felicità”
                     <span class="author">Robert Doisneau</span>
                 </p>
@@ -106,7 +107,7 @@
 
         <!-- Interviews -->
         <section class="interviews">
-            <h2>Cosa dicono i nostri visitatori?</h2>
+            <h2 data-i18n="interviews.title">Cosa dicono i nostri visitatori?</h2>
 
             <div class="interviews-grid">
 
@@ -119,32 +120,40 @@
 
                 <div class="interview-card">
                     <p>
-                        <strong class="interview-box">Intervistatore:</strong> <i>"Ho notato che alcuni titoli sono in
+                        <strong class="interview-box" data-i18n="interviews.interviewer">Intervistatore:</strong> <i
+                            data-i18n="interviews.q1">"Ho notato che alcuni titoli sono in
                             contrasto con il contenuto della fotografia. Si è fatta influenzare da esse o ha preferito
                             guardare soltanto la fotografia?"</i><br><br>
-                        <strong class="interview-box">Visitatrice:</strong> <i>"I titoli li guardo raramente, perché mi
+                        <strong class="interview-box" data-i18n="interviews.visitor_f">Visitatrice:</strong> <i
+                            data-i18n="interviews.a1">"I titoli li guardo raramente, perché mi
                             concentro più sui dettagli delle foto o quadri."</i>
                     </p>
                 </div>
 
                 <div class="interview-card">
                     <p>
-                        <strong class="interview-box">Intervistatore:</strong> <i>"Come mai ha scelto di venire a questa
+                        <strong class="interview-box" data-i18n="interviews.interviewer">Intervistatore:</strong> <i
+                            data-i18n="interviews.q2">"Come mai ha scelto di venire a questa
                             mostra?"</i><br><br>
-                        <strong class="interview-box">Visitatore:</strong> <i>"Sono qui con i miei studenti per un
+                        <strong class="interview-box" data-i18n="interviews.visitor_m">Visitatore:</strong> <i
+                            data-i18n="interviews.a2">"Sono qui con i miei studenti per un
                             progetto interno al nostro percorso di studio."</i><br><br>
-                        <strong class="interview-box">Intervistatore:</strong> <i> "C'è una fotografia che l'ha
+                        <strong class="interview-box" data-i18n="interviews.interviewer">Intervistatore:</strong> <i
+                            data-i18n="interviews.q3">"C'è una fotografia che l'ha
                             colpita?"</i><br><br>
-                        <strong class="interview-box">Visitatore:</strong> <i>"Il titolo è 'Anita', perché è il nome di
+                        <strong class="interview-box" data-i18n="interviews.visitor_m">Visitatore:</strong> <i
+                            data-i18n="interviews.a3">"Il titolo è 'Anita', perché è il nome di
                             mia madre."</i>
                     </p>
                 </div>
 
                 <div class="interview-card">
                     <p>
-                        <strong class="interview-box">Intervistatore:</strong> <i>"Come mai ha scelto di venire a questa
+                        <strong class="interview-box" data-i18n="interviews.interviewer">Intervistatore:</strong> <i
+                            data-i18n="interviews.q4">"Come mai ha scelto di venire a questa
                             mostra?"</i><br><br>
-                        <strong class="interview-box">Visitatrice:</strong> <i>"Io, in realtà, questa mostra l'avevo già
+                        <strong class="interview-box" data-i18n="interviews.visitor_f">Visitatrice:</strong> <i
+                            data-i18n="interviews.a4">"Io, in realtà, questa mostra l'avevo già
                             visitata a Verona, però ho deciso di ritornare perché vedere Doisneau è sempre una buona
                             idea."</i>
                     </p>
@@ -152,9 +161,11 @@
 
                 <div class="interview-card">
                     <p>
-                        <strong class="interview-box">Intervistatore:</strong> <i>"Come mai ha scelto di venire a questa
+                        <strong class="interview-box" data-i18n="interviews.interviewer">Intervistatore:</strong> <i
+                            data-i18n="interviews.q5">"Come mai ha scelto di venire a questa
                             mostra?"</i><br><br>
-                        <strong class="interview-box">Visitatrice:</strong> <i>Allora, Doisneau è sempre stato uno dei
+                        <strong class="interview-box" data-i18n="interviews.visitor_f">Visitatrice:</strong> <i
+                            data-i18n="interviews.a5">Allora, Doisneau è sempre stato uno dei
                             miei fotografi preferiti, ma in particolare negli ultimi anni è diventato più importante
                             ancora perché, avendo fatto molte foto di scolari e avendo io aperto un B&B all'interno di
                             una vecchia scuola, ho esposto alcune delle sue fotografie e quindi mi sento molto legata a
@@ -164,19 +175,23 @@
 
                 <div class="interview-card">
                     <p>
-                        <strong class="interview-box">Intervistatore:</strong> <i>"C'è una fotografia che l`ha colpita
+                        <strong class="interview-box" data-i18n="interviews.interviewer">Intervistatore:</strong> <i
+                            data-i18n="interviews.q6">"C'è una fotografia che l`ha colpita
                             particolarmente?"</i><br><br>
-                        <strong class="interview-box">Visitatore:</strong> <i>"Guarda, una che mi ha colpito
+                        <strong class="interview-box" data-i18n="interviews.visitor_m">Visitatore:</strong> <i
+                            data-i18n="interviews.a6">"Guarda, una che mi ha colpito
                             particolarmente credo sia quella 'Cuccioli al guinzaglio' che non avevo mai visto."</i>
                     </p>
                 </div>
 
                 <div class="interview-card">
                     <p>
-                        <strong class="interview-box">Intervistatore:</strong> <i>"Le è venuta voglia di prendere in
+                        <strong class="interview-box" data-i18n="interviews.interviewer">Intervistatore:</strong> <i
+                            data-i18n="interviews.q7">"Le è venuta voglia di prendere in
                             mano una macchina fotografica, mettersi a fare fotografie a paesaggi o altri soggetti?"</i>
                         <br><br>
-                        <strong class="interview-box">Visitatrice:</strong> <i>"Io sono di un'altra generazione, quindi
+                        <strong class="interview-box" data-i18n="interviews.visitor_f">Visitatrice:</strong> <i
+                            data-i18n="interviews.a7">"Io sono di un'altra generazione, quindi
                             la macchina fotografica l'ho usata, sì, per tanto tempo. Adesso anche io sono un po' più
                             pigra e quindi uso più il telefonino, però ho fatto molte foto sì. Mia madre addirittura
                             faceva foto e le sviluppava lei stessa, quindi..."</i>
@@ -185,20 +200,24 @@
 
                 <div class="interview-card">
                     <p>
-                        <strong class="interview-box">Intervistatore:</strong> <i>"Le è venuta voglia di prendere in
+                        <strong class="interview-box" data-i18n="interviews.interviewer">Intervistatore:</strong> <i
+                            data-i18n="interviews.q8">"Le è venuta voglia di prendere in
                             mano una macchina fotografica, mettersi a fare fotografie a paesaggi o altri
                             soggetti?"</i><br><br>
-                        <strong class="interview-box">Visitatrice:</strong> <i>"Assolutamente sì!"</i>
+                        <strong class="interview-box" data-i18n="interviews.visitor_f">Visitatrice:</strong> <i
+                            data-i18n="interviews.a8">"Assolutamente sì!"</i>
                     </p>
                 </div>
 
                 <div class="interview-card">
                     <p>
-                        <strong class="interview-box">Intervistatore:</strong> <i>"Secondo me alcuni titoli sono in
+                        <strong class="interview-box" data-i18n="interviews.interviewer">Intervistatore:</strong> <i
+                            data-i18n="interviews.q9">"Secondo me alcuni titoli sono in
                             contrasto
                             con il contenuto della fotografia. Si è fatto influenzare da esse o ha preferito guardare
                             soltanto la fotografia?"</i><br><br>
-                        <strong class="interview-box">Visitatrice:</strong> <i>"No, di solito guardo prima la foto,
+                        <strong class="interview-box" data-i18n="interviews.visitor_f">Visitatrice:</strong> <i
+                            data-i18n="interviews.a9">"No, di solito guardo prima la foto,
                             l'opera, il quadro, insomma, quello che ho davanti. Però ho notato delle didascalie che
                             sottolineano e fanno anche sorridere rispetto al soggetto della foto. (Foto citata: Hommages
                             Respectueux / Omaggi rispettosi 1954)</i>
@@ -209,10 +228,11 @@
 
         <!-- Booklet -->
         <section class="booklet">
-            <h2>Acquista <strong>Booklet</strong> per quando vieni a trovarci</h2>
-            <p class="booklet-subtitle">Non dimenticare di prendere i tuoi adesivi gratuiti!</p>
+            <h2 data-i18n="booklet.title">Acquista <strong>Booklet</strong> per quando vieni a trovarci</h2>
+            <p class="booklet-subtitle" data-i18n="booklet.subtitle">Non dimenticare di prendere i tuoi adesivi
+                gratuiti!</p>
             <img src="content/gallery/Gallery_Booklet.svg" alt="Exhibition Booklet">
-            <a href="/checkout"><button class="btn">Acquista Booklet</button></a>
+            <a href="/checkout"><button class="btn" data-i18n="booklet.btn">Acquista Booklet</button></a>
         </section>
     </main>
 
@@ -227,7 +247,7 @@
                         alt="Pordenone Capitale" class="logo-pordenone"></a>
             </div>
 
-            <div class="footer-contact">
+            <div class="footer-contact" data-i18n="nav.contatti">
                 <p>Corso Vittorio Emanuele II, 64 33170 Pordenone</p>
                 <p>tel. 0434 392111</p>
                 <p>P.I. 00081570939</p>
@@ -268,7 +288,7 @@
             </div>
         </div>
 
-        <div class="footer-copyright">
+        <div class="footer-copyright" data-i18n="footer.copyright">
             Copyright &copy; 2026 Tutti i diritti riservati.
         </div>
     </footer>

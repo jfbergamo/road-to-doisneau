@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Road to Doisneau</title>
+    <title data-i18n="home.hero_title">Road to Doisneau</title>
     <link rel="stylesheet" href="style.css">
 
 
@@ -26,18 +26,18 @@
         <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#booklet">Booklet</a></li>
-                    <li><a href="#ticket">Biglietti</a></li>
-                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#booklet" data-i18n="nav.booklet">Booklet</a></li>
+                    <li><a href="#ticket" data-i18n="nav.tickets_btn">Biglietti</a></li>
+                    <li><a href="#contatti" data-i18n="nav.contatti">Contatti</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="nav-right">
             <div class="nav-actions">
-                <a href="/checkout" class="btn btn-pill">Biglietti</a>
-                <button class="btn btn-outline">EN</button>
+                <a href="/checkout" class="btn btn-pill" data-i18n="nav.tickets_btn">Biglietti</a>
+                <button class="btn btn-outline" id="langToggle">EN</button>
             </div>
 
             <button class="nav-hamburger" aria-controls="primary-navigation" aria-expanded="false"
@@ -55,15 +55,15 @@
             <img src="/content/card.svg" alt="LandingPhoto">
 
             <div class="text-container">
-                <h2>ROAD TO DOISNEAU</h2><br>
-                <h3>"Uno scatto per sognare il mondo in cui vorremmo vivere"</h3><br>
-                <a href="/checkout" class="btn btn-pill">Acquista Biglietti</a>
+                <h2 data-i18n="home.title_main">ROAD TO DOISNEAU</h2><br>
+                <h3 data-i18n="home.subtitle_main">"Uno scatto per sognare il mondo in cui vorremmo vivere"</h3><br>
+                <a href="/checkout" class="btn btn-pill" data-i18n="home.buy_btn">Acquista Biglietti</a>
             </div>
         </div>
 
         <div class="home-divider"></div>
 
-        <p id="quote">
+        <p id="quote" data-i18n="home.intro_quote">
             Visitare una mostra di Robert Doisneau è un po’ come fare un viaggio nel tempo senza bisogno di una macchina
             complicata: basta uno sguardo. Se poi la cornice è Pordenone, l’esperienza diventa ancora più intima e
             suggestiva.
@@ -73,70 +73,72 @@
 
     <!-- Booklet -->
     <section class="booklet" id="booklet">
-        <h2>Acquista <strong>Booklet</strong> per quando vieni a trovarci</h2>
-        <p class="booklet-subtitle">Non dimenticare di prendere i tuoi adesivi gratuiti</p>
+        <h2 data-i18n="booklet.title">Acquista <strong>Booklet</strong> per quando vieni a trovarci</h2>
+        <p class="booklet-subtitle" data-i18n="booklet.subtitle">Non dimenticare di prendere i tuoi adesivi gratuiti!
+        </p>
         <img src="/content/gallery/Gallery_Booklet.svg" alt="Exhibition Booklet">
-        <a href="/checkout"><button class="btn">Acquista Booklet</button></a>
+        <a href="/checkout"><button class="btn" data-i18n="booklet.btn">Acquista Booklet</button></a>
     </section>
 
     <section class="booking-section" id="ticket">
 
         <div class="booking-top">
-            <h2>VUOI COMPRARE I TUOI BIGLIETTI?</h2>
-            <h3>Ecco le nostre tariffe!</h3>
+            <h2 data-i18n="landing.tickets_title">VUOI COMPRARE I TUOI BIGLIETTI?</h2>
+            <h3 data-i18n="landing.tickets_subtitle">Ecco le nostre tariffe!</h3>
 
             <div class="Ticket-container">
                 <div class="card ridotto">
-                    <span class="ticket-tag">Ridotto</span>
+                    <span class="ticket-tag" data-i18n="checkout.tag_reduced">Ridotto</span>
                     <div class="price">€9</div>
-                    <p>Oltre i 65</p>
+                    <p data-i18n="checkout.label_over65">Oltre i 65</p>
                     <div class="price">€5</div>
-                    <p>Studenti</p>
+                    <p data-i18n="checkout.label_students">Studenti</p>
                 </div>
 
                 <div class="card intero">
-                    <span class="ticket-tag">Intero</span>
+                    <span class="ticket-tag" data-i18n="checkout.tag_full">Intero</span>
                     <div class="price">€12</div>
-                    <p>Accesso completo<br>a tutte le aree</p>
+                    <p data-i18n="landing.full_access">Accesso completo<br>a tutte le aree</p>
                 </div>
 
                 <div class="card gratis">
-                    <span class="ticket-tag">Gratis</span>
+                    <span class="ticket-tag" data-i18n="checkout.tag_free">Gratis</span>
                     <div class="price">€0</div>
                     <details class="gratis-details">
-                        <summary>Scopri chi ha diritto <span>↓</span></summary>
+                        <summary><span data-i18n="landing.free_info">Scopri chi ha diritto</span> <span>↓</span>
+                        </summary>
                         <ul>
-                            <li>Bambini 0-5 anni</li>
-                            <li>Disabili + Accompagnatori</li>
-                            <li>Giornalisti accreditati</li>
+                            <li data-i18n="checkout.free_list_1">Bambini 0-5 anni</li>
+                            <li data-i18n="checkout.free_list_2">Disabili + Accompagnatori</li>
+                            <li data-i18n="checkout.free_list_3">Giornalisti accreditati</li>
                         </ul>
                     </details>
                 </div>
             </div>
         </div>
 
-        <a href="/checkout" class="btn btn-pill cta-btn">Acquista Biglietti</a>
+        <a href="/checkout" class="btn btn-pill cta-btn" data-i18n="home.buy_btn">Acquista Biglietti</a>
 
         <div class="booking-divider"></div>
 
         <div class="booking-bottom countdown-container">
-            <h3>AFFRETTATI! La mostra finisce tra:</h3>
+            <h3 data-i18n="landing.countdown_title">AFFRETTATI! La mostra finisce tra:</h3>
             <div id="timer">
                 <div class="time-segment">
                     <span id="days">00</span>
-                    <p>Giorni</p>
+                    <p data-i18n="landing.days">Giorni</p>
                 </div>
                 <div class="time-segment">
                     <span id="hours">00</span>
-                    <p>Ore</p>
+                    <p data-i18n="landing.hours">Ore</p>
                 </div>
                 <div class="time-segment">
                     <span id="minutes">00</span>
-                    <p>Minuti</p>
+                    <p data-i18n="landing.minutes">Minuti</p>
                 </div>
                 <div class="time-segment">
                     <span id="seconds">00</span>
-                    <p>Secondi</p>
+                    <p data-i18n="landing.seconds">Secondi</p>
                 </div>
             </div><br>
         </div>
@@ -146,30 +148,34 @@
     <div class="contact-widget" id="contactWidget">
         <button class="widget-trigger" onclick="toggleWidget()">
             <span class="icon">✉</span>
-            <span class="text">Contattaci</span>
+            <span class="text" data-i18n="landing.contact_btn">Contattaci</span>
         </button>
 
         <div class="widget-content">
-            <h3>SCRIVICI</h3>
+            <h3 data-i18n="landing.form_title">Scrivici</h3>
             <form action="/submit" method="POST">
                 <div class="form-row">
-                    <input type="text" id="nome" name="nome" placeholder="Nome" required>
-                    <input type="text" id="cognome" name="cognome" placeholder="Cognome" required>
+                    <input type="text" id="nome" name="nome" placeholder="Nome" required
+                        data-i18n="[placeholder]landing.form_name">
+                    <input type="text" id="cognome" name="cognome" placeholder="Cognome" required
+                        data-i18n="[placeholder]landing.form_surname">
                 </div>
 
-                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="email" id="email" name="email" placeholder="Email" required
+                    data-i18n="[placeholder]landing.form_email">
 
                 <select id="interesse" name="interesse" required>
-                    <option value="" disabled selected>Interesse...</option>
-                    <option value="biglietti">Acquistare biglietti</option>
-                    <option value="eventi">Prossimi eventi</option>
-                    <option value="mostra">Informazioni mostra</option>
-                    <option value="altro">Altro</option>
+                    <option value="" disabled selected data-i18n="landing.form_interest">Interesse...</option>
+                    <option value="biglietti" data-i18n="landing.interest_tickets">Acquistare biglietti</option>
+                    <option value="eventi" data-i18n="landing.interest_events">Prossimi eventi</option>
+                    <option value="mostra" data-i18n="landing.interest_info">Informazioni mostra</option>
+                    <option value="altro" data-i18n="landing.interest_other">Altro</option>
                 </select>
 
-                <textarea id="dettaglio" name="dettaglio" placeholder="La tua richiesta..." rows="3"></textarea>
+                <textarea id="dettaglio" name="dettaglio" placeholder="La tua richiesta..." rows="3"
+                    data-i18n="[placeholder]landing.form_request"></textarea>
 
-                <button type="submit" class="btn-send">Invia Richiesta</button>
+                <button type="submit" class="btn-send" data-i18n="landing.form_send">Invia Richiesta</button>
             </form>
         </div>
     </div>
@@ -227,7 +233,7 @@
             </div>
         </div>
 
-        <div class="footer-copyright">
+        <div class="footer-copyright" data-i18n="footer.copyright">
             Copyright &copy; 2026 Tutti i diritti riservati.
         </div>
     </footer>

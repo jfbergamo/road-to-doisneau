@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riepilogo | Road to Doisneau</title>
+    <title data-i18n="checkout.page_title">Riepilogo | Road to Doisneau</title>
     <link rel="stylesheet" href="style.css">
     <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
     <script>
@@ -24,19 +24,19 @@
         <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">Autore</a></li>
-                    <li><a href="/gallery">Galleria</a></li>
-                    <li><a href="/articles">Articoli</a></li>
-                    <li><a href="/find_us">Trovaci</a></li>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="/about" data-i18n="nav.about">Autore</a></li>
+                    <li><a href="/gallery" data-i18n="nav.gallery">Galleria</a></li>
+                    <li><a href="/articles" data-i18n="nav.articles">Articoli</a></li>
+                    <li><a href="/find_us" data-i18n="nav.find_us">Trovaci</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="nav-right">
             <div class="nav-actions">
-                <a href="/checkout" class="btn btn-pill">Biglietti</a>
-                <button class="btn btn-outline">EN</button>
+                <a href="/checkout" class="btn btn-pill" data-i18n="nav.tickets_btn">Biglietti</a>
+                <button class="btn btn-outline" id="langToggle">EN</button>
             </div>
 
             <button class="nav-hamburger" aria-controls="primary-navigation" aria-expanded="false"
@@ -51,10 +51,10 @@
     <main class="main-container main-exhibition">
 
         <header class="exhibition-header">
-            <h1 class="serif-title">Road to Doisneau</h1>
-            <p class="subtitle">Prendi la strada per immergerti nel passato.</p>
+            <h1 class="serif-title" data-i18n="checkout.main_title">Road to Doisneau</h1>
+            <p class="subtitle" data-i18n="checkout.main_subtitle">Prendi la strada per immergerti nel passato.</p>
             <div class="divider"></div>
-            <h2 class="section-title">Prenota la tua Esperienza</h2>
+            <h2 class="section-title" data-i18n="checkout.booking_title">Prenota la tua Esperienza</h2>
             <div id="limit-error"></div>
         </header>
 
@@ -63,13 +63,13 @@
             <div class="card-visual" style="--bg-image: url('/content/gallery/Gallery_10_La_Dermiere.svg');">
                 <div class="card-overlay"></div>
                 <div class="card-content">
-                    <span class="ticket-tag">Ridotti</span>
+                    <span class="ticket-tag" data-i18n="checkout.tag_reduced">Ridotti</span>
 
                     <div class="price-group">
                         <div class="price-item-pill">
                             <div class="price-info">
                                 <span class="price">€9</span>
-                                <p class="label">Oltre i 65</p>
+                                <p class="label" data-i18n="checkout.label_over65">Oltre i 65</p>
                             </div>
                             <div class="qty-selector">
                                 <button type="button" class="qty-btn minus">−</button>
@@ -81,7 +81,7 @@
                         <div class="price-item-pill">
                             <div class="price-info">
                                 <span class="price">€5</span>
-                                <p class="label">Studenti</p>
+                                <p class="label" data-i18n="checkout.label_students">Studenti</p>
                             </div>
                             <div class="qty-selector">
                                 <button type="button" class="qty-btn minus">−</button>
@@ -96,13 +96,13 @@
             <div class="card-visual highlight" style="--bg-image: url('/content/gallery/Gallery_6_Le_Baiser.svg');">
                 <div class="card-overlay"></div>
                 <div class="card-content">
-                    <span class="ticket-tag tag-dark">Intero</span>
+                    <span class="ticket-tag tag-dark" data-i18n="checkout.tag_full">Intero</span>
 
                     <div class="price-group">
                         <div class="price-item-pill">
                             <div class="price-info">
                                 <span class="price">€12</span>
-                                <p class="label"></p>
+                                <p class="label" data-i18n="checkout.label_standard"></p>
                             </div>
                             <div class="qty-selector">
                                 <button type="button" class="qty-btn minus">−</button>
@@ -117,14 +117,14 @@
             <div class="card-visual" style="--bg-image: url('/content/gallery/Gallery_12_Rose.svg');">
                 <div class="card-overlay"></div>
                 <div class="card-content">
-                    <span class="ticket-tag">Omaggio</span>
+                    <span class="ticket-tag" data-i18n="checkout.tag_free">Omaggio</span>
 
                     <div class="price-group">
 
                         <div class="price-item-pill">
                             <div class="price-info">
                                 <span class="price">€0</span>
-                                <p class="label"></p>
+                                <p class="label" data-i18n="checkout.label_free"></p>
                             </div>
 
                             <div class="qty-selector">
@@ -136,11 +136,12 @@
 
                         <div class="info-summary-pill">
                             <details class="gratis-details-visual">
-                                <summary>Info Omaggio <span>↓</span></summary>
+                                <summary><span data-i18n="checkout.free_info_trigger">Info Omaggio</span> <span>↓</span>
+                                </summary>
                                 <ul>
-                                    <li>Bambini 0-5 anni</li>
-                                    <li>Disabili + Accompagnatori</li>
-                                    <li>Giornalisti accreditati</li>
+                                    <li data-i18n="checkout.free_list_1">Bambini 0-5 anni</li>
+                                    <li data-i18n="checkout.free_list_2">Disabili + Accompagnatori</li>
+                                    <li data-i18n="checkout.free_list_3">Giornalisti accreditati</li>
                                 </ul>
                             </details>
                         </div>
@@ -153,7 +154,8 @@
 
         <div class="checkout-bar-visual" id="checkoutBar">
             <div class="total-info">
-                <span class="label">Totale (<span id="ticket-count">0</span> biglietti)</span>
+                <span class="label"><span data-i18n="checkout.total_label">Totale</span> (<span
+                        id="ticket-count">0</span> <span data-i18n="checkout.tickets_unit">biglietti</span>)</span>
                 <span class="total-amount" id="grand-total">€0</span>
             </div>
             <a href="/checkout"><button class="btn btn-pill btn-buy">Acquista</button></a>

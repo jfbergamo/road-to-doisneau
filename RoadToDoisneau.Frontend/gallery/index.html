@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galleria | Road to Doisneau</title>
+    <title data-i18n="gallery.page_title">Galleria | Road to Doisneau</title>
     <link rel="stylesheet" href="style.css">
     <link id="favicon" rel="icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg+xml">
     <script>
@@ -24,19 +24,19 @@
         <div class="nav-content" id="navigation">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">Autore</a></li>
-                    <li><a href="/gallery">Galleria</a></li>
-                    <li><a href="/articles">Articoli</a></li>
-                    <li><a href="/find_us">Trovaci</a></li>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="/about" data-i18n="nav.about">Autore</a></li>
+                    <li><a href="/gallery" data-i18n="nav.gallery">Galleria</a></li>
+                    <li><a href="/articles" data-i18n="nav.articles">Articoli</a></li>
+                    <li><a href="/find_us" data-i18n="nav.find_us">Trovaci</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="nav-right">
             <div class="nav-actions">
-                <a href="/checkout" class="btn btn-pill">Biglietti</a>
-                <button class="btn btn-outline">EN</button>
+                <a href="/checkout" class="btn btn-pill" data-i18n="nav.tickets_btn">Biglietti</a>
+                <button class="btn btn-outline" id="langToggle">EN</button>
             </div>
 
             <button class="nav-hamburger" aria-controls="primary-navigation" aria-expanded="false"
@@ -51,8 +51,9 @@
 
     <div id="unlocker">
         <div class="unlock-box" ,>
-            <h1 style="color: #052444;">SBLOCCA LA GALLERIA!</h1>
-            <p style="color: B7D8FA;">Guarda subito come Robert Doisneau vedeva il mondo!</p>
+            <h1 style="color: #052444;" data-i18n="gallery.unlock_title">SBLOCCA LA GALLERIA!</h1>
+            <p style="color: B7D8FA;" data-i18n="gallery.unlock_subtitle">Guarda subito come Robert Doisneau vedeva il
+                mondo!</p>
             <div class="film-roll">🔒</div>
         </div>
     </div>
@@ -125,7 +126,7 @@
             </div>
         </div>
 
-        <div class="footer-copyright">
+        <div class="footer-copyright" data-i18n="footer.copyright">
             Copyright &copy; 2026 Tutti i diritti riservati.
         </div>
     </footer>
