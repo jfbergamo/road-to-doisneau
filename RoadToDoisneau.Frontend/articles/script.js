@@ -2,8 +2,6 @@ const grid = document.getElementById('blog-grid');
 const langToggle = document.getElementById('langToggle');
 let currentLang = localStorage.getItem('lang') || 'it';
 
-const API_ENDPOINT = "https://localhost:7022/api";
-
 // Nav
 
 document.addEventListener('DOMContentLoaded', async () => {
