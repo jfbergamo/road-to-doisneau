@@ -387,6 +387,89 @@ a {
     opacity: 0.5;
 }
 
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 60px 20px 40px 20px;
+    font-family: sans-serif;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    gap: 80px;
+}
+
+.footer-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.logo-doisneau {
+    height: 80px;
+    width: auto;
+}
+
+.logo-pordenone {
+    height: 70px;
+    width: auto;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.footer-contact p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+}
+
+.footer-socials img {
+    width: 32px;
+    height: auto;
+}
+
+.footer-sponsors {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-sponsors img {
+    width: 150px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.footer-sponsors img:hover {
+    filter: grayscale(0%);
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 /* Responsiveness per l'articolo */
 @media (max-width: 600px) {
 
@@ -502,5 +585,21 @@ a {
 
     .blog-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-columns {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-socials {
+        flex-direction: row;
+    }
+
+    .footer-logos {
+        flex-direction: column;
+        align-items: center;
     }
 }
