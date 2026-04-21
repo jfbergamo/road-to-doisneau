@@ -1,5 +1,3 @@
-localStorage.clear();
-
 const API_ENDPOINT = "https://localhost:7022/api";
 
 document.addEventListener('DOMContentLoaded', () => {
