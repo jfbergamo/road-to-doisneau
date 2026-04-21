@@ -4,7 +4,7 @@ const API_ENDPOINT = "https://localhost:7022/api"
 
 // Nav
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
 
     const navbar = document.querySelector('.navbar');
 
@@ -38,6 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Loading of articles
+
+    const response = await fetch(`${API_ENDPOINT}/articles`);
+    if (response.headers.get('content-type')?.includes('application/json')) {
+        const articles = await response.json();
+        for (const article of articles) {
+            grid.appendChild(renderArticle(article));
+        }
+    } else {
+        console.error(`Incorrect response from server`);
+    }
+    
 });
 
 // Articles
@@ -85,11 +98,3 @@ function renderArticle(article) {
 
     return blogCardArticle;
 }
-
-(async () => {
-    const result = await fetch(`${API_ENDPOINT}/articles`).then(x => x.json());
-    grid.innerHTML = '';
-    for (const article of result) {
-        grid.appendChild(renderArticle(article));
-    }
-})();
