@@ -138,7 +138,7 @@ function renderTickets(tickets) {
 
     tickets.forEach(t => {
         // Generiamo il QR basandoci sul nome confermato dal database
-        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(t.holder_name)}`;
+        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(t.id)}`;
         
         const qrCard = document.createElement('div');
         qrCard.className = 'qr-card';
