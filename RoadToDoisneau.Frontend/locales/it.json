@@ -112,6 +112,14 @@
         "thanks": "Grazie, i tuoi biglietti per Road to Doisneau sono pronti.",
         "home": "Torna alla Home"
     },
+    "request": {
+        "title": "Grazie!",
+        "tk_contact": "GRAZIE PER AVERCI CONTATTATO!",
+        "req_type": "Tipologia richiesta:",
+        "insert_detail": "Dettaglio inserito:",
+        "waiting": "In attesa di una risposta da parte del nostro team la invitiamo a visitare il sito dedicato alla mostra!",
+        "home": "Vai alla Home"
+    },
     "about": {
         "page_title": "Autore | Road to Doisneau",
         "hero_title": "Robert Doisneau",

@@ -113,6 +113,14 @@
         "thanks": "Thank you, your tickets for Road to Doisneau are ready.",
         "home": "Home"
     },
+    "request": {
+        "title": "Thank you!",
+        "tk_contact": "THANK YOU FOR CONTACTING US!",
+        "req_type": "Request type:",
+        "insert_detail": "Inserting detail:",
+        "waiting": "While waiting for a response from our team we invite you to visit the site dedicated to the exhibition!",
+        "home": "Home"
+    },
     "about": {
         "page_title": "Author | Road to Doisneau",
         "hero_title": "Robert Doisneau",
