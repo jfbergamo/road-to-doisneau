@@ -269,12 +269,6 @@ a {
     font-style: italic;
 }
 
-.text-container .btn {
-    margin-top: 20px;
-    padding: 15px 40px;
-    font-size: 1.2rem;
-}
-
 .Home,
 .Ticket,
 .Contatti {
@@ -352,13 +346,6 @@ a {
     height: 2px;
     background-color: var(--light-color);
     border-radius: 2px;
-}
-
-/* Make the CTA button larger to anchor the bottom of the block */
-.cta-btn {
-    margin-top: 20px;
-    padding: 15px 40px;
-    font-size: 1.2rem;
 }
 
 .Ticket h2 {
@@ -570,7 +557,7 @@ a {
 
 /* Booklet */
 .booklet {
-    background-color: var(--light-color);
+    background-color: var(--comp-color);
     margin: 0 16px 32px 16px;
     border-radius: var(--border-radius-lg);
     padding: 60px 20px 60px 20px;
