@@ -7,6 +7,43 @@
         "find_us": "Trovaci",
         "tickets_btn": "Biglietti"
     },
+    "home": {
+        "hero_subtitle": "Prendi questa strada per scoprire il passato.",
+        "hero_quote": "\"Ci sono giorni in cui il semplice fatto di vedere sembra essere la vera felicità\"",
+        "buy_btn": "Acquista Biglietti",
+        "interviews": {
+            "title": "Cosa dicono i nostri visitatori?",
+            "interviewer": "\"Intervistatore:\"",
+            "visitor_f": "\"Intervistato:\"",
+            "q1": "\"Ho notato che alcuni titoli sono in contrasto con il contenuto della fotografia. Si è fatta influenzare da esse o ha preferito guardare soltanto la fotografia?\"",
+            "a1": "\"I titoli li guardo raramente, perché mi concentro più sui dettagli delle foto o quadri.\"",
+            "q2": "\"Come mai ha scelto di venire a questa mostra?\"",
+            "a2": "\"Sono qui con i miei studenti per un progetto interno al nostro percorso di studio.\"",
+            "q3": "\"C'è una fotografia che l'ha colpita?\"",
+            "a3": "\"Si, il titolo è 'Anita', perché è il nome di mia madre.\"",
+            "q4": "\"Come mai ha scelto di venire a questa mostra?\"",
+            "a4": "\"Io, in realtà, questa mostra l'avevo già visitata a Verona, però ho deciso di ritornare perché ritengo che vedere Doisneau è sempre una buona idea.\"",
+            "q5": "\"Come mai ha scelto di venire a questa mostra?\"",
+            "a5": "\"Doisneau è sempre stato uno dei miei fotografi preferiti, ma in particolare negli ultimi anni è diventato più importante ancora perché, avendo fatto io molte foto di scolari e avendo aperto un B&B all'interno di una vecchia scuola, ho esposto alcune delle sue fotografie e quindi mi sento molto legata a questo artista.\"",
+            "q6": "\"C'è una fotografia che l'ha colpita?\"",
+            "a6": "\"Una che mi ha colpito particolarmente credo sia 'Cuccioli al guinzaglio' che non avevo mai visto.\"",
+            "q7": "\"Le è venuta voglia di prendere in mano una macchina fotografica, mettersi a fare fotografie a paesaggi o altri soggetti?\"",
+            "a7": "\"Io sono di un'altra generazione, quindi la macchina fotografica l'ho usata per tanto tempo. Adesso anche io sono un po' più pigra e quindi uso più il telefonino. Mia madre addirittura faceva foto e le sviluppava lei stessa.\"",
+            "q8": "\"Le è venuta voglia di prendere in mano una macchina fotografica, mettersi a fare fotografie a paesaggi o altri soggetti?\"",
+            "a8": "\"Assolutamente sì!\"",
+            "q9": "\"Ho notato che alcuni titoli sono in contrasto con il contenuto della fotografia. Si è fatta influenzare da esse o ha preferito guardare soltanto la fotografia?\"",
+            "a9": "\"No, usually I watch the photo first. But I've noticed some captions that are very funny in contrast with the photos (cit: Hommages Respectueux / Respectable Homages - 1954\""
+        },
+        "booklet":{
+            "title": "\"Acquista Booklet per quando vieni a trovarci\"",
+            "subtitle": "\"Non dimenticare di prendere i tuoi adesivi gratuiti!\"",
+            "btn": "\"Compra il Booklet\""
+        }
+    },
+    "gallery": {
+        "gallery.unlock_title": "Sblocca la galleria",
+        "gallery.unlock_subtitle": "Clicca sul rullino per sviluppare le foto"
+    },
     "checkout": {
         "page_title": "Riepilogo | Road to Doisneau",
         "main_title": "Road to Doisneau",
@@ -72,6 +109,65 @@
         "art5_title": "Pordenone stregata dal \"Bacio\": Successo travolgente",
         "art5_desc": "Sale piene e code fuori dai musei per il fotografo della felicità.",
         "art6_title": "Un mese in più di fotografie: Mostra prolungata",
-        "art6_desc": "Data la straordinaria affluenza, c'è tempo fino al 14 Agosto."
+        "art6_desc": "Data la straordinaria affluenza, c'è tempo fino al 14 Agosto.",
+        "cosaFarePordenone": {
+            "cat_guide": "Guida urbana",
+            "art2_title": "A spasso con Doisneau: Cosa fare a Pordenone",
+            "art2_subtitle": "Come trasformare una giornata culturale in un'esperienza \"umanista\" tra i portici e le osterie del centro storico.",
+            "art2_caption": "Vista sul Noncello",
+            "art2_p1": " Dopo aver nutrito gli occhi con le opere di Robert Doisneau, l'emozione chiede di essere portata fuori, tra le strade della città. Pordenone, con i suoi portici eleganti e i vicoli medievali, si presta a essere vissuta con la stessa curiosità \"umanista\" del fotografo francese.",
+            "art2_h2_1": "Perdersi nel Corso",
+            "art2_p2": "Iniziate la vostra passeggiata in Corso Vittorio Emanuele II. Qui, l'invito è di dimenticare lo smartphone in tasca: osservate i volti dei passanti, il gioco di luci e ombre sotto le arcate dipinte e il ritmo lento dei passi sul ciottolato. È proprio in questi dettagli ordinari che Doisneau avrebbe trovato la sua \"musica del caso\".",
+            "art2_quote": "\"Il mondo che cercavo di mostrare era un mondo in cui mi sarei sentito bene, dove le persone erano gentili, dove avrei trovato la tenerezza che speravo di ricevere.\"",
+            "art2_h2_2": "Il rito dell'ombra",
+            "art2_p3": " Nessuna giornata a Pordenone può dirsi completa senza una sosta nelle storiche osterie del centro. Entrate in un locale tipico, ordinate un \"tajut\" di vino e ascoltate il brusio delle conversazioni. In quella convivialità sincera, tra un sorriso rubato al bancone e un gesto d'intesa, ritroverete lo spirito dei bistrot parigini che Doisneau amava tanto frequentare.",
+            "art2_p4": "Infine, raggiungete le rive del Noncello al tramonto. La nebbia leggera che spesso sale dall'acqua ricorda le atmosfere soffuse delle mattine lungo la Senna, chiudendo perfettamente il cerchio di una giornata dedicata alla bellezza del reale."
+        },
+        "valse": {
+            "cat_atmospheres": "Atmosfere Parigine",
+            "art3_detail_title": "La Dernière Valse: L'ultimo respiro della festa",
+            "art3_h2_1": "1. Il battito del 14 Luglio",
+            "art3_p1": "Mentre Parigi celebrava fragorosamente la presa della Bastiglia, Doisneau scelse di allontanarsi dai fuochi d'artificio. In un angolo di strada, trovò questa coppia che danzava sola, mentre i musicisti iniziavano a riporre gli strumenti. È il ritratto della \"fine della festa\", quel momento magico dove la gioia pubblica diventa intimità privata.",
+            "art3_h2_2": "2. Il pescatore di immagini",
+            "art3_p2": "A differenza del \"Bacio\", qui non c'è regia. Doisneau amava definirsi un <em>pescatore</em>:restava in attesa che la realtà componesse da sola il suo capolavoro. Notò la grazia composta dei due ballerini sul selciato umido e scattò, catturando non solo una danza, ma il desiderio di un'intera generazione di tornare a sorridere dopo gli anni bui della guerra.",
+            "art3_quote": "\"C`è una sorta di grazia nel veder finire una festa. È il momento in cui le maschere cadono e resta solo l'umanità.\"",
+            "art3_h2_3": "3. Un'eleganza senza tempo",
+            "art3_p3": "Ciò che rende questo scatto eterno è l'equilibrio. L'abito semplice della donna, i lampioni che riflettono la luce sul cemento e l'abbraccio dignitoso. Non è una danza tra nobili, ma il valzer della gente comune che, per una notte, trasforma una periferia parigina nel palcoscenico più prestigioso del mondo."
+        },
+        "articles-basier": {
+            "cat_behind_lens": "Dietro l'obiettivo",
+            "art4_detail_title": "Il Bacio dell'Hôtel de Ville: Cronaca di un'emozione \"costruita\".",
+            "art4_h2_1":"1. La danza degli attori",
+            "art4_p1":"Per decenni abbiamo sognato su questo scatto, credendolo il vertice della spontaneità. La verità è più teatrale: Doisneau non \"rubò\" l'attimo, lo diresse. Notò Françoise e Jacques in un bistrot e, stregato dalla loro chimica, chiese loro di replicare quel bacio davanti all'Hôtel de Ville per un servizio di <em>Life</em>. Non era cronaca, era visione.",
+            "art4_h2_2": "2. Scandalo in tribunale",
+            "art4_p2": "Negli anni '90, il mito rischiò di infrangersi sotto il peso delle aule giudiziarie. Molte coppie sostennero di essere i veri protagonisti, cercando un risarcimento milionario. Doisneau fu costretto a confessare: la foto era un set. Françoise Bornet apparve allora con la stampa originale autografata dal maestro, l'unica prova che mise fine alle dispute.",
+            "art4_quote": "\"Non mi sarei mai permesso di fotografare persone che si baciavano per strada. Gli innamorati che si baciano raramente sono una coppia legittima\"",
+            "art4_h2_3": "3. 155.000 euro di poesia",
+            "art4_p3": "Nel 2005, la copia originale di Françoise è stata battuta all'asta per una cifra record. Oltre 150mila euro per un pezzo di carta. Perché? Perché anche sapendo che si trattava di una posa, quel bacio continua a rappresentare la Parigi che tutti vogliamo sognare: libera, romantica e intramontabile."
+        },
+        "parigiNoncello": {
+            "cat_special_event": "Evento Speciale",
+            "art1_title": "Parigi sul Noncello: Robert Doisneau arriva a Pordenone",
+            "art1_subtitle": "Un viaggio nell'anima della fotografia umanista francese tra le vie del centro storico.",
+            "art1_p1": "Pordenone si trasforma in un set cinematografico d'altri tempi. Con l'arrivo della mostra dedicata a <strong>Robert Doisneau</strong>, la città friulana accoglie la delicatezza di uno sguardo che ha saputo fermare il tempo senza mai spezzarne l'incanto.",
+            "art1_h2_1": "La poetica del quotidiano",
+            "art1_p2": "Non aspettatevi pose plastiche o scenari costruiti a tavolino. Doisneau era un \"pescatore di immagini\", un uomo capace di attendere ore l'allineamento perfetto tra una luce radente e il sorriso di un passante",
+            "art1_quote": "\"Quello che cercavo di mostrare era un mondo dove mi sarei sentito bene, dove le persone fossero gentili\"",
+            "art1_p3": "L`allestimento è stato pensato per creare un dialogo continuo tra le foto e l'architettura pordenonese. Passeggiare tra le sale è come camminare lungo la Senna, un'esperienza che unisce il bianco e nero parigino ai colori caldi dei nostri portici."
+        }
+    },
+    "find_us": {
+        "how_to_reach": "Come Raggiungerci",
+        "reach_text": "La mostra e collocata alla Galleria Harry Bertoia, nel cuore di Pordenone. Facilmente raggiungibile dalla stazione (10-minuti di camminata) o in macchina usando i vicini \"parcheggi multipiano\".",
+        "opening_hours": "Ore di Apertura",
+        "days_mon_wed": "Lunedì - Mercoledì:",
+        "closed": "Chiuso",
+        "days_thu_fri": "Giovedì - Venerdì:",
+        "days_sat_sun": "Sabato - Domenica",
+        "book_advance": "Prenota in anticipo per saltare la coda.",
+        "prolong_experience": "Cosa fare per prolungare l'esperienza a Pordenone",
+        "hotels": "Hotel",
+        "restaurants": "Ristoranti",
+        "enterntainment": "Divertimento"
     }
 }
