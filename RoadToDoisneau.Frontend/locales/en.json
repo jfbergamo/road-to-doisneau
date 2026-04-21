@@ -16,8 +16,11 @@
         "interviews.interviewer": "Interviewer",
         "interviews.visitor_f": "Interviewed",
         "interviews.q1": "I've noticed that some titles are in contrast with the shot's title. Did you get influenced by them or have you prefered to just watch the photos",
-        "interviews.a1": "I rarely read the titles, because I fix myself more on the details of the photos or paintings",
-        ...
+        "interviews.a1": "I rarely read the titles, because I fix myself more on the details of the photos or paintings"
+    },
+    "gallery": {
+        "gallery.unlock_title": "Unlock the gallery",
+        "gallery.unlock_subtitle": "Watch now how Robert Doisneau saw the world!"
     },
     "checkout": {
         "page_title": "Summary | Road to Doisneau",
@@ -131,5 +134,19 @@
         "articles.art1_p2": "Don`t expect plastic poses or constructed poses. Doisneau was an “image fisher”, a man capable of waiting hours the perfect alignment between radiant light and the smile of a passerby",
         "articles.art1_quote": "\"“What I was trying to show was a world where I would have felt better, where people would have been gentler”\"",
         "articles.art1_p3": "Our set-up has been tough to create a continuous dialogue between the photos and Pordenone`s architecture. Strolling between the halls it`s like walking down the Senna, an experience that bonds the Parisian white and black with the colors of our porticoes."
+    },
+    "findUs": {
+        "find_us.how_to_reach": "Ho to reach us",
+        "find_us.reach_text": "The exhibition is collocated at Harry Bertoia Gallery, in the heart of Pordenone. Easily reachable from the station (10-minutes walk) or by car using the nearby \"multilayer parking lot”.",
+        "find_us.opening_hours": "Opening Hours",
+        "find_us.days_mon_wed": "Monday - Wednesday",
+        "find_us.closed": "Closed",
+        "find_us.days_thu_fri": "Thursday - Friday",
+        "find_us.days_sat_sun": "Saturday - Sunday",
+        "find_us.book_advance": "Book in advance to skip line",
+        "find_us.prolong_experience": "What to do to prolongate the visit",
+        "find_us.hotels": "Hotels",
+        "find_us.restaurants": "Restaurants",
+        "find_us.enterntainment": "Enterntainment"
     }
 }
