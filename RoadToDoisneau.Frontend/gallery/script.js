@@ -35,31 +35,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-localStorage.clear();
-
 localStorage.clear();
 
     // --- GESTIONE MODALE ---
-    document.querySelectorAll('.gallery-item').forEach(item => {
-        item.addEventListener('click', () => {
-            const imgPath = item.querySelector('img').src;
-            const text = item.querySelector('.gallery-caption').innerText;
+document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const imgPath = item.querySelector('img').src;
+        const text = item.querySelector('.gallery-caption').innerText;
 
-            modalImg.src = imgPath;
-            modalCaption.innerText = text;
-            modal.style.display = "block";
-            document.body.style.overflow = "hidden";
-        });
+        modalImg.src = imgPath;
+        modalCaption.innerText = text;
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
     });
-
-    // Chiudi modale
-    document.querySelector('.modal-close').onclick = () => {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-    };
-<<<<<<< translations
 });
+
+// Chiudi modale
+document.querySelector('.modal-close').onclick = () => {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+};
 
 // i18n Translation
 const langToggle = document.getElementById('langToggle');
@@ -109,5 +104,3 @@ langToggle.addEventListener('click', () => {
 });
 
 loadTranslations(currentLang);
-=======
->>>>>>> master
