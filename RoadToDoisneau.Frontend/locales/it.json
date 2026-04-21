@@ -78,8 +78,6 @@
         "tag_free": "Omaggio",
         "label_over65": "Oltre i 65",
         "label_students": "Studenti",
-        "label_standard": "Standard",
-        "label_free": "Gratuito",
         "free_info_trigger": "Info Omaggio",
         "free_list_1": "Bambini 0-5 anni",
         "free_list_2": "Disabili + Accompagnatori",
@@ -87,6 +85,32 @@
         "total_label": "Totale",
         "tickets_unit": "biglietti",
         "buy_btn_final": "Acquista"
+    },
+    "formTicket": {
+        "page_title": "Dettagli Partecipanti | Road to Doisneau",
+        "back": "Indietro",
+        "almost_done": "Quasi fatto",
+        "insert_details": "Inserisci i dettagli per ogni partecipante.",
+        "total": "Totale Ordine: ",
+        "confirm": "Conferma e Paga"
+    },
+    "purchase": {
+        "title": "Pagamento Sicuro | Road to Doisneau",
+        "pay_met": "Metodo di Pagamento",
+        "card_tito": "TITOLARE CARTA",
+        "card_scadenza": "MM/AA",
+        "card_tito_2": "Titolare della Carta",
+        "card_numb": "Numero Carta",
+        "card_scad_2": "Scadenza",
+        "card_recap": "Riepilogo Biglietti",
+        "total": "Totale da Pagare",
+        "pay_now": "Paga Ora",
+        "incrip_tran": "Transazione criptata",
+        "verify": "Verifica Transazione...",
+        "bank_com": "Stiamo comunicando con il tuo istituto bancario.",
+        "buy_confirm": "Acquisto Confermato!",
+        "thanks": "Grazie, i tuoi biglietti per Road to Doisneau sono pronti.",
+        "home": "Torna alla Home"
     },
     "about": {
         "page_title": "Autore | Road to Doisneau",
@@ -158,7 +182,7 @@
             "art3_h2_3": "3. Un'eleganza senza tempo",
             "art3_p3": "Ciò che rende questo scatto eterno è l'equilibrio. L'abito semplice della donna, i lampioni che riflettono la luce sul cemento e l'abbraccio dignitoso. Non è una danza tra nobili, ma il valzer della gente comune che, per una notte, trasforma una periferia parigina nel palcoscenico più prestigioso del mondo."
         },
-        "articles-basier": {
+        "basier": {
             "cat_behind_lens": "Dietro l'obiettivo",
             "art4_detail_title": "Il Bacio dell'Hôtel de Ville: Cronaca di un'emozione \"costruita\".",
             "art4_h2_1":"1. La danza degli attori",

@@ -79,8 +79,6 @@
         "tag_free": "Free",
         "label_over65": "Over 65",
         "label_students": "Students",
-        "label_standard": "Standard",
-        "label_free": "Complimentary",
         "free_info_trigger": "Free Ticket Info",
         "free_list_1": "Children 0-5 years",
         "free_list_2": "Disabled + Companion",
@@ -88,6 +86,32 @@
         "total_label": "Total",
         "tickets_unit": "tickets",
         "buy_btn_final": "Purchase"
+    },
+    "formTicket": {
+        "page_title": "Paticipants Details | Road to Doisneau",
+        "back": "Back",
+        "almost_done": "Almost done",
+        "insert_details": "Insert details for each participant.",
+        "total": "Total Order: ",
+        "confirm": "Confirm and Pay"
+    },
+    "purchase": {
+        "title": "Secure Payment | Road to Doisneau",
+        "pay_met": "Payment Method",
+        "card_tito": "CARD OWNER",
+        "card_scadenza": "MM/YY",
+        "card_tito_2": "Card owner",
+        "card_numb": "Card number",
+        "card_scad_2": "Expiring",
+        "card_recap": "Tickets Recap",
+        "total": "Total Payment",
+        "pay_now": "Pay Now",
+        "incrip_tran": "Cripted Transaction",
+        "verify": "Veryfing Transaction...",
+        "bank_com": "We are communicating with your bank.",
+        "buy_confirm": "Purchase Confirmed!",
+        "thanks": "Thank you, your tickets for Road to Doisneau are ready.",
+        "home": "Home"
     },
     "about": {
         "page_title": "Author | Road to Doisneau",
