@@ -152,3 +152,12 @@ langToggle.addEventListener('click', () => {
 });
 
 loadTranslations(currentLang);
+
+(async () => {
+    try {
+        await fetch(`${API_ENDPOINT}/status`);
+        console.log('API OK');
+    } catch {
+        console.error('API CONNECTION ERROR');
+    }
+})()
