@@ -1,26 +1,106 @@
-/* --- FONTS & IDENTITY --- */
-@font-face { font-family: 'Metal'; src: url('/content/fonts/Metal/Metal-Regular.ttf') format('truetype'); }
-@font-face { font-family: 'Libre Caslon Text'; src: url('/content/fonts/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('truetype'); }
-@font-face { font-family: 'Libre Franklin'; src: url('/content/fonts/Libre_Franklin/LibreFranklin-Regular.ttf') format('truetype'); }
-@font-face { font-family: 'Source Sans Pro'; src: url('/content/fonts/Source_Sans_Pro/SourceSansPro-Regular.otf') format('opentype'); }
+/* Fonts */
+@font-face {
+    font-family: 'Metal';
+    src: url('/font/Metal/Metal-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Caslon Text';
+    src: url('/font/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('/font/Libre_Franklin/LibreFranklin-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 
 :root {
+    /* Colors */
     --light-color: #FEF5F3;
     --accent-color: #FAC4B8;
     --comp-color: #B7D8FA;
     --dark-color: #052444;
-    --font-caslon: 'Libre Caslon Text', Georgia, serif;
-    --font-franklin: 'Libre Franklin', sans-serif;
-    --font-source: 'Source Sans Pro', sans-serif;
+
+    /* Typography */
+    --font-metal: 'Metal';
+    --font-caslon: 'Libre Caslon Text';
+    --font-franklin: 'Libre Franklin';
+    --font-source: 'Source Sans Pro';
+
+    /* Borders */
     --border-radius-lg: 24px;
+    --border-radius-btn: 100px;
     --border-radius-pill: 50px;
 }
 
-body {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-    font-family: var(--font-source);
+/* Reset */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: var(--font-caslon);
+    background-color: var(--dark-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.serif-text {
+    font-family: var(--font-caslon);
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Buttons */
+.btn {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 12px 32px;
+    border-radius: var(--border-radius-btn);
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-pill {
+    border-radius: var(--border-radius-pill);
+    padding: 8px 24px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--dark-color);
+    border: 1px solid var(--text-dark);
 }
 
 .checkout-container {
@@ -39,6 +119,20 @@ body {
     border-radius: var(--border-radius-lg);
     border: 1px solid var(--accent-color);
     box-shadow: 0 10px 25px rgba(5, 36, 68, 0.05);
+    display: inline-block;
+    justify-content: center;
+}
+
+.card span {
+    font-family: var(--font-caslon);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-family: var(--font-caslon);
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .serif-title {
@@ -66,23 +160,26 @@ body {
 
 .cc-chip {
     position: absolute;
-    top: 30px; left: 30px;
-    width: 45px; height: 35px;
+    top: 30px;
+    left: 30px;
+    width: 45px;
+    height: 35px;
     background: var(--accent-color);
     border-radius: 5px;
 }
 
 .cc-number-display {
-    font-family: 'Courier New', monospace; /* Mantengo courier per i numeri carta */
-    font-size: 1.4rem;
+    font-family: var(--font-caslon);
+    /* Mantengo courier per i numeri carta */
+    font-size: 1.5rem;
     letter-spacing: 3px;
 }
 
 /* --- Form --- */
 .form-group label {
-    font-family: var(--font-franklin);
-    font-weight: 700;
-    font-size: 0.8rem;
+    font-family: var(--font-caslon);
+    font-weight: bold;
+    font-size: 1.2rem;
     color: var(--dark-color);
 }
 
@@ -93,6 +190,7 @@ input {
     background: var(--light-color);
     border-radius: 12px;
     font-family: var(--font-source);
+    font-size: 1.1rem;
     transition: all 0.3s;
 }
 
@@ -104,14 +202,17 @@ input:focus {
 
 /* --- Button --- */
 .btn-pay {
-    width: 100%;
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
     background: var(--dark-color);
-    color: white;
+    color: var(--light-color);
     border: none;
-    padding: 18px;
+    padding: 15px 40px;
     border-radius: var(--border-radius-pill);
-    font-family: var(--font-franklin);
-    font-weight: 700;
+    font-family: var(--font-caslon);
+    font-weight: bold;
+    font-size: medium;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -123,7 +224,8 @@ input:focus {
 }
 
 /* --- Loader & QR (Tuoi ID) --- */
-#loader, #success-page {
+#loader,
+#success-page {
     text-align: center;
     margin: 100px auto;
 }
@@ -138,7 +240,11 @@ input:focus {
     margin: 0 auto 20px;
 }
 
-@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 #qr-container-grid {
     display: grid;
