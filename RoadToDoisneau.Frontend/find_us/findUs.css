@@ -192,7 +192,17 @@ a {
     margin: 0 16px;
     padding: 40px 20px;
     text-align: center;
-    /* border-bottom: 3px solid #114578; */
+    opacity: 0;
+    transform: translateY(15px);
+    animation: simpleFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes simpleFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .find-us-section:first-child {
@@ -268,7 +278,7 @@ a {
     gap: 15px;
     max-width: 400px;
     margin: 0 auto;
-    
+
 }
 
 .hours-item {
@@ -323,6 +333,13 @@ a {
     color: var(--light-color);
     font-family: var(--font-caslon);
     font-size: 1.2rem;
+}
+
+.divider {
+    width: 400px;
+    height: 3px;
+    background-color: var(--comp-color);
+    margin: 50px auto;
 }
 
 /* Footer */
