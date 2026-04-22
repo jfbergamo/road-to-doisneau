@@ -153,7 +153,7 @@ function renderTickets(tickets) {
             <p style="font-weight: 700; margin-top: 15px; font-family: var(--font-franklin);">
                 ${t.holderName}
             </p>
-            <p style="font-family: var(--font-metal); color: var(--accent-color); font-size: 0.9rem;">
+            <p style="font-family: var(--font-metal); color: var(--dark-color); font-size: 1rem;">
                 CONFERMATO
             </p>
         `;
