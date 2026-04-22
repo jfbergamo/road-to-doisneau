@@ -1,5 +1,3 @@
-const API_ENDPOINT = "https://localhost:7022/api";
-
 document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.querySelector('.main-gallery');
     const mainContent = document.getElementById('main-content');
@@ -10,22 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 1. FUNZIONE PER CARICARE IL JSON ---
     async function loadGalleryData() {
-        try {
-            const response = await fetch(`${API_ENDPOINT}/photos`);
-            if (!response.ok) throw new Error("File JSON non trovato");
-            
-            allPhotos = await response.json(); // Salva i dati nell'array globale
-            renderGallery(allPhotos);
-            
-        } catch (error) {
-            console.error("Errore:", error);
-            {
-                const p = document.createElement('p');
-                p.setAttribute('style', "color:white;")
-                p.innerText = `Errore: ${error.message}`;
-                galleryContainer.appendChild(p);
-            }
-        }
+        const response = await fetch(`${API_ENDPOINT}/photos`);
+        if (!response.ok) throw new Error("File JSON non trovato");
+        
+        allPhotos = await response.json(); // Salva i dati nell'array globale
+        renderGallery(allPhotos);
     }
 
     // --- 2. FUNZIONE PER GENERARE L'HTML ---

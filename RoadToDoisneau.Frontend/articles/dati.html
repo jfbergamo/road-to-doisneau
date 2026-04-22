@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="articles.dati.page_title">GRANDE SUCCESSO A PORDENONE</title>
     <link rel="stylesheet" href="dati.css">
+    <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');
+        }
+    </script>
 </head>
 <body>
 

@@ -1,5 +1,3 @@
-const API_ENDPOINT = "https://localhost:7022/api";
-
 function renderArticle(article) {
     const blogCardArticle = document.createElement('article');
     blogCardArticle.classList.add('blog-card');
