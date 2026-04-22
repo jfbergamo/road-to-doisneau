@@ -78,14 +78,16 @@ a {
 .btn {
     font-family: var(--font-caslon);
     font-size: large;
-    font-weight: normal;
+    font-weight: 700;
     background-color: var(--dark-color);
     color: var(--light-color);
-    padding: 12px 32px;
+    padding: 14px 28px;
     border-radius: var(--border-radius-btn);
     border: none;
     cursor: pointer;
     transition: opacity 0.3s ease;
+    text-decoration: none;
+    margin-right: 5px;
 }
 
 .btn:hover {
@@ -98,9 +100,30 @@ a {
 }
 
 .btn-outline {
-    background-color: transparent;
-    color: var(--dark-color);
+    background-color: var(--dark-color);
+    color: var(--light-color);
     border: 1px solid var(--text-dark);
+}
+
+/* --- Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: var(--accent-color);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 24px;
+    z-index: 1000;
+    border-bottom: 2px solid var(--accent-color);
+    box-sizing: border-box;
+}
+
+.navbar img {
+    margin-top: 9px;
 }
 
 .checkout-container {
@@ -108,8 +131,8 @@ a {
     grid-template-columns: 1.2fr 0.8fr;
     gap: 40px;
     max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 145px 20px 60px;
 }
 
 /* --- Card Style --- */
@@ -170,7 +193,6 @@ a {
 
 .cc-number-display {
     font-family: var(--font-caslon);
-    /* Mantengo courier per i numeri carta */
     font-size: 1.5rem;
     letter-spacing: 3px;
 }

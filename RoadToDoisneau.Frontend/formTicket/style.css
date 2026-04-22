@@ -81,7 +81,7 @@ a {
     font-weight: normal;
     background-color: var(--dark-color);
     color: var(--light-color);
-    padding: 12px 32px;
+    padding: 14px 28px;
     border-radius: var(--border-radius-btn);
     border: none;
     cursor: pointer;
