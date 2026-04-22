@@ -107,8 +107,8 @@ a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--dark-color);
     border: none;
     padding: 16px;
     cursor: pointer;
@@ -125,17 +125,10 @@ a {
 }
 
 .nav-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--light-color);
+    color: var(--dark-color);
 }
 
-/* Posizionamento specifico */
-.prev {
-    left: 20px;
-}
-
-.next {
-    right: 20px;
-}
 
 /* Navigation */
 .navbar {
@@ -242,7 +235,6 @@ a {
     position: relative;
     overflow: hidden;
     aspect-ratio: 4 / 3;
-    /* O usa auto se le foto hanno formati diversi */
     cursor: pointer;
     background: #000;
 
@@ -267,8 +259,8 @@ a {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
+    background: var(--dark-color);
+    color: var(--light-color);
     padding: 5px 10px;
     font-size: 0.8rem;
     opacity: 0;
@@ -283,20 +275,19 @@ a {
     display: none;
 }
 
-/* Nascosta in griglia, la usiamo per il modale */
 
 /* MODALE */
 .modal {
     display: none;
-    /* Diventa 'flex' via JS */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--dark-color);
     justify-content: center;
     align-items: center;
+    z-index: 2000;
 }
 
 .modal-content-wrapper {
@@ -305,41 +296,45 @@ a {
     align-items: center;
     justify-content: center;
     width: 90%;
-    /* Occupa il 90% della larghezza schermo */
     height: 80%;
-    /* Occupa l'80% dell'altezza schermo */
     margin: auto;
 }
 
 #modalImg {
-    /* IMPORTANTE: Queste tre proprietà insieme adattano l'immagine */
-    padding-top: 125px;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Adatta l'immagine senza tagliarla o zoomare */
-
     display: block;
-    background-color: rgba(0, 0, 0, 0.2);
-    /* Opzionale: un fondo leggero */
 }
 
 #modalCaption {
     margin-top: 15px;
-    color: #ccc;
+    background-color: var(--accent-color);
+    color: var(--dark-color);
     font-family: var(--font-caslon);
+    font-size: medium;
     text-align: center;
+    border-radius: var(--border-radius-lg);
+    padding: 7px;
 }
 
 .modal-close {
     position: absolute;
     top: 20px;
-    right: 30px;
+    right: 31px;
     font-size: 50px;
-    color: white;
+    color: var(--light-color);
     cursor: pointer;
 }
 
+/* Posizionamento specifico */
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
 
 /* Footer */
 .footer {
@@ -473,7 +468,7 @@ a {
         overflow: hidden;
         opacity: 0;
         transition: all 0.4s ease-in-out;
-        z-index: 99;
+        z-index: 3000;
     }
 
     .nav-content.active {
@@ -528,6 +523,35 @@ a {
         width: 40px;
         height: 40px;
         font-size: 18px;
+    }
+
+    .modal-content-wrapper {
+        width: 95%;
+        height: 90%;
+    }
+
+    #modalImg {
+        padding-top: 80px;
+    }
+
+    .modal-close {
+        top: 100px;
+        right: 20px;
+        font-size: 40px;
+        background: rgba(0, 0, 0, 0.3);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        z-index: 1010;
+    }
+
+    #modalCaption {
+        font-size: 0.9rem;
+        padding: 0 10px;
+        margin-top: 10px;
     }
 
     .prev {
