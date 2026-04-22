@@ -88,7 +88,8 @@
         "free_list_3": "Accredited Journalists",
         "total_label": "Total",
         "tickets_unit": "tickets",
-        "buy_btn_final": "Purchase"
+        "buy_btn_final": "Purchase",
+        "total_button": "Proceed with order"
     },
     "formTicket": {
         "page_title": "Paticipants Details | Road to Doisneau",
