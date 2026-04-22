@@ -88,7 +88,8 @@
         "free_list_3": "Giornalisti accreditati",
         "total_label": "Totale",
         "tickets_unit": "biglietti",
-        "buy_btn_final": "Acquista"
+        "buy_btn_final": "Acquista",
+        "total_button": "Procedi con l'ordine"
     },
     "formTicket": {
         "page_title": "Dettagli Partecipanti | Road to Doisneau",
