@@ -35,10 +35,10 @@
     --dark-color: #052444;
 
     /* Typography */
-    --font-metal: 'Metal', sans-serif;
-    --font-caslon: 'Libre Caslon Text', Georgia, serif;
-    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
-    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    --font-metal: 'Metal';
+    --font-caslon: 'Libre Caslon Text';
+    --font-franklin: 'Libre Franklin';
+    --font-source: 'Source Sans Pro';
 
     /* Borders */
     --border-radius-lg: 24px;
@@ -55,7 +55,7 @@
 
 /* Body */
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-caslon);
     background-color: var(--dark-color);
     color: var(--dark-color);
     line-height: 1.6;
@@ -65,7 +65,7 @@ h1,
 h2,
 h3,
 .serif-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-caslon);
     font-weight: normal;
 }
 
@@ -76,14 +76,15 @@ a {
 
 /* Buttons */
 .btn {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 12px 32px;
     border-radius: var(--border-radius-btn);
     border: none;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
     transition: opacity 0.3s ease;
 }
 
@@ -150,10 +151,12 @@ a {
 }
 
 .nav-links {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
     display: flex;
     gap: 32px;
     list-style: none;
-    font-weight: 500;
 }
 
 .nav-actions {
@@ -225,7 +228,7 @@ a {
 }
 
 .category {
-    font-family: var(--font-inter);
+    font-family: var(--font-caslon);
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -235,18 +238,18 @@ a {
 }
 
 .blog-card h2 {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-size: 1.6rem;
     margin-bottom: 12px;
     line-height: 1.2;
 }
 
 .blog-card p {
-    font-family: var(--font-text);
+    font-family: var(--font-caslon);
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 20px;
-    color: #444;
+    color: var(--dark-color);
 }
 
 .blog-card .btn {
@@ -254,7 +257,6 @@ a {
     align-self: flex-start;
 }
 
-/* Variante Highlight (Sfondo colorato) */
 .blog-card.highlight {
     background-color: var(--comp-color);
     justify-content: center;
@@ -266,7 +268,7 @@ a {
 }
 
 .mini-quote {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-style: italic;
     font-size: 1.2rem;
     margin: 20px 0;
@@ -287,7 +289,7 @@ a {
 }
 
 .article-header h1 {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-size: clamp(2rem, 5vw, 3.5rem);
     color: var(--dark-color);
     line-height: 1.1;
@@ -295,10 +297,10 @@ a {
 }
 
 .subtitle {
-    font-family: var(--font-text);
+    font-family: var(--font-caslon);
     font-size: 1.2rem;
     font-style: italic;
-    color: #555;
+    color: var(--dark-color);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -317,15 +319,15 @@ a {
 }
 
 .img-caption {
-    font-family: var(--font-alt);
+    font-family: var(--font-caslon);
     font-size: 0.85rem;
     margin-top: 12px;
-    color: #777;
+    color: var(--comp-color);
     font-style: italic;
 }
 
 .article-body {
-    font-family: var(--font-text);
+    font-family: var(--font-caslon);
     font-size: 1.15rem;
     line-height: 1.8;
     color: #333;
@@ -336,7 +338,7 @@ a {
 }
 
 .article-body h2 {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-size: 2rem;
     margin: 48px 0 20px 0;
     color: var(--dark-color);
@@ -361,7 +363,7 @@ a {
 
 /* --- STILE CITAZIONE (Mini Quote) --- */
 .mini-quote {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-style: italic;
     font-size: 1.4rem;
     color: var(--dark-color);
@@ -378,7 +380,7 @@ a {
 
 .mini-quote::before {
     content: "“";
-    font-family: serif;
+    font-family: var(--font-caslon);
     font-size: 4rem;
     position: absolute;
     top: -10px;
@@ -393,7 +395,7 @@ a {
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 60px 20px 40px 20px;
-    font-family: sans-serif;
+    font-family: var(--font-caslon);
 }
 
 .footer-columns {
@@ -430,7 +432,7 @@ a {
 
 .footer-contact p {
     margin: 0;
-    font-family: Georgia, serif;
+    font-family: var(--font-caslon);
     font-style: italic;
     font-size: 1.1rem;
 }
@@ -471,7 +473,7 @@ a {
 }
 
 /* Responsiveness per l'articolo */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     /* Nav */
     .navbar {
@@ -533,11 +535,11 @@ a {
         box-shadow: 0 8px 24px rgba(5, 36, 68, 0.15);
     }
 
-    .nav-links {
+    /* .nav-links {
         flex-direction: column;
         gap: 24px;
         text-align: center;
-    }
+    } */
 
     .nav-actions {
         flex-direction: row;
