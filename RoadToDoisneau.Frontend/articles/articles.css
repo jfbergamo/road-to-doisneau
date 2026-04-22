@@ -201,7 +201,7 @@ a {
 }
 
 .blog-card {
-    background: white;
+    background: #ffe7e1;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     display: flex;
@@ -229,16 +229,18 @@ a {
 
 .category {
     font-family: var(--font-caslon);
-    font-size: 0.75rem;
+    font-size: 1rem;
     text-transform: uppercase;
+    text-align: left;
     letter-spacing: 0.1em;
-    color: var(--accent-color);
-    font-weight: 700;
-    margin-bottom: 8px;
+    color: #28649f;
+    font-weight: 800;
+    font-style: italic;;
+    margin-bottom: 10px;
 }
 
 .blog-card h2 {
-    font-family: var(--font-caslon);
+    font-family: var(--font-source);
     font-size: 1.6rem;
     margin-bottom: 12px;
     line-height: 1.2;
@@ -246,13 +248,15 @@ a {
 
 .blog-card p {
     font-family: var(--font-caslon);
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     margin-bottom: 20px;
     color: var(--dark-color);
 }
 
 .blog-card .btn {
+    border-radius: var(--border-radius-pill);
+    background-color: var(--accent-color);
     margin-top: auto;
     align-self: flex-start;
 }
@@ -298,7 +302,7 @@ a {
 
 .subtitle {
     font-family: var(--font-caslon);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-style: italic;
     color: var(--dark-color);
     max-width: 600px;
@@ -320,9 +324,9 @@ a {
 
 .img-caption {
     font-family: var(--font-caslon);
-    font-size: 0.85rem;
+    font-size: 1.5rem;
     margin-top: 12px;
-    color: var(--comp-color);
+    color: #28649f;
     font-style: italic;
 }
 
@@ -339,7 +343,7 @@ a {
 
 .article-body h2 {
     font-family: var(--font-caslon);
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 48px 0 20px 0;
     color: var(--dark-color);
 }
@@ -358,6 +362,8 @@ a {
 
 /* Fix per i bottoni nel footer */
 .article-footer .btn {
+    border-radius: var(--border-radius-btn);
+    background-color: var(--accent-color);
     display: inline-block;
 }
 
@@ -365,11 +371,11 @@ a {
 .mini-quote {
     font-family: var(--font-caslon);
     font-style: italic;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--dark-color);
     margin: 40px 0;
     padding: 30px;
-    background-color: white;
+    background-color: var(--comp-color);
     border-radius: var(--border-radius-lg);
     position: relative;
     text-align: center;
@@ -385,7 +391,7 @@ a {
     position: absolute;
     top: -10px;
     left: 20px;
-    color: var(--accent-color);
+    color: #e79988;
     opacity: 0.5;
 }
 
@@ -433,7 +439,6 @@ a {
 .footer-contact p {
     margin: 0;
     font-family: var(--font-caslon);
-    font-style: italic;
     font-size: 1.1rem;
 }
 
