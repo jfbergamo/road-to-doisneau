@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="article.css">
     <link rel="stylesheet" href="articles.css">
     <title data-i18n="articles.art3_page_title">La Dernière Valse du 14 juillet 1949 | Road to Doisneau</title>
+    <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');
+        }
+    </script>
 </head>
 
 <body>
@@ -90,7 +96,8 @@
     </main>
 
     <script src="script.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js"></script>
+    <script src="/content/accessibility-menu.min.js"></script>
+    <script src="/accessibility.js"></script>
 
 </body>
 

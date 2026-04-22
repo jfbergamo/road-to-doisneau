@@ -1,17 +1,17 @@
 services:
   postgres:
+    restart: unless-stopped
     image: postgres:latest
     container_name: rtd_db
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: road_to_doisneau
-    ports:
-      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql
       - ./RoadToDoisneau.Db/init.sql:/docker-entrypoint-initdb.d/init.sql
   server:
+    restart: unless-stopped
     build: .
     container_name: rtd_server
     ports:

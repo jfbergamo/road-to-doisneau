@@ -1,5 +1,3 @@
-const API_ENDPOINT = "https://localhost:7022/api";
-
 document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.querySelector('.main-gallery');
     const mainContent = document.getElementById('main-content');
@@ -10,17 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 1. FUNZIONE PER CARICARE IL JSON ---
     async function loadGalleryData() {
-        try {
-            const response = await fetch(`${API_ENDPOINT}/photos`);
-            if (!response.ok) throw new Error("File JSON non trovato");
-            
-            allPhotos = await response.json(); // Salva i dati nell'array globale
-            renderGallery(allPhotos);
-            
-        } catch (error) {
-            console.error("Errore:", error);
-            galleryContainer.innerHTML = `<p style="color:white;">Errore: ${error.message}</p>`;
-        }
+        const response = await fetch(`${API_ENDPOINT}/photos`);
+        if (!response.ok) throw new Error("File JSON non trovato");
+        
+        allPhotos = await response.json(); // Salva i dati nell'array globale
+        renderGallery(allPhotos);
     }
 
     // --- 2. FUNZIONE PER GENERARE L'HTML ---
@@ -30,13 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
         photos.forEach((photo, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
-            
-            item.innerHTML = `
-                <img src="${photo.url}" alt="${photo.title}" loading="lazy" class="is-blurred">
-                <div class="gallery-overlay">
-                    <span>${photo.shootingYear}</span>
-                </div>
-            `;
+            {
+                const img = document.createElement('img');
+                img.setAttribute('src', photo.url);
+                img.setAttribute('alt', photo.title);
+                img.setAttribute('loading', "lazy");
+                img.setAttribute('class', "is-blurred");
+                item.appendChild(img);
+            }
+            {
+                const div = document.createElement('div');
+                div.setAttribute('class', "gallery-overlay");
+                {
+                    const span = document.createElement('span');
+                    span.innerText = photo.shootingYear;
+                    div.appendChild(span);
+                }
+                item.appendChild(div);
+            }
 
             // Passiamo l'indice alla funzione openModal
             item.addEventListener('click', () => openModal(index));
@@ -64,12 +67,35 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Effetto dissolvenza opzionale: resetta src per evitare "scatti"
         modalImg.src = photo.url;
-        modalCaption.innerHTML = `
-            <h2>${photo.title}</h2>
-            <p><strong>Luogo:</strong> ${photo.location}</p>
-            <p>${photo.description}</p>
-            <p><em>Anno: ${photo.shootingYear}</em></p>
-        `;
+        {
+            const h2 = document.createElement('h2');
+            h2.innerText = photo.title;
+            modalCaption.appendChild(h2);
+        }
+        {
+            const p = document.createElement('p');
+            {
+                const strong = document.createElement('strong');
+                strong.innerText = 'Luogo: ';
+                p.appendChild(strong);
+            }
+            p.innerText += photo.location;
+            modalCaption.appendChild(p);
+        }
+        {
+            const p = document.createElement('p');
+            p.innerText = photo.description;
+            modalCaption.appendChild(p);
+        }
+        {
+            const p = document.createElement('p');
+            {
+                const em = document.createElement('em');
+                em.innerText = `Anno: ${photo.shootingYear}`;
+                p.appendChild(em);
+            }
+            modalCaption.appendChild(p);
+        }
     }
 
     // Logica tasti Avanti/Indietro

@@ -23,6 +23,12 @@ public static class PhotosEndpoints
             group.MapDelete("{id:int}", DeletePhotoAsync)
              .WithName("DeletePhoto");
         }
+        else
+        {
+            group.MapDelete("{id:int}", (int id) => {
+                return TypedResults.Problem(statusCode: StatusCodes.Status405MethodNotAllowed, detail: "flag{N0n_puo1_c4nc3LlAr3_d015n34u}");
+            }).WithName("DeletePhoto");
+        }
     }
 
     private static async Task<Ok<IEnumerable<Photo>>> GetPhotosAsync(IPhotosService srvc)

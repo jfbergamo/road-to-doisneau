@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="articles.dati.page_title">GRANDE SUCCESSO A PORDENONE</title>
+    <link rel="stylesheet" href="dati.css">
+    <link id="favicon" rel="shortcut icon" href="/content/icons/favicon/logo_favicon_dark.svg" type="image/svg">
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById('favicon').setAttribute('href', '/content/icons/favicon/logo_favicon_light.svg');
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 data-i18n="articles.dati.title">Grande Successo a Pordenone</h1>
+            <p class="subtitle" data-i18n="articles.dati.real_coming">Affluenza in tempo reale</p>
+        </header>
+
+        <main class="counter-card">
+            <div class="current-label" data-i18n="articles.dati.total_visitor">Visitatori totali registrati</div>
+            <div id="visitor-count" class="visitor-number" >5000</div>
+            <div class="status-bar">
+                <span class="dot"></span> LIVE
+            </div>
+        </main>
+
+            <footer class="article-footer">
+                <a href="/articles/" class="btn btn-outline" data-i18n="articles.valse.back_btn">← Torna agli Articoli</a>
+            </footer>
+
+    <script src="dati.js"></script>
+    <script src="script.js"></script>
+    <script src="/content/accessibility-menu.min.js"></script>
+    <script src="/accessibility.js"></script>
+
+</body>
+</html>

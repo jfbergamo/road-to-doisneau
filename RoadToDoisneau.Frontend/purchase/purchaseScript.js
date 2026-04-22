@@ -1,5 +1,3 @@
-const API_URL = `https://localhost:7022/api`
-
 document.addEventListener('DOMContentLoaded', () => {
     // --- 1. RECUPERO DATI E RIEPILOGO ---
     const finalDetails = JSON.parse(localStorage.getItem('finalOrderDetails')) || [];
@@ -19,10 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const itemDiv = document.createElement('div');
         itemDiv.className = 'item';
-        itemDiv.innerHTML = `
-            <span>${ticket.type} (${ticket.ownerName}) ${ticket.wantsBooklet ? '+ Booklet' : ''}</span>
-            <span>€ ${itemTotal.toFixed(2)}</span>
-        `;
+        {
+            const span = document.createElement('span');
+            span.innerText = `${ticket.type} (${ticket.ownerName}) ${ticket.wantsBooklet ? '+ Booklet' : ''}`;
+            itemDiv.appendChild(span);
+        }
+        {
+            const span = document.createElement('span');
+            span.innerText = `€ ${itemTotal.toFixed(2)}`;
+            itemDiv.appendChild(span);
+        }
         summaryContainer.appendChild(itemDiv);
     });
     totalDisplay.innerText = `€ ${runningTotal.toFixed(2)}`;
@@ -105,7 +109,7 @@ async function simulatePurchase() {
     try {
         const body = JSON.stringify({ tickets: payload });
 
-        const response = await fetch(`${API_URL}/orders`, { 
+        const response = await fetch(`${API_ENDPOINT}/orders`, { 
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: body
@@ -148,15 +152,7 @@ function renderTickets(tickets) {
         
         const qrCard = document.createElement('div');
         qrCard.className = 'qr-card';
-        qrCard.innerHTML = `
-            <img src="${URL.createObjectURL(qr)}" alt="QR Ticket">
-            <p style="font-weight: 700; margin-top: 15px; font-family: var(--font-franklin);">
-                ${t.holderName}
-            </p>
-            <p style="font-family: var(--font-metal); color: var(--dark-color); font-size: 1rem;">
-                CONFERMATO
-            </p>
-        `;
+        renderQrCard(qrCard, qr, t.holderEmail);
         qrGrid.appendChild(qrCard);
     });
 
@@ -166,4 +162,25 @@ function renderTickets(tickets) {
     // Cleanup storage
     localStorage.removeItem('cartData');
     localStorage.removeItem('finalOrderDetails');
+}
+
+function renderQrCard(qrCard, qr, holderName) {
+    {
+        const img = document.createElement('img');
+        img.setAttribute('src', URL.createObjectURL(qr));
+        img.setAttribute('alt', "QR Ticket");
+        qrCard.appendChild(img);
+    }
+    {
+        const p = document.createElement('p');
+        p.setAttribute('style', "font-weight: 700; margin-top: 15px; font-family: var(--font-franklin);")
+        p.innerText = holderName;
+        qrCard.appendChild(p);
+    }
+    {
+        const p = document.createElement('p');
+        p.setAttribute('style', "font-family: var(--font-metal); color: var(--accent-color); font-size: 0.9rem;")
+        p.innerText = 'CONFERMATO';
+        qrCard.appendChild(p);
+    }
 }

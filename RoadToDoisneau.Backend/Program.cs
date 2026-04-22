@@ -49,5 +49,6 @@ app.UseStaticFiles();
 app.MapModelsEndpoints(isDevel);
 
 app.MapGet("/api/status", () => new { Status = "Running" });
+app.MapGet("/api/admin", () => "flag{U_r_n0W_aN_4dm1n}");
 
 app.Run();

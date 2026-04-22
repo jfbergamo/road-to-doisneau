@@ -7,29 +7,32 @@
         "find_us": "Trovaci",
         "tickets_btn": "Biglietti"
     },
+    "footer": {
+        "copyright": "Copyright &copy; 2026 Tutti i diritti riservati."
+    },
     "land": {
         "subtitle_main": "\"Uno scatto per sognare il mondo in cui vorremmo vivere\"",
-        "land.intro_quote": "Visitare una mostra di Robert Doisneau è un po` come fare un viaggio nel tempo senza bisogno di una macchina complicata: basta uno sguardo. Se poi la cornice è Pordenone, l`esperienza diventa ancora più intima e suggestiva.",
-        "land.tickets_title": "VUOI COMPRARE I TUOI BIGLIETTI?",
-        "land.tickets_subtitle": "Ecco le nostre tariffe!",
-        "land.full_access": "Accesso completo a tutte le aree",
-        "land.free_info": "Scopri chi ha diritto",
-        "land.free_list_1": "Bambini 0-5 anni",
-        "land.free_list_2": "Disabili + Accompagnatori",
-        "land.free_list_3": "Giornalisti accreditati",
-        "land.countdown_title": "AFFRETTATI! La mostra finisce tra:",
-        "land.days": "Giorni",
-        "land.hours": "Ore",
-        "land.minutes": "Minuti",
-        "land.seconds": "Secondi",
-        "land.contact_btn": "Contattaci",
-        "land.form_title": "Scrivici",
-        "land.form_interest": "Interesse...",
-        "land.interest_tickets": "Acquistare biglietti",
-        "land.interest_events": "Prossimi eventi",
-        "land.interest_info": "Informazioni mostra",
-        "land.interest_other": "Altro",
-        "land.form_send": "Invia richiesta"
+        "intro_quote": "Visitare una mostra di Robert Doisneau è un po` come fare un viaggio nel tempo senza bisogno di una macchina complicata: basta uno sguardo. Se poi la cornice è Pordenone, l`esperienza diventa ancora più intima e suggestiva.",
+        "tickets_title": "VUOI COMPRARE I TUOI BIGLIETTI?",
+        "tickets_subtitle": "Ecco le nostre tariffe!",
+        "full_access": "Accesso completo a tutte le aree",
+        "free_info": "Scopri chi ha diritto",
+        "free_list_1": "Bambini 0-5 anni",
+        "free_list_2": "Disabili + Accompagnatori",
+        "free_list_3": "Giornalisti accreditati",
+        "countdown_title": "AFFRETTATI! La mostra finisce tra:",
+        "days": "Giorni",
+        "hours": "Ore",
+        "minutes": "Minuti",
+        "seconds": "Secondi",
+        "contact_btn": "Contattaci",
+        "form_title": "Scrivici",
+        "form_interest": "Interesse...",
+        "interest_tickets": "Acquistare biglietti",
+        "interest_events": "Prossimi eventi",
+        "interest_info": "Informazioni mostra",
+        "interest_other": "Altro",
+        "form_send": "Invia richiesta"
     },
     "home": {
         "hero_subtitle": "Prendi questa strada per scoprire il passato.",
@@ -61,7 +64,8 @@
         "booklet":{
             "title": "Acquista Booklet per quando vieni a trovarci",
             "subtitle": "Non dimenticare di prendere i tuoi adesivi gratuiti!",
-            "btn": "Compra il Booklet"
+            "btn": "Compra il Booklet",
+            "home_btn": "Vai al sito"
         }
     },
     "gallery": {
@@ -177,7 +181,8 @@
             "art2_quote": "\"Il mondo che cercavo di mostrare era un mondo in cui mi sarei sentito bene, dove le persone erano gentili, dove avrei trovato la tenerezza che speravo di ricevere.\"",
             "art2_h2_2": "Il rito dell'ombra",
             "art2_p3": " Nessuna giornata a Pordenone può dirsi completa senza una sosta nelle storiche osterie del centro. Entrate in un locale tipico, ordinate un \"tajut\" di vino e ascoltate il brusio delle conversazioni. In quella convivialità sincera, tra un sorriso rubato al bancone e un gesto d'intesa, ritroverete lo spirito dei bistrot parigini che Doisneau amava tanto frequentare.",
-            "art2_p4": "Infine, raggiungete le rive del Noncello al tramonto. La nebbia leggera che spesso sale dall'acqua ricorda le atmosfere soffuse delle mattine lungo la Senna, chiudendo perfettamente il cerchio di una giornata dedicata alla bellezza del reale."
+            "art2_p4": "Infine, raggiungete le rive del Noncello al tramonto. La nebbia leggera che spesso sale dall'acqua ricorda le atmosfere soffuse delle mattine lungo la Senna, chiudendo perfettamente il cerchio di una giornata dedicata alla bellezza del reale.",
+            "back_btn": "Torna agli Articoli"
         },
         "valse": {
             "cat_atmospheres": "Atmosfere Parigine",
@@ -188,7 +193,8 @@
             "art3_p2": "A differenza del \"Bacio\", qui non c'è regia. Doisneau amava definirsi un <em>pescatore</em>:restava in attesa che la realtà componesse da sola il suo capolavoro. Notò la grazia composta dei due ballerini sul selciato umido e scattò, catturando non solo una danza, ma il desiderio di un'intera generazione di tornare a sorridere dopo gli anni bui della guerra.",
             "art3_quote": "\"C`è una sorta di grazia nel veder finire una festa. È il momento in cui le maschere cadono e resta solo l'umanità.\"",
             "art3_h2_3": "3. Un'eleganza senza tempo",
-            "art3_p3": "Ciò che rende questo scatto eterno è l'equilibrio. L'abito semplice della donna, i lampioni che riflettono la luce sul cemento e l'abbraccio dignitoso. Non è una danza tra nobili, ma il valzer della gente comune che, per una notte, trasforma una periferia parigina nel palcoscenico più prestigioso del mondo."
+            "art3_p3": "Ciò che rende questo scatto eterno è l'equilibrio. L'abito semplice della donna, i lampioni che riflettono la luce sul cemento e l'abbraccio dignitoso. Non è una danza tra nobili, ma il valzer della gente comune che, per una notte, trasforma una periferia parigina nel palcoscenico più prestigioso del mondo.",
+            "back_btn": "Torna agli Articoli"
         },
         "basier": {
             "cat_behind_lens": "Dietro l'obiettivo",
@@ -199,7 +205,8 @@
             "art4_p2": "Negli anni '90, il mito rischiò di infrangersi sotto il peso delle aule giudiziarie. Molte coppie sostennero di essere i veri protagonisti, cercando un risarcimento milionario. Doisneau fu costretto a confessare: la foto era un set. Françoise Bornet apparve allora con la stampa originale autografata dal maestro, l'unica prova che mise fine alle dispute.",
             "art4_quote": "\"Non mi sarei mai permesso di fotografare persone che si baciavano per strada. Gli innamorati che si baciano raramente sono una coppia legittima\"",
             "art4_h2_3": "3. 155.000 euro di poesia",
-            "art4_p3": "Nel 2005, la copia originale di Françoise è stata battuta all'asta per una cifra record. Oltre 150mila euro per un pezzo di carta. Perché? Perché anche sapendo che si trattava di una posa, quel bacio continua a rappresentare la Parigi che tutti vogliamo sognare: libera, romantica e intramontabile."
+            "art4_p3": "Nel 2005, la copia originale di Françoise è stata battuta all'asta per una cifra record. Oltre 150mila euro per un pezzo di carta. Perché? Perché anche sapendo che si trattava di una posa, quel bacio continua a rappresentare la Parigi che tutti vogliamo sognare: libera, romantica e intramontabile.",
+            "back_btn": "Torna agli Articoli"
         },
         "parigiNoncello": {
             "cat_special_event": "Evento Speciale",
@@ -209,7 +216,13 @@
             "art1_h2_1": "La poetica del quotidiano",
             "art1_p2": "Non aspettatevi pose plastiche o scenari costruiti a tavolino. Doisneau era un \"pescatore di immagini\", un uomo capace di attendere ore l'allineamento perfetto tra una luce radente e il sorriso di un passante",
             "art1_quote": "\"Quello che cercavo di mostrare era un mondo dove mi sarei sentito bene, dove le persone fossero gentili\"",
-            "art1_p3": "L`allestimento è stato pensato per creare un dialogo continuo tra le foto e l'architettura pordenonese. Passeggiare tra le sale è come camminare lungo la Senna, un'esperienza che unisce il bianco e nero parigino ai colori caldi dei nostri portici."
+            "art1_p3": "L`allestimento è stato pensato per creare un dialogo continuo tra le foto e l'architettura pordenonese. Passeggiare tra le sale è come camminare lungo la Senna, un'esperienza che unisce il bianco e nero parigino ai colori caldi dei nostri portici.",
+            "back_btn": "Torna agli Articoli"
+        },
+        "dati": {
+            "page_title": "GRANDE SUCCESSO A PORDENONE",
+            "title": "Grande Successo a Pordenone",
+            "total_visitor": "Visitatori totali registrati"
         }
     },
     "find_us": {

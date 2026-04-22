@@ -70,7 +70,12 @@ function updateCountdown() {
 
     if (distance < 0) {
         clearInterval(countdownInterval);
-        document.querySelector(".countdown-container").innerHTML = "<h3>Mostra Conclusa!</h3>";
+        const countdownContainer = document.querySelector(".countdown-container");
+        {
+            const h3 = document.createElement('h3');
+            h3.innerText = 'Mostra Conclusa!';
+            countdownContainer.appendChild(h3);
+        }
         return;
     }
 
@@ -152,7 +157,7 @@ function applyTranslations(translations) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = text;
             } else {
-                element.innerHTML = text;
+                element.innerText = text;
             }
         }
     });

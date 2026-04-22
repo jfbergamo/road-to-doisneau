@@ -135,7 +135,7 @@ function applyTranslations(translations) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = text;
             } else {
-                element.innerHTML = text;
+                element.innerText = text;
             }
         }
     });
@@ -152,3 +152,12 @@ langToggle.addEventListener('click', () => {
 });
 
 loadTranslations(currentLang);
+
+(async () => {
+    const api = await fetch(`${API_ENDPOINT}/status`);
+    if (api.ok) {
+        console.log('API OK');
+    } else {
+        console.error('API CONNECTION ERROR');
+    }
+})()
