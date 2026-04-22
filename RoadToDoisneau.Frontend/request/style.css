@@ -1,30 +1,115 @@
-/* --- Variabili e Font (Assicurati che siano in cima al file) --- */
+/* Fonts */
+@font-face {
+    font-family: 'Metal';
+    src: url('/font/Metal/Metal-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Caslon Text';
+    src: url('/font/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('/font/Libre_Franklin/LibreFranklin-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
+    /* Colors */
     --light-color: #FEF5F3;
     --accent-color: #FAC4B8;
     --comp-color: #B7D8FA;
     --dark-color: #052444;
-    --font-metal: 'Metal', sans-serif;
-    --font-caslon: 'Libre Caslon Text', Georgia, serif;
-    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
-    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+    /* Typography */
+    --font-metal: 'Metal';
+    --font-caslon: 'Libre Caslon Text';
+    --font-franklin: 'Libre Franklin';
+    --font-source: 'Source Sans Pro';
+
+    /* Borders */
     --border-radius-lg: 24px;
+    --border-radius-btn: 100px;
     --border-radius-pill: 50px;
 }
 
-/* --- Layout Pagina Grazie --- */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
 body {
-    background-color: var(--light-color);
+    font-family: var(--font-caslon);
+    background-color: var(--dark-color);
+    color: var(--dark-color);
+    line-height: 1.6;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    font-family: var(--font-source);
+}
+
+h1,
+h2,
+h3,
+.serif-text {
+    font-family: var(--font-caslon);
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Buttons */
+.btn {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 12px 32px;
+    border-radius: var(--border-radius-btn);
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-pill {
+    border-radius: var(--border-radius-pill);
+    padding: 8px 24px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--dark-color);
+    border: 1px solid var(--text-dark);
 }
 
 .participant-card-visual {
-    background: white;
+    background: var(--light-color);
     padding: 60px 40px;
     border-radius: var(--border-radius-lg);
     border: 1px solid var(--accent-color);
@@ -34,9 +119,18 @@ body {
     width: 100%;
 }
 
+.participant-card-visual p {
+    font-family: var(--font-caslon);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin-top: 20px;
+}
+
 .serif-title {
     font-family: var(--font-caslon);
     font-size: 2.2rem;
+    font-weight: bold;
     color: var(--dark-color);
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -46,13 +140,14 @@ body {
 .request-info-box {
     margin-top: 30px;
     padding: 25px;
-    background: var(--light-color);
+    background: var(--comp-color);
     border-radius: 15px;
     text-align: center;
+    
 }
 
 .request-label {
-    font-family: var(--font-franklin);
+    font-family: var(--font-caslon);
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.75rem;
@@ -60,11 +155,12 @@ body {
     display: block;
     margin-bottom: 8px;
     color: var(--dark-color);
+    font-size: medium;
     opacity: 0.6;
 }
 
 .ticket-tag {
-    font-family: var(--font-metal);
+    font-family: var(--font-caslon);
     font-size: 2.5rem;
     color: var(--dark-color);
     margin: 0;
@@ -79,11 +175,11 @@ body {
 }
 
 .message-text {
-    font-style: italic;
+    font-style: var(--font-caslon);
     font-size: 1rem;
     color: var(--dark-color);
     line-height: 1.6;
-    background: white;
+    background: var(--light-color);
     padding: 15px;
     border-radius: 10px;
     margin-top: 10px;
@@ -98,11 +194,12 @@ body {
 .btn-pill {
     display: inline-block;
     background-color: var(--dark-color);
-    color: white;
+    color: var(--light-color);
     padding: 15px 35px;
+    margin-top: 25px;
     border-radius: var(--border-radius-pill);
     text-decoration: none;
-    font-family: var(--font-franklin);
+    font-family: var(--font-caslon);
     font-weight: 700;
     transition: 0.3s;
 }
@@ -111,11 +208,4 @@ body {
     background-color: var(--accent-color);
     color: var(--dark-color);
     transform: scale(1.05);
-}
-
-.thank{
-    font-family: var(--font-metal);
-    font-size: 1.2rem;
-    color: var(--dark-color);
-    margin-top: 20px;
 }

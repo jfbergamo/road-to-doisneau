@@ -1,20 +1,106 @@
-/* --- Identity --- */
+/* Fonts */
+@font-face {
+    font-family: 'Metal';
+    src: url('/font/Metal/Metal-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Caslon Text';
+    src: url('/font/Libre_Caslon_Text/LibreCaslonText-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('/font/Libre_Franklin/LibreFranklin-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
+    /* Colors */
     --light-color: #FEF5F3;
     --accent-color: #FAC4B8;
     --comp-color: #B7D8FA;
     --dark-color: #052444;
-    --font-caslon: 'Libre Caslon Text', serif;
-    --font-franklin: 'Libre Franklin', sans-serif;
-    --font-source: 'Source Sans Pro', sans-serif;
+
+    /* Typography */
+    --font-metal: 'Metal';
+    --font-caslon: 'Libre Caslon Text';
+    --font-franklin: 'Libre Franklin';
+    --font-source: 'Source Sans Pro';
+
+    /* Borders */
     --border-radius-lg: 24px;
     --border-radius-btn: 100px;
+    --border-radius-pill: 50px;
 }
 
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
 body {
-    font-family: var(--font-source);
-    background-color: var(--light-color);
+    font-family: var(--font-caslon);
+    background-color: var(--dark-color);
     color: var(--dark-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.serif-text {
+    font-family: var(--font-caslon);
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Buttons */
+.btn {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 14px 28px;
+    border-radius: var(--border-radius-btn);
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-pill {
+    border-radius: var(--border-radius-pill);
+    padding: 8px 24px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--dark-color);
+    border: 1px solid var(--text-dark);
 }
 
 .main-container {
@@ -27,32 +113,36 @@ body {
 .navbar {
     position: fixed;
     top: 0; width: 100%; height: 80px;
-    background: rgba(254, 245, 243, 0.9);
+    background: var(--accent-color);
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 8px 24px;
     z-index: 1000;
     border-bottom: 2px solid var(--accent-color);
     box-sizing: border-box;
 }
 
+.navbar img {
+    margin-top: 9px;
+}
+
 /* --- Typography --- */
 .serif-title {
     font-family: var(--font-caslon);
-    font-size: 2.8rem;
+    font-size: 3rem;
 }
 
 .subtitle {
-    font-family: var(--font-franklin);
+    font-family: var(--font-caslon);
     color: var(--dark-color);
     opacity: 0.7;
 }
 
 /* --- Card Partecipanti --- */
 .participant-card-visual {
-    background: white;
+    background: var(--light-color);
     padding: 30px;
     border-radius: var(--border-radius-lg);
     margin-bottom: 25px;
@@ -61,6 +151,10 @@ body {
     transition: all 0.2s;
 }
 
+.participant-card-visual label {
+    font-family: var(--font-caslon);
+    font-size: 3rem;
+}
 .participant-card-visual:hover {
     transform: translate(-3px, -3px);
     box-shadow: 12px 12px 0px var(--comp-color);
@@ -69,23 +163,23 @@ body {
 /* --- Payment Card (Scura) --- */
 .payment-card {
     background: var(--dark-color);
-    color: white;
+    color: var(--light-color);
     padding: 40px;
     border-radius: var(--border-radius-lg);
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 .form-input-dark {
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--dark-color);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
+    color: var(--light-color);
     padding: 14px;
     border-radius: 12px;
 }
 
 /* --- Bottoni (Utilizzando btn-pill e btn-outline) --- */
 .btn {
-    font-family: var(--font-franklin);
+    font-family: var(--font-caslon);
     padding: 14px 28px;
     border-radius: var(--border-radius-btn);
     font-weight: 700;
@@ -96,14 +190,14 @@ body {
 }
 
 .btn-outline {
-    background: transparent;
-    border: 2px solid var(--dark-color);
-    color: var(--dark-color);
+    background: var(--dark-color);
+    color: var(--light-color);
+    margin-right: 5px;
 }
 
 .btn-pill {
     background: var(--dark-color);
-    color: white;
+    color: var(--light-color);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -115,7 +209,7 @@ body {
 
 /* --- Utility --- */
 .ticket-tag {
-    font-family: 'Metal';
+    font-family: var(--font-caslon);
     color: var(--accent-color);
     letter-spacing: 1px;
 }

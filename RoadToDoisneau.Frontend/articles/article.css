@@ -35,10 +35,10 @@
     --dark-color: #052444;
 
     /* Typography */
-    --font-metal: 'Metal', sans-serif;
-    --font-caslon: 'Libre Caslon Text', Georgia, serif;
-    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
-    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    --font-metal: 'Metal';
+    --font-caslon: 'Libre Caslon Text';
+    --font-franklin: 'Libre Franklin';
+    --font-source: 'Source Sans Pro';
 
     /* Borders */
     --border-radius-lg: 24px;
@@ -55,7 +55,7 @@
 
 /* Body */
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-caslon);
     background-color: var(--dark-color);
     color: var(--dark-color);
     line-height: 1.6;
@@ -65,7 +65,7 @@ h1,
 h2,
 h3,
 .serif-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-caslon);
     font-weight: normal;
 }
 
@@ -115,7 +115,7 @@ a {
 }
 
 h1 {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-size: 3rem;
     line-height: 1.1;
     margin-bottom: 30px;
@@ -146,7 +146,7 @@ h1 {
 }
 
 .curiosity-item h2 {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-size: 1.6rem;
     margin-bottom: 10px;
 }
@@ -157,10 +157,11 @@ h1 {
 }
 
 blockquote {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-style: italic;
-    font-size: 1.4rem;
-    background: #fff;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    background-color: var(--comp-color);
     padding: 30px;
     border-radius: 12px;
     margin: 40px 0;
@@ -170,7 +171,7 @@ blockquote {
 blockquote::before {
     content: '“';
     font-size: 4rem;
-    color: var(--accent-color);
+    color: #e79988;
     position: absolute;
     top: -10px;
     left: 10px;

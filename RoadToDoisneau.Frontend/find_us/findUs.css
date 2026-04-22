@@ -35,10 +35,10 @@
     --dark-color: #052444;
 
     /* Typography */
-    --font-metal: 'Metal', sans-serif;
-    --font-caslon: 'Libre Caslon Text', Georgia, serif;
-    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
-    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    --font-metal: 'Metal';
+    --font-caslon: 'Libre Caslon Text';
+    --font-franklin: 'Libre Franklin';
+    --font-source: 'Source Sans Pro';
 
     /* Borders */
     --border-radius-lg: 24px;
@@ -55,7 +55,7 @@
 
 /* Body */
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-caslon);
     background-color: var(--dark-color);
     color: var(--dark-color);
     line-height: 1.6;
@@ -65,8 +65,9 @@ h1,
 h2,
 h3,
 .serif-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-caslon);
     font-weight: normal;
+    font-size: x-large;
 }
 
 a {
@@ -76,14 +77,15 @@ a {
 
 /* Buttons */
 .btn {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 12px 32px;
     border-radius: var(--border-radius-btn);
     border: none;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
     transition: opacity 0.3s ease;
 }
 
@@ -150,10 +152,12 @@ a {
 }
 
 .nav-links {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
     display: flex;
     gap: 32px;
     list-style: none;
-    font-weight: 500;
 }
 
 .nav-actions {
@@ -188,7 +192,7 @@ a {
     margin: 0 16px;
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 3px solid #114578;
+    /* border-bottom: 3px solid #114578; */
 }
 
 .find-us-section:first-child {
@@ -206,9 +210,15 @@ a {
 }
 
 .find-us-section h2 {
-    font-size: 2.2rem;
+    font-family: var(--font-caslon);
+    font-size: 3rem;
     margin-bottom: 30px;
     color: var(--accent-color);
+}
+
+.find-us-section h3 {
+    font-family: var(--font-caslon);
+    font-size: 1.5rem;
 }
 
 .info-block {
@@ -251,12 +261,14 @@ a {
 }
 
 .hours-grid {
+    font-family: var(--font-caslon);
+    font-size: x-large;
     display: flex;
     flex-direction: column;
     gap: 15px;
     max-width: 400px;
     margin: 0 auto;
-    font-family: var(--font-inter);
+    
 }
 
 .hours-item {
@@ -297,7 +309,7 @@ a {
 .hotel-info h3 {
     margin: 0 0 10px 0;
     color: var(--accent-color);
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     cursor: pointer;
     transition: opacity 0.3s;
 }
@@ -309,7 +321,8 @@ a {
 .hotel-info p {
     margin: 2px 0;
     color: var(--light-color);
-    font-family: var(--font-inter);
+    font-family: var(--font-caslon);
+    font-size: 1.2rem;
 }
 
 /* Footer */
@@ -317,7 +330,7 @@ a {
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 60px 20px 40px 20px;
-    font-family: sans-serif;
+    font-family: var(--font-caslon);
 }
 
 .footer-columns {
@@ -354,8 +367,7 @@ a {
 
 .footer-contact p {
     margin: 0;
-    font-family: Georgia, serif;
-    font-style: italic;
+    font-family: var(--font-caslon);
     font-size: 1.1rem;
 }
 

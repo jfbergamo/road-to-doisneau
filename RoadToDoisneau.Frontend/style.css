@@ -35,10 +35,10 @@
     --dark-color: #052444;
 
     /* Typography */
-    --font-metal: 'Metal', sans-serif;
-    --font-caslon: 'Libre Caslon Text', Georgia, serif;
-    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
-    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    --font-metal: 'Metal';
+    --font-caslon: 'Libre Caslon Text';
+    --font-franklin: 'Libre Franklin';
+    --font-source: 'Source Sans Pro';
 
     /* Borders */
     --border-radius-lg: 24px;
@@ -55,7 +55,7 @@
 
 /* Body */
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-caslon);
     background-color: var(--dark-color);
     color: var(--dark-color);
     line-height: 1.6;
@@ -65,7 +65,7 @@ h1,
 h2,
 h3,
 .serif-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-caslon);
     font-weight: normal;
 }
 
@@ -76,14 +76,15 @@ a {
 
 /* Buttons */
 .btn {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 12px 32px;
     border-radius: var(--border-radius-btn);
     border: none;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
     transition: opacity 0.3s ease;
 }
 
@@ -150,10 +151,13 @@ a {
 }
 
 .nav-links {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
     display: flex;
     gap: 32px;
     list-style: none;
-    font-weight: 500;
+
 }
 
 .nav-actions {
@@ -278,7 +282,7 @@ a {
 }
 
 .hero-main-title {
-    font-family: 'Metal';
+    font-family: var(--font-metal);
     font-size: 10rem;
     font-style: italic;
     font-weight: normal;
@@ -299,8 +303,8 @@ a {
 }
 
 .hero-subtitle {
-    font-family: 'Libre Caslon Text';
-    font-size: 2.5rem;
+    font-family: var(--font-caslon);
+    font-size: 3rem;
     font-style: italic;
     color: var(--dark-color);
     margin-bottom: 24px;
@@ -309,8 +313,8 @@ a {
 }
 
 .hero-text p.serif-text {
-    font-family: 'Inter';
-    font-size: 1.2rem;
+    font-family: var(--font-caslon);
+    font-size: 1.5rem;
     letter-spacing: 1px;
     max-width: 1000px;
     margin: 0 auto 32px auto;
@@ -319,7 +323,7 @@ a {
 }
 
 .author {
-    font-family: 'Source Sans Pro';
+    font-family: var(--font-caslon);
     display: block;
     text-align: right;
     font-style: italic;
@@ -361,7 +365,7 @@ a {
     font-size: 3.5rem;
     color: var(--dark-color);
     margin-bottom: 20px;
-    font-family: var(--font-sans);
+    font-family: var(--font-caslon);
     font-weight: bold;
 }
 
@@ -372,25 +376,32 @@ a {
     gap: 30px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 20px 10px; 
+    padding: 20px 10px;
     scrollbar-width: none;
 }
 
 .interview-card {
     flex: 0 0 340px;
-    background-color: #FFFFFF;
+    background-color: var(--light-color);
     padding: 40px;
     border-radius: 16px;
     text-align: left;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08); 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
 }
 
 .interview-card p {
-    font-size: 0.95rem;
     color: var(--dark-color);
     line-height: 1.6;
+}
+
+.interview-card i {
+    font-family: var(--font-source);
+    font-size: large;
+    font-weight: normal;
+    color: var(--dark-color);
+
 }
 
 .interview-box {
@@ -399,7 +410,7 @@ a {
 }
 
 .interview-box {
-    color: var(--accent-color) 
+    color: var(--dark-color);
 }
 
 /* Booklet */
@@ -413,12 +424,18 @@ a {
 }
 
 .booklet h2 {
+    font-family: var(--font-caslon);
     font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
     color: var(--dark-color);
     margin-bottom: 10px;
 }
 
 .booklet-subtitle {
+    font-family: var(--font-caslon);
+    font-size: 1.5rem;
+    font-weight: normal;
     margin-bottom: 40px;
     color: var(--dark-color)
 }
@@ -445,7 +462,7 @@ a {
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 60px 20px 40px 20px;
-    font-family: sans-serif;
+    font-family: var(--font-caslon);
 }
 
 .footer-columns {
@@ -482,8 +499,7 @@ a {
 
 .footer-contact p {
     margin: 0;
-    font-family: Georgia, serif;
-    font-style: italic;
+    font-family: var(--font-caslon);
     font-size: 1.1rem;
 }
 

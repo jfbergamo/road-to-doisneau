@@ -48,10 +48,10 @@
     --dark-color: #052444;
 
     /* Typography */
-    --font-metal: 'Metal', sans-serif;
-    --font-caslon: 'Libre Caslon Text', Georgia, serif;
-    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
-    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    --font-metal: 'Metal';
+    --font-caslon: 'Libre Caslon Text';
+    --font-franklin: 'Libre Franklin';
+    --font-source: 'Source Sans Pro';
 
     /* Borders */
     --border-radius-lg: 24px;
@@ -68,7 +68,7 @@
 
 /* Body */
 body {
-    font-family: var(--font-franklin);
+    font-family: var(--font-caslon);
     background-color: var(--dark-color);
     color: var(--dark-color);
     line-height: 1.6;
@@ -79,7 +79,7 @@ h2,
 h3,
 .serif-text {
     font-family: var(--font-caslon);
-    font-weight: normal;
+    font-weight: bold;
 }
 
 a {
@@ -89,14 +89,15 @@ a {
 
 /* Buttons */
 .btn {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 12px 32px;
     border-radius: var(--border-radius-btn);
     border: none;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
     transition: opacity 0.3s ease;
 }
 
@@ -164,10 +165,12 @@ a {
 
 
 .nav-links {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
     display: flex;
     gap: 32px;
     list-style: none;
-    font-weight: 500;
 }
 
 .nav-actions {
@@ -229,8 +232,9 @@ a {
 }
 
 .hero-doisneau h1 {
-    font-family: var(--font-logo);
+    font-family: var(--font-metal);
     font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: normal;
     color: var(--dark-color);
     margin-bottom: 10px;
     font-style: italic;
@@ -238,7 +242,7 @@ a {
 }
 
 .hero-doisneau .subtitle {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-size: 1.6rem;
     color: var(--dark-color);
     opacity: 0.8;
@@ -290,7 +294,7 @@ a {
 }
 
 .bio-text p {
-    font-family: var(--font-text);
+    font-family: var(--font-caslon);
     font-size: 1.15rem;
     margin-bottom: 20px;
     color: var(--dark-color);
@@ -318,7 +322,7 @@ a {
 }
 
 .img-caption {
-    font-family: var(--font-text);
+    font-family: var(--font-caslon);
     font-size: 0.9rem;
     color: var(--dark-color);
     margin-top: 10px;
@@ -332,7 +336,7 @@ a {
 }
 
 .bio-highlights h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-size: 1.8rem;
     margin-bottom: 25px;
 }
@@ -342,7 +346,7 @@ a {
 }
 
 .highlights-list li {
-    font-family: var(--font-main);
+    font-family: var(--font-caslon);
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 1px solid rgba(5, 36, 68, 0.1);
@@ -367,7 +371,7 @@ a {
 }
 
 .quote-section blockquote {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     color: var(--accent-color);
     max-width: 900px;
@@ -399,7 +403,12 @@ a {
 
 .cta-box p {
     margin-bottom: 40px;
-    font-family: var(--font-main);
+    font-family: var(--font-caslon);
+    font-size: 1.5rem;
+}
+
+.cta-box .btn {
+    padding: 12px 32px;
 }
 
 /* Footer */
@@ -407,7 +416,7 @@ a {
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 60px 20px 40px 20px;
-    font-family: sans-serif;
+    font-family: var(--font-caslon);
 }
 
 .footer-columns {
@@ -444,8 +453,7 @@ a {
 
 .footer-contact p {
     margin: 0;
-    font-family: Georgia, serif;
-    font-style: italic;
+    font-family: var(--font-caslon);
     font-size: 1.1rem;
 }
 
@@ -549,6 +557,9 @@ a {
     }
 
     .nav-links {
+        font-family: var(--font-caslon);
+        font-size: large;
+        font-weight: normal;
         flex-direction: column;
         gap: 24px;
         text-align: center;
