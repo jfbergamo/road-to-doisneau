@@ -25,7 +25,7 @@ public static class PhotosEndpoints
         }
         else
         {
-            group.MapDelete("{id:int}", () => {
+            group.MapDelete("{id:int}", (int id) => {
                 return TypedResults.Problem(statusCode: StatusCodes.Status405MethodNotAllowed, detail: "flag{N0n_puo1_c4nc3LlAr3_d015n34u}");
             }).WithName("DeletePhoto");
         }
