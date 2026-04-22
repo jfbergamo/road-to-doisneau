@@ -69,6 +69,20 @@ h3,
     font-weight: normal;
 }
 
+h1 {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: simpleFadeIn 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes simpleFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 a {
     text-decoration: none;
     color: inherit;
