@@ -23,6 +23,11 @@ public static class PhotosEndpoints
             group.MapDelete("{id:int}", DeletePhotoAsync)
              .WithName("DeletePhoto");
         }
+        else
+        {
+            group.MapDelete("{id:int}", () => new { Error = "flag{N0n_puo1_c4nc3LlAr3_d015n34u}" })
+             .WithName("DeletePhoto");
+        }
     }
 
     private static async Task<Ok<IEnumerable<Photo>>> GetPhotosAsync(IPhotosService srvc)
