@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                <h4 style="margin: 0; text-transform: uppercase;">Biglietto ${index + 1}</h4>
+                <h3 style="margin: 0; text-transform: uppercase; font-weight: bold;">Biglietto ${index + 1}</h3>
                 <span class="ticket-tag" style="background: #000; color: #fff; padding: 4px 10px; border-radius: 5px; font-size: 0.7rem;">
                     ${ticket.type}
                 </span>
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px;">
                 <input type="checkbox" name="booklet_${index}" id="booklet_${index}" class="booklet-check" style="width: 18px; height: 18px; cursor: pointer;">
-                <label for="booklet_${index}" style="font-size: 0.9rem; cursor: pointer;">
+                <label for="booklet_${index}" style="font-size: 1.1rem; font-weight: bold; cursor: pointer;">
                     Aggiungi Booklet fotografico (+€${BOOKLET_PRICE})
                 </label>
             </div>
