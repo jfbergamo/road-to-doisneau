@@ -154,10 +154,10 @@ langToggle.addEventListener('click', () => {
 loadTranslations(currentLang);
 
 (async () => {
-    try {
-        await fetch(`${API_ENDPOINT}/status`);
+    const api = await fetch(`${API_ENDPOINT}/status`);
+    if (api.ok) {
         console.log('API OK');
-    } catch {
+    } else {
         console.error('API CONNECTION ERROR');
     }
 })()
