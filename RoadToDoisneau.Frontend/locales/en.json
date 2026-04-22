@@ -37,7 +37,6 @@
     "home": {
         "hero_subtitle": "Take the road to rediscover the past.",
         "hero_quote": "\"There are days in wich the simple act of seeing seems to be true happiness\"",
-        "hero_sign": "Robert Doisneau",
         "buy_btn": "Buy Tickets",
         "interviews": {
             "title": "What do our visitors say?",
@@ -183,7 +182,7 @@
             "art2_h2_2": "The shadow rite",
             "art2_p3": "Not a day in Pordenone could be declared finished without having made a stop in the historic city-center taverns. Walk into a typical local tavern, order a “tajut” of wine and listen to the buzz of conversations. In that sincere conviviality, between a stolen smile from a balcony and a gesture of understanding, you`ll find again the spirit of the Parisian bistrot that Doisneau really loved to go to.",
             "art2_p4": "Finally, reach the Noncello shore at sunset, The light fog that frequently rises from the water that resembles the suffused atmosphere of a morning alongside the Senna, perfectly closing the circle of a day dedicated to the real beauty.",
-            "back_btn": "← Go back to the Articles"
+            "back_btn": "Go back to the Articles"
         },
         "valse": {
             "cat_atmospheres": "Parisian atmospheres",
@@ -194,7 +193,8 @@
             "art3_p2": "Unlike “the Kiss”. Here there`s no staging. Doisneau loved to define himself a fisher: he played the waiting game until reality composed itself the masterpiece.  He noticed the grace of the two dancers on the humid paving and he shot, capturing not only a dance, but the desire of an entire generation to go back to smiling after the dark years of war.",
             "art3_quote": "\"“There`s a sort of grace in seeing a party till the end. It`s the moment in which the masks drop and only humanity remains.”\"",
             "art3_h2_3": "3. Un elegance without time",
-            "art3_p3": "What makes this shot eternal and equilibrated. The simple dress of the woman, the streetlamps that reflect the light on the cement and the dignified hug. It`s not a noble dance, but the walzer of the common people that, for one night, transforming the periferic Paris in the world's most prestigious stage."
+            "art3_p3": "What makes this shot eternal and equilibrated. The simple dress of the woman, the streetlamps that reflect the light on the cement and the dignified hug. It`s not a noble dance, but the walzer of the common people that, for one night, transforming the periferic Paris in the world's most prestigious stage.",
+            "back_btn": "Go back to the Articles"
         },
         "basier": {
             "cat_behind_lens": "Behind the lens",
@@ -205,7 +205,8 @@
             "art4_p2": "In the 90s, the mith risked breaking under the pressure of the judicial system. A lot of couples argued to have been the real protagonists, trying to get compensation in the millions. Doisneau was forced to confess: his photo was staged. Françoise Bornet appeared with the original print signed by the maestro, the only proof that put an end to the disputes.",
             "art4_quote": "\"“I would have never permitted myself to shoot at people kissing on the street. Two lovers kissing are rarely a legitimate one”\"",
             "art4_h2_3": "3. 155.000 euros of poetry",
-            "art4_p3": "In 2005, the original copy of Françoise was sold at auction for a record figure. Over 150 thousand euros for a piece of paper. Why? Because even knowing that it was a staged pose, that kiss continued to represent the Paris that all of us want to dream about: free, romantic and timeless."
+            "art4_p3": "In 2005, the original copy of Françoise was sold at auction for a record figure. Over 150 thousand euros for a piece of paper. Why? Because even knowing that it was a staged pose, that kiss continued to represent the Paris that all of us want to dream about: free, romantic and timeless.",
+            "back_btn": "Go back to the Articles"
         },
         "parigiNoncello": {
             "cat_special_event": "Special Event",
@@ -215,7 +216,13 @@
             "art1_h2_1": "The poetry of the ordinary",
             "art1_p2": "Don`t expect plastic poses or constructed poses. Doisneau was an “image fisher”, a man capable of waiting hours the perfect alignment between radiant light and the smile of a passerby",
             "art1_quote": "\"“What I was trying to show was a world where I would have felt better, where people would have been gentler”\"",
-            "art1_p3": "Our set-up has been tough to create a continuous dialogue between the photos and Pordenone`s architecture. Strolling between the halls it`s like walking down the Senna, an experience that bonds the Parisian white and black with the colors of our porticoes."
+            "art1_p3": "Our set-up has been tough to create a continuous dialogue between the photos and Pordenone`s architecture. Strolling between the halls it`s like walking down the Senna, an experience that bonds the Parisian white and black with the colors of our porticoes.",
+            "back_btn": "Go back to the Articles"
+        },
+        "dati": {
+            "page_title": "GREAT SUCCESS IN PORDENONE",
+            "title": "Great Success in Pordenone",
+            "total_visitor": "Total visitors"
         }
     },
     "find_us": {
