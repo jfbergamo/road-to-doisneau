@@ -1,5 +1,3 @@
-const API_URL = `https://localhost:7022/api`
-
 document.addEventListener('DOMContentLoaded', () => {
     // --- 1. RECUPERO DATI E RIEPILOGO ---
     const finalDetails = JSON.parse(localStorage.getItem('finalOrderDetails')) || [];
@@ -111,7 +109,7 @@ async function simulatePurchase() {
     try {
         const body = JSON.stringify({ tickets: payload });
 
-        const response = await fetch(`${API_URL}/orders`, { 
+        const response = await fetch(`${API_ENDPOINT}/orders`, { 
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: body

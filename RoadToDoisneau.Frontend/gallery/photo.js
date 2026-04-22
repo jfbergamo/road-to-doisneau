@@ -1,5 +1,3 @@
-const API_ENDPOINT = "https://localhost:7022/api";
-
 document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.querySelector('.main-gallery');
     const mainContent = document.getElementById('main-content');
