@@ -1,0 +1,155 @@
+/* Importazione variabili fornite */
+:root {
+    --light-color: #FEF5F3;
+    --accent-color: #FAC4B8;
+    --comp-color: #B7D8FA;
+    --dark-color: #052444;
+
+    --font-metal: 'Metal', sans-serif;
+    --font-caslon: 'Libre Caslon Text', Georgia, serif;
+    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
+    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+    --border-radius-lg: 24px;
+    --border-radius-btn: 100px;
+    --border-radius-pill: 50px;
+}
+
+/* Reset base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-color);
+    font-family: var(--font-source);
+    color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Header */
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: var(--font-metal);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.subtitle {
+    font-family: var(--font-caslon);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    opacity: 0.8;
+}
+
+/* Card del Contatore */
+.counter-card {
+    background-color: white;
+    padding: 60px 40px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 20px 40px rgba(5, 36, 68, 0.08);
+    border: 1px solid var(--accent-color);
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.current-label {
+    font-family: var(--font-franklin);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.visitor-number {
+    font-family: var(--font-caslon);
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    display: block;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+/* Badge LIVE */
+.status-bar {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--dark-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: var(--border-radius-pill);
+    font-family: var(--font-franklin);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #ff4d4d; /* Rosso vibrante per il live */
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Footer & Bottone */
+footer {
+    margin-top: 20px;
+}
+
+.btn-back {
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--font-franklin);
+    color: var(--dark-color);
+    background-color: var(--comp-color);
+    padding: 14px 32px;
+    border-radius: var(--border-radius-btn);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-back:hover {
+    background-color: transparent;
+    border-color: var(--comp-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    h1 { font-size: 2.2rem; }
+    .visitor-number { font-size: 3.5rem; }
+    .counter-card { padding: 40px 20px; }
+}
