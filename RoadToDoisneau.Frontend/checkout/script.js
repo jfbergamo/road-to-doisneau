@@ -187,7 +187,7 @@ function applyTranslations(translations) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = text;
             } else {
-                element.innerHTML = text;
+                element.innerText = text;
             }
         }
     });
