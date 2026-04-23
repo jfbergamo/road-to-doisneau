@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadGalleryData() {
         const response = await fetch(`${API_ENDPOINT}/photos`);
         if (!response.ok) throw new Error("File JSON non trovato");
-        
+
         allPhotos = await response.json(); // Salva i dati nell'array globale
         renderGallery(allPhotos);
     }
 
     // --- 2. FUNZIONE PER GENERARE L'HTML ---
     function renderGallery(photos) {
-        galleryContainer.innerHTML = ''; 
+        galleryContainer.innerHTML = '';
 
         photos.forEach((photo, index) => {
             const item = document.createElement('div');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Passiamo l'indice alla funzione openModal
             item.addEventListener('click', () => openModal(index));
-            
+
             galleryContainer.appendChild(item);
         });
     }
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function openModal(index) {
         currentIndex = index; // Aggiorna l'indice corrente
         updateModalContent();
-        
+
         modal.style.display = "flex"; // Usa 'flex' per il centramento CSS
         document.body.style.overflow = "hidden";
     }
@@ -64,38 +64,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Funzione dedicata per aggiornare i dati nel modale senza chiuderlo
     function updateModalContent() {
         const photo = allPhotos[currentIndex];
-        
-        // Effetto dissolvenza opzionale: resetta src per evitare "scatti"
+
+        // 1. Clear previous captions to prevent stacking
+        modalCaption.innerHTML = '';
+
+        // 2. Update image
         modalImg.src = photo.url;
-        {
-            const h2 = document.createElement('h2');
-            h2.innerText = photo.title;
-            modalCaption.appendChild(h2);
-        }
-        {
-            const p = document.createElement('p');
-            {
-                const strong = document.createElement('strong');
-                strong.innerText = 'Luogo: ';
-                p.appendChild(strong);
-            }
-            p.innerText += photo.location;
-            modalCaption.appendChild(p);
-        }
-        {
-            const p = document.createElement('p');
-            p.innerText = photo.description;
-            modalCaption.appendChild(p);
-        }
-        {
-            const p = document.createElement('p');
-            {
-                const em = document.createElement('em');
-                em.innerText = `Anno: ${photo.shootingYear}`;
-                p.appendChild(em);
-            }
-            modalCaption.appendChild(p);
-        }
+        modalImg.alt = photo.title;
+
+        // 3. Rebuild the caption content
+        const h2 = document.createElement('h2');
+        h2.innerText = photo.title;
+        modalCaption.appendChild(h2);
+
+        const pLocation = document.createElement('p');
+        const strong = document.createElement('strong');
+        strong.innerText = 'Luogo: ';
+        pLocation.appendChild(strong);
+        pLocation.append(photo.location); // Use append to add text after the strong tag
+        modalCaption.appendChild(pLocation);
+
+        const pDesc = document.createElement('p');
+        pDesc.innerText = photo.description;
+        modalCaption.appendChild(pDesc);
+
+        const pYear = document.createElement('p');
+        const em = document.createElement('em');
+        em.innerText = `Anno: ${photo.shootingYear}`;
+        pYear.appendChild(em);
+        modalCaption.appendChild(pYear);
     }
 
     // Logica tasti Avanti/Indietro
