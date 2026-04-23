@@ -36,23 +36,38 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-    // --- GESTIONE MODALE ---
+// --- GESTIONE MODALE ---
+const modal = document.getElementById('photoModal');
+const modalImg = document.getElementById('modalImg');
+const modalCaption = document.getElementById('modalCaption');
+
 document.querySelectorAll('.gallery-item').forEach(item => {
     item.addEventListener('click', () => {
-        const imgPath = item.querySelector('img').src;
-        const text = item.querySelector('.gallery-caption').innerText;
+        const clickedImg = item.querySelector('img');
+        const clickedCaption = item.querySelector('.gallery-caption');
 
-        modalImg.src = imgPath;
-        modalCaption.innerText = text;
-        modal.style.display = "block";
+        if (clickedImg && modalImg) {
+            // FORCE the image to update to the new source
+            modalImg.src = clickedImg.src;
+        }
+
+        if (clickedCaption && modalCaption) {
+            // Use innerText to OVERWRITE the old caption so they don't stack
+            modalCaption.innerText = clickedCaption.innerText;
+        }
+
+        modal.style.display = "flex";
         document.body.style.overflow = "hidden";
     });
 });
 
-// Chiudi modale
+// Close logic
 document.querySelector('.modal-close').onclick = () => {
     modal.style.display = "none";
     document.body.style.overflow = "auto";
+    // Optional: Clear the image/text so it's fresh for next time
+    modalImg.src = "";
+    modalCaption.innerText = "";
 };
 
 // i18n Translation
