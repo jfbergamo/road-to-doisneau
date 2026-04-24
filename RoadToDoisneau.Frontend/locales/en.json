@@ -18,7 +18,7 @@
         "full_access": "Complete access",
         "free_info": "Find whose eligible",
         "free_list_1": "Kids 0-5 years",
-        "free_list_2": "handicapped + Caretaker",
+        "free_list_2": "Handicapped + Caretaker",
         "free_list_3": "Accredited Journalists",
         "countdown_title": "HURRY! The exhibit ends in:",
         "days": "Days",
@@ -37,7 +37,7 @@
     "home": {
         "hero_subtitle": "Take the road to rediscover the past.",
         "hero_quote": "\"There are days in wich the simple act of seeing seems to be true happiness\"",
-        "buy_btn": "Buy Tickets",
+        "buy_btn": "Buy tickets",
         "interviews": {
             "title": "What do our visitors say?",
             "interviewer": "\"Interviewer:\"",
@@ -62,10 +62,10 @@
             "a9": "\"No, usually I watch the photo first. But I've noticed some captions that are very funny in contrast with the photos (cit: Hommages Respectueux / Respectable Homages - 1954\""
         },
         "booklet": {
-            "title": "Buy Booklet before coming to see us",
+            "title": "Buy booklet before coming to see us",
             "subtitle": "Don't forget to take your free stikers!",
-            "btn": "Buy Booklet",
-            "home_btn": "Go to our Site"
+            "btn": "Buy booklet",
+            "home_btn": "Go to our site"
         }
     },
     "gallery": {
@@ -76,18 +76,18 @@
         "page_title": "Summary | Road to Doisneau",
         "main_title": "Road to Doisneau",
         "main_subtitle": "Take the road to immerse yourself in the past.",
-        "booking_title": "Book Your Experience",
+        "booking_title": "Book your experience",
         "tag_reduced": "Reduced",
         "tag_full": "Full",
         "tag_free": "Free",
         "label_over65": "Over 65",
         "label_students": "Students",
-        "free_info_trigger": "Free Ticket Info",
+        "free_info_trigger": "Free ticket info",
         "free_list_1": "Children 0-5 years",
         "free_list_2": "Disabled + Companion",
         "free_list_3": "Accredited Journalists",
         "total_label": "Total",
-        "tickets_unit": "tickets",
+        "tickets_unit": "Tickets",
         "buy_btn_final": "Purchase",
         "total_button": "Proceed with order"
     },
@@ -96,24 +96,24 @@
         "back": "Back",
         "almost_done": "Almost done",
         "insert_details": "Insert details for each participant.",
-        "total": "Total Order: ",
-        "confirm": "Confirm and Pay"
+        "total": "Total order: ",
+        "confirm": "Confirm and pay"
     },
     "purchase": {
         "title": "Secure Payment | Road to Doisneau",
-        "pay_met": "Payment Method",
+        "pay_met": "Payment method",
         "card_tito": "CARD OWNER",
         "card_scadenza": "MM/YY",
         "card_tito_2": "Card owner",
         "card_numb": "Card number",
         "card_scad_2": "Expiring",
-        "card_recap": "Tickets Recap",
-        "total": "Total Payment",
-        "pay_now": "Pay Now",
-        "incrip_tran": "Cripted Transaction",
-        "verify": "Veryfing Transaction...",
+        "card_recap": "Tickets recap",
+        "total": "Total payment",
+        "pay_now": "Pay now",
+        "incrip_tran": "Cripted transaction",
+        "verify": "Veryfing transaction...",
         "bank_com": "We are communicating with your bank.",
-        "buy_confirm": "Purchase Confirmed!",
+        "buy_confirm": "Purchase confirmed!",
         "thanks": "Thank you, your tickets for Road to Doisneau are ready.",
         "home": "Home"
     },
@@ -138,9 +138,9 @@
         "highlight_3": "1950: Takes his most famous shot, Le Baiser de l'hôtel de ville.",
         "highlight_4": "1984: Named Knight of the Legion of Honor.",
         "quote": "\"What I was trying to show was a world where I would feel good, where people would be kind, where I would find the tenderness I hoped to receive. My photos were proof that this world can exist.\"",
-        "cta_title": "Explore His Works",
+        "cta_title": "Explore his works",
         "cta_text": "Discover the curated selection for the \"Road to Doisneau\" exhibition.",
-        "cta_btn": "Go to Gallery"
+        "cta_btn": "Go to gallery"
     },
     "articles": {
         "page_title": "Articles | Road to Doisneau",
@@ -149,13 +149,13 @@
         "cat_curiosity": "Curiosity",
         "cat_news": "News",
         "cat_notice": "Notice",
-        "cat_atmospheres": "Parisian Atmospheres",
-        "cat_behind_lens": "Behind the Lens",
-        "cat_special_event": "Special Event",
-        "read_more": "Read More",
-        "discover_guide": "Discover the Guide",
-        "book_now": "Book Now",
-        "back_btn": "← Back to Articles",
+        "cat_atmospheres": "Parisian atmospheres",
+        "cat_behind_lens": "Behind the lens",
+        "cat_special_event": "Special event",
+        "read_more": "Read more",
+        "discover_guide": "Discover the guide",
+        "book_now": "Book now",
+        "back_btn": "← Back to articles",
         "art1_title": "Paris on the Noncello: Robert Doisneau arrives in Pordenone",
         "art1_desc": "The complicit gaze of the photographer who made the ordinary eternal arrives in the city with a unique selection.",
         "art1_subtitle": "A journey into the soul of French humanist photography through the streets of the historic center.",
@@ -210,7 +210,7 @@
             "back_btn": "Go back to the Articles"
         },
         "parigiNoncello": {
-            "cat_special_event": "Special Event",
+            "cat_special_event": "Special event",
             "art1_title": "Paris on the Noncello: Robert Doisneau arrives in Pordenone",
             "art1_subtitle": "A trip in the soul of french humanistic photography between the streets of the storic citycenter.",
             "art1_p1": "Pordenone transforms itself in a cinematic set of other times. With the arrival of the exhibition dedicated to Robert Doisneau, the Friulian city welcomes the delicacy of a look that was capable of stopping time without breaking the enchantment. ",
@@ -222,14 +222,14 @@
         },
         "dati": {
             "page_title": "GREAT SUCCESS IN PORDENONE",
-            "title": "Great Success in Pordenone",
+            "title": "Great success in Pordenone",
             "total_visitor": "Total visitors"
         }
     },
     "find_us": {
         "how_to_reach": "How to reach us",
         "reach_text": "The exhibition is collocated at Harry Bertoia Gallery, in the heart of Pordenone. Easily reachable from the station (10-minutes walk) or by car using the nearby \"multilayer parking lot”.",
-        "opening_hours": "Opening Hours",
+        "opening_hours": "Opening hours",
         "days_mon_wed": "Monday - Wednesday:",
         "closed": "Closed",
         "days_thu_fri": "Thursday - Friday:",

@@ -37,7 +37,7 @@
     "home": {
         "hero_subtitle": "Prendi questa strada per scoprire il passato.",
         "hero_quote": "\"Ci sono giorni in cui il semplice fatto di vedere sembra essere la vera felicità\"",
-        "buy_btn": "Acquista Biglietti",
+        "buy_btn": "Acquista biglietti",
         "interviews": {
             "title": "Cosa dicono i nostri visitatori?",
             "interviewer": "\"Intervistatore:\"",
@@ -62,9 +62,9 @@
             "a9": "\"No, usually I watch the photo first. But I've noticed some captions that are very funny in contrast with the photos (cit: Hommages Respectueux / Respectable Homages - 1954\""
         },
         "booklet":{
-            "title": "Acquista Booklet per quando vieni a trovarci",
+            "title": "Acquista booklet per quando vieni a trovarci",
             "subtitle": "Non dimenticare di prendere i tuoi adesivi gratuiti!",
-            "btn": "Compra il Booklet",
+            "btn": "Compra il booklet",
             "home_btn": "Vai al sito"
         }
     },
@@ -104,16 +104,16 @@
         "pay_met": "Metodo di Pagamento",
         "card_tito": "TITOLARE CARTA",
         "card_scadenza": "MM/AA",
-        "card_tito_2": "Titolare della Carta",
-        "card_numb": "Numero Carta",
+        "card_tito_2": "Titolare della carta",
+        "card_numb": "Numero carta",
         "card_scad_2": "Scadenza",
-        "card_recap": "Riepilogo Biglietti",
-        "total": "Totale da Pagare",
-        "pay_now": "Paga Ora",
+        "card_recap": "Riepilogo biglietti",
+        "total": "Totale da pagare",
+        "pay_now": "Paga ora",
         "incrip_tran": "Transazione criptata",
-        "verify": "Verifica Transazione...",
+        "verify": "Verifica transazione...",
         "bank_com": "Stiamo comunicando con il tuo istituto bancario.",
-        "buy_confirm": "Acquisto Confermato!",
+        "buy_confirm": "Acquisto confermato!",
         "thanks": "Grazie, i tuoi biglietti per Road to Doisneau sono pronti.",
         "home": "Torna alla Home"
     },
@@ -149,13 +149,13 @@
         "cat_curiosity": "Curiosità",
         "cat_news": "News",
         "cat_notice": "Avviso",
-        "cat_atmospheres": "Atmosfere Parigine",
+        "cat_atmospheres": "Atmosfere parigine",
         "cat_behind_lens": "Dietro l'obiettivo",
         "cat_special_event": "Evento Speciale",
-        "read_more": "Leggi di Più",
-        "discover_guide": "Scopri la Guida",
-        "book_now": "Prenota Ora",
-        "back_btn": "← Torna agli Articoli",
+        "read_more": "Leggi di più",
+        "discover_guide": "Scopri la guida",
+        "book_now": "Prenota ora",
+        "back_btn": "← Torna agli articoli",
         "art1_title": "Parigi sul Noncello: Robert Doisneau arriva a Pordenone",
         "art1_desc": "Lo sguardo complice del fotografo che ha reso eterno l'ordinario approda in città con una selezione antologica unica.",
         "art1_subtitle": "Un viaggio nell'anima della fotografia umanista francese tra le vie del centro storico.",
@@ -177,16 +177,16 @@
             "art2_subtitle": "Come trasformare una giornata culturale in un'esperienza \"umanista\" tra i portici e le osterie del centro storico.",
             "art2_caption": "Vista sul Noncello",
             "art2_p1": " Dopo aver nutrito gli occhi con le opere di Robert Doisneau, l'emozione chiede di essere portata fuori, tra le strade della città. Pordenone, con i suoi portici eleganti e i vicoli medievali, si presta a essere vissuta con la stessa curiosità \"umanista\" del fotografo francese.",
-            "art2_h2_1": "Perdersi nel Corso",
+            "art2_h2_1": "Perdersi nel corso",
             "art2_p2": "Iniziate la vostra passeggiata in Corso Vittorio Emanuele II. Qui, l'invito è di dimenticare lo smartphone in tasca: osservate i volti dei passanti, il gioco di luci e ombre sotto le arcate dipinte e il ritmo lento dei passi sul ciottolato. È proprio in questi dettagli ordinari che Doisneau avrebbe trovato la sua \"musica del caso\".",
             "art2_quote": "\"Il mondo che cercavo di mostrare era un mondo in cui mi sarei sentito bene, dove le persone erano gentili, dove avrei trovato la tenerezza che speravo di ricevere.\"",
             "art2_h2_2": "Il rito dell'ombra",
             "art2_p3": " Nessuna giornata a Pordenone può dirsi completa senza una sosta nelle storiche osterie del centro. Entrate in un locale tipico, ordinate un \"tajut\" di vino e ascoltate il brusio delle conversazioni. In quella convivialità sincera, tra un sorriso rubato al bancone e un gesto d'intesa, ritroverete lo spirito dei bistrot parigini che Doisneau amava tanto frequentare.",
             "art2_p4": "Infine, raggiungete le rive del Noncello al tramonto. La nebbia leggera che spesso sale dall'acqua ricorda le atmosfere soffuse delle mattine lungo la Senna, chiudendo perfettamente il cerchio di una giornata dedicata alla bellezza del reale.",
-            "back_btn": "Torna agli Articoli"
+            "back_btn": "Torna agli articoli"
         },
         "valse": {
-            "cat_atmospheres": "Atmosfere Parigine",
+            "cat_atmospheres": "Atmosfere parigine",
             "art3_detail_title": "La Dernière Valse: L'ultimo respiro della festa",
             "art3_h2_1": "1. Il battito del 14 Luglio",
             "art3_p1": "Mentre Parigi celebrava fragorosamente la presa della Bastiglia, Doisneau scelse di allontanarsi dai fuochi d'artificio. In un angolo di strada, trovò questa coppia che danzava sola, mentre i musicisti iniziavano a riporre gli strumenti. È il ritratto della \"fine della festa\", quel momento magico dove la gioia pubblica diventa intimità privata.",
@@ -210,7 +210,7 @@
             "back_btn": "Torna agli Articoli"
         },
         "parigiNoncello": {
-            "cat_special_event": "Evento Speciale",
+            "cat_special_event": "Evento pseciale",
             "art1_title": "Parigi sul Noncello: Robert Doisneau arriva a Pordenone",
             "art1_subtitle": "Un viaggio nell'anima della fotografia umanista francese tra le vie del centro storico.",
             "art1_p1": "Pordenone si trasforma in un set cinematografico d'altri tempi. Con l'arrivo della mostra dedicata a <strong>Robert Doisneau</strong>, la città friulana accoglie la delicatezza di uno sguardo che ha saputo fermare il tempo senza mai spezzarne l'incanto.",
@@ -222,14 +222,14 @@
         },
         "dati": {
             "page_title": "GRANDE SUCCESSO A PORDENONE",
-            "title": "Grande Successo a Pordenone",
+            "title": "Grande successo a Pordenone",
             "total_visitor": "Visitatori totali registrati"
         }
     },
     "find_us": {
-        "how_to_reach": "Come Raggiungerci",
+        "how_to_reach": "Come raggiungerci",
         "reach_text": "La mostra e collocata alla Galleria Harry Bertoia, nel cuore di Pordenone. Facilmente raggiungibile dalla stazione (10-minuti di camminata) o in macchina usando i vicini \"parcheggi multipiano\".",
-        "opening_hours": "Ore di Apertura",
+        "opening_hours": "Ore di apertura",
         "days_mon_wed": "Lunedì - Mercoledì:",
         "closed": "Chiuso",
         "days_thu_fri": "Giovedì - Venerdì:",
