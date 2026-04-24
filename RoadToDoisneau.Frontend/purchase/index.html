@@ -21,7 +21,7 @@
 
     <div id="checkout-screen" class="checkout-container">
         <div class="card">
-            <h2 class="serif-title" style="font-size: 1.5rem;" data-i18n="purchase.pay_met">Metodo di Pagamento</h2>
+            <h2 class="serif-title" style="font-size: 1.5rem;" data-i18n="purchase.pay_met">Metodo di pagamento</h2>
             <form id="purchaseForm">
                 <div class="credit-card-box">
                     <div class="cc-chip"></div>
@@ -34,12 +34,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label data-i18n="purchase.card_tito_2">Titolare della Carta</label>
+                    <label data-i18n="purchase.card_tito_2">Titolare della carta</label>
                     <input type="text" id="cc-name" placeholder="NOME COGNOME" required>
                 </div>
 
                 <div class="form-group">
-                    <label data-i18n="purchase.card_numb">Numero Carta</label>
+                    <label data-i18n="purchase.card_numb">Numero carta</label>
                     <input type="tel" id="cc-num" placeholder="1234 5678 1234 5678" inputmode="numeric" maxlength="19"
                         required>
                 </div>
@@ -59,16 +59,15 @@
         </div>
 
         <div class="card" style="height: fit-content;">
-            <h2 class="serif-title" style="font-size: 1.5rem;" data-i18n="purchase.card_recap">Riepilogo Biglietti</h2>
+            <h2 class="serif-title" style="font-size: 1.5rem;" data-i18n="purchase.card_recap">Riepilogo biglietti</h2>
             <div id="ticket-summary-list">
             </div>
             <div class="total" style="border-top: 2px solid #eee; margin-top: 15px; padding-top: 15px;">
-                <span data-i18n="purchase.total">Totale da Pagare</span>
+                <span data-i18n="purchase.total">Totale da pagare</span>
                 <span id="final-total-display">€ 0,00</span>
                 <hr>
             </div>
-            <button type="button" class="btn-pay" onclick="simulatePurchase()" data-i18n="purchase.pay_now">Paga
-                Ora</button>
+            <button type="button" class="btn-pay" onclick="simulatePurchase()" data-i18n="purchase.pay_now">Paga ora</button>
             <p style="text-align: center; font-size: 1.1rem; color: #4a7fca; margin-top: 15px;"
                 data-i18n="purchase.incrip_tran">Transazione criptata</p>
         </div>
@@ -76,12 +75,12 @@
 
     <div id="loader" class="card" style="max-width: 400px; display: none; margin: 100px auto; text-align: center;">
         <div class="spinner"></div>
-        <h3 data-i18n="purchase.verify">Verifica Transazione...</h3>
+        <h3 data-i18n="purchase.verify">Verifica transazione...</h3>
         <p data-i18n="purchase.bank_com">Stiamo comunicando con il tuo istituto bancario.</p>
     </div>
 
     <div id="success-page" class="card" style="max-width: 800px; display: none; margin: 145px auto; text-align: center; padding: 100px 20px 60px; margin-bottom: 20px;">
-        <h1 style="color: #052444;" data-i18n="purchase.buy_confirm">Acquisto Confermato!</h1>
+        <h1 style="color: #052444;" data-i18n="purchase.buy_confirm">Acquisto confermato!</h1>
         <p data-i18n="purchase.thanks">Grazie, i tuoi biglietti per <strong>Road to Doisneau</strong> sono pronti.</p>
         <div id="qr-container-grid"
             style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
