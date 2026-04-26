@@ -558,31 +558,55 @@ a {
 /* Booklet */
 .booklet {
     background-color: var(--comp-color);
-    margin: 0 16px 32px 16px;
     border-radius: var(--border-radius-lg);
-    padding: 60px 20px 60px 20px;
-    text-align: center;
+    padding: 10px 20px 10px 20px;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.booklet-content {
+    flex: 1;
+    text-align: left;
+    min-width: 300px;
+    margin: 60px;
 }
 
 .booklet h2 {
-    font-size: 2.5rem;
+    font-family: var(--font-caslon);
+    font-size: 2.1rem;
+    font-weight: normal;
+    font-style: italic;
+    text-align: left;
     color: var(--dark-color);
     margin-bottom: 10px;
 }
 
 .booklet-subtitle {
-    margin-bottom: 40px;
+    font-family: var(--font-caslon);
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 0;
     color: var(--dark-color)
 }
 
+.booklet a {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
 .booklet img {
+    flex: 1;
     width: 100%;
     max-width: 400px;
     height: auto;
     object-fit: contain;
-    margin: 0 auto 40px auto;
-    display: block;
+    margin: 60px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;

@@ -96,7 +96,8 @@
                     <span class="ticket-tag" data-i18n="checkout.tag_free">Gratis</span>
                     <div class="price">€0</div>
                     <details class="gratis-details">
-                        <summary><div data-i18n="land.free_info">Scopri chi ha diritto</div> <span>↓</span>
+                        <summary>
+                            <div data-i18n="land.free_info">Scopri chi ha diritto</div> <span>↓</span>
                         </summary>
                         <ul>
                             <li data-i18n="land.free_list_1">Bambini 0-5 anni</li>
@@ -113,13 +114,16 @@
         <div class="booking-divider"></div>
 
         <!-- Booklet -->
-        <section class="booklet" id="booklet">
-            <h2 data-i18n="home.booklet.title">Acquista <strong>booklet</strong> per quando vieni a trovarci</h2>
-            <p class="booklet-subtitle" data-i18n="home.booklet.subtitle">Non dimenticare di prendere i tuoi adesivi
-                gratuiti!
-            </p>
+        <section class="booklet">
             <img src="/content/gallery/Gallery_Booklet.svg" alt="Exhibition Booklet">
-            <a href="/checkout"><button class="btn btn-pill" data-i18n="home.booklet.btn">Acquista booklet</button></a>
+
+            <div class="booklet-content">
+                <h2 data-i18n="home.booklet.title">Acquista <strong>booklet</strong> per quando vieni a trovarci</h2>
+                <p class="booklet-subtitle" data-i18n="home.booklet.subtitle">Non dimenticare di prendere i tuoi adesivi
+                    gratuiti!</p>
+            </div>
+
+            <a href="/checkout"><button class="btn" data-i18n="home.booklet.btn">Acquista booklet</button></a>
         </section>
 
         <div class="booking-bottom countdown-container">

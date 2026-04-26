@@ -126,6 +126,7 @@ if (booklet) {
     bookletObserver.observe(booklet);
 }
 
+
 // i18n Translation
 const langToggle = document.getElementById('langToggle');
 let currentLang = localStorage.getItem('lang') || 'it';
