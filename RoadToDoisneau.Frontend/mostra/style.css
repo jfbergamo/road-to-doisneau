@@ -35,10 +35,10 @@
     --dark-color: #052444;
 
     /* Typography */
-    --font-metal: 'Metal', sans-serif;
-    --font-caslon: 'Libre Caslon Text', Georgia, serif;
-    --font-franklin: 'Libre Franklin', Helvetica, Arial, sans-serif;
-    --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    --font-metal: 'Metal';
+    --font-caslon: 'Libre Caslon Text';
+    --font-franklin: 'Libre Franklin';
+    --font-source: 'Source Sans Pro';
 
     /* Borders */
     --border-radius-lg: 24px;
@@ -53,25 +53,12 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-padding-top: 50px;
-    scroll-behavior: smooth;
-}
-
 /* Body */
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-caslon);
     background-color: var(--dark-color);
     color: var(--dark-color);
     line-height: 1.6;
-}
-
-h1,
-h2,
-h3,
-.serif-text {
-    font-family: var(--font-serif);
-    font-weight: normal;
 }
 
 a {
@@ -79,16 +66,32 @@ a {
     color: inherit;
 }
 
+h1,
+h2,
+h3,
+.serif-text {
+    font-family: var(--font-caslon);
+    font-weight: normal;
+}
+
+h1 {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: simpleFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
 /* Buttons */
 .btn {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 12px 32px;
     border-radius: var(--border-radius-btn);
     border: none;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
     transition: opacity 0.3s ease;
 }
 
@@ -105,6 +108,14 @@ a {
     background-color: transparent;
     color: var(--dark-color);
     border: 1px solid var(--text-dark);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+[id] {
+    scroll-margin-top: 60px;
 }
 
 /* Navigation */
@@ -155,10 +166,13 @@ a {
 }
 
 .nav-links {
+    font-family: var(--font-caslon);
+    font-size: large;
+    font-weight: normal;
     display: flex;
     gap: 32px;
     list-style: none;
-    font-weight: 500;
+
 }
 
 .nav-actions {
@@ -255,14 +269,14 @@ a {
 }
 
 .text-container h2 {
-    font-family: var(--font-logo);
+    font-family: var(--font-caslon);
     font-size: 5rem;
     color: var(--dark-color);
     line-height: 1.1;
 }
 
 .text-container h3 {
-    font-family: var(--font-text);
+    font-family: var(--font-caslon);
     font-size: 2rem;
     color: var(--dark-color);
     max-width: 450px;
@@ -346,17 +360,17 @@ a {
     height: 2px;
     background-color: var(--light-color);
     border-radius: 2px;
-}
+    }
 
 .Ticket h2 {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-size: 15rem;
     color: var(--dark-color);
     margin-bottom: 10px;
 }
 
 .Ticket h3 {
-    font-family: var(--font-text);
+    font-family: var(--font-caslon);
     font-size: 1.2rem;
     font-style: italic;
     color: var(--dark-color);
@@ -397,7 +411,7 @@ a {
     color: var(--dark-color);
     padding: 6px 18px;
     border-radius: var(--border-radius-pill);
-    font-family: var(--font-inter);
+    font-family: var(--font-caslon);
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -407,7 +421,7 @@ a {
 }
 
 .price {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-size: 3.5rem;
     font-weight: 800;
     color: var(--dark-color);
@@ -420,7 +434,7 @@ a {
 }
 
 .card p {
-    font-family: var(--font-inter);
+    font-family: var(--font-caslon);
     color: var(--dark-color);
     opacity: 0.7;
     font-size: 1rem;
@@ -432,7 +446,7 @@ a {
     text-align: left;
     margin-top: 20px;
     padding-left: 20px;
-    font-family: var(--font-inter);
+    font-family: var(--font-caslon);
     font-size: 0.9rem;
     color: var(--dark-color);
     list-style-type: none;
@@ -486,7 +500,7 @@ a {
     list-style: none;
     padding: 12px 15px;
     cursor: pointer;
-    font-family: var(--font-main);
+    font-family: var(--font-caslon);
     font-weight: 800;
     font-size: 0.85rem;
     color: var(--dark-color);
@@ -529,7 +543,7 @@ a {
     list-style: none;
     padding: 0 15px 15px 15px;
     margin: 0;
-    font-family: var(--font-text);
+    font-family: var(--font-caslon);
     font-size: 0.9rem;
     line-height: 1.6;
     color: var(--dark-color);
@@ -644,7 +658,7 @@ a {
 }
 
 .countdown-container h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     color: var(--dark-color);
     font-size: 1.8rem;
     margin-bottom: 30px;
@@ -675,7 +689,7 @@ a {
 
 .time-segment span {
     display: block;
-    font-family: var(--font-main);
+    font-family: var(--font-caslon);
     font-size: 2.5rem;
     font-weight: 800;
     line-height: 1;
@@ -683,7 +697,7 @@ a {
 }
 
 .time-segment p {
-    font-family: var(--font-alt);
+    font-family: var(--font-caslon);
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -696,7 +710,7 @@ a {
     background-color: transparent;
     color: var(--dark-color);
     background-color: var(--light-color);
-    font-family: var(--font-text);
+    font-family: var(--font-caslon);
     line-height: 1.6;
     font-size: 2rem;
     padding: 0;
@@ -711,7 +725,7 @@ a {
 #quote::before {
     content: "Perchè Doisneau?";
     display: block;
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     font-size: 5rem;
     font-weight: bold;
     color: var(--dark-color);
@@ -725,7 +739,7 @@ a {
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 60px 20px 40px 20px;
-    font-family: sans-serif;
+    font-family: var(--font-caslon);
 }
 
 .footer-columns {
@@ -762,8 +776,7 @@ a {
 
 .footer-contact p {
     margin: 0;
-    font-family: Georgia, serif;
-    font-style: italic;
+    font-family: var(--font-caslon);
     font-size: 1.1rem;
 }
 
@@ -820,7 +833,7 @@ a {
     padding: 15px 25px;
     border-radius: var(--border-radius-pill);
     cursor: pointer;
-    font-family: var(--font-main);
+    font-family: var(--font-caslon);
     font-weight: 800;
     display: flex;
     align-items: center;
@@ -853,7 +866,7 @@ a {
 }
 
 .widget-content h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-caslon);
     color: var(--dark-color);
     margin-bottom: 15px;
     font-size: 1.2rem;
@@ -872,7 +885,7 @@ a {
     padding: 10px;
     border: 1px solid rgba(5, 36, 68, 0.1);
     border-radius: 8px;
-    font-family: var(--font-inter);
+    font-family: var(--font-caslon);
     font-size: 0.85rem;
     box-sizing: border-box;
 }
