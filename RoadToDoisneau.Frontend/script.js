@@ -80,7 +80,7 @@ if (interviewGrid) {
     interviewGrid.innerHTML += interviewGrid.innerHTML;
 
     let isPaused = false;
-    let scrollSpeed = 1;
+    let scrollSpeed = 0.5;
 
     interviewGrid.addEventListener('mouseenter', () => isPaused = true);
     interviewGrid.addEventListener('mouseleave', () => isPaused = false);

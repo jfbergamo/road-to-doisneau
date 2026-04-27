@@ -392,7 +392,7 @@ a {
 .cta-gallery {
     background-color: var(--comp-color);
     margin: 0 16px 32px 16px;
-    padding: 80px 20px;
+    padding: 40px 20px;
     border-radius: var(--border-radius-lg);
     text-align: center;
 }
